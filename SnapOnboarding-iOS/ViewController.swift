@@ -7,19 +7,36 @@
 //
 
 import UIKit
+import RazzleDazzle
 
 class ViewController: UIViewController {
+    
+    
+    // MARK: - UIViewController life cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        presentOnboardingViewController()
     }
-
+    
+    private func presentOnboardingViewController() {
+        let onboardingViewController = OnboardingViewController()
+        
+        var configuration = OnboardingViewControllerConfiguration()
+        configuration.backgroundColor = UIColor(red: 255/255.0, green: 0/255.0, blue: 88/255.0, alpha: 1.0)
+        configuration.numberOfPages = 3
+        
+        onboardingViewController.applyConfiguration(configuration)
+        
+        presentViewController(onboardingViewController, animated: true, completion: nil)
+    }
 
 }
 
