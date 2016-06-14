@@ -13,46 +13,59 @@ public class OnboardingViewController: AnimatedPagingScrollViewController {
     
     internal var configuration: OnboardingViewControllerConfiguration!
     
-    private var pageControl: UIPageControl!
+    private var pageControl = UIPageControl()
     
     public func applyConfiguration(configuration: OnboardingViewControllerConfiguration) {
         self.configuration = configuration
         
-        setupPages()
-        //setupMargins()
-        setupBackground()
-        //setupLabel()
-        //setupOnOffButton()
+        configureBackground()
+        addViews()
+        configureViews()
     }
     
-    internal func setupPages() {
-        pageControl = UIPageControl()
-        pageControl.numberOfPages = configuration.numberOfPages
-        contentView.addSubview(pageControl)
-        keepView(pageControl, onPages: [0, 1, 2])
-    }
+    // MARK: - UIView configuration
     
-    internal func setupBackground() {
+    private func configureBackground() {
         view.backgroundColor = configuration.backgroundColor
     }
     
-    // MARK: - RazzleDazzle setup
+    private func addViews() {
+        contentView.addSubview(pageControl)
+    }
+    
+    private func configureViews() {
+        configurePageControl()
+    }
+    
+    private func configurePageControl() {
+        pageControl.numberOfPages = configuration.numberOfPages
+        
+        let bottom = NSLayoutConstraint(item: pageControl, attribute: .Bottom, relatedBy: .Equal, toItem: scrollView, attribute: .BottomMargin, multiplier: 1, constant: 0)
+        NSLayoutConstraint.activateConstraints([bottom])
+        
+        keepView(pageControl, onPages: [-1, 3])
+    }
+    
+    // MARK: - RazzleDazzle properties
     
     public override func numberOfPages() -> Int {
         return configuration.numberOfPages
     }
     
-    // MARK: - UIScrollViewDelegate
+    // MARK: - UIViewController properties
     
-    public override func scrollViewDidScroll(scrollView: UIScrollView) {
-        super.scrollViewDidScroll(scrollView)
-        /*print("offset: \(pageOffset)")
-        print("width: \(pageWidth)")*/
+    public override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return .LightContent
     }
+    
+}
+
+// MARK: - UIScrollViewDelegate
+
+extension OnboardingViewController {
     
     public func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
         pageControl.currentPage = Int(pageOffset)
-        print(pageControl.currentPage)
     }
     
 }

@@ -11,15 +11,6 @@ import RazzleDazzle
 
 class ViewController: UIViewController {
     
-    
-    // MARK: - UIViewController life cycle
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
-    }
-    
     override func viewDidAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -35,7 +26,7 @@ class ViewController: UIViewController {
         
         onboardingViewController.applyConfiguration(configuration)
         
-        presentViewController(onboardingViewController, animated: true, completion: nil)
+        presentViewController(onboardingViewController, animated: false, completion: nil)
     }
 
 }
