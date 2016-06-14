@@ -18,11 +18,11 @@ class ViewController: UIViewController {
     }
     
     private func presentOnboardingViewController() {
-        let onboardingViewController = OnboardingViewController()
+        let storyboard = UIStoryboard(name: "SnapOnboarding", bundle: nil)
+        let onboardingViewController = storyboard.instantiateViewControllerWithIdentifier("snapOnboardingViewController") as! SnapOnboardingViewController
         
-        var configuration = OnboardingViewControllerConfiguration()
-        configuration.backgroundColor = UIColor(red: 255/255.0, green: 0/255.0, blue: 88/255.0, alpha: 1.0)
-        configuration.numberOfPages = 3
+        let exampleColor = UIColor(red: 255/255.0, green: 0/255.0, blue: 88/255.0, alpha: 1.0)
+        let configuration = SnapOnboardingViewControllerConfiguration(delegate: self, backgroundColor: exampleColor)
         
         onboardingViewController.applyConfiguration(configuration)
         
