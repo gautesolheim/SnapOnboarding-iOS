@@ -84,8 +84,10 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "$BUILT_PRODUCTS_DIR/RazzleDazzle/RazzleDazzle.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/SnapFonts-iOS/SnapFonts_iOS.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/TTTAttributedLabel/TTTAttributedLabel.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "$BUILT_PRODUCTS_DIR/RazzleDazzle/RazzleDazzle.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/SnapFonts-iOS/SnapFonts_iOS.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/TTTAttributedLabel/TTTAttributedLabel.framework"
 fi

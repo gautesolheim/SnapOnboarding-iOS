@@ -4,6 +4,11 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="GothamRnd-Book.otf">
+            <string>GothamRounded-Book</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--SnapOnboardingViewController-->
         <scene sceneID="ass-MY-NDH">
@@ -59,18 +64,45 @@
                                 </connections>
                             </scrollView>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Cmg-dD-FcZ" userLabel="pageControl">
-                                <rect key="frame" x="281" y="553" width="39" height="37"/>
+                                <rect key="frame" x="280" y="532" width="39" height="8"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="8" id="aLo-3N-YMM"/>
+                                </constraints>
+                                <color key="pageIndicatorTintColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
+                                <color key="currentPageIndicatorTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </pageControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bSY-Ed-cVR" userLabel="termsAndConditionsLabel" customClass="TTTAttributedLabel">
+                                <rect key="frame" x="150" y="554" width="300" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="1M7-eP-m59"/>
+                                    <constraint firstAttribute="width" constant="300" id="l5Y-3w-PR8"/>
+                                </constraints>
+                                <string key="text">Ved bruk av tjenesten Snapsale godtar du
+Vilkårene for bruk og Retningslinjer for personvern</string>
+                                <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="10"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="lineSpacing">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="tNM-nG-5BO" id="lVT-ym-ciZ"/>
+                                </connections>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.0" blue="0.34509803921568627" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="hkp-8h-jwT" firstAttribute="bottom" secondItem="Tym-hW-bm2" secondAttribute="bottom" id="0qv-Tk-Z3B"/>
+                            <constraint firstItem="bqD-gD-GKI" firstAttribute="top" secondItem="bSY-Ed-cVR" secondAttribute="bottom" constant="16" id="3EP-X1-ada"/>
                             <constraint firstItem="hkp-8h-jwT" firstAttribute="trailing" secondItem="Tym-hW-bm2" secondAttribute="trailing" id="C5g-Im-RNY"/>
+                            <constraint firstItem="bSY-Ed-cVR" firstAttribute="centerX" secondItem="Tym-hW-bm2" secondAttribute="centerX" id="G9y-P0-HNl"/>
                             <constraint firstItem="hkp-8h-jwT" firstAttribute="top" secondItem="Tym-hW-bm2" secondAttribute="top" id="ZFX-St-7c7"/>
+                            <constraint firstItem="bSY-Ed-cVR" firstAttribute="top" secondItem="Cmg-dD-FcZ" secondAttribute="bottom" constant="14" id="duT-oX-llX"/>
+                            <constraint firstItem="Cmg-dD-FcZ" firstAttribute="centerX" secondItem="Tym-hW-bm2" secondAttribute="centerX" id="dvy-5J-3dA"/>
                             <constraint firstItem="zp8-Mv-jdd" firstAttribute="width" secondItem="Tym-hW-bm2" secondAttribute="width" id="g8G-cH-RXN"/>
                             <constraint firstItem="hkp-8h-jwT" firstAttribute="leading" secondItem="Tym-hW-bm2" secondAttribute="leading" id="gtR-W0-q4L"/>
-                            <constraint firstItem="Cmg-dD-FcZ" firstAttribute="bottom" secondItem="bqD-gD-GKI" secondAttribute="top" constant="-10" id="qx8-JY-A5Y"/>
-                            <constraint firstItem="Cmg-dD-FcZ" firstAttribute="centerX" secondItem="Tym-hW-bm2" secondAttribute="centerX" id="vHM-lH-HeA"/>
                         </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -78,6 +110,7 @@
                     <connections>
                         <outlet property="pageControl" destination="Cmg-dD-FcZ" id="IGk-zK-rmJ"/>
                         <outlet property="scrollView" destination="hkp-8h-jwT" id="mFU-ia-u9g"/>
+                        <outlet property="termsAndConditionsLabel" destination="bSY-Ed-cVR" id="iVc-1Y-rQI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J0i-Sp-vt5" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -88,6 +121,10 @@
         <scene sceneID="h5M-Gs-Mlh">
             <objects>
                 <viewController storyboardIdentifier="locationViewController" id="tuq-Zg-aCA" userLabel="locationViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uCB-4V-4gp"/>
+                        <viewControllerLayoutGuide type="bottom" id="Tnx-e1-m8T"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="CMB-oQ-19v">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -101,6 +138,10 @@
         <scene sceneID="Mtt-oe-dxY">
             <objects>
                 <viewController storyboardIdentifier="introViewController" id="msg-6e-T6i" userLabel="introViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jnX-Zh-1IU"/>
+                        <viewControllerLayoutGuide type="bottom" id="knZ-Sh-tcc"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="OvS-2d-WuL">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -114,6 +155,10 @@
         <scene sceneID="4Vf-ZG-nv7">
             <objects>
                 <viewController storyboardIdentifier="loginViewController" id="0qE-Ud-UlA" userLabel="loginViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6VU-A7-cWa"/>
+                        <viewControllerLayoutGuide type="bottom" id="lpC-Qa-pWA"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="JFE-Tf-2Hq">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

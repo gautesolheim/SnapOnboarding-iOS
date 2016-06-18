@@ -7,147 +7,134 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00DA94579B5791A05859BBEF8E0C3236 /* CornerRadiusAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EAF16AFC4779332901544C5CD3B099 /* CornerRadiusAnimation.swift */; settings = {COMPILER_FLAGS = "-fmodules"; }; };
-		023354ED4503926EAE596A2549D38C6B /* LayerStrokeColorAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4130581DDAAE23A2242DAF811ADF21A0 /* LayerStrokeColorAnimation.swift */; settings = {COMPILER_FLAGS = "-fmodules"; }; };
-		0815F073B1CAA0031CCD7F7DCF155BB7 /* ConstraintConstantAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34ADE3BAB17EF3771CA7746189C0900B /* ConstraintConstantAnimation.swift */; settings = {COMPILER_FLAGS = "-fmodules"; }; };
-		0839BF38CE7F3DB2FFDF47B6FB5DBE53 /* ConstraintMultiplierAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670E63541A777BF5CAD55974A88EF380 /* ConstraintMultiplierAnimation.swift */; settings = {COMPILER_FLAGS = "-fmodules"; }; };
-		0CCE7C5582F4F23E71D828CCDF7ACDA3 /* Pods-SnapOnboarding-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6232520C8D0C3CFD2BB5C86511516E09 /* Pods-SnapOnboarding-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2E98D05370CD0D85BE52E656CE4C5B3E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */; };
+		06A72D07EEDDF085A1DC0585788839EC /* GothamRnd-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8505F65836CD31EB68DCC17C99429736 /* GothamRnd-Bold.otf */; };
+		0D35952D18C3BFF5B453A765D7F8A02D /* Pods-SnapOnboarding-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DEF8B1BE739ADF27D1833670BB1EF31B /* Pods-SnapOnboarding-iOS-dummy.m */; };
+		0EB27D5AFE3DD689DCBE14CEFAFC6292 /* SnapFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE3D5DB5D762243F9203D761BDB9255 /* SnapFonts.swift */; };
+		2E98D05370CD0D85BE52E656CE4C5B3E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23196A94A5BF44B66D0D3866A48DF3DC /* Foundation.framework */; };
+		2F15447A06ACE93383B47CB84460A44B /* TTTAttributedLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C4FF51E67D8A5FC29585D1E14C9AAB2 /* TTTAttributedLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		34762B4B954D28136B539C97192A045F /* Pods-SnapOnboarding-iOSTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9570B57657ADDE4152EB8E5E2ECCD42B /* Pods-SnapOnboarding-iOSTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		36EEF055AED59F278E9EE426F832F3B0 /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F46765C364D7CA3F74973C8A022C68 /* Animator.swift */; settings = {COMPILER_FLAGS = "-fmodules"; }; };
-		3A9951278251E168F9E969DC0AF264C1 /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6FF6A5A0821FA36C213DCA07906FB6 /* Animation.swift */; settings = {COMPILER_FLAGS = "-fmodules"; }; };
-		404E912E167B1D11D28260C458031BED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */; };
-		405A15BE05E199FB0703C92BE2B7F5AD /* PathPositionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F956E83235D43D36E3FF51F945F632 /* PathPositionAnimation.swift */; settings = {COMPILER_FLAGS = "-fmodules"; }; };
-		4103518FA05B001CCFD56F704898CCDF /* Pods-SnapOnboarding-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DEF8B1BE739ADF27D1833670BB1EF31B /* Pods-SnapOnboarding-iOS-dummy.m */; };
-		43FEE37AE696950687038CB4C2E55FEB /* UIView+Transform.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB763D78C897C76888E1B8F0E453465E /* UIView+Transform.swift */; settings = {COMPILER_FLAGS = "-fmodules"; }; };
-		44B25C167083E9104AFEEF8BC747812F /* RazzleDazzle-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C185574CC645B209ACB1667BEF808758 /* RazzleDazzle-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		45F4C0C411F25E4CE9E39B9C018E5C4A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */; };
-		480E91CB774366B96D86B9B74426CE64 /* LayerFillColorAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1590167B0CDF02945EC0F68CBE8C221 /* LayerFillColorAnimation.swift */; settings = {COMPILER_FLAGS = "-fmodules"; }; };
+		404E912E167B1D11D28260C458031BED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23196A94A5BF44B66D0D3866A48DF3DC /* Foundation.framework */; };
+		41928D7C7F7F9509D149E72297371441 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B8DD4DBBBE9814966FA2747B536DC00 /* QuartzCore.framework */; };
 		4EE67B0AA88C053CEEFCFB1CF0B36A44 /* Pods-SnapOnboarding-iOSUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B89D37C6F40617F909BA47826BE4BF3E /* Pods-SnapOnboarding-iOSUITests-dummy.m */; };
-		51B4E36B582EE100A2E1EDC7935522F8 /* Filmstrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC516B7BAC421F3724CD84BD8840EF0 /* Filmstrip.swift */; settings = {COMPILER_FLAGS = "-fmodules"; }; };
-		5FFC8BF850762CE1B14DC015826F0386 /* RotationAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F365EDD511549869DC48A40001D9A6C /* RotationAnimation.swift */; settings = {COMPILER_FLAGS = "-fmodules"; }; };
-		653A55D4DA3430CDA1DD3DF71AD22EDE /* ScaleAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66440B1DAB0E62FA797F268291DD60D /* ScaleAnimation.swift */; settings = {COMPILER_FLAGS = "-fmodules"; }; };
-		7269F97EA60649E8DA920CCF082F3AAF /* LayerStrokeEndAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5BB5682487CE89B6EAAC205DDFAF25 /* LayerStrokeEndAnimation.swift */; settings = {COMPILER_FLAGS = "-fmodules"; }; };
-		7CAB3934C79E13014BE6024E7B5EF8C4 /* Animatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BC1127EFC676E7E0415F48E6F26029 /* Animatable.swift */; settings = {COMPILER_FLAGS = "-fmodules"; }; };
-		80B225223EFACA3FEFFAC9E212BA21A9 /* ScrollViewPageConstraintAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0ADD3E9408E1C782C31E57127A4620 /* ScrollViewPageConstraintAnimation.swift */; settings = {COMPILER_FLAGS = "-fmodules"; }; };
-		8E13FD4A195A2D9A5A0EFAA66704AC02 /* Interpolatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C52B0B1D474BD55C03D8C5094C17F8 /* Interpolatable.swift */; settings = {COMPILER_FLAGS = "-fmodules"; }; };
-		95D8BEC2525FD1CF79C957359A804544 /* EasingFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB047040C887B62BA3FA4909BEDEEED6 /* EasingFunction.swift */; settings = {COMPILER_FLAGS = "-fmodules"; }; };
-		A14A0BB35E175AE06B30DD4A7FD0C4CF /* AlphaAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437C85948814E17F0D5F535DF725827D /* AlphaAnimation.swift */; settings = {COMPILER_FLAGS = "-fmodules"; }; };
-		AC0F3CFAE90A1572C39C115EE6196BCE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E86668F20F252C440D1015B816BE59C5 /* UIKit.framework */; };
-		AF190C4B36A9B952F5C3D3B0C2BD9A55 /* LayerStrokeStartAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B06113F296D65A525BB39220DEA1E0 /* LayerStrokeStartAnimation.swift */; settings = {COMPILER_FLAGS = "-fmodules"; }; };
-		B3BB22C25B8B01B782C2BE7136458BCC /* BackgroundColorAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C93EF7CBCD9FCAE95EB9CF4FC615983 /* BackgroundColorAnimation.swift */; settings = {COMPILER_FLAGS = "-fmodules"; }; };
-		B5E5037F59C2C0AB2836A0063F196451 /* TranslationAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E960114260888ADA964E1C0D57F730 /* TranslationAnimation.swift */; settings = {COMPILER_FLAGS = "-fmodules"; }; };
-		BA108DD55CBE30346B2AD8DA2316BD6F /* AnimatedPagingScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3545B9F370B62F5A57EE49D28DC2AE /* AnimatedPagingScrollViewController.swift */; settings = {COMPILER_FLAGS = "-fmodules"; }; };
+		4F37CEA8E6296353C083723657C0FD78 /* GothamRnd-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = FD165A86B541A151668F289CAB5FFE85 /* GothamRnd-Light.otf */; };
+		525D3B78A8FC64E16A2627D2316CBCD9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BE088BE12675C2748B7E2A7AB4655E /* CoreGraphics.framework */; };
+		55BEB9087CEF1F3893197E94798665EF /* TTTAttributedLabel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 820C84F146C192B3894CD9029F6C9469 /* TTTAttributedLabel-dummy.m */; };
+		6A566F46141568C41472A044FD795561 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70BFE7B073D3BADAB1FD3267C395A2AE /* UIKit.framework */; };
+		6BC19B0394C5189A1CEB1F134F2EEEFD /* GothamRnd-LightIta.otf in Resources */ = {isa = PBXBuildFile; fileRef = 083BA1D25695AC1CD4061B55EAEBF340 /* GothamRnd-LightIta.otf */; };
+		750D712C24083E7C803463A37F40D583 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23196A94A5BF44B66D0D3866A48DF3DC /* Foundation.framework */; };
+		7C5823A841F1572FF5F7A811F11E3773 /* GothamRnd-BookIta.otf in Resources */ = {isa = PBXBuildFile; fileRef = A9608333D9351E89388F38649B8A5543 /* GothamRnd-BookIta.otf */; };
+		84C47D6AD0B7E31F4ADF2EB536FA17CD /* TTTAttributedLabel-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B48245C887772E4ABD49C0279B7F64CC /* TTTAttributedLabel-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		88F1A1E9DAEEB3C09E184C91D1BD6F14 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70BFE7B073D3BADAB1FD3267C395A2AE /* UIKit.framework */; };
+		8C0E2CC59D31A131E152F24B82436D31 /* Pods-SnapOnboarding-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6232520C8D0C3CFD2BB5C86511516E09 /* Pods-SnapOnboarding-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9627B1F35807C5196265B84FDB0D65D5 /* GothamRnd-MedIta.otf in Resources */ = {isa = PBXBuildFile; fileRef = 594F05B0C72292E3F119B8E4146232C2 /* GothamRnd-MedIta.otf */; };
+		B17DABD831513F51DCD75A75A55EB154 /* GothamRnd-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = B2C3D9E0306DBCB570DA90B068EBDA46 /* GothamRnd-Book.otf */; };
+		B5D2E864A4D7CBED9DDB468FC4A10694 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23196A94A5BF44B66D0D3866A48DF3DC /* Foundation.framework */; };
+		BB443C7DCCBD4F26ED28C59180E4CEA6 /* GothamRnd-BoldIta.otf in Resources */ = {isa = PBXBuildFile; fileRef = 70A08084E8A9B9BF17ABBC38916324C5 /* GothamRnd-BoldIta.otf */; };
+		BB921578BE5FBF25AAE2521E5131904F /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F408D1E8A61DA521CEA459A8269845F4 /* CoreText.framework */; };
+		BBDF64A5AC09E8A0712A8CB402CFD167 /* GothamRnd-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 35026DBD30D9B539E77600312675CD72 /* GothamRnd-Medium.otf */; };
+		BC6145D24E246402F771682031DDD613 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23196A94A5BF44B66D0D3866A48DF3DC /* Foundation.framework */; };
 		BC8FBBCFA6482684BC366BCE0781399D /* Pods-SnapOnboarding-iOSTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E75C4141C940C6C288179AA3A2630D8F /* Pods-SnapOnboarding-iOSTests-dummy.m */; };
-		CF205F0B04EAF03093166FC7061ECD01 /* LabelTextColorAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9164EB3560986DCABB06708A3619748 /* LabelTextColorAnimation.swift */; settings = {COMPILER_FLAGS = "-fmodules"; }; };
+		BF9B501B8BCDFE04FC6C724BE25757E3 /* SnapFonts-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2FC822E7BABB3AF823C1889CE3292D4E /* SnapFonts-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CB6C17FFC356B9D57188184563866555 /* TTTAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 02C5CC3D8EA7A2F685F71DD0C553EEDF /* TTTAttributedLabel.m */; };
 		D1428C9F1E85DA32344BB4E082BE1830 /* Pods-SnapOnboarding-iOSUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 327DA0FA04AC34ACAFB93446E4F28128 /* Pods-SnapOnboarding-iOSUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D4DA2064E498B191C49BFDD2A683F588 /* RazzleDazzle-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A029034522E0253FA2534C57DC3FF29D /* RazzleDazzle-dummy.m */; };
-		D5E6042B3ABB5BF6E32054D2969919D2 /* CubicBezier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90A0563E2BF3ED8E85909F6B1C0DBAC /* CubicBezier.swift */; settings = {COMPILER_FLAGS = "-fmodules"; }; };
-		DAAED7C42528398C807191BB0926E922 /* HideAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D490D8724838EBFA9D6AB8CA098B14 /* HideAnimation.swift */; settings = {COMPILER_FLAGS = "-fmodules"; }; };
-		EBE384574322340962FFA5AACCCF6C8B /* RazzleDazzle.h in Headers */ = {isa = PBXBuildFile; fileRef = 378A3F40EFF4A8E8F12E1E728A7B6045 /* RazzleDazzle.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FD552075D0A10626DB05827F9D468817 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */; };
+		E81EC233F987AA9C572B3DF769E2C422 /* SnapFonts-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E92625FC4D0B469B2D328819C1B1D04D /* SnapFonts-iOS-dummy.m */; };
+		EEE2AC21F5B26D0A481D8EDF830199CB /* Fonts.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 489A0BC6465E3B56F931BB22D57F1DBB /* Fonts.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		B53AD5D2FBEF0CA129B3CAABA7AB81E5 /* PBXContainerItemProxy */ = {
+		7604849F9CB3434ADC9A2D30C04C8980 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 4E0203A03E5B45D1C9902B04A2FE16D9;
-			remoteInfo = RazzleDazzle;
+			remoteGlobalIDString = 1697B4433E1C9216785435805FAAFEE6;
+			remoteInfo = "SnapFonts-iOS";
+		};
+		8145D522DDBE851608533C32620D4C27 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 58D6E536573AAD2D8DCF1911F8071A09;
+			remoteInfo = "SnapFonts-iOS-Fonts";
+		};
+		EDE97DDF766E4BA023BBF6C4AF3ADC6F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 13C0CF18AE723C3BEB78D6770F312A0A;
+			remoteInfo = TTTAttributedLabel;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0BB0266A7E6BAD28B2AE7706C48D44F4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		02C5CC3D8EA7A2F685F71DD0C553EEDF /* TTTAttributedLabel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TTTAttributedLabel.m; path = TTTAttributedLabel/TTTAttributedLabel.m; sourceTree = "<group>"; };
+		083BA1D25695AC1CD4061B55EAEBF340 /* GothamRnd-LightIta.otf */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; name = "GothamRnd-LightIta.otf"; path = "Fonts/GothamRnd-LightIta.otf"; sourceTree = "<group>"; };
 		0C563F8D5A501643E1CAB339676E2FD4 /* Pods-SnapOnboarding-iOSUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SnapOnboarding-iOSUITests-resources.sh"; sourceTree = "<group>"; };
-		0E5BB5682487CE89B6EAAC205DDFAF25 /* LayerStrokeEndAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayerStrokeEndAnimation.swift; path = Source/LayerStrokeEndAnimation.swift; sourceTree = "<group>"; };
-		14F46765C364D7CA3F74973C8A022C68 /* Animator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Animator.swift; path = Source/Animator.swift; sourceTree = "<group>"; };
 		15F912FD36D9E310B24EF74F1012BABE /* Pods-SnapOnboarding-iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SnapOnboarding-iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		1830DC79DA4E40EF628E37525970A54A /* Pods-SnapOnboarding-iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SnapOnboarding-iOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		1DBF5DB46063155A23F83CB212C01D5E /* Pods-SnapOnboarding-iOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SnapOnboarding-iOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		1FAAC49F37D6933B9D701098A49F43B9 /* ResourceBundle-Fonts-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-Fonts-Info.plist"; sourceTree = "<group>"; };
 		21420C50703EC944D1E55A57D4B42685 /* Pods-SnapOnboarding-iOSTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SnapOnboarding-iOSTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		29EAF16AFC4779332901544C5CD3B099 /* CornerRadiusAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CornerRadiusAnimation.swift; path = Source/CornerRadiusAnimation.swift; sourceTree = "<group>"; };
+		23196A94A5BF44B66D0D3866A48DF3DC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		28D4B088CB04B1889AE6C4FB5056CDD1 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2BFA4018CAC62FB3EAA33D3612D70E7B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2C1F3B17025EF97D957DFA79FFCD47E3 /* Pods-SnapOnboarding-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-SnapOnboarding-iOS.modulemap"; sourceTree = "<group>"; };
-		2C3545B9F370B62F5A57EE49D28DC2AE /* AnimatedPagingScrollViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatedPagingScrollViewController.swift; path = Source/AnimatedPagingScrollViewController.swift; sourceTree = "<group>"; };
-		2DB67DB2070589263560AC489F3B3874 /* RazzleDazzle.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = RazzleDazzle.modulemap; sourceTree = "<group>"; };
+		2FC822E7BABB3AF823C1889CE3292D4E /* SnapFonts-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SnapFonts-iOS-umbrella.h"; sourceTree = "<group>"; };
 		327DA0FA04AC34ACAFB93446E4F28128 /* Pods-SnapOnboarding-iOSUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SnapOnboarding-iOSUITests-umbrella.h"; sourceTree = "<group>"; };
-		34ADE3BAB17EF3771CA7746189C0900B /* ConstraintConstantAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintConstantAnimation.swift; path = Source/ConstraintConstantAnimation.swift; sourceTree = "<group>"; };
-		378A3F40EFF4A8E8F12E1E728A7B6045 /* RazzleDazzle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RazzleDazzle.h; path = Source/RazzleDazzle.h; sourceTree = "<group>"; };
+		35026DBD30D9B539E77600312675CD72 /* GothamRnd-Medium.otf */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; name = "GothamRnd-Medium.otf"; path = "Fonts/GothamRnd-Medium.otf"; sourceTree = "<group>"; };
 		3EDB8856DCA76BC697D4DE5044B0717F /* Pods-SnapOnboarding-iOSTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-SnapOnboarding-iOSTests.modulemap"; sourceTree = "<group>"; };
-		4130581DDAAE23A2242DAF811ADF21A0 /* LayerStrokeColorAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayerStrokeColorAnimation.swift; path = Source/LayerStrokeColorAnimation.swift; sourceTree = "<group>"; };
-		437C85948814E17F0D5F535DF725827D /* AlphaAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AlphaAnimation.swift; path = Source/AlphaAnimation.swift; sourceTree = "<group>"; };
-		43AAE29C73411A7EB0718C3C9365A420 /* RazzleDazzle-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RazzleDazzle-prefix.pch"; sourceTree = "<group>"; };
-		53524E5E10C687B3E4C79FB4840B770C /* Pods_SnapOnboarding_iOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnapOnboarding_iOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		489A0BC6465E3B56F931BB22D57F1DBB /* Fonts.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Fonts.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		535506DB67341334D233DE75CBC381F3 /* Pods-SnapOnboarding-iOS-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SnapOnboarding-iOS-resources.sh"; sourceTree = "<group>"; };
+		594F05B0C72292E3F119B8E4146232C2 /* GothamRnd-MedIta.otf */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; name = "GothamRnd-MedIta.otf"; path = "Fonts/GothamRnd-MedIta.otf"; sourceTree = "<group>"; };
 		5E3DCF72FBBD1C60D200CD895E489C65 /* Pods-SnapOnboarding-iOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SnapOnboarding-iOS-acknowledgements.markdown"; sourceTree = "<group>"; };
-		5E4613EA5BF2EB4BC76CE5C491535EC9 /* RazzleDazzle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RazzleDazzle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5E6FF6A5A0821FA36C213DCA07906FB6 /* Animation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Animation.swift; path = Source/Animation.swift; sourceTree = "<group>"; };
+		619462FD27D99A824FF1A526B143B0A6 /* SnapFonts-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "SnapFonts-iOS.xcconfig"; sourceTree = "<group>"; };
 		6232520C8D0C3CFD2BB5C86511516E09 /* Pods-SnapOnboarding-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SnapOnboarding-iOS-umbrella.h"; sourceTree = "<group>"; };
-		658E224C570A85D586756CEF266CBCDF /* Pods_SnapOnboarding_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnapOnboarding_iOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		670E63541A777BF5CAD55974A88EF380 /* ConstraintMultiplierAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMultiplierAnimation.swift; path = Source/ConstraintMultiplierAnimation.swift; sourceTree = "<group>"; };
 		6992E7AA801B98AC9A07EB1FC8891F35 /* Pods-SnapOnboarding-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SnapOnboarding-iOS.release.xcconfig"; sourceTree = "<group>"; };
-		6C93EF7CBCD9FCAE95EB9CF4FC615983 /* BackgroundColorAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BackgroundColorAnimation.swift; path = Source/BackgroundColorAnimation.swift; sourceTree = "<group>"; };
-		6F365EDD511549869DC48A40001D9A6C /* RotationAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RotationAnimation.swift; path = Source/RotationAnimation.swift; sourceTree = "<group>"; };
+		6E893F5BF362A683E8EB461265195D0E /* SnapFonts-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "SnapFonts-iOS.modulemap"; sourceTree = "<group>"; };
 		6F681771FD21AA5EA34C95F06D75B618 /* Pods-SnapOnboarding-iOSUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-SnapOnboarding-iOSUITests.modulemap"; sourceTree = "<group>"; };
-		73B06113F296D65A525BB39220DEA1E0 /* LayerStrokeStartAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayerStrokeStartAnimation.swift; path = Source/LayerStrokeStartAnimation.swift; sourceTree = "<group>"; };
+		70A08084E8A9B9BF17ABBC38916324C5 /* GothamRnd-BoldIta.otf */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; name = "GothamRnd-BoldIta.otf"; path = "Fonts/GothamRnd-BoldIta.otf"; sourceTree = "<group>"; };
+		70BFE7B073D3BADAB1FD3267C395A2AE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		739487C2CAA6C32C34446BED7C5AAD46 /* SnapFonts_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SnapFonts_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7662E2DD49AFB652371A2DBC49243A52 /* Pods-SnapOnboarding-iOSTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SnapOnboarding-iOSTests-resources.sh"; sourceTree = "<group>"; };
-		87E960114260888ADA964E1C0D57F730 /* TranslationAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TranslationAnimation.swift; path = Source/TranslationAnimation.swift; sourceTree = "<group>"; };
+		7DE3D5DB5D762243F9203D761BDB9255 /* SnapFonts.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SnapFonts.swift; sourceTree = "<group>"; };
+		8028A29F93869E10F2703E7824F74109 /* TTTAttributedLabel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TTTAttributedLabel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8187808E23AC484A928EA8180ABDFC15 /* Pods_SnapOnboarding_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnapOnboarding_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		81BE088BE12675C2748B7E2A7AB4655E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		820C84F146C192B3894CD9029F6C9469 /* TTTAttributedLabel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TTTAttributedLabel-dummy.m"; sourceTree = "<group>"; };
+		83501884FF1B0B9DB8C237042AE6E0F7 /* SnapFonts-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SnapFonts-iOS-prefix.pch"; sourceTree = "<group>"; };
+		8505F65836CD31EB68DCC17C99429736 /* GothamRnd-Bold.otf */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; name = "GothamRnd-Bold.otf"; path = "Fonts/GothamRnd-Bold.otf"; sourceTree = "<group>"; };
+		8A9C65D31ADC9A292EDA408CAE8A92CF /* TTTAttributedLabel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TTTAttributedLabel-prefix.pch"; sourceTree = "<group>"; };
+		8B8DD4DBBBE9814966FA2747B536DC00 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		8C4FF51E67D8A5FC29585D1E14C9AAB2 /* TTTAttributedLabel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TTTAttributedLabel.h; path = TTTAttributedLabel/TTTAttributedLabel.h; sourceTree = "<group>"; };
 		8EBDB0EF9097BB78D97EAF8500443066 /* Pods-SnapOnboarding-iOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SnapOnboarding-iOS-acknowledgements.plist"; sourceTree = "<group>"; };
 		8ECB7A61C90A83CFFADB0F6A5D62EA37 /* Pods-SnapOnboarding-iOSUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SnapOnboarding-iOSUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9570B57657ADDE4152EB8E5E2ECCD42B /* Pods-SnapOnboarding-iOSTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SnapOnboarding-iOSTests-umbrella.h"; sourceTree = "<group>"; };
-		967A1B88CB8B8E2335A42A35DD38E96A /* RazzleDazzle.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RazzleDazzle.xcconfig; sourceTree = "<group>"; };
 		9CD71FB65F61BA1C0EEA2C2F2E2626CB /* Pods-SnapOnboarding-iOSUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SnapOnboarding-iOSUITests-acknowledgements.plist"; sourceTree = "<group>"; };
-		A029034522E0253FA2534C57DC3FF29D /* RazzleDazzle-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "RazzleDazzle-dummy.m"; sourceTree = "<group>"; };
-		A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		A66440B1DAB0E62FA797F268291DD60D /* ScaleAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScaleAnimation.swift; path = Source/ScaleAnimation.swift; sourceTree = "<group>"; };
+		9D9E53A7DB96A9CC4B23AB9E9161415C /* TTTAttributedLabel.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = TTTAttributedLabel.modulemap; sourceTree = "<group>"; };
 		A93C315A6478F88D44B475700D53FA80 /* Pods-SnapOnboarding-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SnapOnboarding-iOS.debug.xcconfig"; sourceTree = "<group>"; };
-		AB047040C887B62BA3FA4909BEDEEED6 /* EasingFunction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EasingFunction.swift; path = Source/EasingFunction.swift; sourceTree = "<group>"; };
-		AB763D78C897C76888E1B8F0E453465E /* UIView+Transform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Transform.swift"; path = "Source/UIView+Transform.swift"; sourceTree = "<group>"; };
+		A9608333D9351E89388F38649B8A5543 /* GothamRnd-BookIta.otf */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; name = "GothamRnd-BookIta.otf"; path = "Fonts/GothamRnd-BookIta.otf"; sourceTree = "<group>"; };
+		B2C3D9E0306DBCB570DA90B068EBDA46 /* GothamRnd-Book.otf */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; name = "GothamRnd-Book.otf"; path = "Fonts/GothamRnd-Book.otf"; sourceTree = "<group>"; };
+		B48245C887772E4ABD49C0279B7F64CC /* TTTAttributedLabel-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TTTAttributedLabel-umbrella.h"; sourceTree = "<group>"; };
 		B89D37C6F40617F909BA47826BE4BF3E /* Pods-SnapOnboarding-iOSUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SnapOnboarding-iOSUITests-dummy.m"; sourceTree = "<group>"; };
-		B8BC1127EFC676E7E0415F48E6F26029 /* Animatable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Animatable.swift; path = Source/Animatable.swift; sourceTree = "<group>"; };
-		B90A0563E2BF3ED8E85909F6B1C0DBAC /* CubicBezier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CubicBezier.swift; path = Source/CubicBezier.swift; sourceTree = "<group>"; };
-		C185574CC645B209ACB1667BEF808758 /* RazzleDazzle-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RazzleDazzle-umbrella.h"; sourceTree = "<group>"; };
 		C24C57B03AABAD0D22A8487B9CEBCA74 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C2C52B0B1D474BD55C03D8C5094C17F8 /* Interpolatable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Interpolatable.swift; path = Source/Interpolatable.swift; sourceTree = "<group>"; };
-		C3F956E83235D43D36E3FF51F945F632 /* PathPositionAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PathPositionAnimation.swift; path = Source/PathPositionAnimation.swift; sourceTree = "<group>"; };
-		C4D490D8724838EBFA9D6AB8CA098B14 /* HideAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HideAnimation.swift; path = Source/HideAnimation.swift; sourceTree = "<group>"; };
-		C9164EB3560986DCABB06708A3619748 /* LabelTextColorAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LabelTextColorAnimation.swift; path = Source/LabelTextColorAnimation.swift; sourceTree = "<group>"; };
-		CC0ADD3E9408E1C782C31E57127A4620 /* ScrollViewPageConstraintAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScrollViewPageConstraintAnimation.swift; path = Source/ScrollViewPageConstraintAnimation.swift; sourceTree = "<group>"; };
+		C9C5238C047D4633B200A0062755070F /* TTTAttributedLabel.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TTTAttributedLabel.xcconfig; sourceTree = "<group>"; };
+		D09851D410D270E17624C9D158FB65E2 /* Pods_SnapOnboarding_iOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnapOnboarding_iOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3F33CF2869ED3D30867A563CC5889A4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D7A29E0028FC04F24CB6B00BD20B466C /* Pods-SnapOnboarding-iOSTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SnapOnboarding-iOSTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		DEF8B1BE739ADF27D1833670BB1EF31B /* Pods-SnapOnboarding-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SnapOnboarding-iOS-dummy.m"; sourceTree = "<group>"; };
 		E1C83D93DF0EA5B690B3DA6ACC2EA017 /* Pods-SnapOnboarding-iOSTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SnapOnboarding-iOSTests-frameworks.sh"; sourceTree = "<group>"; };
 		E48A5AE643D2A10188CFEAECC80FD03C /* Pods-SnapOnboarding-iOSUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SnapOnboarding-iOSUITests-frameworks.sh"; sourceTree = "<group>"; };
 		E75C4141C940C6C288179AA3A2630D8F /* Pods-SnapOnboarding-iOSTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SnapOnboarding-iOSTests-dummy.m"; sourceTree = "<group>"; };
-		E86668F20F252C440D1015B816BE59C5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		EFC516B7BAC421F3724CD84BD8840EF0 /* Filmstrip.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Filmstrip.swift; path = Source/Filmstrip.swift; sourceTree = "<group>"; };
-		F1590167B0CDF02945EC0F68CBE8C221 /* LayerFillColorAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayerFillColorAnimation.swift; path = Source/LayerFillColorAnimation.swift; sourceTree = "<group>"; };
+		E92625FC4D0B469B2D328819C1B1D04D /* SnapFonts-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SnapFonts-iOS-dummy.m"; sourceTree = "<group>"; };
+		EC5797549D468BECB4491D17C7469579 /* Pods_SnapOnboarding_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnapOnboarding_iOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F315062572ECA8A32A8EF40433004C04 /* Pods-SnapOnboarding-iOS-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SnapOnboarding-iOS-frameworks.sh"; sourceTree = "<group>"; };
-		F8AFC8DDDE0351D0A43BFD06AA209882 /* Pods_SnapOnboarding_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnapOnboarding_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F408D1E8A61DA521CEA459A8269845F4 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/CoreText.framework; sourceTree = DEVELOPER_DIR; };
+		F51D128FFD44FF5954D0916E9CC6C014 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC3EA683238620C72B0417E25854F764 /* Pods-SnapOnboarding-iOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SnapOnboarding-iOSUITests.release.xcconfig"; sourceTree = "<group>"; };
+		FD165A86B541A151668F289CAB5FFE85 /* GothamRnd-Light.otf */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; name = "GothamRnd-Light.otf"; path = "Fonts/GothamRnd-Light.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		0180987E07B5A38422DCB0622925FB34 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FD552075D0A10626DB05827F9D468817 /* Foundation.framework in Frameworks */,
-				AC0F3CFAE90A1572C39C115EE6196BCE /* UIKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		28C0017CB16D34734510642E8D6F12BE /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				45F4C0C411F25E4CE9E39B9C018E5C4A /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		2C021F300826E42D65436CDBD715227D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -156,11 +143,47 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2EFD474DDAEE63CB51C307B017F3EACB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5D2E864A4D7CBED9DDB468FC4A10694 /* Foundation.framework in Frameworks */,
+				6A566F46141568C41472A044FD795561 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49C9DD95230E37105349645C41333106 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				525D3B78A8FC64E16A2627D2316CBCD9 /* CoreGraphics.framework in Frameworks */,
+				BB921578BE5FBF25AAE2521E5131904F /* CoreText.framework in Frameworks */,
+				BC6145D24E246402F771682031DDD613 /* Foundation.framework in Frameworks */,
+				41928D7C7F7F9509D149E72297371441 /* QuartzCore.framework in Frameworks */,
+				88F1A1E9DAEEB3C09E184C91D1BD6F14 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4EE29B3D5F1C1D6D4F2EFC52D9D1992C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				404E912E167B1D11D28260C458031BED /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8FA35243CC3718391DF695FC2503990F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCFE40AC6B2F6706348FEBF58D95ADC9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				750D712C24083E7C803463A37F40D583 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,65 +200,80 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		3DE93085C7A7195F2FC7B5A037B09EA4 /* RazzleDazzle */ = {
+		20B56609144CE204DFA8221F742B2D76 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				437C85948814E17F0D5F535DF725827D /* AlphaAnimation.swift */,
-				B8BC1127EFC676E7E0415F48E6F26029 /* Animatable.swift */,
-				2C3545B9F370B62F5A57EE49D28DC2AE /* AnimatedPagingScrollViewController.swift */,
-				5E6FF6A5A0821FA36C213DCA07906FB6 /* Animation.swift */,
-				14F46765C364D7CA3F74973C8A022C68 /* Animator.swift */,
-				6C93EF7CBCD9FCAE95EB9CF4FC615983 /* BackgroundColorAnimation.swift */,
-				34ADE3BAB17EF3771CA7746189C0900B /* ConstraintConstantAnimation.swift */,
-				670E63541A777BF5CAD55974A88EF380 /* ConstraintMultiplierAnimation.swift */,
-				29EAF16AFC4779332901544C5CD3B099 /* CornerRadiusAnimation.swift */,
-				B90A0563E2BF3ED8E85909F6B1C0DBAC /* CubicBezier.swift */,
-				AB047040C887B62BA3FA4909BEDEEED6 /* EasingFunction.swift */,
-				EFC516B7BAC421F3724CD84BD8840EF0 /* Filmstrip.swift */,
-				C4D490D8724838EBFA9D6AB8CA098B14 /* HideAnimation.swift */,
-				C2C52B0B1D474BD55C03D8C5094C17F8 /* Interpolatable.swift */,
-				C9164EB3560986DCABB06708A3619748 /* LabelTextColorAnimation.swift */,
-				F1590167B0CDF02945EC0F68CBE8C221 /* LayerFillColorAnimation.swift */,
-				4130581DDAAE23A2242DAF811ADF21A0 /* LayerStrokeColorAnimation.swift */,
-				0E5BB5682487CE89B6EAAC205DDFAF25 /* LayerStrokeEndAnimation.swift */,
-				73B06113F296D65A525BB39220DEA1E0 /* LayerStrokeStartAnimation.swift */,
-				C3F956E83235D43D36E3FF51F945F632 /* PathPositionAnimation.swift */,
-				378A3F40EFF4A8E8F12E1E728A7B6045 /* RazzleDazzle.h */,
-				6F365EDD511549869DC48A40001D9A6C /* RotationAnimation.swift */,
-				A66440B1DAB0E62FA797F268291DD60D /* ScaleAnimation.swift */,
-				CC0ADD3E9408E1C782C31E57127A4620 /* ScrollViewPageConstraintAnimation.swift */,
-				87E960114260888ADA964E1C0D57F730 /* TranslationAnimation.swift */,
-				AB763D78C897C76888E1B8F0E453465E /* UIView+Transform.swift */,
-				9CAC7EF160FCB234AD0846E70EF26C0F /* Support Files */,
-			);
-			path = RazzleDazzle;
-			sourceTree = "<group>";
-		};
-		41A014BF58D3A2A5B3F655A0C80A3A3C /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				3DE93085C7A7195F2FC7B5A037B09EA4 /* RazzleDazzle */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				F302CD3B306AF1ED96B9AF31FCDBC26C /* iOS */,
+				98D8E1B8E5425B55732206F84F22DEC1 /* iOS */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2CE286315465FC33F886A6E55923AD52 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8505F65836CD31EB68DCC17C99429736 /* GothamRnd-Bold.otf */,
+				70A08084E8A9B9BF17ABBC38916324C5 /* GothamRnd-BoldIta.otf */,
+				B2C3D9E0306DBCB570DA90B068EBDA46 /* GothamRnd-Book.otf */,
+				A9608333D9351E89388F38649B8A5543 /* GothamRnd-BookIta.otf */,
+				FD165A86B541A151668F289CAB5FFE85 /* GothamRnd-Light.otf */,
+				083BA1D25695AC1CD4061B55EAEBF340 /* GothamRnd-LightIta.otf */,
+				594F05B0C72292E3F119B8E4146232C2 /* GothamRnd-MedIta.otf */,
+				35026DBD30D9B539E77600312675CD72 /* GothamRnd-Medium.otf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		4A39037566989A70F89E45D6308B06B6 /* SnapFonts-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				7DE3D5DB5D762243F9203D761BDB9255 /* SnapFonts.swift */,
+				2CE286315465FC33F886A6E55923AD52 /* Resources */,
+				A66740594CA53A7E8211F3508DE784AD /* Support Files */,
+			);
+			path = "SnapFonts-iOS";
+			sourceTree = "<group>";
+		};
+		650575766706C1FE17AEF017F77F5151 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				489A0BC6465E3B56F931BB22D57F1DBB /* Fonts.bundle */,
+				8187808E23AC484A928EA8180ABDFC15 /* Pods_SnapOnboarding_iOS.framework */,
+				EC5797549D468BECB4491D17C7469579 /* Pods_SnapOnboarding_iOSTests.framework */,
+				D09851D410D270E17624C9D158FB65E2 /* Pods_SnapOnboarding_iOSUITests.framework */,
+				739487C2CAA6C32C34446BED7C5AAD46 /* SnapFonts_iOS.framework */,
+				8028A29F93869E10F2703E7824F74109 /* TTTAttributedLabel.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		71795F9A493818B2C29E2010B468F35F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4A39037566989A70F89E45D6308B06B6 /* SnapFonts-iOS */,
+				85142345E6DB18C26F3E933FFDF7A7BC /* TTTAttributedLabel */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
-				41A014BF58D3A2A5B3F655A0C80A3A3C /* Pods */,
-				B9EAA71AC873D3ECB7F845F7994449F8 /* Products */,
+				20B56609144CE204DFA8221F742B2D76 /* Frameworks */,
+				71795F9A493818B2C29E2010B468F35F /* Pods */,
+				650575766706C1FE17AEF017F77F5151 /* Products */,
 				07520B1097649AA8146B3674A6B152FB /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		85142345E6DB18C26F3E933FFDF7A7BC /* TTTAttributedLabel */ = {
+			isa = PBXGroup;
+			children = (
+				8C4FF51E67D8A5FC29585D1E14C9AAB2 /* TTTAttributedLabel.h */,
+				02C5CC3D8EA7A2F685F71DD0C553EEDF /* TTTAttributedLabel.m */,
+				AC889EFE8F34EBBFD0FB53188016F467 /* Support Files */,
+			);
+			path = TTTAttributedLabel;
 			sourceTree = "<group>";
 		};
 		8A959C80B376E6766B8B3CE066FF2F9E /* Pods-SnapOnboarding-iOS */ = {
@@ -256,18 +294,45 @@
 			path = "Target Support Files/Pods-SnapOnboarding-iOS";
 			sourceTree = "<group>";
 		};
-		9CAC7EF160FCB234AD0846E70EF26C0F /* Support Files */ = {
+		98D8E1B8E5425B55732206F84F22DEC1 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				0BB0266A7E6BAD28B2AE7706C48D44F4 /* Info.plist */,
-				2DB67DB2070589263560AC489F3B3874 /* RazzleDazzle.modulemap */,
-				967A1B88CB8B8E2335A42A35DD38E96A /* RazzleDazzle.xcconfig */,
-				A029034522E0253FA2534C57DC3FF29D /* RazzleDazzle-dummy.m */,
-				43AAE29C73411A7EB0718C3C9365A420 /* RazzleDazzle-prefix.pch */,
-				C185574CC645B209ACB1667BEF808758 /* RazzleDazzle-umbrella.h */,
+				81BE088BE12675C2748B7E2A7AB4655E /* CoreGraphics.framework */,
+				F408D1E8A61DA521CEA459A8269845F4 /* CoreText.framework */,
+				23196A94A5BF44B66D0D3866A48DF3DC /* Foundation.framework */,
+				8B8DD4DBBBE9814966FA2747B536DC00 /* QuartzCore.framework */,
+				70BFE7B073D3BADAB1FD3267C395A2AE /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		A66740594CA53A7E8211F3508DE784AD /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F51D128FFD44FF5954D0916E9CC6C014 /* Info.plist */,
+				1FAAC49F37D6933B9D701098A49F43B9 /* ResourceBundle-Fonts-Info.plist */,
+				6E893F5BF362A683E8EB461265195D0E /* SnapFonts-iOS.modulemap */,
+				619462FD27D99A824FF1A526B143B0A6 /* SnapFonts-iOS.xcconfig */,
+				E92625FC4D0B469B2D328819C1B1D04D /* SnapFonts-iOS-dummy.m */,
+				83501884FF1B0B9DB8C237042AE6E0F7 /* SnapFonts-iOS-prefix.pch */,
+				2FC822E7BABB3AF823C1889CE3292D4E /* SnapFonts-iOS-umbrella.h */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/RazzleDazzle";
+			path = "../Target Support Files/SnapFonts-iOS";
+			sourceTree = "<group>";
+		};
+		AC889EFE8F34EBBFD0FB53188016F467 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				28D4B088CB04B1889AE6C4FB5056CDD1 /* Info.plist */,
+				9D9E53A7DB96A9CC4B23AB9E9161415C /* TTTAttributedLabel.modulemap */,
+				C9C5238C047D4633B200A0062755070F /* TTTAttributedLabel.xcconfig */,
+				820C84F146C192B3894CD9029F6C9469 /* TTTAttributedLabel-dummy.m */,
+				8A9C65D31ADC9A292EDA408CAE8A92CF /* TTTAttributedLabel-prefix.pch */,
+				B48245C887772E4ABD49C0279B7F64CC /* TTTAttributedLabel-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/TTTAttributedLabel";
 			sourceTree = "<group>";
 		};
 		B7AB3A11E573DCF4C86419F9F618C09A /* Pods-SnapOnboarding-iOSTests */ = {
@@ -288,17 +353,6 @@
 			path = "Target Support Files/Pods-SnapOnboarding-iOSTests";
 			sourceTree = "<group>";
 		};
-		B9EAA71AC873D3ECB7F845F7994449F8 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				F8AFC8DDDE0351D0A43BFD06AA209882 /* Pods_SnapOnboarding_iOS.framework */,
-				658E224C570A85D586756CEF266CBCDF /* Pods_SnapOnboarding_iOSTests.framework */,
-				53524E5E10C687B3E4C79FB4840B770C /* Pods_SnapOnboarding_iOSUITests.framework */,
-				5E4613EA5BF2EB4BC76CE5C491535EC9 /* RazzleDazzle.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		E2DEC4DF5F12DB36E3604AB650D2E00E /* Pods-SnapOnboarding-iOSUITests */ = {
 			isa = PBXGroup;
 			children = (
@@ -317,23 +371,14 @@
 			path = "Target Support Files/Pods-SnapOnboarding-iOSUITests";
 			sourceTree = "<group>";
 		};
-		F302CD3B306AF1ED96B9AF31FCDBC26C /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */,
-				E86668F20F252C440D1015B816BE59C5 /* UIKit.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		256240BAF3FA71FBE2C8847422C5CE81 /* Headers */ = {
+		0E0C46DEEA1FFC3854702AA2E3D58527 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0CCE7C5582F4F23E71D828CCDF7ACDA3 /* Pods-SnapOnboarding-iOS-umbrella.h in Headers */,
+				BF9B501B8BCDFE04FC6C724BE25757E3 /* SnapFonts-iOS-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,12 +390,12 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A9BD3E84223564EE4E4F2FF8263E1F62 /* Headers */ = {
+		795C764D6176D5E6BF6457E79946C1DE /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				44B25C167083E9104AFEEF8BC747812F /* RazzleDazzle-umbrella.h in Headers */,
-				EBE384574322340962FFA5AACCCF6C8B /* RazzleDazzle.h in Headers */,
+				84C47D6AD0B7E31F4ADF2EB536FA17CD /* TTTAttributedLabel-umbrella.h in Headers */,
+				2F15447A06ACE93383B47CB84460A44B /* TTTAttributedLabel.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,43 +407,69 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EFFAAA746B0021B4A8ECD9F739DED147 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C0E2CC59D31A131E152F24B82436D31 /* Pods-SnapOnboarding-iOS-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		4E0203A03E5B45D1C9902B04A2FE16D9 /* RazzleDazzle */ = {
+		13C0CF18AE723C3BEB78D6770F312A0A /* TTTAttributedLabel */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6788BDC0F02358A352CAA6B116D5F06F /* Build configuration list for PBXNativeTarget "RazzleDazzle" */;
+			buildConfigurationList = 4C5BFAD7D3794F7D3A49FC5CB173880A /* Build configuration list for PBXNativeTarget "TTTAttributedLabel" */;
 			buildPhases = (
-				B0C502E00DF096496763A83A737BD99A /* Sources */,
-				0180987E07B5A38422DCB0622925FB34 /* Frameworks */,
-				A9BD3E84223564EE4E4F2FF8263E1F62 /* Headers */,
+				9D9519E82A4AF099560D1E60EBB738E8 /* Sources */,
+				49C9DD95230E37105349645C41333106 /* Frameworks */,
+				795C764D6176D5E6BF6457E79946C1DE /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = RazzleDazzle;
-			productName = RazzleDazzle;
-			productReference = 5E4613EA5BF2EB4BC76CE5C491535EC9 /* RazzleDazzle.framework */;
+			name = TTTAttributedLabel;
+			productName = TTTAttributedLabel;
+			productReference = 8028A29F93869E10F2703E7824F74109 /* TTTAttributedLabel.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		55024ED9C07DBA8AEFA1597FA06A2183 /* Pods-SnapOnboarding-iOS */ = {
+		1697B4433E1C9216785435805FAAFEE6 /* SnapFonts-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 96455BD29A8AD3EA6B56AD8954B34CD2 /* Build configuration list for PBXNativeTarget "Pods-SnapOnboarding-iOS" */;
+			buildConfigurationList = 1E71D73730DD9DFDECBA792FCFFFF44F /* Build configuration list for PBXNativeTarget "SnapFonts-iOS" */;
 			buildPhases = (
-				1CCA560DE0AB0256DBB5EB31E2668BD1 /* Sources */,
-				28C0017CB16D34734510642E8D6F12BE /* Frameworks */,
-				256240BAF3FA71FBE2C8847422C5CE81 /* Headers */,
+				6B9FC97E50BC96A2E8BB963B0E0B55D0 /* Sources */,
+				2EFD474DDAEE63CB51C307B017F3EACB /* Frameworks */,
+				FDD0288E6A3DFFBB8F1EE6A263CDB66E /* Resources */,
+				0E0C46DEEA1FFC3854702AA2E3D58527 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				389AF1437A5FABD2710D7592B46A07AD /* PBXTargetDependency */,
+				E2C976CB8521EC2DC394C6BD2038896D /* PBXTargetDependency */,
 			);
-			name = "Pods-SnapOnboarding-iOS";
-			productName = "Pods-SnapOnboarding-iOS";
-			productReference = F8AFC8DDDE0351D0A43BFD06AA209882 /* Pods_SnapOnboarding_iOS.framework */;
+			name = "SnapFonts-iOS";
+			productName = "SnapFonts-iOS";
+			productReference = 739487C2CAA6C32C34446BED7C5AAD46 /* SnapFonts_iOS.framework */;
 			productType = "com.apple.product-type.framework";
+		};
+		58D6E536573AAD2D8DCF1911F8071A09 /* SnapFonts-iOS-Fonts */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5BBA83859EE9AA3D16F39C866DC158C /* Build configuration list for PBXNativeTarget "SnapFonts-iOS-Fonts" */;
+			buildPhases = (
+				CBCAF6AC3BA5F372BB56D5F4F33075AB /* Sources */,
+				8FA35243CC3718391DF695FC2503990F /* Frameworks */,
+				B2A1774F0C5669B497BBB60DADE2C347 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SnapFonts-iOS-Fonts";
+			productName = "SnapFonts-iOS-Fonts";
+			productReference = 489A0BC6465E3B56F931BB22D57F1DBB /* Fonts.bundle */;
+			productType = "com.apple.product-type.bundle";
 		};
 		C0A5EE3F13B1BDFDF6FE4630C4803C37 /* Pods-SnapOnboarding-iOSUITests */ = {
 			isa = PBXNativeTarget;
@@ -414,7 +485,26 @@
 			);
 			name = "Pods-SnapOnboarding-iOSUITests";
 			productName = "Pods-SnapOnboarding-iOSUITests";
-			productReference = 53524E5E10C687B3E4C79FB4840B770C /* Pods_SnapOnboarding_iOSUITests.framework */;
+			productReference = D09851D410D270E17624C9D158FB65E2 /* Pods_SnapOnboarding_iOSUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		CE7C085E91C734B3E0CDB975E11CED18 /* Pods-SnapOnboarding-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7DA2B371150D3AD16E24F8B121D1BD39 /* Build configuration list for PBXNativeTarget "Pods-SnapOnboarding-iOS" */;
+			buildPhases = (
+				05487F02975D9F8A9F36E1379AA9A707 /* Sources */,
+				DCFE40AC6B2F6706348FEBF58D95ADC9 /* Frameworks */,
+				EFFAAA746B0021B4A8ECD9F739DED147 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AF0CB1B924433F7FF2DE4D60C3C1A7D3 /* PBXTargetDependency */,
+				BF94FE8805FF1A358F6ECDE66EE570C0 /* PBXTargetDependency */,
+			);
+			name = "Pods-SnapOnboarding-iOS";
+			productName = "Pods-SnapOnboarding-iOS";
+			productReference = 8187808E23AC484A928EA8180ABDFC15 /* Pods_SnapOnboarding_iOS.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		F61BAFF331AE8B40B7B2A1616A19A32F /* Pods-SnapOnboarding-iOSTests */ = {
@@ -431,7 +521,7 @@
 			);
 			name = "Pods-SnapOnboarding-iOSTests";
 			productName = "Pods-SnapOnboarding-iOSTests";
-			productReference = 658E224C570A85D586756CEF266CBCDF /* Pods_SnapOnboarding_iOSTests.framework */;
+			productReference = EC5797549D468BECB4491D17C7469579 /* Pods_SnapOnboarding_iOSTests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -451,24 +541,61 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = B9EAA71AC873D3ECB7F845F7994449F8 /* Products */;
+			productRefGroup = 650575766706C1FE17AEF017F77F5151 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				55024ED9C07DBA8AEFA1597FA06A2183 /* Pods-SnapOnboarding-iOS */,
+				CE7C085E91C734B3E0CDB975E11CED18 /* Pods-SnapOnboarding-iOS */,
 				F61BAFF331AE8B40B7B2A1616A19A32F /* Pods-SnapOnboarding-iOSTests */,
 				C0A5EE3F13B1BDFDF6FE4630C4803C37 /* Pods-SnapOnboarding-iOSUITests */,
-				4E0203A03E5B45D1C9902B04A2FE16D9 /* RazzleDazzle */,
+				1697B4433E1C9216785435805FAAFEE6 /* SnapFonts-iOS */,
+				58D6E536573AAD2D8DCF1911F8071A09 /* SnapFonts-iOS-Fonts */,
+				13C0CF18AE723C3BEB78D6770F312A0A /* TTTAttributedLabel */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		B2A1774F0C5669B497BBB60DADE2C347 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06A72D07EEDDF085A1DC0585788839EC /* GothamRnd-Bold.otf in Resources */,
+				BB443C7DCCBD4F26ED28C59180E4CEA6 /* GothamRnd-BoldIta.otf in Resources */,
+				B17DABD831513F51DCD75A75A55EB154 /* GothamRnd-Book.otf in Resources */,
+				7C5823A841F1572FF5F7A811F11E3773 /* GothamRnd-BookIta.otf in Resources */,
+				4F37CEA8E6296353C083723657C0FD78 /* GothamRnd-Light.otf in Resources */,
+				6BC19B0394C5189A1CEB1F134F2EEEFD /* GothamRnd-LightIta.otf in Resources */,
+				9627B1F35807C5196265B84FDB0D65D5 /* GothamRnd-MedIta.otf in Resources */,
+				BBDF64A5AC09E8A0712A8CB402CFD167 /* GothamRnd-Medium.otf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDD0288E6A3DFFBB8F1EE6A263CDB66E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EEE2AC21F5B26D0A481D8EDF830199CB /* Fonts.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		1CCA560DE0AB0256DBB5EB31E2668BD1 /* Sources */ = {
+		05487F02975D9F8A9F36E1379AA9A707 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4103518FA05B001CCFD56F704898CCDF /* Pods-SnapOnboarding-iOS-dummy.m in Sources */,
+				0D35952D18C3BFF5B453A765D7F8A02D /* Pods-SnapOnboarding-iOS-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B9FC97E50BC96A2E8BB963B0E0B55D0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E81EC233F987AA9C572B3DF769E2C422 /* SnapFonts-iOS-dummy.m in Sources */,
+				0EB27D5AFE3DD689DCBE14CEFAFC6292 /* SnapFonts.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,36 +607,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B0C502E00DF096496763A83A737BD99A /* Sources */ = {
+		9D9519E82A4AF099560D1E60EBB738E8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A14A0BB35E175AE06B30DD4A7FD0C4CF /* AlphaAnimation.swift in Sources */,
-				7CAB3934C79E13014BE6024E7B5EF8C4 /* Animatable.swift in Sources */,
-				BA108DD55CBE30346B2AD8DA2316BD6F /* AnimatedPagingScrollViewController.swift in Sources */,
-				3A9951278251E168F9E969DC0AF264C1 /* Animation.swift in Sources */,
-				36EEF055AED59F278E9EE426F832F3B0 /* Animator.swift in Sources */,
-				B3BB22C25B8B01B782C2BE7136458BCC /* BackgroundColorAnimation.swift in Sources */,
-				0815F073B1CAA0031CCD7F7DCF155BB7 /* ConstraintConstantAnimation.swift in Sources */,
-				0839BF38CE7F3DB2FFDF47B6FB5DBE53 /* ConstraintMultiplierAnimation.swift in Sources */,
-				00DA94579B5791A05859BBEF8E0C3236 /* CornerRadiusAnimation.swift in Sources */,
-				D5E6042B3ABB5BF6E32054D2969919D2 /* CubicBezier.swift in Sources */,
-				95D8BEC2525FD1CF79C957359A804544 /* EasingFunction.swift in Sources */,
-				51B4E36B582EE100A2E1EDC7935522F8 /* Filmstrip.swift in Sources */,
-				DAAED7C42528398C807191BB0926E922 /* HideAnimation.swift in Sources */,
-				8E13FD4A195A2D9A5A0EFAA66704AC02 /* Interpolatable.swift in Sources */,
-				CF205F0B04EAF03093166FC7061ECD01 /* LabelTextColorAnimation.swift in Sources */,
-				480E91CB774366B96D86B9B74426CE64 /* LayerFillColorAnimation.swift in Sources */,
-				023354ED4503926EAE596A2549D38C6B /* LayerStrokeColorAnimation.swift in Sources */,
-				7269F97EA60649E8DA920CCF082F3AAF /* LayerStrokeEndAnimation.swift in Sources */,
-				AF190C4B36A9B952F5C3D3B0C2BD9A55 /* LayerStrokeStartAnimation.swift in Sources */,
-				405A15BE05E199FB0703C92BE2B7F5AD /* PathPositionAnimation.swift in Sources */,
-				D4DA2064E498B191C49BFDD2A683F588 /* RazzleDazzle-dummy.m in Sources */,
-				5FFC8BF850762CE1B14DC015826F0386 /* RotationAnimation.swift in Sources */,
-				653A55D4DA3430CDA1DD3DF71AD22EDE /* ScaleAnimation.swift in Sources */,
-				80B225223EFACA3FEFFAC9E212BA21A9 /* ScrollViewPageConstraintAnimation.swift in Sources */,
-				B5E5037F59C2C0AB2836A0063F196451 /* TranslationAnimation.swift in Sources */,
-				43FEE37AE696950687038CB4C2E55FEB /* UIView+Transform.swift in Sources */,
+				55BEB9087CEF1F3893197E94798665EF /* TTTAttributedLabel-dummy.m in Sources */,
+				CB6C17FFC356B9D57188184563866555 /* TTTAttributedLabel.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBCAF6AC3BA5F372BB56D5F4F33075AB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -524,15 +634,56 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		389AF1437A5FABD2710D7592B46A07AD /* PBXTargetDependency */ = {
+		AF0CB1B924433F7FF2DE4D60C3C1A7D3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = RazzleDazzle;
-			target = 4E0203A03E5B45D1C9902B04A2FE16D9 /* RazzleDazzle */;
-			targetProxy = B53AD5D2FBEF0CA129B3CAABA7AB81E5 /* PBXContainerItemProxy */;
+			name = "SnapFonts-iOS";
+			target = 1697B4433E1C9216785435805FAAFEE6 /* SnapFonts-iOS */;
+			targetProxy = 7604849F9CB3434ADC9A2D30C04C8980 /* PBXContainerItemProxy */;
+		};
+		BF94FE8805FF1A358F6ECDE66EE570C0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TTTAttributedLabel;
+			target = 13C0CF18AE723C3BEB78D6770F312A0A /* TTTAttributedLabel */;
+			targetProxy = EDE97DDF766E4BA023BBF6C4AF3ADC6F /* PBXContainerItemProxy */;
+		};
+		E2C976CB8521EC2DC394C6BD2038896D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "SnapFonts-iOS-Fonts";
+			target = 58D6E536573AAD2D8DCF1911F8071A09 /* SnapFonts-iOS-Fonts */;
+			targetProxy = 8145D522DDBE851608533C32620D4C27 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		1F9EEB59B3FF94EDE5468783840223A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C9C5238C047D4633B200A0062755070F /* TTTAttributedLabel.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/TTTAttributedLabel/TTTAttributedLabel-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TTTAttributedLabel/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/TTTAttributedLabel/TTTAttributedLabel.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = TTTAttributedLabel;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		23E82BB0E5A26AD5EC9A7CAF10E4DE05 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FC3EA683238620C72B0417E25854F764 /* Pods-SnapOnboarding-iOSUITests.release.xcconfig */;
@@ -558,6 +709,35 @@
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = Pods_SnapOnboarding_iOSUITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		3675D71C10C3A1B1B157B12CAD7E96FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 619462FD27D99A824FF1A526B143B0A6 /* SnapFonts-iOS.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SnapFonts-iOS/SnapFonts-iOS-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SnapFonts-iOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SnapFonts-iOS/SnapFonts-iOS.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SnapFonts_iOS;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -608,6 +788,40 @@
 			};
 			name = Debug;
 		};
+		68242C468FBDA64A0B63C3B6FBFA9A77 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A93C315A6478F88D44B475700D53FA80 /* Pods-SnapOnboarding-iOS.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-SnapOnboarding-iOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SnapOnboarding-iOS/Pods-SnapOnboarding-iOS.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_SnapOnboarding_iOS;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		6F7C75EBA475678B620399F21FB99669 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1DBF5DB46063155A23F83CB212C01D5E /* Pods-SnapOnboarding-iOSUITests.debug.xcconfig */;
@@ -635,6 +849,53 @@
 				PRODUCT_NAME = Pods_SnapOnboarding_iOSUITests;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		70C59761474A6CEE02D65A2BFD02B16F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 619462FD27D99A824FF1A526B143B0A6 /* SnapFonts-iOS.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/SnapFonts-iOS";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/SnapFonts-iOS/ResourceBundle-Fonts-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = Fonts;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		74C9C3E3772761D60C56E57450F1443E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 619462FD27D99A824FF1A526B143B0A6 /* SnapFonts-iOS.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SnapFonts-iOS/SnapFonts-iOS-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SnapFonts-iOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SnapFonts-iOS/SnapFonts-iOS.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SnapFonts_iOS;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -707,6 +968,35 @@
 			};
 			name = Debug;
 		};
+		A7FF695FDE5DD2605671496B1458BEC8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C9C5238C047D4633B200A0062755070F /* TTTAttributedLabel.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/TTTAttributedLabel/TTTAttributedLabel-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TTTAttributedLabel/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/TTTAttributedLabel/TTTAttributedLabel.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = TTTAttributedLabel;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		AAF678CED40D3499169D10F63CA0719E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -745,7 +1035,24 @@
 			};
 			name = Release;
 		};
-		CE68B81C5366D8B2CBF9044AE376C536 /* Release */ = {
+		C840D3912AF610247F5A6B78CE96F7C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 619462FD27D99A824FF1A526B143B0A6 /* SnapFonts-iOS.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/SnapFonts-iOS";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/SnapFonts-iOS/ResourceBundle-Fonts-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = Fonts;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		CDF64B93A34731BB84E784A512AB5641 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6992E7AA801B98AC9A07EB1FC8891F35 /* Pods-SnapOnboarding-iOS.release.xcconfig */;
 			buildSettings = {
@@ -778,99 +1085,6 @@
 			};
 			name = Release;
 		};
-		D74E2A0CD3E4C094753603D90FE5FE87 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A93C315A6478F88D44B475700D53FA80 /* Pods-SnapOnboarding-iOS.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-SnapOnboarding-iOS/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-SnapOnboarding-iOS/Pods-SnapOnboarding-iOS.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_SnapOnboarding_iOS;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		E708A9F699DB68BE5FD49210420BBE39 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 967A1B88CB8B8E2335A42A35DD38E96A /* RazzleDazzle.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/RazzleDazzle/RazzleDazzle-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/RazzleDazzle/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/RazzleDazzle/RazzleDazzle.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = RazzleDazzle;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		F8FE53152051576C8822E32A11B58DBA /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 967A1B88CB8B8E2335A42A35DD38E96A /* RazzleDazzle.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/RazzleDazzle/RazzleDazzle-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/RazzleDazzle/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/RazzleDazzle/RazzleDazzle.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = RazzleDazzle;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -892,6 +1106,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		1E71D73730DD9DFDECBA792FCFFFF44F /* Build configuration list for PBXNativeTarget "SnapFonts-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74C9C3E3772761D60C56E57450F1443E /* Debug */,
+				3675D71C10C3A1B1B157B12CAD7E96FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -901,20 +1124,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6788BDC0F02358A352CAA6B116D5F06F /* Build configuration list for PBXNativeTarget "RazzleDazzle" */ = {
+		4C5BFAD7D3794F7D3A49FC5CB173880A /* Build configuration list for PBXNativeTarget "TTTAttributedLabel" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E708A9F699DB68BE5FD49210420BBE39 /* Debug */,
-				F8FE53152051576C8822E32A11B58DBA /* Release */,
+				1F9EEB59B3FF94EDE5468783840223A5 /* Debug */,
+				A7FF695FDE5DD2605671496B1458BEC8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		96455BD29A8AD3EA6B56AD8954B34CD2 /* Build configuration list for PBXNativeTarget "Pods-SnapOnboarding-iOS" */ = {
+		7DA2B371150D3AD16E24F8B121D1BD39 /* Build configuration list for PBXNativeTarget "Pods-SnapOnboarding-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D74E2A0CD3E4C094753603D90FE5FE87 /* Debug */,
-				CE68B81C5366D8B2CBF9044AE376C536 /* Release */,
+				68242C468FBDA64A0B63C3B6FBFA9A77 /* Debug */,
+				CDF64B93A34731BB84E784A512AB5641 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F5BBA83859EE9AA3D16F39C866DC158C /* Build configuration list for PBXNativeTarget "SnapFonts-iOS-Fonts" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C840D3912AF610247F5A6B78CE96F7C2 /* Debug */,
+				70C59761474A6CEE02D65A2BFD02B16F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

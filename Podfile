@@ -1,9 +1,13 @@
+source 'https://github.com/CocoaPods/Specs.git'
+source 'https://github.com/gautesolheim/CocoaPodsTest.git' # Update to skylib/SnapPods
+
 platform :ios, '8.0'
 
 target 'SnapOnboarding-iOS' do
   use_frameworks!
 
-  pod "RazzleDazzle"
+  pod 'TTTAttributedLabel'
+  pod 'SnapFonts-iOS'
 
   target 'SnapOnboarding-iOSTests' do
     inherit! :search_paths

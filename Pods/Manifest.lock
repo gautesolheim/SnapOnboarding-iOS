@@ -1,12 +1,15 @@
 PODS:
-  - RazzleDazzle (0.1.2)
+  - SnapFonts-iOS (1.0.0)
+  - TTTAttributedLabel (2.0.0)
 
 DEPENDENCIES:
-  - RazzleDazzle
+  - SnapFonts-iOS
+  - TTTAttributedLabel
 
 SPEC CHECKSUMS:
-  RazzleDazzle: f3b6ec5595e57366192010e5ca7ffbb207639cee
+  SnapFonts-iOS: a8bcc484e7769110a866dc35221964823c8f20c7
+  TTTAttributedLabel: 8cffe8e127e4e82ff3af1e5386d4cd0ad000b656
 
-PODFILE CHECKSUM: b87414db629663de978be332d1df70b83559396a
+PODFILE CHECKSUM: 4a13bcbec602aeef3550b9c4557f1eab3286b950
 
 COCOAPODS: 1.0.1

@@ -7,12 +7,12 @@
 //
 
 import UIKit
-import RazzleDazzle
+import SnapFonts_iOS
 
 class ViewController: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
-        super.viewWillAppear(animated)
+        super.viewDidAppear(animated)
         
         presentOnboardingViewController()
     }

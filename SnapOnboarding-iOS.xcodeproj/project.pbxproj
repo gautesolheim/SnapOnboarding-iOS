@@ -123,20 +123,56 @@
 			name = Example;
 			sourceTree = "<group>";
 		};
-		9F1E9B091D0EE45A00E0EC40 /* Configurations */ = {
+		9F38E0B71D12C49300164E38 /* Intro View Controller */ = {
 			isa = PBXGroup;
 			children = (
-				9F1E9B0A1D0EE54A00E0EC40 /* SnapOnboardingViewControllerConfiguration.swift */,
+				9F38E0BB1D12C4E700164E38 /* Views */,
 			);
-			name = Configurations;
+			name = "Intro View Controller";
 			sourceTree = "<group>";
 		};
-		9F1E9B141D104E5800E0EC40 /* Delegates */ = {
+		9F38E0B81D12C4B700164E38 /* Location View Controller */ = {
 			isa = PBXGroup;
 			children = (
-				9F1E9B151D104E7200E0EC40 /* SnapOnboardingDelegate.swift */,
+				9F38E0BC1D12C4EC00164E38 /* Views */,
 			);
-			name = Delegates;
+			name = "Location View Controller";
+			sourceTree = "<group>";
+		};
+		9F38E0B91D12C4C200164E38 /* Login View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9F38E0BD1D12C4F100164E38 /* Views */,
+			);
+			name = "Login View Controller";
+			sourceTree = "<group>";
+		};
+		9F38E0BA1D12C4E100164E38 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		9F38E0BB1D12C4E700164E38 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		9F38E0BC1D12C4EC00164E38 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		9F38E0BD1D12C4F100164E38 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		9F4CE0A61D0EB29F00A6A1FB = {
@@ -165,9 +201,13 @@
 		9F4CE0B11D0EB2A000A6A1FB /* SnapOnboarding-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				9F1E9B141D104E5800E0EC40 /* Delegates */,
-				9F1E9B091D0EE45A00E0EC40 /* Configurations */,
+				9F38E0BA1D12C4E100164E38 /* Views */,
+				9F1E9B151D104E7200E0EC40 /* SnapOnboardingDelegate.swift */,
+				9F1E9B0A1D0EE54A00E0EC40 /* SnapOnboardingViewControllerConfiguration.swift */,
 				9F1E9B061D0EE2F900E0EC40 /* SnapOnboardingViewController.swift */,
+				9F38E0B71D12C49300164E38 /* Intro View Controller */,
+				9F38E0B81D12C4B700164E38 /* Location View Controller */,
+				9F38E0B91D12C4C200164E38 /* Login View Controller */,
 				9F1E9B171D104F4000E0EC40 /* SnapOnboarding.storyboard */,
 			);
 			path = "SnapOnboarding-iOS";
