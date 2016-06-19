@@ -8,35 +8,27 @@ public class SnapOnboardingViewController: UIViewController {
     @IBOutlet var pageControl: UIPageControl?
     @IBOutlet var termsAndConditionsLabel: TTTAttributedLabel?
     
-    private var configuration: SnapOnboardingViewControllerConfiguration?
+    private var backgroundColor: UIColor?
+    private var delegate: SnapOnboardingDelegate?
     
-    public func applyConfiguration(configuration: SnapOnboardingViewControllerConfiguration) {
-        self.configuration = configuration
+    public func applyConfiguration(configuration: SnapOnboardingConfiguration) {
+        self.backgroundColor = configuration.backgroundColor
+        self.delegate = configuration.delegate
     }
     
     public override func viewDidLoad() {
         super.viewDidLoad()
         
-        assert(configuration != nil)
+        assert(backgroundColor != nil)
         
         configureBackground()
-        configureScrollView()
-        configurePageControl()
         configureTermsAndConditionsLabel()
     }
     
     // MARK: - UIView configuration
     
     private func configureBackground() {
-        view.backgroundColor = configuration?.backgroundColor
-    }
-    
-    private func configureScrollView() {
-        
-    }
-    
-    private func configurePageControl() {
-        
+        view.backgroundColor = backgroundColor
     }
     
     private func configureTermsAndConditionsLabel() {
@@ -57,14 +49,11 @@ public class SnapOnboardingViewController: UIViewController {
         
         termsAndConditionsLabel?.activeLinkAttributes = nil
         
-        let termsAndConditionsURL = NSURL(string: "https://snapsale.com/terms")
-        let privacyPolicyURL = NSURL(string: "https://snapsale.com/privacy")
-        
         let termsAndConditionsRange = termsAndConditionsText.rangeOfString("Vilkårene for bruk")
         let privacyPolicyRange = termsAndConditionsText.rangeOfString("Retningslinjer for personvern")
         
-        termsAndConditionsLabel?.addLinkToURL(termsAndConditionsURL, withRange: termsAndConditionsRange)
-        termsAndConditionsLabel?.addLinkToURL(privacyPolicyURL, withRange: privacyPolicyRange)
+        termsAndConditionsLabel?.addLinkToURL(NSURL(string: "terms"), withRange: termsAndConditionsRange)
+        termsAndConditionsLabel?.addLinkToURL(NSURL(string: "privacy"), withRange: privacyPolicyRange)
         
         termsAndConditionsLabel?.extendsLinkTouchArea = true
     }
@@ -75,18 +64,21 @@ public class SnapOnboardingViewController: UIViewController {
         guard let scrollView = scrollView else {
             return
         }
+
+//        Uncomment for Home Screen-like delayed updating
+//        let viewWidth = view.frame.width
+//        
+//        switch scrollView.contentOffset.x {
+//        case 0:
+//            pageControl?.currentPage = 0
+//        case viewWidth:
+//            pageControl?.currentPage = 1
+//        case viewWidth * 2:
+//            pageControl?.currentPage = 2
+//        default: break
+//        }
         
-        let viewWidth = view.frame.width
-        
-        switch scrollView.contentOffset.x {
-        case 0:
-            pageControl?.currentPage = 0
-        case viewWidth:
-            pageControl?.currentPage = 1
-        case viewWidth * 2:
-            pageControl?.currentPage = 2
-        default: break
-        }
+        pageControl?.currentPage = Int(round(scrollView.contentOffset.x / view.frame.width))
     }
     
     // MARK: - UIViewController properties
@@ -112,7 +104,23 @@ extension SnapOnboardingViewController: UIScrollViewDelegate {
 extension SnapOnboardingViewController: TTTAttributedLabelDelegate {
     
     public func attributedLabel(label: TTTAttributedLabel!, didSelectLinkWithURL url: NSURL!) {
-        UIApplication.sharedApplication().openURL(url)
+        switch url.absoluteString {
+            case "terms":
+            delegate?.termsAndConditionsTapped()
+            case "privacy":
+            delegate?.privacyPolicyTapped()
+        default: break
+        }
+    }
+    
+}
+
+// MARK: IntroViewControllerDelegate
+
+extension SnapOnboardingViewController: IntroViewControllerDelegate {
+    
+    func nextButtonTapped() {
+        // TODO: Scroll to LocationViewController
     }
     
 }

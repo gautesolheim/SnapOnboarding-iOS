@@ -22,7 +22,7 @@ class ViewController: UIViewController {
         let onboardingViewController = storyboard.instantiateViewControllerWithIdentifier("snapOnboardingViewController") as! SnapOnboardingViewController
         
         let exampleColor = UIColor(red: 255/255.0, green: 0/255.0, blue: 88/255.0, alpha: 1.0)
-        let configuration = SnapOnboardingViewControllerConfiguration(delegate: self, backgroundColor: exampleColor)
+        let configuration = SnapOnboardingConfiguration(delegate: self, backgroundColor: exampleColor)
         
         onboardingViewController.applyConfiguration(configuration)
         
@@ -31,3 +31,37 @@ class ViewController: UIViewController {
 
 }
 
+extension ViewController: SnapOnboardingDelegate {
+    
+    func termsAndConditionsTapped() {
+        print("terms-and-conditions-tapped")
+    }
+    
+    func privacyPolicyTapped() {
+        print("privacy-policy-tapped")
+    }
+    
+    
+    func enableLocationServicesTapped() {
+        print("enable-location-services-tapped")
+    }
+    
+    
+    func facebookSignupTapped() {
+        print("facebook-signup-tapped")
+    }
+    
+    func instagramSignupTapped() {
+        print("instagram-signup-tapped")
+    }
+    
+    
+    func willDismiss() {
+        print("will-dismiss")
+    }
+    
+    func didDismiss() {
+        print("did-dismiss")
+    }
+    
+}
