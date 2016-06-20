@@ -9,10 +9,10 @@
 /* Begin PBXBuildFile section */
 		2F92F97CE6EF2D1642567673 /* Pods_SnapOnboarding_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B6EDB55121C9D11510752EE /* Pods_SnapOnboarding_iOSTests.framework */; };
 		4F748D93E19F3A967840C8BA /* Pods_SnapOnboarding_iOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D15C0E862D794A7AA1142D8 /* Pods_SnapOnboarding_iOSUITests.framework */; };
+		9F150B721D17CF4800C3D716 /* SnapOnboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F150B741D17CF4800C3D716 /* SnapOnboarding.storyboard */; };
 		9F1E9B071D0EE2F900E0EC40 /* SnapOnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1E9B061D0EE2F900E0EC40 /* SnapOnboardingViewController.swift */; };
 		9F1E9B0B1D0EE54A00E0EC40 /* SnapOnboardingConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1E9B0A1D0EE54A00E0EC40 /* SnapOnboardingConfiguration.swift */; };
 		9F1E9B161D104E7200E0EC40 /* SnapOnboardingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1E9B151D104E7200E0EC40 /* SnapOnboardingDelegate.swift */; };
-		9F1E9B181D104F4000E0EC40 /* SnapOnboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F1E9B171D104F4000E0EC40 /* SnapOnboarding.storyboard */; };
 		9F4CE0B31D0EB2A000A6A1FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4CE0B21D0EB2A000A6A1FB /* AppDelegate.swift */; };
 		9F4CE0B51D0EB2A000A6A1FB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4CE0B41D0EB2A000A6A1FB /* ViewController.swift */; };
 		9F4CE0B81D0EB2A000A6A1FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F4CE0B61D0EB2A000A6A1FB /* Main.storyboard */; };
@@ -53,10 +53,10 @@
 		536EFA56B0C768995691AFF3 /* Pods-SnapOnboarding-iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapOnboarding-iOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SnapOnboarding-iOSTests/Pods-SnapOnboarding-iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		61FA61E55698DC3EA237BB46 /* Pods-SnapOnboarding-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapOnboarding-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SnapOnboarding-iOS/Pods-SnapOnboarding-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		83E0D5046DFCB39BD51FA799 /* Pods-SnapOnboarding-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapOnboarding-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-SnapOnboarding-iOS/Pods-SnapOnboarding-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		9F150B731D17CF4800C3D716 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SnapOnboarding.storyboard; sourceTree = "<group>"; };
 		9F1E9B061D0EE2F900E0EC40 /* SnapOnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapOnboardingViewController.swift; sourceTree = "<group>"; };
 		9F1E9B0A1D0EE54A00E0EC40 /* SnapOnboardingConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapOnboardingConfiguration.swift; sourceTree = "<group>"; };
 		9F1E9B151D104E7200E0EC40 /* SnapOnboardingDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapOnboardingDelegate.swift; sourceTree = "<group>"; };
-		9F1E9B171D104F4000E0EC40 /* SnapOnboarding.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SnapOnboarding.storyboard; sourceTree = "<group>"; };
 		9F4CE0AF1D0EB29F00A6A1FB /* SnapOnboarding-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SnapOnboarding-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F4CE0B21D0EB2A000A6A1FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = "SnapOnboarding-iOS/AppDelegate.swift"; sourceTree = "<group>"; };
 		9F4CE0B41D0EB2A000A6A1FB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = "SnapOnboarding-iOS/ViewController.swift"; sourceTree = "<group>"; };
@@ -191,7 +191,7 @@
 				9F38E0B71D12C49300164E38 /* Intro View Controller */,
 				9F38E0B81D12C4B700164E38 /* Location View Controller */,
 				9F38E0B91D12C4C200164E38 /* Login View Controller */,
-				9F1E9B171D104F4000E0EC40 /* SnapOnboarding.storyboard */,
+				9F150B741D17CF4800C3D716 /* SnapOnboarding.storyboard */,
 			);
 			path = "SnapOnboarding-iOS";
 			sourceTree = "<group>";
@@ -316,7 +316,6 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
 			);
 			mainGroup = 9F4CE0A61D0EB29F00A6A1FB;
@@ -337,7 +336,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F4CE0BD1D0EB2A000A6A1FB /* LaunchScreen.storyboard in Resources */,
-				9F1E9B181D104F4000E0EC40 /* SnapOnboarding.storyboard in Resources */,
+				9F150B721D17CF4800C3D716 /* SnapOnboarding.storyboard in Resources */,
 				9F4CE0BA1D0EB2A000A6A1FB /* Assets.xcassets in Resources */,
 				9F4CE0B81D0EB2A000A6A1FB /* Main.storyboard in Resources */,
 			);
@@ -532,6 +531,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		9F150B741D17CF4800C3D716 /* SnapOnboarding.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9F150B731D17CF4800C3D716 /* Base */,
+			);
+			name = SnapOnboarding.storyboard;
+			sourceTree = "<group>";
+		};
 		9F4CE0B61D0EB2A000A6A1FB /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -590,7 +597,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -630,7 +637,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";

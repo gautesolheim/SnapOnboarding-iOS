@@ -1,5 +1,5 @@
 source 'https://github.com/CocoaPods/Specs.git'
-source 'https://github.com/gautesolheim/CocoaPodsTest.git' # Update to skylib/SnapPods
+source 'https://github.com/skylib/SnapPods'
 
 platform :ios, '8.0'
 

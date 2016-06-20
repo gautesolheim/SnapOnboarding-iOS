@@ -21,8 +21,10 @@ class ViewController: UIViewController {
         let storyboard = UIStoryboard(name: "SnapOnboarding", bundle: nil)
         let onboardingViewController = storyboard.instantiateViewControllerWithIdentifier("snapOnboardingViewController") as! SnapOnboardingViewController
         
+        var stringsViewModel = SnapOnboardingStringsViewModel()
+        
         let exampleColor = UIColor(red: 255/255.0, green: 0/255.0, blue: 88/255.0, alpha: 1.0)
-        let configuration = SnapOnboardingConfiguration(delegate: self, backgroundColor: exampleColor)
+        let configuration = SnapOnboardingConfiguration(delegate: self, stringsViewModel: stringsViewModel, backgroundColor: exampleColor)
         
         onboardingViewController.applyConfiguration(configuration)
         
