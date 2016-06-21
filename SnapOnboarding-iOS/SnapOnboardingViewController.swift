@@ -4,36 +4,33 @@ import SnapFonts_iOS
 
 public class SnapOnboardingViewController: UIViewController {
     
-    @IBOutlet var scrollView: UIScrollView?
-    @IBOutlet var pageControl: UIPageControl?
-    @IBOutlet var termsAndConditionsLabel: TTTAttributedLabel?
+    @IBOutlet private var scrollView: UIScrollView?
+    @IBOutlet private var pageControl: UIPageControl?
+    @IBOutlet private var termsAndConditionsLabel: TTTAttributedLabel?
     
     private var backgroundColor: UIColor?
     private var delegate: SnapOnboardingDelegate?
+    private var stringsViewModel: SnapOnboardingStringsViewModel?
     
     public func applyConfiguration(configuration: SnapOnboardingConfiguration) {
-        self.backgroundColor = configuration.backgroundColor
         self.delegate = configuration.delegate
+        self.stringsViewModel = configuration.stringsViewModel
     }
     
     public override func viewDidLoad() {
         super.viewDidLoad()
         
-        assert(backgroundColor != nil)
+        assert(stringsViewModel != nil)
         
-        configureBackground()
         configureTermsAndConditionsLabel()
     }
     
     // MARK: - UIView configuration
     
-    private func configureBackground() {
-        view.backgroundColor = backgroundColor
-    }
-    
     private func configureTermsAndConditionsLabel() {
-        // TODO: NSLocalizedString
-        let termsAndConditionsText: NSString = "Ved bruk av tjenesten Snapsale godtar du\rVilkårene for bruk og Retningslinjer for personvern"
+        guard let stringsViewModel = stringsViewModel, termsAndConditionsText = stringsViewModel.termsAndPrivacyFooter else {
+            return
+        }
         
         termsAndConditionsLabel?.setText(termsAndConditionsText, afterInheritingLabelAttributesAndConfiguringWithBlock: { (text) -> NSMutableAttributedString in
             if let gothamRoundedBook = SnapFonts.gothamRoundedBookOfSize(10) {
@@ -45,15 +42,15 @@ public class SnapOnboardingViewController: UIViewController {
         
         if let gothamRoundedMedium = SnapFonts.gothamRoundedMediumOfSize(10) {
             termsAndConditionsLabel?.linkAttributes = [NSFontAttributeName : gothamRoundedMedium]
+            termsAndConditionsLabel?.activeLinkAttributes = nil
         }
         
-        termsAndConditionsLabel?.activeLinkAttributes = nil
-        
-        let termsAndConditionsRange = termsAndConditionsText.rangeOfString("Vilkårene for bruk")
-        let privacyPolicyRange = termsAndConditionsText.rangeOfString("Retningslinjer for personvern")
-        
-        termsAndConditionsLabel?.addLinkToURL(NSURL(string: "terms"), withRange: termsAndConditionsRange)
-        termsAndConditionsLabel?.addLinkToURL(NSURL(string: "privacy"), withRange: privacyPolicyRange)
+        if let termsIndexRange = stringsViewModel.rangeOfTermsAndConditions, privacyIndexRange = stringsViewModel.rangeOfPrivacyPolicy {
+            let termsRange = termsAndConditionsText.startIndex.distanceTo(termsIndexRange.startIndex) ..< termsAndConditionsText.startIndex.distanceTo(termsIndexRange.endIndex)
+            let privacyRange = termsAndConditionsText.startIndex.distanceTo(privacyIndexRange.startIndex) ..< termsAndConditionsText.startIndex.distanceTo(privacyIndexRange.endIndex)
+            termsAndConditionsLabel?.addLinkToURL(NSURL(string: "terms"), withRange: NSRange(termsRange))
+            termsAndConditionsLabel?.addLinkToURL(NSURL(string: "privacy"), withRange: NSRange(privacyRange))
+        }
         
         termsAndConditionsLabel?.extendsLinkTouchArea = true
     }
@@ -85,6 +82,22 @@ public class SnapOnboardingViewController: UIViewController {
     
     public override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return .LightContent
+    }
+    
+    override public func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        guard let identifier = segue.identifier, stringsViewModel = stringsViewModel else {
+            return
+        }
+        
+        switch identifier {
+            case "introContainerViewEmbed":
+            (segue.destinationViewController as? IntroViewController)?.applyStrings(stringsViewModel)
+            case "locationContainerViewEmbed":
+            (segue.destinationViewController as? LocationViewController)?.applyStrings(stringsViewModel)
+            case "loginContainerViewEmbed":
+            (segue.destinationViewController as? LoginViewController)?.applyStrings(stringsViewModel)
+        default: break
+        }
     }
     
 }

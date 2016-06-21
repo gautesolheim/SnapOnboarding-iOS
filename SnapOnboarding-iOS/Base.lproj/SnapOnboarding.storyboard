@@ -32,19 +32,19 @@
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zp8-Mv-jdd" userLabel="Intro Container View">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="511"/>
                                         <connections>
-                                            <segue destination="msg-6e-T6i" kind="embed" id="W5f-MQ-aEW"/>
+                                            <segue destination="msg-6e-T6i" kind="embed" identifier="introContainerViewEmbed" id="W5f-MQ-aEW"/>
                                         </connections>
                                     </containerView>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wxa-xb-Waf" userLabel="Location Container View">
                                         <rect key="frame" x="600" y="0.0" width="600" height="511"/>
                                         <connections>
-                                            <segue destination="tuq-Zg-aCA" kind="embed" id="3Vt-HL-aw0"/>
+                                            <segue destination="tuq-Zg-aCA" kind="embed" identifier="locationContainerViewEmbed" id="3Vt-HL-aw0"/>
                                         </connections>
                                     </containerView>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wKY-ec-gks" userLabel="Login Container View">
                                         <rect key="frame" x="1200" y="0.0" width="600" height="511"/>
                                         <connections>
-                                            <segue destination="0qE-Ud-UlA" kind="embed" id="DZq-As-WfN"/>
+                                            <segue destination="0qE-Ud-UlA" kind="embed" identifier="loginContainerViewEmbed" id="DZq-As-WfN"/>
                                         </connections>
                                     </containerView>
                                 </subviews>
@@ -195,6 +195,7 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                     </view>
                     <connections>
                         <outlet property="infoLabel" destination="6QU-g5-Hyl" id="rJ4-yW-m3m"/>
+                        <outlet property="nextButton" destination="keh-ad-7Sj" id="9U6-Rr-HqM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pQy-kG-wUh" userLabel="First Responder" sceneMemberID="firstResponder"/>

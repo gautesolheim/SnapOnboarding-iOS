@@ -2,22 +2,37 @@ import UIKit
 
 class IntroViewController: UIViewController {
 
-    @IBOutlet var infoLabel: UILabel?
+    @IBOutlet private var nextButton: UIButton?
+    @IBOutlet private var infoLabel: UILabel?
     
     var delegate: IntroViewControllerDelegate?
+    private var stringsViewModel: SnapOnboardingStringsViewModel?
     
     @IBAction func nextButtonTapped(sender: UIButton) {
         delegate?.nextButtonTapped()
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        configureInfoLabel()
+    func applyStrings(strings: SnapOnboardingStringsViewModel) {
+        stringsViewModel = strings
     }
     
-    private func configureInfoLabel() {
-        // TODO: Line height, NSLocalizedString
+    // MARK: - UIViewController life cycle
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        configureLabels()
+    }
+    
+    private func configureLabels() {
+        // TODO: Line height
+        
+        nextButton?.setTitle(stringsViewModel?.next?.uppercaseString, forState: .Normal)
+        infoLabel?.text = stringsViewModel?.introHeadline
     }
 
 }

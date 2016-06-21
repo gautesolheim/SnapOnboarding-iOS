@@ -8,6 +8,7 @@ target 'SnapOnboarding-iOS' do
 
   pod 'TTTAttributedLabel'
   pod 'SnapFonts-iOS'
+  pod 'SnapTagsView'
 
   target 'SnapOnboarding-iOSTests' do
     inherit! :search_paths
