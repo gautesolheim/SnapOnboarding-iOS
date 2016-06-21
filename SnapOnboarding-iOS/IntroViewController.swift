@@ -9,7 +9,7 @@ class IntroViewController: UIViewController {
     private var stringsViewModel: SnapOnboardingStringsViewModel?
     
     @IBAction func nextButtonTapped(sender: UIButton) {
-        delegate?.nextButtonTapped()
+        delegate?.introNextButtonTapped()
     }
     
     func applyStrings(strings: SnapOnboardingStringsViewModel) {

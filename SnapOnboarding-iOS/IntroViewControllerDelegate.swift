@@ -1,5 +1,5 @@
 internal protocol IntroViewControllerDelegate: class {
     
-    func nextButtonTapped()
+    func introNextButtonTapped()
     
 }

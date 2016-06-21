@@ -2,6 +2,7 @@ import UIKit
 
 class LocationViewController: UIViewController {
     
+    var delegate: LocationViewControllerDelegate?
     private var stringsViewModel: SnapOnboardingStringsViewModel?
     
     internal func applyStrings(strings: SnapOnboardingStringsViewModel) {

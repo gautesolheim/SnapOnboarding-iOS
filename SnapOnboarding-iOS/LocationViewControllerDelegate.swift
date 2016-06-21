@@ -1,6 +1,6 @@
-internal protocol LocationViewControllerDelegate: class {
+protocol LocationViewControllerDelegate: class {
     
-    func nextButtonTapped()
+    func locationNextButtonTapped()
     func enableLocationServicesTapped()
     
 }

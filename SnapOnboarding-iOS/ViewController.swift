@@ -12,10 +12,15 @@ import SnapTagsView
 
 class ViewController: UIViewController {
     
+    private var didPresent = false
+    
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-        presentOnboardingViewController()
+        if !didPresent {
+            didPresent = true
+            presentOnboardingViewController()
+        }
     }
     
     private func presentOnboardingViewController() {

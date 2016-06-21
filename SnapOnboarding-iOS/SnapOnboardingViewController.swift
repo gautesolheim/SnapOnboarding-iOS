@@ -17,12 +17,26 @@ public class SnapOnboardingViewController: UIViewController {
         self.stringsViewModel = configuration.stringsViewModel
     }
     
+    // MARK: - UIViewController life cycle
+    
     public override func viewDidLoad() {
         super.viewDidLoad()
         
         assert(stringsViewModel != nil)
         
         configureTermsAndConditionsLabel()
+    }
+    
+    public override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        //dismiss()
+    }
+    
+    private func dismiss() {
+        delegate?.willDismiss()
+        
+        dismissViewControllerAnimated(true) { self.delegate?.didDismiss() }
     }
     
     // MARK: - UIView configuration
@@ -91,12 +105,19 @@ public class SnapOnboardingViewController: UIViewController {
         
         switch identifier {
             case "introContainerViewEmbed":
-            (segue.destinationViewController as? IntroViewController)?.applyStrings(stringsViewModel)
+            let destinationViewController = segue.destinationViewController as? IntroViewController
+            destinationViewController?.delegate = self
+            destinationViewController?.applyStrings(stringsViewModel)
             case "locationContainerViewEmbed":
-            (segue.destinationViewController as? LocationViewController)?.applyStrings(stringsViewModel)
+            let destinationViewController = segue.destinationViewController as? LocationViewController
+            destinationViewController?.delegate = self
+            destinationViewController?.applyStrings(stringsViewModel)
             case "loginContainerViewEmbed":
-            (segue.destinationViewController as? LoginViewController)?.applyStrings(stringsViewModel)
+            let destinationViewController = segue.destinationViewController as? LoginViewController
+            destinationViewController?.delegate = self
+            destinationViewController?.applyStrings(stringsViewModel)
         default: break
+        
         }
     }
     
@@ -128,12 +149,46 @@ extension SnapOnboardingViewController: TTTAttributedLabelDelegate {
     
 }
 
-// MARK: IntroViewControllerDelegate
+// MARK: - IntroViewControllerDelegate
 
 extension SnapOnboardingViewController: IntroViewControllerDelegate {
     
-    func nextButtonTapped() {
+    func introNextButtonTapped() {
         // TODO: Scroll to LocationViewController
+        print("intr")
+    }
+    
+}
+
+// MARK: - LocationViewControllerDelegate
+
+extension SnapOnboardingViewController: LocationViewControllerDelegate {
+    
+    func locationNextButtonTapped() {
+        // TODO: Scroll to LoginViewController
+        print("loc")
+    }
+    
+    func enableLocationServicesTapped() {
+        delegate?.enableLocationServicesTapped()
+    }
+    
+}
+
+// MARK: - LoginViewControllerDelegate
+
+extension SnapOnboardingViewController: LoginViewControllerDelegate {
+    
+    func facebookSignupTapped() {
+        delegate?.facebookSignupTapped()
+    }
+    
+    func instagramSignupTapped() {
+        delegate?.instagramSignupTapped()
+    }
+    
+    func skipLoginButtonTapped() {
+        dismiss()
     }
     
 }
