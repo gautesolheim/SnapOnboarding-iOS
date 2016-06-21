@@ -36,7 +36,9 @@ public class SnapOnboardingViewController: UIViewController {
     private func dismiss() {
         delegate?.willDismiss()
         
-        dismissViewControllerAnimated(true) { self.delegate?.didDismiss() }
+        dismissViewControllerAnimated(true) {
+            self.delegate?.didDismiss()
+        }
     }
     
     // MARK: - UIView configuration
@@ -67,6 +69,16 @@ public class SnapOnboardingViewController: UIViewController {
         }
         
         termsAndConditionsLabel?.extendsLinkTouchArea = true
+    }
+    
+    // MARK: - UIScrollView
+    
+    private func scrollToNextPage() {
+        if let scrollView = scrollView {
+            var newOffset = scrollView.contentOffset
+            newOffset.x += view.frame.width
+            scrollView.setContentOffset(newOffset, animated: true)
+        }
     }
     
     // MARK: - UIPageControl
@@ -154,8 +166,7 @@ extension SnapOnboardingViewController: TTTAttributedLabelDelegate {
 extension SnapOnboardingViewController: IntroViewControllerDelegate {
     
     func introNextButtonTapped() {
-        // TODO: Scroll to LocationViewController
-        print("intr")
+        scrollToNextPage()
     }
     
 }
@@ -165,8 +176,7 @@ extension SnapOnboardingViewController: IntroViewControllerDelegate {
 extension SnapOnboardingViewController: LocationViewControllerDelegate {
     
     func locationNextButtonTapped() {
-        // TODO: Scroll to LoginViewController
-        print("loc")
+        scrollToNextPage()
     }
     
     func enableLocationServicesTapped() {

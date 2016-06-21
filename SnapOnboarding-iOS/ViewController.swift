@@ -73,7 +73,7 @@ class ViewController: UIViewController {
         model.rangeOfPrivacyPolicy = footer.rangeOfString("Privacy Policy")
         
         model.next = "Next"
-        model.introHeadline = "Publishing sales is fast and easy. We tag and categorise ads with clever image recognition."
+        model.introHeadline = "Publishing sales is fast and easy. We tag and categorize ads with clever image recognition."
         model.tags = createTagRepresentationsFromStrings(
             ["Purse", "MichaelKors", "JetSetTravel", "Leather", "Beige", "Accessories"]
         )

@@ -5,7 +5,7 @@ class LoginViewController: UIViewController {
     var delegate: LoginViewControllerDelegate?
     private var stringsViewModel: SnapOnboardingStringsViewModel?
     
-    internal func applyStrings(strings: SnapOnboardingStringsViewModel) {
+    func applyStrings(strings: SnapOnboardingStringsViewModel) {
         self.stringsViewModel = strings
     }
 

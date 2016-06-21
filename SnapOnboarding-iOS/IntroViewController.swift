@@ -3,7 +3,7 @@ import UIKit
 class IntroViewController: UIViewController {
 
     @IBOutlet private var nextButton: UIButton?
-    @IBOutlet private var infoLabel: UILabel?
+    @IBOutlet private var headlineLabel: UILabel?
     
     var delegate: IntroViewControllerDelegate?
     private var stringsViewModel: SnapOnboardingStringsViewModel?
@@ -32,7 +32,7 @@ class IntroViewController: UIViewController {
         // TODO: Line height
         
         nextButton?.setTitle(stringsViewModel?.next?.uppercaseString, forState: .Normal)
-        infoLabel?.text = stringsViewModel?.introHeadline
+        headlineLabel?.text = stringsViewModel?.introHeadline
     }
 
 }
