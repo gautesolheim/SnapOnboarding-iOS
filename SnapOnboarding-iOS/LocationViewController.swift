@@ -3,7 +3,7 @@ import UIKit
 class LocationViewController: UIViewController {
     
     @IBOutlet private var nextButton: UIButton?
-    @IBOutlet private var headlineLabel: UILabel?
+    @IBOutlet var headlineLabel: SnapOnboardingHeadlineLabel!
     @IBOutlet private var enableLocationServicesButton: UIButton!
     @IBOutlet private var notNowButton: UIButton!
     
@@ -35,14 +35,17 @@ class LocationViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        configureLabels()
+        configureNextButton()
+        configureHeadlineLabel()
     }
     
-    private func configureLabels() {
-        // TODO: Line height
-        
-        nextButton?.setTitle(stringsViewModel?.next?.uppercaseString, forState: .Normal)
-        headlineLabel?.text = stringsViewModel?.locationHeadline
+    private func configureNextButton() {
+        let title = stringsViewModel?.next?.uppercaseString
+        nextButton?.setTitle(title, forState: .Normal)
+    }
+    
+    private func configureHeadlineLabel() {
+        headlineLabel?.designableText = stringsViewModel?.locationHeadline ?? ""
     }
 
 }

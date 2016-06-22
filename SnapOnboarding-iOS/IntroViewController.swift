@@ -3,7 +3,7 @@ import UIKit
 class IntroViewController: UIViewController {
 
     @IBOutlet private var nextButton: UIButton?
-    @IBOutlet private var headlineLabel: UILabel?
+    @IBOutlet var headlineLabel: SnapOnboardingHeadlineLabel!
     
     var delegate: IntroViewControllerDelegate?
     private var stringsViewModel: SnapOnboardingStringsViewModel?
@@ -25,14 +25,17 @@ class IntroViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        configureLabels()
+        configureNextButton()
+        configureHeadlineLabel()
     }
     
-    private func configureLabels() {
-        // TODO: Line height
-        
-        nextButton?.setTitle(stringsViewModel?.next?.uppercaseString, forState: .Normal)
-        headlineLabel?.text = stringsViewModel?.introHeadline
+    private func configureNextButton() {
+        let title = stringsViewModel?.next?.uppercaseString
+        nextButton?.setTitle(title, forState: .Normal)
+    }
+    
+    private func configureHeadlineLabel() {
+        headlineLabel?.designableText = stringsViewModel?.introHeadline ?? ""
     }
 
 }

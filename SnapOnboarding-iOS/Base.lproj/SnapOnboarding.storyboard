@@ -135,6 +135,10 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                         <rect key="frame" x="0.0" y="0.0" width="600" height="502"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ANS-Dj-bV5" userLabel="sparklingView">
+                                <rect key="frame" x="46" y="118" width="508" height="256"/>
+                                <color key="backgroundColor" red="0.9813889724" green="0.0175405649" blue="0.3706242488" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Acl-8o-2Dq" userLabel="nextButton">
                                 <rect key="frame" x="540" y="15" width="45" height="16"/>
                                 <constraints>
@@ -149,15 +153,28 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                                     <action selector="nextButtonTapped:" destination="msg-6e-T6i" eventType="touchUpInside" id="l5m-X0-00Y"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Følg selgere og produkter nær deg! Aldri gå glipp av et kupp igjen." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GPV-cC-643" userLabel="headlineLabel">
-                                <rect key="frame" x="111" y="45" width="378" height="51"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GPV-cC-643" userLabel="headlineLabel" customClass="SnapOnboardingHeadlineLabel" customModule="SnapOnboarding_iOS" customModuleProvider="target">
+                                <rect key="frame" x="111" y="45" width="378" height="56"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="400" id="a84-Jw-hYc"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="21"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="designableLineSpacing">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="designableText" value="Følg selgere og produkter nær deg! Aldri gå glipp av et kupp igjen."/>
+                                </userDefinedRuntimeAttributes>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pFE-Cu-2wV" userLabel="enableLocationServicesButton">
+                                <rect key="frame" x="203" y="409" width="195" height="30"/>
+                                <state key="normal" title="SKRU PÅ STEDSTJENESTER"/>
+                                <connections>
+                                    <action selector="enableLocationServicesButtonTapped:" destination="tuq-Zg-aCA" eventType="touchUpInside" id="3Gz-8Y-QUq"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ScQ-wx-E74" userLabel="notNowButton">
                                 <rect key="frame" x="276" y="455" width="49" height="30"/>
                                 <state key="normal" title="Ikke nå"/>
@@ -165,31 +182,28 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                                     <action selector="notNowButtonTapped:" destination="tuq-Zg-aCA" eventType="touchUpInside" id="HKa-Gl-7Mr"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pFE-Cu-2wV">
-                                <rect key="frame" x="203" y="409" width="195" height="30"/>
-                                <state key="normal" title="SKRU PÅ STEDSTJENESTER"/>
-                                <connections>
-                                    <action selector="enableLocationServicesButtonTapped:" destination="tuq-Zg-aCA" eventType="touchUpInside" id="3Gz-8Y-QUq"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.0" blue="0.34509804844856262" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="GPV-cC-643" firstAttribute="centerX" secondItem="CMB-oQ-19v" secondAttribute="centerX" id="9Jd-TD-e9z"/>
+                            <constraint firstAttribute="trailing" secondItem="ANS-Dj-bV5" secondAttribute="trailing" constant="46" id="MPX-VE-C7Z"/>
                             <constraint firstItem="GPV-cC-643" firstAttribute="top" secondItem="uCB-4V-4gp" secondAttribute="bottom" constant="45" id="Nzt-8U-ppf"/>
                             <constraint firstAttribute="trailing" secondItem="Acl-8o-2Dq" secondAttribute="trailing" constant="15" id="OB7-Vo-KnQ"/>
+                            <constraint firstItem="pFE-Cu-2wV" firstAttribute="top" secondItem="ANS-Dj-bV5" secondAttribute="bottom" constant="35" id="OeW-5A-9op"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="GPV-cC-643" secondAttribute="trailing" constant="38" id="PgA-KD-zzq"/>
                             <constraint firstItem="pFE-Cu-2wV" firstAttribute="centerX" secondItem="CMB-oQ-19v" secondAttribute="centerX" id="XH0-uY-O9k"/>
+                            <constraint firstItem="ANS-Dj-bV5" firstAttribute="leading" secondItem="CMB-oQ-19v" secondAttribute="leading" constant="46" id="e62-QF-rhg"/>
                             <constraint firstItem="ScQ-wx-E74" firstAttribute="centerX" secondItem="CMB-oQ-19v" secondAttribute="centerX" id="frP-7n-4cy"/>
                             <constraint firstItem="Acl-8o-2Dq" firstAttribute="top" secondItem="uCB-4V-4gp" secondAttribute="bottom" constant="15" id="iz5-5N-PdF"/>
                             <constraint firstItem="ScQ-wx-E74" firstAttribute="top" secondItem="pFE-Cu-2wV" secondAttribute="bottom" constant="16" id="jpr-hn-Rlu"/>
                             <constraint firstItem="Tnx-e1-m8T" firstAttribute="top" secondItem="ScQ-wx-E74" secondAttribute="bottom" constant="17" id="tFI-3S-C0c"/>
                             <constraint firstItem="GPV-cC-643" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="CMB-oQ-19v" secondAttribute="leading" constant="38" id="trG-Rd-WUn"/>
+                            <constraint firstItem="ANS-Dj-bV5" firstAttribute="top" secondItem="GPV-cC-643" secondAttribute="bottom" constant="22" id="wrW-tJ-cyL"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="enableLocationServicesButton" destination="pFE-Cu-2wV" id="DOC-KX-HMa"/>
-                        <outlet property="headlineLabel" destination="GPV-cC-643" id="djr-ar-cRE"/>
+                        <outlet property="headlineLabel" destination="GPV-cC-643" id="t2H-cy-cMu"/>
                         <outlet property="nextButton" destination="Acl-8o-2Dq" id="mwC-hl-nrB"/>
                         <outlet property="notNowButton" destination="ScQ-wx-E74" id="7ln-Qz-ax4"/>
                     </connections>
@@ -210,8 +224,8 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                         <rect key="frame" x="0.0" y="0.0" width="600" height="502"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V9z-WP-6mg" userLabel="sparklingView">
-                                <rect key="frame" x="26" y="143" width="548" height="359"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V9z-WP-6mg" userLabel="sparklingView">
+                                <rect key="frame" x="46" y="143" width="508" height="348"/>
                                 <color key="backgroundColor" red="0.98138897235576927" green="0.017540564903846152" blue="0.37062424879807693" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="keh-ad-7Sj" userLabel="nextButton">
@@ -227,38 +241,44 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                                     <action selector="nextButtonTapped:" destination="msg-6e-T6i" eventType="touchUpInside" id="0EP-YZ-exR"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Å legge ut salg er raskt og enkelt. Vi tagger og kategoriserer annonser med smart bildegjenkjenning." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6QU-g5-Hyl" userLabel="headlineLabel">
-                                <rect key="frame" x="108" y="45" width="384" height="76"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6QU-g5-Hyl" userLabel="headlineLabel" customClass="SnapOnboardingHeadlineLabel" customModule="SnapOnboarding_iOS" customModuleProvider="target">
+                                <rect key="frame" x="108" y="45" width="384" height="86"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="400" id="hSW-9Q-2N4"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="21"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="designableText" value="Å legge ut salg er raskt og enkelt. Vi tagger og kategoriserer annonser med smart bildegjenkjenning."/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="designableLineSpacing">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.0" blue="0.34509804844856262" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="6QU-g5-Hyl" firstAttribute="top" secondItem="jnX-Zh-1IU" secondAttribute="bottom" constant="45" id="6eI-gQ-pKk"/>
                             <constraint firstItem="V9z-WP-6mg" firstAttribute="top" secondItem="6QU-g5-Hyl" secondAttribute="bottom" constant="22" id="H5y-xd-kFJ"/>
-                            <constraint firstItem="knZ-Sh-tcc" firstAttribute="top" secondItem="V9z-WP-6mg" secondAttribute="bottom" id="K3H-io-dDc"/>
+                            <constraint firstItem="knZ-Sh-tcc" firstAttribute="top" secondItem="V9z-WP-6mg" secondAttribute="bottom" constant="11" id="K3H-io-dDc"/>
                             <constraint firstItem="6QU-g5-Hyl" firstAttribute="centerX" secondItem="OvS-2d-WuL" secondAttribute="centerX" id="OSW-6o-GGR"/>
                             <constraint firstItem="6QU-g5-Hyl" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="OvS-2d-WuL" secondAttribute="leading" constant="38" id="T6E-87-bBf"/>
                             <constraint firstAttribute="trailing" secondItem="keh-ad-7Sj" secondAttribute="trailing" constant="15" id="Vxe-Qr-13W"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="6QU-g5-Hyl" secondAttribute="trailing" constant="38" id="e6D-pF-UUb"/>
-                            <constraint firstAttribute="trailing" secondItem="V9z-WP-6mg" secondAttribute="trailing" constant="26" id="es8-70-MBM"/>
-                            <constraint firstItem="V9z-WP-6mg" firstAttribute="leading" secondItem="OvS-2d-WuL" secondAttribute="leading" constant="26" id="iGf-bE-Kfv"/>
+                            <constraint firstAttribute="trailing" secondItem="V9z-WP-6mg" secondAttribute="trailing" constant="46" id="es8-70-MBM"/>
+                            <constraint firstItem="V9z-WP-6mg" firstAttribute="leading" secondItem="OvS-2d-WuL" secondAttribute="leading" constant="46" id="iGf-bE-Kfv"/>
                             <constraint firstItem="keh-ad-7Sj" firstAttribute="top" secondItem="jnX-Zh-1IU" secondAttribute="bottom" constant="15" id="pm3-SW-4Rd"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="headlineLabel" destination="6QU-g5-Hyl" id="bYz-hQ-j2E"/>
+                        <outlet property="headlineLabel" destination="6QU-g5-Hyl" id="boZ-NX-yUM"/>
                         <outlet property="nextButton" destination="keh-ad-7Sj" id="9U6-Rr-HqM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pQy-kG-wUh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-92" y="1235.5"/>
+            <point key="canvasLocation" x="-92" y="1235"/>
         </scene>
         <!--loginViewController-->
         <scene sceneID="4Vf-ZG-nv7">
@@ -271,8 +291,55 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                     <view key="view" contentMode="scaleToFill" id="JFE-Tf-2Hq">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="502"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DIb-IE-TZ2" userLabel="sparklingView">
+                                <rect key="frame" x="40" y="47" width="520" height="267"/>
+                                <color key="backgroundColor" red="0.9813889724" green="0.0175405649" blue="0.3706242488" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iZI-f9-ZQP" userLabel="continueWithInstagramButton">
+                                <rect key="frame" x="200" y="409" width="200" height="30"/>
+                                <state key="normal" title="FORTSETT MED INSTAGRAM"/>
+                                <connections>
+                                    <action selector="continueWithInstagramButtonTapped:" destination="0qE-Ud-UlA" eventType="touchUpInside" id="Lu9-OJ-Czz"/>
+                                    <action selector="enableLocationServicesButtonTapped:" destination="tuq-Zg-aCA" eventType="touchUpInside" id="Sjb-0v-dCQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LxE-Ac-dOb" userLabel="skipLoginButton">
+                                <rect key="frame" x="187" y="455" width="227" height="30"/>
+                                <state key="normal" title="Hopp over, prøve uten innlogging"/>
+                                <connections>
+                                    <action selector="notNowButtonTapped:" destination="tuq-Zg-aCA" eventType="touchUpInside" id="XQd-p0-5cj"/>
+                                    <action selector="skipLoginButtonTapped:" destination="0qE-Ud-UlA" eventType="touchUpInside" id="96b-TX-vhA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hVU-s5-rUl" userLabel="continueWithFacebookButton">
+                                <rect key="frame" x="203" y="359" width="194" height="30"/>
+                                <state key="normal" title="FORTSETT MED FACEBOOK"/>
+                                <connections>
+                                    <action selector="continueWithFacebookButtonTapped:" destination="0qE-Ud-UlA" eventType="touchUpInside" id="WI4-mg-gym"/>
+                                    <action selector="enableLocationServicesButtonTapped:" destination="tuq-Zg-aCA" eventType="touchUpInside" id="K0H-1o-Dw4"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="0.0" blue="0.34509804844856262" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="DIb-IE-TZ2" firstAttribute="top" secondItem="6VU-A7-cWa" secondAttribute="bottom" constant="47" id="7mc-zJ-dOn"/>
+                            <constraint firstItem="DIb-IE-TZ2" firstAttribute="leading" secondItem="JFE-Tf-2Hq" secondAttribute="leading" constant="40" id="E66-6j-YDR"/>
+                            <constraint firstItem="LxE-Ac-dOb" firstAttribute="top" secondItem="iZI-f9-ZQP" secondAttribute="bottom" constant="16" id="I5A-7Q-3xE"/>
+                            <constraint firstItem="hVU-s5-rUl" firstAttribute="top" secondItem="DIb-IE-TZ2" secondAttribute="bottom" constant="45" id="JvG-V6-r7i"/>
+                            <constraint firstItem="LxE-Ac-dOb" firstAttribute="centerX" secondItem="JFE-Tf-2Hq" secondAttribute="centerX" id="LH2-bu-0P3"/>
+                            <constraint firstAttribute="trailing" secondItem="DIb-IE-TZ2" secondAttribute="trailing" constant="40" id="PG6-H2-TCF"/>
+                            <constraint firstItem="iZI-f9-ZQP" firstAttribute="top" secondItem="hVU-s5-rUl" secondAttribute="bottom" constant="20" id="gwF-82-QbO"/>
+                            <constraint firstItem="hVU-s5-rUl" firstAttribute="centerX" secondItem="JFE-Tf-2Hq" secondAttribute="centerX" id="u46-yW-LFl"/>
+                            <constraint firstItem="lpC-Qa-pWA" firstAttribute="top" secondItem="LxE-Ac-dOb" secondAttribute="bottom" constant="17" id="uJ2-pc-QXe"/>
+                            <constraint firstItem="iZI-f9-ZQP" firstAttribute="centerX" secondItem="JFE-Tf-2Hq" secondAttribute="centerX" id="vdE-gO-8fk"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="continueWithFacebookButton" destination="hVU-s5-rUl" id="FzT-Jk-MBK"/>
+                        <outlet property="continueWithInstagramButton" destination="iZI-f9-ZQP" id="M98-5b-NzK"/>
+                        <outlet property="skipLoginButton" destination="LxE-Ac-dOb" id="WBb-T4-dX2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7I0-p0-avN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
