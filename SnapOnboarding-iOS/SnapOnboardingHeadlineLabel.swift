@@ -1,11 +1,3 @@
-//
-//  SnapOnboardingHeadlineLabel.swift
-//  SnapOnboarding-iOS
-//
-//  Created by Gaute Solheim on 22.06.2016.
-//  Copyright © 2016 Gaute Solheim. All rights reserved.
-//
-
 import UIKit
 
 @IBDesignable class SnapOnboardingHeadlineLabel: UILabel {
@@ -17,18 +9,14 @@ import UIKit
             let paragraphStyle = attributes[NSParagraphStyleAttributeName] as? NSMutableParagraphStyle ?? createDefaultParagraphStyle()
             paragraphStyle.lineSpacing = designableLineSpacing
             attributes[NSParagraphStyleAttributeName] = paragraphStyle
-            updateText(designableText) // Redundant at runtime, but required for storyboard rendering
+            updateText(text)
         }
     }
     
-    @IBInspectable var designableText: String = "Placeholder" {
-        didSet {
-            updateText(designableText)
+    func updateText(text: String?) {
+        if let text = text {
+            attributedText = NSMutableAttributedString(string: text, attributes: attributes)
         }
-    }
-    
-    private func updateText(newText: String) {
-        attributedText = NSMutableAttributedString(string: designableText, attributes: attributes)
     }
     
     private func createDefaultParagraphStyle() -> NSMutableParagraphStyle {

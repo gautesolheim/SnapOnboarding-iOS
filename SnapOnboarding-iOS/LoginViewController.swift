@@ -4,7 +4,7 @@ class LoginViewController: UIViewController {
     
     @IBOutlet var continueWithFacebookButton: UIButton?
     @IBOutlet var continueWithInstagramButton: UIButton?
-    @IBOutlet var skipLoginButton: UIButton?
+    @IBOutlet var skipLoginButton: SnapOnboardingUnderlinedButton?
     
     @IBAction func continueWithFacebookButtonTapped(sender: UIButton) {
         delegate?.facebookSignupTapped()
@@ -34,13 +34,21 @@ class LoginViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        configureLabels()
+        configureContinueWithFacebookButton()
+        configureContinueWithInstagramButton()
+        configureSkipLoginButton()
     }
     
-    private func configureLabels() {
-        // TODO: Line height
+    private func configureContinueWithFacebookButton() {
         
+    }
+    
+    private func configureContinueWithInstagramButton() {
         
+    }
+    
+    private func configureSkipLoginButton() {
+        skipLoginButton?.updateText(stringsViewModel?.skipWithoutLogin)
     }
 
 }

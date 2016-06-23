@@ -3,9 +3,11 @@ import UIKit
 class LocationViewController: UIViewController {
     
     @IBOutlet private var nextButton: UIButton?
-    @IBOutlet var headlineLabel: SnapOnboardingHeadlineLabel!
-    @IBOutlet private var enableLocationServicesButton: UIButton!
-    @IBOutlet private var notNowButton: UIButton!
+    @IBOutlet private var headlineLabel: SnapOnboardingHeadlineLabel?
+    @IBOutlet private var enableLocationServicesButton: UIButton?
+    @IBOutlet private var notNowButton: SnapOnboardingUnderlinedButton?
+    
+    @IBOutlet var enableLocationServicesButtonWidth: NSLayoutConstraint?
     
     var delegate: LocationViewControllerDelegate?
     private var stringsViewModel: SnapOnboardingStringsViewModel?
@@ -37,6 +39,7 @@ class LocationViewController: UIViewController {
         
         configureNextButton()
         configureHeadlineLabel()
+        configureNotNowButton()
     }
     
     private func configureNextButton() {
@@ -45,7 +48,14 @@ class LocationViewController: UIViewController {
     }
     
     private func configureHeadlineLabel() {
-        headlineLabel?.designableText = stringsViewModel?.locationHeadline ?? ""
+        headlineLabel?.updateText(stringsViewModel?.locationHeadline)
+    }
+    
+    private func configureNotNowButton() {
+        notNowButton?.updateText(stringsViewModel?.notNow)
+        let intrinsicContentWidth = enableLocationServicesButton?.intrinsicContentSize().width
+        let requiredWidth = (intrinsicContentWidth ?? 263) + 30
+        enableLocationServicesButtonWidth?.constant = requiredWidth
     }
 
 }

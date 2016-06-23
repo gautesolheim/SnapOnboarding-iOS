@@ -13,6 +13,9 @@
         <mutableArray key="GothamRnd-Medium.otf">
             <string>GothamRounded-Medium</string>
             <string>GothamRounded-Medium</string>
+            <string>GothamRounded-Medium</string>
+            <string>GothamRounded-Medium</string>
+            <string>GothamRounded-Medium</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -136,7 +139,7 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ANS-Dj-bV5" userLabel="sparklingView">
-                                <rect key="frame" x="46" y="118" width="508" height="256"/>
+                                <rect key="frame" x="46" y="123" width="508" height="265"/>
                                 <color key="backgroundColor" red="0.9813889724" green="0.0175405649" blue="0.3706242488" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Acl-8o-2Dq" userLabel="nextButton">
@@ -153,7 +156,7 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                                     <action selector="nextButtonTapped:" destination="msg-6e-T6i" eventType="touchUpInside" id="l5m-X0-00Y"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GPV-cC-643" userLabel="headlineLabel" customClass="SnapOnboardingHeadlineLabel" customModule="SnapOnboarding_iOS" customModuleProvider="target">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Følg selgere og produkter nær deg! Aldri gå glipp av et kupp igjen." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GPV-cC-643" userLabel="headlineLabel" customClass="SnapOnboardingHeadlineLabel" customModule="SnapOnboarding_iOS" customModuleProvider="target">
                                 <rect key="frame" x="111" y="45" width="378" height="56"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="400" id="a84-Jw-hYc"/>
@@ -165,19 +168,35 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                                     <userDefinedRuntimeAttribute type="number" keyPath="designableLineSpacing">
                                         <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="designableText" value="Følg selgere og produkter nær deg! Aldri gå glipp av et kupp igjen."/>
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pFE-Cu-2wV" userLabel="enableLocationServicesButton">
-                                <rect key="frame" x="203" y="409" width="195" height="30"/>
-                                <state key="normal" title="SKRU PÅ STEDSTJENESTER"/>
+                                <rect key="frame" x="225" y="387" width="150" height="54"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="o7o-NB-ewd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GothamRounded-Medium" family="Gotham Rounded" pointSize="15"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <inset key="contentEdgeInsets" minX="51" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="SKRU PÅ STEDSTJENESTER" backgroundImage="btn location">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="enableLocationServicesButtonTapped:" destination="tuq-Zg-aCA" eventType="touchUpInside" id="3Gz-8Y-QUq"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ScQ-wx-E74" userLabel="notNowButton">
-                                <rect key="frame" x="276" y="455" width="49" height="30"/>
-                                <state key="normal" title="Ikke nå"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ScQ-wx-E74" userLabel="notNowButton" customClass="SnapOnboardingUnderlinedButton" customModule="SnapOnboarding_iOS" customModuleProvider="target">
+                                <rect key="frame" x="277" y="457" width="47" height="28"/>
+                                <fontDescription key="fontDescription" name="GothamRounded-Medium" family="Gotham Rounded" pointSize="13"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Ikke nå">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="underlineColor">
+                                        <color key="value" red="0.99607843137254903" green="0.90980392156862744" blue="0.019607843137254902" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="notNowButtonTapped:" destination="tuq-Zg-aCA" eventType="touchUpInside" id="HKa-Gl-7Mr"/>
                                 </connections>
@@ -203,9 +222,10 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                     </view>
                     <connections>
                         <outlet property="enableLocationServicesButton" destination="pFE-Cu-2wV" id="DOC-KX-HMa"/>
+                        <outlet property="enableLocationServicesButtonWidth" destination="o7o-NB-ewd" id="6bD-Su-CUq"/>
                         <outlet property="headlineLabel" destination="GPV-cC-643" id="t2H-cy-cMu"/>
                         <outlet property="nextButton" destination="Acl-8o-2Dq" id="mwC-hl-nrB"/>
-                        <outlet property="notNowButton" destination="ScQ-wx-E74" id="7ln-Qz-ax4"/>
+                        <outlet property="notNowButton" destination="ScQ-wx-E74" id="mJn-sH-NzJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PcZ-cZ-ktu" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -224,8 +244,8 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                         <rect key="frame" x="0.0" y="0.0" width="600" height="502"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V9z-WP-6mg" userLabel="sparklingView">
-                                <rect key="frame" x="46" y="143" width="508" height="348"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V9z-WP-6mg" userLabel="sparklingView">
+                                <rect key="frame" x="46" y="153" width="508" height="338"/>
                                 <color key="backgroundColor" red="0.98138897235576927" green="0.017540564903846152" blue="0.37062424879807693" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="keh-ad-7Sj" userLabel="nextButton">
@@ -241,7 +261,7 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                                     <action selector="nextButtonTapped:" destination="msg-6e-T6i" eventType="touchUpInside" id="0EP-YZ-exR"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6QU-g5-Hyl" userLabel="headlineLabel" customClass="SnapOnboardingHeadlineLabel" customModule="SnapOnboarding_iOS" customModuleProvider="target">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Å legge ut salg er raskt og enkelt. Vi tagger og kategoriserer annonser med smart bildegjenkjenning." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6QU-g5-Hyl" userLabel="headlineLabel" customClass="SnapOnboardingHeadlineLabel" customModule="SnapOnboarding_iOS" customModuleProvider="target">
                                 <rect key="frame" x="108" y="45" width="384" height="86"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="400" id="hSW-9Q-2N4"/>
@@ -250,7 +270,6 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="designableText" value="Å legge ut salg er raskt og enkelt. Vi tagger og kategoriserer annonser med smart bildegjenkjenning."/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="designableLineSpacing">
                                         <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
@@ -293,27 +312,36 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DIb-IE-TZ2" userLabel="sparklingView">
-                                <rect key="frame" x="40" y="47" width="520" height="267"/>
+                                <rect key="frame" x="40" y="47" width="520" height="269"/>
                                 <color key="backgroundColor" red="0.9813889724" green="0.0175405649" blue="0.3706242488" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iZI-f9-ZQP" userLabel="continueWithInstagramButton">
-                                <rect key="frame" x="200" y="409" width="200" height="30"/>
+                                <rect key="frame" x="200" y="411" width="200" height="30"/>
                                 <state key="normal" title="FORTSETT MED INSTAGRAM"/>
                                 <connections>
                                     <action selector="continueWithInstagramButtonTapped:" destination="0qE-Ud-UlA" eventType="touchUpInside" id="Lu9-OJ-Czz"/>
                                     <action selector="enableLocationServicesButtonTapped:" destination="tuq-Zg-aCA" eventType="touchUpInside" id="Sjb-0v-dCQ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LxE-Ac-dOb" userLabel="skipLoginButton">
-                                <rect key="frame" x="187" y="455" width="227" height="30"/>
-                                <state key="normal" title="Hopp over, prøve uten innlogging"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LxE-Ac-dOb" userLabel="skipLoginButton" customClass="SnapOnboardingUnderlinedButton" customModule="SnapOnboarding_iOS" customModuleProvider="target">
+                                <rect key="frame" x="190" y="457" width="220" height="28"/>
+                                <fontDescription key="fontDescription" name="GothamRounded-Medium" family="Gotham Rounded" pointSize="13"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Hopp over, prøve uten innlogging">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="underlineColor">
+                                        <color key="value" red="0.99607843137254903" green="0.90980392156862744" blue="0.019607843137254902" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="notNowButtonTapped:" destination="tuq-Zg-aCA" eventType="touchUpInside" id="XQd-p0-5cj"/>
                                     <action selector="skipLoginButtonTapped:" destination="0qE-Ud-UlA" eventType="touchUpInside" id="96b-TX-vhA"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hVU-s5-rUl" userLabel="continueWithFacebookButton">
-                                <rect key="frame" x="203" y="359" width="194" height="30"/>
+                                <rect key="frame" x="203" y="361" width="194" height="30"/>
                                 <state key="normal" title="FORTSETT MED FACEBOOK"/>
                                 <connections>
                                     <action selector="continueWithFacebookButtonTapped:" destination="0qE-Ud-UlA" eventType="touchUpInside" id="WI4-mg-gym"/>
@@ -338,7 +366,7 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                     <connections>
                         <outlet property="continueWithFacebookButton" destination="hVU-s5-rUl" id="FzT-Jk-MBK"/>
                         <outlet property="continueWithInstagramButton" destination="iZI-f9-ZQP" id="M98-5b-NzK"/>
-                        <outlet property="skipLoginButton" destination="LxE-Ac-dOb" id="WBb-T4-dX2"/>
+                        <outlet property="skipLoginButton" destination="LxE-Ac-dOb" id="AFH-il-sYj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7I0-p0-avN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -346,4 +374,7 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
             <point key="canvasLocation" x="1491" y="1235.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="btn location" width="72" height="54"/>
+    </resources>
 </document>

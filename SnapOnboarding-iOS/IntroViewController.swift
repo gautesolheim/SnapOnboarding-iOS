@@ -35,7 +35,7 @@ class IntroViewController: UIViewController {
     }
     
     private func configureHeadlineLabel() {
-        headlineLabel?.designableText = stringsViewModel?.introHeadline ?? ""
+        headlineLabel?.text = stringsViewModel?.introHeadline
     }
 
 }

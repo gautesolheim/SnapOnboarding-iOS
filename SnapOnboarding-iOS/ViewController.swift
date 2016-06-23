@@ -87,7 +87,7 @@ class ViewController: UIViewController {
         model.wowYouDeclinedBody = "If you wish to enable it later, navigate to: System settings › Privacy › Location Services › Snapsale."
         model.continueWithFacebook = "Continue with Facebook"
         model.continueWithInstagram = "Continue with Instagram"
-        model.skipWithoutLogin = "Skip, try without logging in."
+        model.skipWithoutLogin = "Skip, try without logging in"
         
         return model
     }
