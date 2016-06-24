@@ -29,7 +29,7 @@ class LocationViewController: UIViewController {
         self.viewModel = viewModel
     }
 
-    // MARK: - UIViewController life cycle
+    // MARK: UIViewController life cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,7 +68,6 @@ class LocationViewController: UIViewController {
     
     private func configureWillAskLaterLabel() {
         willAskLaterLabel?.updateTextWithHeader(viewModel?.willAskLaterTitle, text: viewModel?.willAskLaterBody)
-        willAskLaterLabel?.hidden = false
     }
 
 }

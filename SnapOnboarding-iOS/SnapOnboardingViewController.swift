@@ -28,7 +28,7 @@ public class SnapOnboardingViewController: UIViewController {
         self.viewModel = configuration.viewModel
     }
     
-    // MARK: - UIViewController life cycle
+    // MARK: UIViewController life cycle
     
     public override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,7 +46,7 @@ public class SnapOnboardingViewController: UIViewController {
         }
     }
     
-    // MARK: - UIView configuration
+    // MARK: UIView configuration
     
     private func configureTermsAndConditionsLabel() {
         guard let termsViewModel = viewModel?.termsViewModel, termsAndConditionsText = termsViewModel.termsAndPrivacyFooter else {
@@ -76,7 +76,7 @@ public class SnapOnboardingViewController: UIViewController {
         termsAndConditionsLabel?.extendsLinkTouchArea = true
     }
     
-    // MARK: - UIScrollView
+    // MARK: UIScrollView
     
     private func scrollToNextPage() {
         if let scrollView = scrollView {
@@ -86,7 +86,7 @@ public class SnapOnboardingViewController: UIViewController {
         }
     }
     
-    // MARK: - UIPageControl
+    // MARK: UIPageControl
     
     private func updatePageControl() {
         guard let scrollView = scrollView else {
@@ -96,9 +96,22 @@ public class SnapOnboardingViewController: UIViewController {
         pageControl?.currentPage = Int(round(scrollView.contentOffset.x / view.frame.width))
     }
     
-    // MARK: - UIViewController properties
+    // MARK: UIContentContainer
     
-    public override func preferredStatusBarStyle() -> UIStatusBarStyle {
+    override public func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransitionToSize(size, withTransitionCoordinator: coordinator)
+        
+        let currentPage = pageControl?.currentPage ?? 0
+        
+        coordinator.animateAlongsideTransition({ _ in
+            let newOffset = CGPoint(x: CGFloat(currentPage) * size.width, y: 0)
+            self.scrollView?.setContentOffset(newOffset, animated: true)
+            }, completion: nil)
+    }
+    
+    // MARK: UIViewController properties
+    
+    override public func preferredStatusBarStyle() -> UIStatusBarStyle {
         return .LightContent
     }
     

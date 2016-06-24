@@ -21,7 +21,7 @@ class IntroViewController: UIViewController {
         self.viewModel = viewModel
     }
     
-    // MARK: - UIViewController life cycle
+    // MARK: UIViewController life cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
