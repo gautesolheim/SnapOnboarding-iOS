@@ -2,12 +2,12 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
-    @IBOutlet var continueWithFacebookButton: UIButton?
-    @IBOutlet var continueWithInstagramButton: UIButton?
-    @IBOutlet var skipLoginButton: SnapOnboardingUnderlinedButton?
+    @IBOutlet private var continueWithFacebookButton: UIButton?
+    @IBOutlet private var continueWithInstagramButton: UIButton?
+    @IBOutlet private var skipLoginButton: UIButton?
     
-    @IBOutlet var continueWithFacebookButtonWidth: NSLayoutConstraint?
-    @IBOutlet var continueWithInstagramButtonWidth: NSLayoutConstraint?
+    @IBOutlet private var continueWithFacebookButtonWidth: NSLayoutConstraint?
+    @IBOutlet private var continueWithInstagramButtonWidth: NSLayoutConstraint?
     
     @IBAction func continueWithFacebookButtonTapped(sender: UIButton) {
         delegate?.facebookSignupTapped()
@@ -60,7 +60,7 @@ class LoginViewController: UIViewController {
     }
     
     private func configureSkipLoginButton() {
-        skipLoginButton?.updateText(stringsViewModel?.skipWithoutLogin)
+        skipLoginButton?.setTitle(stringsViewModel?.skipWithoutLogin, forState: .Normal)
     }
     
     private func alignFacebookAndInstagramButtons() {

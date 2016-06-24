@@ -5,7 +5,7 @@ class LocationViewController: UIViewController {
     @IBOutlet private var nextButton: UIButton?
     @IBOutlet private var headlineLabel: SnapOnboardingHeadlineLabel?
     @IBOutlet private var enableLocationServicesButton: UIButton?
-    @IBOutlet private var notNowButton: SnapOnboardingUnderlinedButton?
+    @IBOutlet private var notNowButton: UIButton?
     
     @IBOutlet var enableLocationServicesButtonWidth: NSLayoutConstraint?
     
@@ -61,7 +61,7 @@ class LocationViewController: UIViewController {
     }
     
     private func configureNotNowButton() {
-        notNowButton?.updateText(stringsViewModel?.notNow)
+        notNowButton?.setTitle(stringsViewModel?.notNow, forState: .Normal)
     }
 
 }
