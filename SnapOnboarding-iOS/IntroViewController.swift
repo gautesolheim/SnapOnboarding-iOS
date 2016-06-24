@@ -1,18 +1,23 @@
 import UIKit
 
+protocol IntroViewControllerProtocol: class {
+//    var delegate: IntroViewControllerDelegate? { get set }
+//    func configureForViewModel(viewModel: IntroViewModel)
+}
+
 class IntroViewController: UIViewController {
 
     @IBOutlet private var nextButton: UIButton?
-    @IBOutlet var headlineLabel: SnapOnboardingHeadlineLabel!
+    @IBOutlet private var headlineLabel: SnapOnboardingHeadlineLabel?
     
     var delegate: IntroViewControllerDelegate?
-    private var stringsViewModel: SnapOnboardingStringsViewModel?
+    private var stringsViewModel: SnapOnboardingViewModel?
     
     @IBAction func nextButtonTapped(sender: UIButton) {
         delegate?.introNextButtonTapped()
     }
     
-    func applyStrings(strings: SnapOnboardingStringsViewModel) {
+    func applyStrings(strings: SnapOnboardingViewModel) {
         stringsViewModel = strings
     }
     
@@ -35,7 +40,11 @@ class IntroViewController: UIViewController {
     }
     
     private func configureHeadlineLabel() {
-        headlineLabel?.text = stringsViewModel?.introHeadline
+        headlineLabel?.updateText(stringsViewModel?.introHeadline)
     }
 
+}
+
+extension IntroViewController: IntroViewControllerProtocol {
+    
 }

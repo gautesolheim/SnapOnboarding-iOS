@@ -36,8 +36,8 @@ class ViewController: UIViewController {
         presentViewController(onboardingViewController, animated: false, completion: nil)
     }
     
-    private func createSampleStringsViewModelNorwegian() -> SnapOnboardingStringsViewModel {
-        var model = SnapOnboardingStringsViewModel()
+    private func createSampleStringsViewModelNorwegian() -> SnapOnboardingViewModel {
+        var model = SnapOnboardingViewModel()
         
         let footer = "Ved bruk av tjenesten Snapsale godtar du Vilkårene for bruk og Retningslinjer for personvern"
         model.termsAndPrivacyFooter = footer
@@ -64,8 +64,8 @@ class ViewController: UIViewController {
         return model
     }
     
-    private func createSampleStringsViewModelEnglish() -> SnapOnboardingStringsViewModel {
-        var model = SnapOnboardingStringsViewModel()
+    private func createSampleStringsViewModelEnglish() -> SnapOnboardingViewModel {
+        var model = SnapOnboardingViewModel()
         
         let footer = "You accept our Privacy Policy and Terms And Conditions by using the service Snapsale."
         model.termsAndPrivacyFooter = footer
@@ -79,7 +79,7 @@ class ViewController: UIViewController {
         )
         
         model.locationHeadline = "Follow sellers and products near you! Never miss a bargain again."
-        model.enableLocationServices = "Enable location services services"
+        model.enableLocationServices = "Enable location services"
         model.notNow = "Not now"
         model.willAskLaterTitle = "All right!"
         model.willAskLaterBody = "We will ask again later, when we need your location, for instance when you publish an ad."

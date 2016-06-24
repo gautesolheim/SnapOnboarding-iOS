@@ -10,7 +10,7 @@ class LocationViewController: UIViewController {
     @IBOutlet var enableLocationServicesButtonWidth: NSLayoutConstraint?
     
     var delegate: LocationViewControllerDelegate?
-    private var stringsViewModel: SnapOnboardingStringsViewModel?
+    private var stringsViewModel: SnapOnboardingViewModel?
     
     @IBAction func nextButtonTapped(sender: UIButton) {
         delegate?.locationNextButtonTapped()
@@ -24,7 +24,7 @@ class LocationViewController: UIViewController {
         // TODO: Display will ask later label
     }
     
-    func applyStrings(strings: SnapOnboardingStringsViewModel) {
+    func applyStrings(strings: SnapOnboardingViewModel) {
         self.stringsViewModel = strings
     }
 
@@ -55,8 +55,9 @@ class LocationViewController: UIViewController {
     private func configureEnableLocationServicesButton() {
         enableLocationServicesButton?.setTitle(stringsViewModel?.enableLocationServices?.uppercaseString, forState: .Normal)
         let intrinsicContentWidth = enableLocationServicesButton?.intrinsicContentSize().width ?? 245
-        let requiredWidth = intrinsicContentWidth + 26
-        enableLocationServicesButtonWidth?.constant = requiredWidth
+        let rightPadding: CGFloat = 26
+        let width = intrinsicContentWidth + rightPadding
+        enableLocationServicesButtonWidth?.constant = width
     }
     
     private func configureNotNowButton() {

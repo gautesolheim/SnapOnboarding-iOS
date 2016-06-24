@@ -1,7 +1,7 @@
 import UIKit
 import SnapTagsView
 
-public struct SnapOnboardingStringsViewModel {
+public struct SnapOnboardingViewModel {
     
     public var termsAndPrivacyFooter: String?
     public var rangeOfTermsAndConditions: Range<String.CharacterView.Index>?
@@ -28,6 +28,6 @@ public struct SnapOnboardingStringsViewModel {
 public struct SnapOnboardingConfiguration {
     
     public var delegate: SnapOnboardingDelegate?
-    public var stringsViewModel: SnapOnboardingStringsViewModel
+    public var stringsViewModel: SnapOnboardingViewModel
 
 }

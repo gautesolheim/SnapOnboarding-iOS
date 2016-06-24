@@ -10,7 +10,7 @@ public class SnapOnboardingViewController: UIViewController {
     
     private var backgroundColor: UIColor?
     private var delegate: SnapOnboardingDelegate?
-    private var stringsViewModel: SnapOnboardingStringsViewModel?
+    private var stringsViewModel: SnapOnboardingViewModel?
     
     public func applyConfiguration(configuration: SnapOnboardingConfiguration) {
         self.delegate = configuration.delegate
@@ -129,6 +129,7 @@ public class SnapOnboardingViewController: UIViewController {
             destinationViewController?.delegate = self
             destinationViewController?.applyStrings(stringsViewModel)
         default: break
+            // enum
         
         }
     }
@@ -156,6 +157,7 @@ extension SnapOnboardingViewController: TTTAttributedLabelDelegate {
             case "privacy":
             delegate?.privacyPolicyTapped()
         default: break
+            // enum
         }
     }
     

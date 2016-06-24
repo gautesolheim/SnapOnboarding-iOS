@@ -22,9 +22,9 @@ class LoginViewController: UIViewController {
     }
     
     var delegate: LoginViewControllerDelegate?
-    private var stringsViewModel: SnapOnboardingStringsViewModel?
+    private var stringsViewModel: SnapOnboardingViewModel?
     
-    func applyStrings(strings: SnapOnboardingStringsViewModel) {
+    func applyStrings(strings: SnapOnboardingViewModel) {
         self.stringsViewModel = strings
     }
     
@@ -46,14 +46,16 @@ class LoginViewController: UIViewController {
     private func configureContinueWithFacebookButton() {
         continueWithFacebookButton?.setTitle(stringsViewModel?.continueWithFacebook?.uppercaseString, forState: .Normal)
         let intrinsicContentWidth = continueWithFacebookButton?.intrinsicContentSize().width ?? 245
-        let requiredWidth = intrinsicContentWidth + 26
+        let rightPadding: CGFloat = 25
+        let requiredWidth = intrinsicContentWidth + rightPadding
         continueWithFacebookButtonWidth?.constant = requiredWidth
     }
     
     private func configureContinueWithInstagramButton() {
         continueWithInstagramButton?.setTitle(stringsViewModel?.continueWithInstagram?.uppercaseString, forState: .Normal)
         let intrinsicContentWidth = continueWithInstagramButton?.intrinsicContentSize().width ?? 245
-        let requiredWidth = intrinsicContentWidth + 26
+        let rightPadding: CGFloat = 25
+        let requiredWidth = intrinsicContentWidth + rightPadding
         continueWithInstagramButtonWidth?.constant = requiredWidth
     }
     
