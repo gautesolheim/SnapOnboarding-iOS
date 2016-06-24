@@ -16,6 +16,8 @@
             <string>GothamRounded-Medium</string>
             <string>GothamRounded-Medium</string>
             <string>GothamRounded-Medium</string>
+            <string>GothamRounded-Medium</string>
+            <string>GothamRounded-Medium</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -138,8 +140,8 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                         <rect key="frame" x="0.0" y="0.0" width="600" height="502"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ANS-Dj-bV5" userLabel="sparklingView">
-                                <rect key="frame" x="46" y="123" width="508" height="265"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ANS-Dj-bV5" userLabel="sparklingView">
+                                <rect key="frame" x="46" y="123" width="508" height="229"/>
                                 <color key="backgroundColor" red="0.9813889724" green="0.0175405649" blue="0.3706242488" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Acl-8o-2Dq" userLabel="nextButton">
@@ -170,14 +172,14 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pFE-Cu-2wV" userLabel="enableLocationServicesButton">
-                                <rect key="frame" x="225" y="387" width="150" height="54"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pFE-Cu-2wV" userLabel="enableLocationServicesButton">
+                                <rect key="frame" x="151" y="387" width="298" height="54"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="o7o-NB-ewd"/>
+                                    <constraint firstAttribute="width" constant="298" id="o7o-NB-ewd"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="GothamRounded-Medium" family="Gotham Rounded" pointSize="15"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                <inset key="contentEdgeInsets" minX="51" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <inset key="contentEdgeInsets" minX="58" minY="0.0" maxX="0.0" maxY="2"/>
                                 <state key="normal" title="SKRU PÅ STEDSTJENESTER" backgroundImage="btn location">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -312,15 +314,39 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DIb-IE-TZ2" userLabel="sparklingView">
-                                <rect key="frame" x="40" y="47" width="520" height="269"/>
+                                <rect key="frame" x="40" y="47" width="520" height="221"/>
                                 <color key="backgroundColor" red="0.9813889724" green="0.0175405649" blue="0.3706242488" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iZI-f9-ZQP" userLabel="continueWithInstagramButton">
-                                <rect key="frame" x="200" y="411" width="200" height="30"/>
-                                <state key="normal" title="FORTSETT MED INSTAGRAM"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iZI-f9-ZQP" userLabel="continueWithInstagramButton">
+                                <rect key="frame" x="151" y="387" width="298" height="54"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="298" id="h7t-YZ-m0x"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GothamRounded-Medium" family="Gotham Rounded" pointSize="15"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <inset key="contentEdgeInsets" minX="58" minY="0.0" maxX="0.0" maxY="2"/>
+                                <state key="normal" title="FORTSETT MED INSTAGRAM" backgroundImage="btn login instagram">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="continueWithInstagramButtonTapped:" destination="0qE-Ud-UlA" eventType="touchUpInside" id="Lu9-OJ-Czz"/>
                                     <action selector="enableLocationServicesButtonTapped:" destination="tuq-Zg-aCA" eventType="touchUpInside" id="Sjb-0v-dCQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hVU-s5-rUl" userLabel="continueWithFacebookButton">
+                                <rect key="frame" x="151" y="313" width="298" height="54"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="298" id="hdJ-tp-v4g"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GothamRounded-Medium" family="Gotham Rounded" pointSize="15"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <inset key="contentEdgeInsets" minX="58" minY="0.0" maxX="0.0" maxY="2"/>
+                                <state key="normal" title="FORTSETT MED FACEBOOK" backgroundImage="btn login facebook">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="continueWithFacebookButtonTapped:" destination="0qE-Ud-UlA" eventType="touchUpInside" id="WI4-mg-gym"/>
+                                    <action selector="enableLocationServicesButtonTapped:" destination="tuq-Zg-aCA" eventType="touchUpInside" id="K0H-1o-Dw4"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LxE-Ac-dOb" userLabel="skipLoginButton" customClass="SnapOnboardingUnderlinedButton" customModule="SnapOnboarding_iOS" customModuleProvider="target">
@@ -340,14 +366,6 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                                     <action selector="skipLoginButtonTapped:" destination="0qE-Ud-UlA" eventType="touchUpInside" id="96b-TX-vhA"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hVU-s5-rUl" userLabel="continueWithFacebookButton">
-                                <rect key="frame" x="203" y="361" width="194" height="30"/>
-                                <state key="normal" title="FORTSETT MED FACEBOOK"/>
-                                <connections>
-                                    <action selector="continueWithFacebookButtonTapped:" destination="0qE-Ud-UlA" eventType="touchUpInside" id="WI4-mg-gym"/>
-                                    <action selector="enableLocationServicesButtonTapped:" destination="tuq-Zg-aCA" eventType="touchUpInside" id="K0H-1o-Dw4"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.0" blue="0.34509804844856262" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -365,7 +383,9 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                     </view>
                     <connections>
                         <outlet property="continueWithFacebookButton" destination="hVU-s5-rUl" id="FzT-Jk-MBK"/>
+                        <outlet property="continueWithFacebookButtonWidth" destination="hdJ-tp-v4g" id="aAA-lw-DjA"/>
                         <outlet property="continueWithInstagramButton" destination="iZI-f9-ZQP" id="M98-5b-NzK"/>
+                        <outlet property="continueWithInstagramButtonWidth" destination="h7t-YZ-m0x" id="jmw-Wg-m0K"/>
                         <outlet property="skipLoginButton" destination="LxE-Ac-dOb" id="AFH-il-sYj"/>
                     </connections>
                 </viewController>
@@ -376,5 +396,7 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
     </scenes>
     <resources>
         <image name="btn location" width="72" height="54"/>
+        <image name="btn login facebook" width="74" height="54"/>
+        <image name="btn login instagram" width="74" height="54"/>
     </resources>
 </document>

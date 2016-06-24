@@ -39,6 +39,7 @@ class LocationViewController: UIViewController {
         
         configureNextButton()
         configureHeadlineLabel()
+        configureEnableLocationServicesButton()
         configureNotNowButton()
     }
     
@@ -51,11 +52,15 @@ class LocationViewController: UIViewController {
         headlineLabel?.updateText(stringsViewModel?.locationHeadline)
     }
     
+    private func configureEnableLocationServicesButton() {
+        enableLocationServicesButton?.setTitle(stringsViewModel?.enableLocationServices?.uppercaseString, forState: .Normal)
+        let intrinsicContentWidth = enableLocationServicesButton?.intrinsicContentSize().width ?? 245
+        let requiredWidth = intrinsicContentWidth + 26
+        enableLocationServicesButtonWidth?.constant = requiredWidth
+    }
+    
     private func configureNotNowButton() {
         notNowButton?.updateText(stringsViewModel?.notNow)
-        let intrinsicContentWidth = enableLocationServicesButton?.intrinsicContentSize().width
-        let requiredWidth = (intrinsicContentWidth ?? 263) + 30
-        enableLocationServicesButtonWidth?.constant = requiredWidth
     }
 
 }

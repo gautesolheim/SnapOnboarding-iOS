@@ -79,7 +79,7 @@ class ViewController: UIViewController {
         )
         
         model.locationHeadline = "Follow sellers and products near you! Never miss a bargain again."
-        model.enableLocationServices = "Enable location services"
+        model.enableLocationServices = "Enable location services services"
         model.notNow = "Not now"
         model.willAskLaterTitle = "All right!"
         model.willAskLaterBody = "We will ask again later, when we need your location, for instance when you publish an ad."

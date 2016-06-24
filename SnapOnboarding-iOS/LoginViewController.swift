@@ -6,6 +6,9 @@ class LoginViewController: UIViewController {
     @IBOutlet var continueWithInstagramButton: UIButton?
     @IBOutlet var skipLoginButton: SnapOnboardingUnderlinedButton?
     
+    @IBOutlet var continueWithFacebookButtonWidth: NSLayoutConstraint?
+    @IBOutlet var continueWithInstagramButtonWidth: NSLayoutConstraint?
+    
     @IBAction func continueWithFacebookButtonTapped(sender: UIButton) {
         delegate?.facebookSignupTapped()
     }
@@ -37,18 +40,34 @@ class LoginViewController: UIViewController {
         configureContinueWithFacebookButton()
         configureContinueWithInstagramButton()
         configureSkipLoginButton()
+        alignFacebookAndInstagramButtons()
     }
     
     private func configureContinueWithFacebookButton() {
-        
+        continueWithFacebookButton?.setTitle(stringsViewModel?.continueWithFacebook?.uppercaseString, forState: .Normal)
+        let intrinsicContentWidth = continueWithFacebookButton?.intrinsicContentSize().width ?? 245
+        let requiredWidth = intrinsicContentWidth + 26
+        continueWithFacebookButtonWidth?.constant = requiredWidth
     }
     
     private func configureContinueWithInstagramButton() {
-        
+        continueWithInstagramButton?.setTitle(stringsViewModel?.continueWithInstagram?.uppercaseString, forState: .Normal)
+        let intrinsicContentWidth = continueWithInstagramButton?.intrinsicContentSize().width ?? 245
+        let requiredWidth = intrinsicContentWidth + 26
+        continueWithInstagramButtonWidth?.constant = requiredWidth
     }
     
     private func configureSkipLoginButton() {
         skipLoginButton?.updateText(stringsViewModel?.skipWithoutLogin)
+    }
+    
+    private func alignFacebookAndInstagramButtons() {
+        if let facebookWidth = continueWithFacebookButtonWidth?.constant, instagramWidth = continueWithInstagramButtonWidth?.constant {
+            let difference = facebookWidth - instagramWidth
+            if (-6 ... 6).contains(difference) {
+                continueWithInstagramButtonWidth?.constant = facebookWidth
+            }
+        }
     }
 
 }
