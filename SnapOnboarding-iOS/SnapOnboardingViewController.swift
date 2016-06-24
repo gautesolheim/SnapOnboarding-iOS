@@ -38,12 +38,6 @@ public class SnapOnboardingViewController: UIViewController {
         configureTermsAndConditionsLabel()
     }
     
-    public override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        //dismiss()
-    }
-    
     private func dismiss() {
         delegate?.willDismiss()
         

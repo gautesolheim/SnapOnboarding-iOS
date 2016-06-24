@@ -6,6 +6,7 @@ class LocationViewController: UIViewController {
     @IBOutlet private var headlineLabel: SnapOnboardingHeadlineLabel?
     @IBOutlet private var enableLocationServicesButton: UIButton?
     @IBOutlet private var notNowButton: UIButton?
+    @IBOutlet private var willAskLaterLabel: SnapOnboardingHeadlineLabel?
     
     @IBOutlet var enableLocationServicesButtonWidth: NSLayoutConstraint?
     
@@ -41,6 +42,7 @@ class LocationViewController: UIViewController {
         configureHeadlineLabel()
         configureEnableLocationServicesButton()
         configureNotNowButton()
+        configureWillAskLaterLabel()
     }
     
     private func configureNextButton() {
@@ -62,6 +64,11 @@ class LocationViewController: UIViewController {
     
     private func configureNotNowButton() {
         notNowButton?.setTitle(viewModel?.notNow, forState: .Normal)
+    }
+    
+    private func configureWillAskLaterLabel() {
+        willAskLaterLabel?.updateTextWithHeader(viewModel?.willAskLaterTitle, text: viewModel?.willAskLaterBody)
+        willAskLaterLabel?.hidden = false
     }
 
 }

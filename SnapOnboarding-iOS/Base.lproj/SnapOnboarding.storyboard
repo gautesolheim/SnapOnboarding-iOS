@@ -9,6 +9,7 @@
             <string>GothamRounded-Book</string>
             <string>GothamRounded-Book</string>
             <string>GothamRounded-Book</string>
+            <string>GothamRounded-Book</string>
         </mutableArray>
         <mutableArray key="GothamRnd-Medium.otf">
             <string>GothamRounded-Medium</string>
@@ -167,9 +168,21 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="designableLineSpacing">
+                                    <userDefinedRuntimeAttribute type="number" keyPath="lineSpacin">
                                         <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vi vil spørre deg på et senere tidspunkt, når vi trenger lokasjonen din, for eksempel ved et nytt salg." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Og-sM-3rO" userLabel="willAskLaterLabel" customClass="SnapOnboardingHeadlineLabel" customModule="SnapOnboarding_iOS" customModuleProvider="target">
+                                <rect key="frame" x="108" y="380" width="385" height="86"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="400" id="cBg-0u-kaL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="header" value="Den er god!"/>
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pFE-Cu-2wV" userLabel="enableLocationServicesButton">
@@ -202,19 +215,24 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                         <color key="backgroundColor" red="1" green="0.0" blue="0.34509804844856262" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="GPV-cC-643" firstAttribute="centerX" secondItem="CMB-oQ-19v" secondAttribute="centerX" id="9Jd-TD-e9z"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="2Og-sM-3rO" secondAttribute="trailing" constant="27" id="DxR-IT-zUx"/>
                             <constraint firstAttribute="trailing" secondItem="ANS-Dj-bV5" secondAttribute="trailing" constant="46" id="MPX-VE-C7Z"/>
                             <constraint firstItem="GPV-cC-643" firstAttribute="top" secondItem="uCB-4V-4gp" secondAttribute="bottom" constant="45" id="Nzt-8U-ppf"/>
                             <constraint firstAttribute="trailing" secondItem="Acl-8o-2Dq" secondAttribute="trailing" constant="15" id="OB7-Vo-KnQ"/>
                             <constraint firstItem="pFE-Cu-2wV" firstAttribute="top" secondItem="ANS-Dj-bV5" secondAttribute="bottom" constant="35" id="OeW-5A-9op"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="GPV-cC-643" secondAttribute="trailing" constant="38" id="PgA-KD-zzq"/>
                             <constraint firstItem="pFE-Cu-2wV" firstAttribute="centerX" secondItem="CMB-oQ-19v" secondAttribute="centerX" id="XH0-uY-O9k"/>
+                            <constraint firstItem="2Og-sM-3rO" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="CMB-oQ-19v" secondAttribute="leading" constant="27" id="d7o-fs-5dK"/>
                             <constraint firstItem="ANS-Dj-bV5" firstAttribute="leading" secondItem="CMB-oQ-19v" secondAttribute="leading" constant="46" id="e62-QF-rhg"/>
                             <constraint firstItem="ScQ-wx-E74" firstAttribute="centerX" secondItem="CMB-oQ-19v" secondAttribute="centerX" id="frP-7n-4cy"/>
                             <constraint firstItem="Acl-8o-2Dq" firstAttribute="top" secondItem="uCB-4V-4gp" secondAttribute="bottom" constant="15" id="iz5-5N-PdF"/>
                             <constraint firstItem="ScQ-wx-E74" firstAttribute="top" secondItem="pFE-Cu-2wV" secondAttribute="bottom" constant="16" id="jpr-hn-Rlu"/>
+                            <constraint firstItem="2Og-sM-3rO" firstAttribute="centerX" secondItem="CMB-oQ-19v" secondAttribute="centerX" id="kUR-Ef-cUt"/>
+                            <constraint firstItem="2Og-sM-3rO" firstAttribute="top" secondItem="ANS-Dj-bV5" secondAttribute="bottom" constant="25" id="pdX-TD-GSy"/>
                             <constraint firstItem="Tnx-e1-m8T" firstAttribute="top" secondItem="ScQ-wx-E74" secondAttribute="bottom" constant="17" id="tFI-3S-C0c"/>
                             <constraint firstItem="GPV-cC-643" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="CMB-oQ-19v" secondAttribute="leading" constant="38" id="trG-Rd-WUn"/>
                             <constraint firstItem="ANS-Dj-bV5" firstAttribute="top" secondItem="GPV-cC-643" secondAttribute="bottom" constant="22" id="wrW-tJ-cyL"/>
+                            <constraint firstItem="Tnx-e1-m8T" firstAttribute="top" secondItem="2Og-sM-3rO" secondAttribute="bottom" constant="36" id="yv8-en-iPl"/>
                         </constraints>
                     </view>
                     <connections>
@@ -223,6 +241,7 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                         <outlet property="headlineLabel" destination="GPV-cC-643" id="t2H-cy-cMu"/>
                         <outlet property="nextButton" destination="Acl-8o-2Dq" id="mwC-hl-nrB"/>
                         <outlet property="notNowButton" destination="ScQ-wx-E74" id="HeA-Cs-rIH"/>
+                        <outlet property="willAskLaterLabel" destination="2Og-sM-3rO" id="Xo3-rc-Dde"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PcZ-cZ-ktu" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -267,7 +286,7 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="designableLineSpacing">
+                                    <userDefinedRuntimeAttribute type="number" keyPath="lineSpacin">
                                         <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
