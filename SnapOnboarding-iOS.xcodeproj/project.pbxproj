@@ -14,7 +14,6 @@
 		9F1E9B0B1D0EE54A00E0EC40 /* SnapOnboardingConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1E9B0A1D0EE54A00E0EC40 /* SnapOnboardingConfiguration.swift */; };
 		9F1E9B161D104E7200E0EC40 /* SnapOnboardingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1E9B151D104E7200E0EC40 /* SnapOnboardingDelegate.swift */; };
 		9F25D07E1D1AE30B00B56D6A /* SnapOnboardingHeadlineLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F25D07D1D1AE30B00B56D6A /* SnapOnboardingHeadlineLabel.swift */; };
-		9F25D0801D1AF6F300B56D6A /* SnapOnboardingUnderlinedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F25D07F1D1AF6F300B56D6A /* SnapOnboardingUnderlinedButton.swift */; };
 		9F4CE0B31D0EB2A000A6A1FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4CE0B21D0EB2A000A6A1FB /* AppDelegate.swift */; };
 		9F4CE0B51D0EB2A000A6A1FB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4CE0B41D0EB2A000A6A1FB /* ViewController.swift */; };
 		9F4CE0B81D0EB2A000A6A1FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F4CE0B61D0EB2A000A6A1FB /* Main.storyboard */; };
@@ -61,7 +60,6 @@
 		9F1E9B0A1D0EE54A00E0EC40 /* SnapOnboardingConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapOnboardingConfiguration.swift; sourceTree = "<group>"; };
 		9F1E9B151D104E7200E0EC40 /* SnapOnboardingDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapOnboardingDelegate.swift; sourceTree = "<group>"; };
 		9F25D07D1D1AE30B00B56D6A /* SnapOnboardingHeadlineLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapOnboardingHeadlineLabel.swift; sourceTree = "<group>"; };
-		9F25D07F1D1AF6F300B56D6A /* SnapOnboardingUnderlinedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapOnboardingUnderlinedButton.swift; sourceTree = "<group>"; };
 		9F4CE0AF1D0EB29F00A6A1FB /* SnapOnboarding-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SnapOnboarding-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F4CE0B21D0EB2A000A6A1FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = "SnapOnboarding-iOS/AppDelegate.swift"; sourceTree = "<group>"; };
 		9F4CE0B41D0EB2A000A6A1FB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = "SnapOnboarding-iOS/ViewController.swift"; sourceTree = "<group>"; };
@@ -143,7 +141,6 @@
 			isa = PBXGroup;
 			children = (
 				9F25D07D1D1AE30B00B56D6A /* SnapOnboardingHeadlineLabel.swift */,
-				9F25D07F1D1AF6F300B56D6A /* SnapOnboardingUnderlinedButton.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -512,7 +509,6 @@
 				9F9C7D391D16CE89006203B7 /* IntroViewController.swift in Sources */,
 				9F59C6401D17043900CAD9F7 /* IntroViewControllerDelegate.swift in Sources */,
 				9F1E9B161D104E7200E0EC40 /* SnapOnboardingDelegate.swift in Sources */,
-				9F25D0801D1AF6F300B56D6A /* SnapOnboardingUnderlinedButton.swift in Sources */,
 				9F59C6431D17072C00CAD9F7 /* LocationViewControllerDelegate.swift in Sources */,
 				9FADA8B61D1974DF00746E71 /* LoginViewControllerDelegate.swift in Sources */,
 				9F4CE0B31D0EB2A000A6A1FB /* AppDelegate.swift in Sources */,

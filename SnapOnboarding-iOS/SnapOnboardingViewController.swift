@@ -2,6 +2,17 @@ import UIKit
 import TTTAttributedLabel
 import SnapFonts_iOS
 
+private enum TermsAndConditionsURL: String {
+    case TermsAndConditions = "terms"
+    case PrivacyPolicy = "privacy"
+}
+
+private enum EmbedSegueIdentifier: String {
+    case IntroViewController = "introContainerViewEmbed"
+    case LocationViewController = "locationContainerViewEmbed"
+    case LoginViewController = "loginContainerViewEmbed"
+}
+
 public class SnapOnboardingViewController: UIViewController {
     
     @IBOutlet private var scrollView: UIScrollView?
@@ -10,11 +21,11 @@ public class SnapOnboardingViewController: UIViewController {
     
     private var backgroundColor: UIColor?
     private var delegate: SnapOnboardingDelegate?
-    private var stringsViewModel: SnapOnboardingViewModel?
+    private var viewModel: SnapOnboardingViewModel?
     
     public func applyConfiguration(configuration: SnapOnboardingConfiguration) {
         self.delegate = configuration.delegate
-        self.stringsViewModel = configuration.stringsViewModel
+        self.viewModel = configuration.viewModel
     }
     
     // MARK: - UIViewController life cycle
@@ -22,7 +33,7 @@ public class SnapOnboardingViewController: UIViewController {
     public override func viewDidLoad() {
         super.viewDidLoad()
         
-        assert(stringsViewModel != nil)
+        assert(viewModel != nil)
         
         configureTermsAndConditionsLabel()
     }
@@ -44,7 +55,7 @@ public class SnapOnboardingViewController: UIViewController {
     // MARK: - UIView configuration
     
     private func configureTermsAndConditionsLabel() {
-        guard let stringsViewModel = stringsViewModel, termsAndConditionsText = stringsViewModel.termsAndPrivacyFooter else {
+        guard let termsViewModel = viewModel?.termsViewModel, termsAndConditionsText = termsViewModel.termsAndPrivacyFooter else {
             return
         }
         
@@ -61,11 +72,11 @@ public class SnapOnboardingViewController: UIViewController {
             termsAndConditionsLabel?.activeLinkAttributes = nil
         }
         
-        if let termsIndexRange = stringsViewModel.rangeOfTermsAndConditions, privacyIndexRange = stringsViewModel.rangeOfPrivacyPolicy {
+        if let termsIndexRange = termsViewModel.rangeOfTermsAndConditions, privacyIndexRange = termsViewModel.rangeOfPrivacyPolicy {
             let termsRange = termsAndConditionsText.startIndex.distanceTo(termsIndexRange.startIndex) ..< termsAndConditionsText.startIndex.distanceTo(termsIndexRange.endIndex)
             let privacyRange = termsAndConditionsText.startIndex.distanceTo(privacyIndexRange.startIndex) ..< termsAndConditionsText.startIndex.distanceTo(privacyIndexRange.endIndex)
-            termsAndConditionsLabel?.addLinkToURL(NSURL(string: "terms"), withRange: NSRange(termsRange))
-            termsAndConditionsLabel?.addLinkToURL(NSURL(string: "privacy"), withRange: NSRange(privacyRange))
+            termsAndConditionsLabel?.addLinkToURL(NSURL(string: TermsAndConditionsURL.TermsAndConditions.rawValue), withRange: NSRange(termsRange))
+            termsAndConditionsLabel?.addLinkToURL(NSURL(string: TermsAndConditionsURL.PrivacyPolicy.rawValue), withRange: NSRange(privacyRange))
         }
         
         termsAndConditionsLabel?.extendsLinkTouchArea = true
@@ -87,19 +98,6 @@ public class SnapOnboardingViewController: UIViewController {
         guard let scrollView = scrollView else {
             return
         }
-
-//        Uncomment for Home Screen-like delayed updating
-//        let viewWidth = view.frame.width
-//        
-//        switch scrollView.contentOffset.x {
-//        case 0:
-//            pageControl?.currentPage = 0
-//        case viewWidth:
-//            pageControl?.currentPage = 1
-//        case viewWidth * 2:
-//            pageControl?.currentPage = 2
-//        default: break
-//        }
         
         pageControl?.currentPage = Int(round(scrollView.contentOffset.x / view.frame.width))
     }
@@ -111,26 +109,24 @@ public class SnapOnboardingViewController: UIViewController {
     }
     
     override public func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        guard let identifier = segue.identifier, stringsViewModel = stringsViewModel else {
+        guard let identifier = segue.identifier, viewModel = viewModel else {
             return
         }
         
         switch identifier {
-            case "introContainerViewEmbed":
+            case EmbedSegueIdentifier.IntroViewController.rawValue:
             let destinationViewController = segue.destinationViewController as? IntroViewController
             destinationViewController?.delegate = self
-            destinationViewController?.applyStrings(stringsViewModel)
-            case "locationContainerViewEmbed":
+            destinationViewController?.configureForViewModel(viewModel.introViewModel)
+            case EmbedSegueIdentifier.LocationViewController.rawValue:
             let destinationViewController = segue.destinationViewController as? LocationViewController
             destinationViewController?.delegate = self
-            destinationViewController?.applyStrings(stringsViewModel)
-            case "loginContainerViewEmbed":
+            destinationViewController?.configureForViewModel(viewModel.locationViewModel)
+            case EmbedSegueIdentifier.LoginViewController.rawValue:
             let destinationViewController = segue.destinationViewController as? LoginViewController
             destinationViewController?.delegate = self
-            destinationViewController?.applyStrings(stringsViewModel)
+            destinationViewController?.configureForViewModel(viewModel.loginViewModel)
         default: break
-            // enum
-        
         }
     }
     
@@ -152,12 +148,11 @@ extension SnapOnboardingViewController: TTTAttributedLabelDelegate {
     
     public func attributedLabel(label: TTTAttributedLabel!, didSelectLinkWithURL url: NSURL!) {
         switch url.absoluteString {
-            case "terms":
+            case TermsAndConditionsURL.TermsAndConditions.rawValue:
             delegate?.termsAndConditionsTapped()
-            case "privacy":
+            case TermsAndConditionsURL.PrivacyPolicy.rawValue:
             delegate?.privacyPolicyTapped()
         default: break
-            // enum
         }
     }
     

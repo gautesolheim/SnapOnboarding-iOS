@@ -27,67 +27,87 @@ class ViewController: UIViewController {
         let storyboard = UIStoryboard(name: "SnapOnboarding", bundle: nil)
         let onboardingViewController = storyboard.instantiateViewControllerWithIdentifier("snapOnboardingViewController") as! SnapOnboardingViewController
         
-        let stringsViewModel = createSampleStringsViewModelEnglish()
-        
-        let configuration = SnapOnboardingConfiguration(delegate: self, stringsViewModel: stringsViewModel)
+        let viewModel = createSampleViewModelEnglish()
+        let configuration = SnapOnboardingConfiguration(delegate: self, viewModel: viewModel)
         
         onboardingViewController.applyConfiguration(configuration)
-        
         presentViewController(onboardingViewController, animated: false, completion: nil)
     }
     
-    private func createSampleStringsViewModelNorwegian() -> SnapOnboardingViewModel {
-        var model = SnapOnboardingViewModel()
-        
+    private func createSampleViewModelNorwegian() -> SnapOnboardingViewModel {
+        var termsViewModel = SnapOnboardingViewModel.TermsViewModel()
         let footer = "Ved bruk av tjenesten Snapsale godtar du Vilkårene for bruk og Retningslinjer for personvern"
-        model.termsAndPrivacyFooter = footer
-        model.rangeOfTermsAndConditions = footer.rangeOfString("Vilkårene for bruk")
-        model.rangeOfPrivacyPolicy = footer.rangeOfString("Retningslinjer for personvern")
+        termsViewModel.termsAndPrivacyFooter = footer
+        termsViewModel.rangeOfTermsAndConditions = footer.rangeOfString("Vilkårene for bruk")
+        termsViewModel.rangeOfPrivacyPolicy = footer.rangeOfString("Retningslinjer for personvern")
         
-        model.next = "Neste"
-        model.introHeadline = "Å legge ut salg er raskt og enkelt. Vi tagger og kategoriserer annonser med smart bildegjenkjenning."
-        model.tags = createTagRepresentationsFromStrings(
+        var introViewModel = SnapOnboardingViewModel.IntroViewModel()
+        introViewModel.next = "Neste"
+        introViewModel.introHeadline = "Å legge ut salg er raskt og enkelt. Vi tagger og kategoriserer annonser med smart bildegjenkjenning."
+        introViewModel.tags = createTagRepresentationsFromStrings(
             ["Veske", "MichaelKors", "JetSetTravel", "Skinn", "Beige", "Accessoirer"]
         )
         
-        model.locationHeadline = "Følg selgere og produkter nær deg! Aldri gå glipp av et kupp igjen."
-        model.enableLocationServices = "Skru på stedstjenester"
-        model.notNow = "Ikke nå"
-        model.willAskLaterTitle = "Den er god!"
-        model.willAskLaterBody = "Vi vil spørre deg på et senere tidspunkt, når vi trenger lokasjonen din, for eksempel ved et nytt salg."
-        model.wowYouDeclinedTitle = "Oi, du avslo stedstjenester!"
-        model.wowYouDeclinedBody = "Om du ønsker å skru det på senere, gå til: System innstillinger › Personvern › Stedstjenester › Snapsale"
-        model.continueWithFacebook = "Fortsett med Facebook"
-        model.continueWithInstagram = "Fortsett med Instagram"
-        model.skipWithoutLogin = "Hopp over, prøve uten innlogging"
+        var locationViewModel = SnapOnboardingViewModel.LocationViewModel()
+        locationViewModel.next = "Neste"
+        locationViewModel.locationHeadline = "Følg selgere og produkter nær deg! Aldri gå glipp av et kupp igjen."
+        locationViewModel.enableLocationServices = "Skru på stedstjenester"
+        locationViewModel.notNow = "Ikke nå"
+        locationViewModel.willAskLaterTitle = "Den er god!"
+        locationViewModel.willAskLaterBody = "Vi vil spørre deg på et senere tidspunkt, når vi trenger lokasjonen din, for eksempel ved et nytt salg."
+        locationViewModel.wowYouDeclinedTitle = "Oi, du avslo stedstjenester!"
+        locationViewModel.wowYouDeclinedBody = "Om du ønsker å skru det på senere, gå til: System innstillinger › Personvern › Stedstjenester › Snapsale"
+        
+        var loginViewModel = SnapOnboardingViewModel.LoginViewModel()
+        loginViewModel.continueWithFacebook = "Fortsett med Facebook"
+        loginViewModel.continueWithInstagram = "Fortsett med Instagram"
+        loginViewModel.skipWithoutLogin = "Hopp over, prøve uten innlogging"
+        
+        let model = SnapOnboardingViewModel(
+            termsViewModel: termsViewModel,
+            introViewModel: introViewModel,
+            locationViewModel: locationViewModel,
+            loginViewModel: loginViewModel
+        )
         
         return model
     }
     
-    private func createSampleStringsViewModelEnglish() -> SnapOnboardingViewModel {
-        var model = SnapOnboardingViewModel()
-        
+    private func createSampleViewModelEnglish() -> SnapOnboardingViewModel {
+        var termsViewModel = SnapOnboardingViewModel.TermsViewModel()
         let footer = "You accept our Privacy Policy and Terms And Conditions by using the service Snapsale."
-        model.termsAndPrivacyFooter = footer
-        model.rangeOfTermsAndConditions = footer.rangeOfString("Terms And Conditions")
-        model.rangeOfPrivacyPolicy = footer.rangeOfString("Privacy Policy")
+        termsViewModel.termsAndPrivacyFooter = footer
+        termsViewModel.rangeOfTermsAndConditions = footer.rangeOfString("Terms And Conditions")
+        termsViewModel.rangeOfPrivacyPolicy = footer.rangeOfString("Privacy Policy")
         
-        model.next = "Next"
-        model.introHeadline = "Publishing sales is fast and easy. We tag and categorize ads with clever image recognition."
-        model.tags = createTagRepresentationsFromStrings(
+        var introViewModel = SnapOnboardingViewModel.IntroViewModel()
+        introViewModel.next = "Next"
+        introViewModel.introHeadline = "Publishing sales is fast and easy. We tag and categorize ads with clever image recognition."
+        introViewModel.tags = createTagRepresentationsFromStrings(
             ["Purse", "MichaelKors", "JetSetTravel", "Leather", "Beige", "Accessories"]
         )
         
-        model.locationHeadline = "Follow sellers and products near you! Never miss a bargain again."
-        model.enableLocationServices = "Enable location services"
-        model.notNow = "Not now"
-        model.willAskLaterTitle = "All right!"
-        model.willAskLaterBody = "We will ask again later, when we need your location, for instance when you publish an ad."
-        model.wowYouDeclinedTitle = "Wow, you disabled location services!"
-        model.wowYouDeclinedBody = "If you wish to enable it later, navigate to: System settings › Privacy › Location Services › Snapsale."
-        model.continueWithFacebook = "Continue with Facebook"
-        model.continueWithInstagram = "Continue with Instagram"
-        model.skipWithoutLogin = "Skip, try without logging in"
+        var locationViewModel = SnapOnboardingViewModel.LocationViewModel()
+        locationViewModel.next = "Next"
+        locationViewModel.locationHeadline = "Follow sellers and products near you! Never miss a bargain again."
+        locationViewModel.enableLocationServices = "Enable location services"
+        locationViewModel.notNow = "Not now"
+        locationViewModel.willAskLaterTitle = "All right!"
+        locationViewModel.willAskLaterBody = "We will ask again later, when we need your location, for instance when you publish an ad."
+        locationViewModel.wowYouDeclinedTitle = "Wow, you disabled location services!"
+        locationViewModel.wowYouDeclinedBody = "If you wish to enable it later, navigate to: System settings › Privacy › Location Services › Snapsale."
+        
+        var loginViewModel = SnapOnboardingViewModel.LoginViewModel()
+        loginViewModel.continueWithFacebook = "Continue with Facebook"
+        loginViewModel.continueWithInstagram = "Continue with Instagram"
+        loginViewModel.skipWithoutLogin = "Skip, try without logging in"
+        
+        let model = SnapOnboardingViewModel(
+            termsViewModel: termsViewModel,
+            introViewModel: introViewModel,
+            locationViewModel: locationViewModel,
+            loginViewModel: loginViewModel
+        )
         
         return model
     }

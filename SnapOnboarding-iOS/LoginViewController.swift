@@ -22,10 +22,10 @@ class LoginViewController: UIViewController {
     }
     
     var delegate: LoginViewControllerDelegate?
-    private var stringsViewModel: SnapOnboardingViewModel?
+    private var viewModel: SnapOnboardingViewModel.LoginViewModel?
     
-    func applyStrings(strings: SnapOnboardingViewModel) {
-        self.stringsViewModel = strings
+    func configureForViewModel(viewModel: SnapOnboardingViewModel.LoginViewModel) {
+        self.viewModel = viewModel
     }
     
     // MARK: - UIViewController life cycle
@@ -44,7 +44,7 @@ class LoginViewController: UIViewController {
     }
     
     private func configureContinueWithFacebookButton() {
-        continueWithFacebookButton?.setTitle(stringsViewModel?.continueWithFacebook?.uppercaseString, forState: .Normal)
+        continueWithFacebookButton?.setTitle(viewModel?.continueWithFacebook?.uppercaseString, forState: .Normal)
         let intrinsicContentWidth = continueWithFacebookButton?.intrinsicContentSize().width ?? 245
         let rightPadding: CGFloat = 25
         let requiredWidth = intrinsicContentWidth + rightPadding
@@ -52,7 +52,7 @@ class LoginViewController: UIViewController {
     }
     
     private func configureContinueWithInstagramButton() {
-        continueWithInstagramButton?.setTitle(stringsViewModel?.continueWithInstagram?.uppercaseString, forState: .Normal)
+        continueWithInstagramButton?.setTitle(viewModel?.continueWithInstagram?.uppercaseString, forState: .Normal)
         let intrinsicContentWidth = continueWithInstagramButton?.intrinsicContentSize().width ?? 245
         let rightPadding: CGFloat = 25
         let requiredWidth = intrinsicContentWidth + rightPadding
@@ -60,7 +60,7 @@ class LoginViewController: UIViewController {
     }
     
     private func configureSkipLoginButton() {
-        skipLoginButton?.setTitle(stringsViewModel?.skipWithoutLogin, forState: .Normal)
+        skipLoginButton?.setTitle(viewModel?.skipWithoutLogin, forState: .Normal)
     }
     
     private func alignFacebookAndInstagramButtons() {

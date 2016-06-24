@@ -11,14 +11,14 @@ class IntroViewController: UIViewController {
     @IBOutlet private var headlineLabel: SnapOnboardingHeadlineLabel?
     
     var delegate: IntroViewControllerDelegate?
-    private var stringsViewModel: SnapOnboardingViewModel?
+    private var viewModel: SnapOnboardingViewModel.IntroViewModel?
     
     @IBAction func nextButtonTapped(sender: UIButton) {
         delegate?.introNextButtonTapped()
     }
     
-    func applyStrings(strings: SnapOnboardingViewModel) {
-        stringsViewModel = strings
+    func configureForViewModel(viewModel: SnapOnboardingViewModel.IntroViewModel) {
+        self.viewModel = viewModel
     }
     
     // MARK: - UIViewController life cycle
@@ -35,12 +35,12 @@ class IntroViewController: UIViewController {
     }
     
     private func configureNextButton() {
-        let title = stringsViewModel?.next?.uppercaseString
+        let title = viewModel?.next?.uppercaseString
         nextButton?.setTitle(title, forState: .Normal)
     }
     
     private func configureHeadlineLabel() {
-        headlineLabel?.updateText(stringsViewModel?.introHeadline)
+        headlineLabel?.updateText(viewModel?.introHeadline)
     }
 
 }

@@ -3,31 +3,45 @@ import SnapTagsView
 
 public struct SnapOnboardingViewModel {
     
-    public var termsAndPrivacyFooter: String?
-    public var rangeOfTermsAndConditions: Range<String.CharacterView.Index>?
-    public var rangeOfPrivacyPolicy: Range<String.CharacterView.Index>?
+    public struct TermsViewModel {
+        public var termsAndPrivacyFooter: String?
+        public var rangeOfTermsAndConditions: Range<String.CharacterView.Index>?
+        public var rangeOfPrivacyPolicy: Range<String.CharacterView.Index>?
+    }
     
-    public var next: String?
-    public var introHeadline: String?
-    public var tags: [SnapTagRepresentation]?
+    public struct IntroViewModel {
+        public var next: String?
+        public var introHeadline: String?
+        public var tags: [SnapTagRepresentation]?
+    }
     
-    public var locationHeadline: String?
-    public var enableLocationServices: String?
-    public var notNow: String?
-    public var willAskLaterTitle: String?
-    public var willAskLaterBody: String?
-    public var wowYouDeclinedTitle: String?
-    public var wowYouDeclinedBody: String?
+    public struct LocationViewModel {
+        public var next: String?
+        public var locationHeadline: String?
+        public var enableLocationServices: String?
+        public var notNow: String?
+        public var willAskLaterTitle: String?
+        public var willAskLaterBody: String?
+        public var wowYouDeclinedTitle: String?
+        public var wowYouDeclinedBody: String?
+    }
     
-    public var continueWithFacebook: String?
-    public var continueWithInstagram: String?
-    public var skipWithoutLogin: String?
+    public struct LoginViewModel {
+        public var continueWithFacebook: String?
+        public var continueWithInstagram: String?
+        public var skipWithoutLogin: String?
+    }
+    
+    public var termsViewModel: TermsViewModel
+    public var introViewModel: IntroViewModel
+    public var locationViewModel: LocationViewModel
+    public var loginViewModel: LoginViewModel
     
 }
 
 public struct SnapOnboardingConfiguration {
     
     public var delegate: SnapOnboardingDelegate?
-    public var stringsViewModel: SnapOnboardingViewModel
+    public var viewModel: SnapOnboardingViewModel
 
 }

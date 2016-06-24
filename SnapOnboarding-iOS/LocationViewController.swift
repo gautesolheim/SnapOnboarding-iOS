@@ -10,7 +10,7 @@ class LocationViewController: UIViewController {
     @IBOutlet var enableLocationServicesButtonWidth: NSLayoutConstraint?
     
     var delegate: LocationViewControllerDelegate?
-    private var stringsViewModel: SnapOnboardingViewModel?
+    private var viewModel: SnapOnboardingViewModel.LocationViewModel?
     
     @IBAction func nextButtonTapped(sender: UIButton) {
         delegate?.locationNextButtonTapped()
@@ -24,8 +24,8 @@ class LocationViewController: UIViewController {
         // TODO: Display will ask later label
     }
     
-    func applyStrings(strings: SnapOnboardingViewModel) {
-        self.stringsViewModel = strings
+    func configureForViewModel(viewModel: SnapOnboardingViewModel.LocationViewModel) {
+        self.viewModel = viewModel
     }
 
     // MARK: - UIViewController life cycle
@@ -44,16 +44,16 @@ class LocationViewController: UIViewController {
     }
     
     private func configureNextButton() {
-        let title = stringsViewModel?.next?.uppercaseString
+        let title = viewModel?.next?.uppercaseString
         nextButton?.setTitle(title, forState: .Normal)
     }
     
     private func configureHeadlineLabel() {
-        headlineLabel?.updateText(stringsViewModel?.locationHeadline)
+        headlineLabel?.updateText(viewModel?.locationHeadline)
     }
     
     private func configureEnableLocationServicesButton() {
-        enableLocationServicesButton?.setTitle(stringsViewModel?.enableLocationServices?.uppercaseString, forState: .Normal)
+        enableLocationServicesButton?.setTitle(viewModel?.enableLocationServices?.uppercaseString, forState: .Normal)
         let intrinsicContentWidth = enableLocationServicesButton?.intrinsicContentSize().width ?? 245
         let rightPadding: CGFloat = 26
         let width = intrinsicContentWidth + rightPadding
@@ -61,7 +61,7 @@ class LocationViewController: UIViewController {
     }
     
     private func configureNotNowButton() {
-        notNowButton?.setTitle(stringsViewModel?.notNow, forState: .Normal)
+        notNowButton?.setTitle(viewModel?.notNow, forState: .Normal)
     }
 
 }
