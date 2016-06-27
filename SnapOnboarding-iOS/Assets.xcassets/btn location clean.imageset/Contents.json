@@ -1,19 +1,28 @@
 {
   "images" : [
     {
-      "idiom" : "universal",
-      "filename" : "btn location clean.pdf",
       "resizing" : {
         "mode" : "3-part-horizontal",
         "center" : {
-          "mode" : "tile",
+          "mode" : "stretch",
           "width" : 1
         },
         "cap-insets" : {
-          "right" : 27,
-          "left" : 27
+          "right" : 25,
+          "left" : 24
         }
-      }
+      },
+      "idiom" : "universal",
+      "filename" : "btn location clean.pdf",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
     }
   ],
   "info" : {

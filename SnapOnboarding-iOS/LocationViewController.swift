@@ -136,14 +136,15 @@ class LocationViewController: UIViewController {
         let backgroundImage = UIImage(named: "btn location clean")! // TODO: swiftgen
         enableLocationServicesButton?.setTitle(nil, forState: .Normal)
         enableLocationServicesButton?.setBackgroundImage(backgroundImage, forState: .Normal)
+        enableLocationServicesButton?.contentEdgeInsets = UIEdgeInsetsZero
         
         let spinner = UIImage(named: "icon_m_spinner_black")! // TODO: swiftgen
-        spinnerImageView.image = spinner
         spinnerImageView.translatesAutoresizingMaskIntoConstraints = false
+        spinnerImageView.image = spinner
         spinnerImageView.alpha = 0.0
         enableLocationServicesButton?.addSubview(spinnerImageView)
-        enableLocationServicesButton?.addConstraint(NSLayoutConstraint(item: enableLocationServicesButton!, attribute: .CenterX, relatedBy: .Equal, toItem: spinnerImageView, attribute: .CenterX, multiplier: 1, constant: 0))
-        enableLocationServicesButton?.addConstraint(NSLayoutConstraint(item: enableLocationServicesButton!, attribute: .CenterY, relatedBy: .Equal, toItem: spinnerImageView, attribute: .CenterY, multiplier: 1, constant: 1))
+        enableLocationServicesButton?.addConstraint(NSLayoutConstraint(item: spinnerImageView, attribute: .CenterX, relatedBy: .Equal, toItem: enableLocationServicesButton!, attribute: .CenterX, multiplier: 1, constant: 0)) // TODO: !
+        enableLocationServicesButton?.addConstraint(NSLayoutConstraint(item: spinnerImageView, attribute: .CenterY, relatedBy: .Equal, toItem: enableLocationServicesButton!, attribute: .CenterY, multiplier: 1, constant: 0)) // TODO: !
         
         UIView.animateWithDuration(0.3, animations: {
             self.enableLocationServicesButton?.frame.size.width = 0
@@ -164,6 +165,7 @@ class LocationViewController: UIViewController {
                 } else {
                     UIView.animateWithDuration(1.0, delay: 0, options: [UIViewAnimationOptions.CurveEaseOut], animations: {
                         self.spinnerImageView.transform = CGAffineTransformRotate(self.spinnerImageView.transform, CGFloat(M_PI))
+                        self.spinnerImageView.alpha = 0.0
                         }, completion: nil)
                 }
         })

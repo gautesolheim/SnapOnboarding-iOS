@@ -142,7 +142,7 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ANS-Dj-bV5" userLabel="sparklingView">
-                                <rect key="frame" x="46" y="123" width="508" height="232"/>
+                                <rect key="frame" x="46" y="123" width="508" height="236"/>
                                 <color key="backgroundColor" red="0.9813889724" green="0.0175405649" blue="0.3706242488" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Acl-8o-2Dq" userLabel="nextButton">
@@ -174,7 +174,7 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vi vil spørre deg på et senere tidspunkt, når vi trenger lokasjonen din, for eksempel ved et nytt salg." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Og-sM-3rO" userLabel="willAskLaterLabel" customClass="SnapOnboardingHeadlineLabel" customModule="SnapOnboarding_iOS" customModuleProvider="target">
-                                <rect key="frame" x="108" y="380" width="385" height="96"/>
+                                <rect key="frame" x="108" y="384" width="385" height="92"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="400" id="cBg-0u-kaL"/>
                                 </constraints>
@@ -186,7 +186,7 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pFE-Cu-2wV" userLabel="enableLocationServicesButton">
-                                <rect key="frame" x="151" y="390" width="298" height="54"/>
+                                <rect key="frame" x="151" y="394" width="298" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="298" id="o7o-NB-ewd"/>
                                 </constraints>
@@ -403,7 +403,7 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
         </scene>
     </scenes>
     <resources>
-        <image name="btn location" width="72" height="54"/>
+        <image name="btn location" width="68" height="50"/>
         <image name="btn login facebook" width="74" height="54"/>
         <image name="btn login instagram" width="74" height="54"/>
         <image name="link skip" width="45" height="25"/>
