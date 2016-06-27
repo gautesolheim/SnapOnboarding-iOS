@@ -11,6 +11,7 @@
 		4F748D93E19F3A967840C8BA /* Pods_SnapOnboarding_iOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D15C0E862D794A7AA1142D8 /* Pods_SnapOnboarding_iOSUITests.framework */; };
 		9F0D2E0A1D21261D0085BA12 /* EnableLocationServicesButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0D2E091D21261D0085BA12 /* EnableLocationServicesButton.swift */; };
 		9F0D2E0C1D214E830085BA12 /* SnapOnboardingViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0D2E0B1D214E830085BA12 /* SnapOnboardingViewControllerProtocol.swift */; };
+		9F0D2E0F1D215EB90085BA12 /* LocationViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0D2E0E1D215EB90085BA12 /* LocationViewControllerProtocol.swift */; };
 		9F150B721D17CF4800C3D716 /* SnapOnboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F150B741D17CF4800C3D716 /* SnapOnboarding.storyboard */; };
 		9F1E9B071D0EE2F900E0EC40 /* SnapOnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1E9B061D0EE2F900E0EC40 /* SnapOnboardingViewController.swift */; };
 		9F1E9B0B1D0EE54A00E0EC40 /* SnapOnboardingConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1E9B0A1D0EE54A00E0EC40 /* SnapOnboardingConfiguration.swift */; };
@@ -59,6 +60,7 @@
 		83E0D5046DFCB39BD51FA799 /* Pods-SnapOnboarding-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapOnboarding-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-SnapOnboarding-iOS/Pods-SnapOnboarding-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		9F0D2E091D21261D0085BA12 /* EnableLocationServicesButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnableLocationServicesButton.swift; sourceTree = "<group>"; };
 		9F0D2E0B1D214E830085BA12 /* SnapOnboardingViewControllerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapOnboardingViewControllerProtocol.swift; sourceTree = "<group>"; };
+		9F0D2E0E1D215EB90085BA12 /* LocationViewControllerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationViewControllerProtocol.swift; sourceTree = "<group>"; };
 		9F150B731D17CF4800C3D716 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SnapOnboarding.storyboard; sourceTree = "<group>"; };
 		9F1E9B061D0EE2F900E0EC40 /* SnapOnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapOnboardingViewController.swift; sourceTree = "<group>"; };
 		9F1E9B0A1D0EE54A00E0EC40 /* SnapOnboardingConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapOnboardingConfiguration.swift; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 				9F0D2E081D2126010085BA12 /* Views */,
 				9F59C6421D17072C00CAD9F7 /* LocationViewControllerDelegate.swift */,
 				9F9C7D3A1D16CE9A006203B7 /* LocationViewController.swift */,
+				9F0D2E0E1D215EB90085BA12 /* LocationViewControllerProtocol.swift */,
 			);
 			name = "Location View Controller";
 			sourceTree = "<group>";
@@ -526,6 +529,7 @@
 				9F1E9B161D104E7200E0EC40 /* SnapOnboardingDelegate.swift in Sources */,
 				9F59C6431D17072C00CAD9F7 /* LocationViewControllerDelegate.swift in Sources */,
 				9F0D2E0C1D214E830085BA12 /* SnapOnboardingViewControllerProtocol.swift in Sources */,
+				9F0D2E0F1D215EB90085BA12 /* LocationViewControllerProtocol.swift in Sources */,
 				9FADA8B61D1974DF00746E71 /* LoginViewControllerDelegate.swift in Sources */,
 				9F4CE0B31D0EB2A000A6A1FB /* AppDelegate.swift in Sources */,
 			);

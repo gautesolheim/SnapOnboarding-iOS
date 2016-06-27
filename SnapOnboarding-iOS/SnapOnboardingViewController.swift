@@ -13,12 +13,6 @@ private enum EmbedSegueIdentifier: String {
     case LoginViewController = "loginContainerViewEmbed"
 }
 
-public enum LocationServicesStatus {
-    case NotYetRequested
-    case Enabled
-    case Disabled
-}
-
 public class SnapOnboardingViewController: UIViewController {
     
     @IBOutlet private var scrollView: UIScrollView?
@@ -27,7 +21,9 @@ public class SnapOnboardingViewController: UIViewController {
     
     private var delegate: SnapOnboardingDelegate?
     private var viewModel: SnapOnboardingViewModel?
-    var locationServicesStatus: LocationServicesStatus = .NotYetRequested
+    
+    private var locationViewController: LocationViewControllerProtocol?
+    private var userHasRespondedToLocationServices = false
     
     // MARK: UIViewController life cycle
     
@@ -134,6 +130,7 @@ public class SnapOnboardingViewController: UIViewController {
             let destinationViewController = segue.destinationViewController as? LocationViewController
             destinationViewController?.delegate = self
             destinationViewController?.configureForViewModel(viewModel.locationViewModel)
+            locationViewController = destinationViewController
             case EmbedSegueIdentifier.LoginViewController.rawValue:
             let destinationViewController = segue.destinationViewController as? LoginViewController
             destinationViewController?.delegate = self
@@ -149,16 +146,15 @@ public class SnapOnboardingViewController: UIViewController {
 extension SnapOnboardingViewController: SnapOnboardingViewControllerProtocol {
     
     public func applyConfiguration(configuration: SnapOnboardingConfiguration) {
-        self.delegate = configuration.delegate
-        self.viewModel = configuration.viewModel
+        delegate = configuration.delegate
+        viewModel = configuration.viewModel
     }
     
     public func locationServicesStatusChanged(status: Bool) {
-        switch status {
-        case true:
-            locationServicesStatus = .Enabled
-        case false:
-            locationServicesStatus = .Disabled
+        locationViewController?.locationServicesStatusChanged(status)
+        
+        if status {
+            scrollToNextPage()
         }
     }
     
@@ -168,7 +164,37 @@ extension SnapOnboardingViewController: SnapOnboardingViewControllerProtocol {
 
 extension SnapOnboardingViewController: UIScrollViewDelegate {
     
+    // TEMP for "in between"
+    override public func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+//        scrollView?.contentSize.width = view.frame.width * 2
+    }
+    
     public func scrollViewDidScroll(scrollView: UIScrollView) {
+        // Static
+//        if !userHasRespondedToLocationServices && scrollView.contentOffset.x > view.frame.width + 1 {
+//            scrollView.scrollEnabled = false
+//        } else {
+//            scrollView.scrollEnabled = true
+//        }
+        
+        // Very dynamic
+//        if !userHasRespondedToLocationServices && scrollView.contentOffset.x > view.frame.width {
+//            scrollView.contentSize.width = view.frame.width * 2
+//        }
+        
+        // In between
+//        if !userHasRespondedToLocationServices && scrollView.contentOffset.x > view.frame.width + 60 {
+//            var offset = scrollView.contentOffset
+//            offset.x = view.frame.width
+//            scrollView.setContentOffset(offset, animated: true)
+//            scrollView.scrollEnabled = false
+//        } else {
+//            scrollView.scrollEnabled = true
+//        }
+
+        
         updatePageControl()
     }
     
@@ -205,11 +231,22 @@ extension SnapOnboardingViewController: IntroViewControllerDelegate {
 extension SnapOnboardingViewController: LocationViewControllerDelegate {
     
     func locationNextButtonTapped() {
-        scrollToNextPage()
+        if userHasRespondedToLocationServices {
+            scrollToNextPage()
+        } else {
+            delegate?.enableLocationServicesTapped()
+            userHasRespondedToLocationServices = true
+        }
+        
     }
     
     func enableLocationServicesTapped() {
         delegate?.enableLocationServicesTapped()
+        userHasRespondedToLocationServices = true
+    }
+    
+    func notNowButtonTapped() {
+        userHasRespondedToLocationServices = true
     }
     
 }

@@ -1,5 +1,12 @@
 import UIKit
 
+enum LocationServicesStatus {
+    case NotYetRequested
+    case WaitingForResponse
+    case Enabled
+    case Disabled
+}
+
 class LocationViewController: UIViewController {
     
     @IBOutlet private var nextButton: UIButton?
@@ -8,13 +15,13 @@ class LocationViewController: UIViewController {
     @IBOutlet private var notNowButton: UIButton?
     @IBOutlet private var willAskLaterLabel: SnapOnboardingHeadlineLabel?
     
-    @IBOutlet var enableLocationServicesButtonWidth: NSLayoutConstraint?
+    @IBOutlet private var enableLocationServicesButtonWidth: NSLayoutConstraint?
     
     var delegate: LocationViewControllerDelegate?
     private var viewModel: SnapOnboardingViewModel.LocationViewModel?
     
     private var spinnerImageView = UIImageView()
-    private var shouldAnimateSpinner = true
+    private var locationServicesStatus: LocationServicesStatus = .NotYetRequested
     
     @IBAction func nextButtonTapped(sender: UIButton) {
         delegate?.locationNextButtonTapped()
@@ -22,26 +29,12 @@ class LocationViewController: UIViewController {
     
     @IBAction func enableLocationServicesButtonTapped(sender: UIButton) {
         delegate?.enableLocationServicesTapped()
+        locationServicesStatus = .WaitingForResponse
         animateEnableLocationServicesButtonToSpinner()
     }
     
     @IBAction func notNowButtonTapped(sender: UIButton) {
-        //configureWillAskLaterLabelForNotNow()
-        
-        // Reset for testing
-        if shouldAnimateSpinner {
-            shouldAnimateSpinner = false
-        } else {
-            shouldAnimateSpinner = true
-            enableLocationServicesButton?.setBackgroundImage(UIImage(named: "btn location"), forState: .Normal)
-            enableLocationServicesButtonWidth?.active = true
-            spinnerImageView.removeFromSuperview()
-            configureEnableLocationServicesButton()
-        }
-    }
-    
-    func configureForViewModel(viewModel: SnapOnboardingViewModel.LocationViewModel) {
-        self.viewModel = viewModel
+        configureWillAskLaterLabelForNotNow()
     }
 
     // MARK: UIViewController life cycle
@@ -80,19 +73,16 @@ class LocationViewController: UIViewController {
         notNowButton?.setTitle(viewModel?.notNow, forState: .Normal)
     }
     
-    private func prepareForWillAskLaterLabel() {
-        enableLocationServicesButton?.hidden = true
-        notNowButton?.hidden = true
-    }
-    
     private func configureWillAskLaterLabelForNotNow() {
-        prepareForWillAskLaterLabel()
+        prepareForWillAskLaterLabelAppearance()
+        
         willAskLaterLabel?.updateTextWithHeader(viewModel?.willAskLaterTitle, text: viewModel?.willAskLaterBody)
-        willAskLaterLabel?.hidden = false
+        
+        animateWillAskLaterLabelAppearanceWithDuration(0.1)
     }
     
     private func configureWillAskLaterLabelForLocationDisabled() {
-        prepareForWillAskLaterLabel()
+        prepareForWillAskLaterLabelAppearance()
         
         guard let wowYouDeclinedBody = viewModel?.wowYouDeclinedBody else {
             return
@@ -109,7 +99,34 @@ class LocationViewController: UIViewController {
         }
         
         willAskLaterLabel?.updateAttributedTextWithHeader(viewModel?.wowYouDeclinedTitle, text: attributedText)
+        animateWillAskLaterLabelAppearanceWithDuration(0.1)
+    }
+    
+    private func configureWillAskLaterLabelForThankYou() {
+        prepareForWillAskLaterLabelAppearance()
+        
+        willAskLaterLabel?.updateTextWithHeader(viewModel?.didEnableLocationServicesTitle, text: viewModel?.didEnableLocationServicesBody)
+        
+        animateWillAskLaterLabelAppearanceWithDuration(0.1)
+    }
+    
+    private func prepareForWillAskLaterLabelAppearance() {
+        // Not animating
+        // enableLocationServicesButton?.hidden = true
+        // notNowButton?.hidden = true
+        
+        // Animating
+        willAskLaterLabel?.alpha = 0.0
+    }
+    
+    private func animateWillAskLaterLabelAppearanceWithDuration(duration: Double) {
         willAskLaterLabel?.hidden = false
+        
+        UIView.animateWithDuration(duration, animations: {
+            self.enableLocationServicesButton?.alpha = 0
+            self.notNowButton?.alpha = 0
+            self.willAskLaterLabel?.alpha = 1
+        })
     }
     
     private func animateEnableLocationServicesButtonToSpinner() {
@@ -129,7 +146,7 @@ class LocationViewController: UIViewController {
         UIView.animateWithDuration(0.3, animations: {
             self.enableLocationServicesButton?.frame.size.width = 0
         }, completion: { _ in
-            UIView.animateWithDuration(1.2, delay: 0, options: UIViewAnimationOptions.CurveEaseIn, animations: {
+            UIView.animateWithDuration(0.9, delay: 0, options: UIViewAnimationOptions.CurveEaseIn, animations: {
                 self.spinnerImageView.alpha = 1.0
                 }, completion: nil)
             self.animateEnableLocationServicesButtonSpinner()
@@ -140,14 +157,33 @@ class LocationViewController: UIViewController {
         UIView.animateWithDuration(0.3, delay: 0, options: UIViewAnimationOptions.CurveLinear, animations: {
             self.spinnerImageView.transform = CGAffineTransformRotate(self.spinnerImageView.transform, CGFloat(M_PI_2))
             }, completion: { _ in
-                if self.shouldAnimateSpinner {
+                if self.locationServicesStatus == .WaitingForResponse {
                     self.animateEnableLocationServicesButtonSpinner()
                 } else {
-                    UIView.animateWithDuration(0.5, delay: 0, options: [UIViewAnimationOptions.CurveEaseOut], animations: {
-                        self.spinnerImageView.transform = CGAffineTransformRotate(self.spinnerImageView.transform, CGFloat(M_PI_2))
+                    UIView.animateWithDuration(1.0, delay: 0, options: [UIViewAnimationOptions.CurveEaseOut], animations: {
+                        self.spinnerImageView.transform = CGAffineTransformRotate(self.spinnerImageView.transform, CGFloat(M_PI))
                         }, completion: nil)
                 }
         })
     }
 
+}
+
+extension LocationViewController: LocationViewControllerProtocol {
+    
+    func configureForViewModel(viewModel: SnapOnboardingViewModel.LocationViewModel) {
+        self.viewModel = viewModel
+    }
+    
+    func locationServicesStatusChanged(status: Bool) {
+        switch status {
+        case true:
+            locationServicesStatus = .Enabled
+            configureWillAskLaterLabelForThankYou()
+        case false:
+            locationServicesStatus = .Disabled
+            configureWillAskLaterLabelForLocationDisabled()
+        }
+    }
+    
 }

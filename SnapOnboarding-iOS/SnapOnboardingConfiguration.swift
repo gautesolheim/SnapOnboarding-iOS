@@ -24,6 +24,8 @@ public struct SnapOnboardingViewModel {
         public var willAskLaterBody: String?
         public var wowYouDeclinedTitle: String?
         public var wowYouDeclinedBody: String?
+        public var didEnableLocationServicesTitle: String?
+        public var didEnableLocationServicesBody: String?
     }
     
     public struct LoginViewModel {

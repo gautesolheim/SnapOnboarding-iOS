@@ -58,7 +58,9 @@ class ViewController: UIViewController {
         locationViewModel.willAskLaterTitle = "Den er god!"
         locationViewModel.willAskLaterBody = "Vi vil spørre deg på et senere tidspunkt, når vi trenger lokasjonen din, for eksempel ved et nytt salg."
         locationViewModel.wowYouDeclinedTitle = "Oi, du avslo stedstjenester!"
-        locationViewModel.wowYouDeclinedBody = "Om du ønsker å skru det på senere, gå til: System innstillinger > Personvern › Stedstjenester › Snapsale"
+        locationViewModel.wowYouDeclinedBody = "Om du ønsker å skru det på senere, gå til: System innstillinger › Personvern › Stedstjenester › Snapsale"
+        locationViewModel.didEnableLocationServicesTitle = "Takk!"
+        locationViewModel.didEnableLocationServicesBody = "Du skrudde på stedstjenester, og får derfor maksimalt utbytte av tjenesten."
         
         var loginViewModel = SnapOnboardingViewModel.LoginViewModel()
         loginViewModel.continueWithFacebook = "Fortsett med Facebook"
@@ -98,6 +100,8 @@ class ViewController: UIViewController {
         locationViewModel.willAskLaterBody = "We will ask again later, when we need your location, for instance when you publish an ad."
         locationViewModel.wowYouDeclinedTitle = "Wow, you disabled location services!"
         locationViewModel.wowYouDeclinedBody = "If you wish to enable it later, navigate to: System settings › Privacy › Location Services › Snapsale."
+        locationViewModel.didEnableLocationServicesTitle = "Thank you!"
+        locationViewModel.didEnableLocationServicesBody = "You enabled location services, and will therefore get the most of the service."
         
         var loginViewModel = SnapOnboardingViewModel.LoginViewModel()
         loginViewModel.continueWithFacebook = "Continue with Facebook"
@@ -140,17 +144,15 @@ extension ViewController: SnapOnboardingDelegate {
     func enableLocationServicesTapped() {
         print("enable-location-services-tapped")
         
-        var status = false
-        
         let alertController = UIAlertController(title: "Enable Location Services?", message: nil, preferredStyle: .Alert)
         alertController.addAction(UIAlertAction(title: "Enable", style: .Default, handler: { _ in
-            status = true
+            self.onboardingViewController?.locationServicesStatusChanged(true)
         }))
-        alertController.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
+        alertController.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: { _ in
+            self.onboardingViewController?.locationServicesStatusChanged(false)
+        }))
         
-        onboardingViewController?.presentViewController(alertController, animated: true, completion: {
-            self.onboardingViewController?.locationServicesStatusChanged(status)
-        })
+        onboardingViewController?.presentViewController(alertController, animated: true, completion: nil)
     }
     
     
