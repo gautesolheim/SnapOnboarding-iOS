@@ -113,11 +113,6 @@ class LocationViewController: UIViewController {
     }
     
     private func prepareForWillAskLaterLabelAppearance() {
-        // Not animating
-        // enableLocationServicesButton?.hidden = true
-        // notNowButton?.hidden = true
-        
-        // Animating
         willAskLaterLabel?.alpha = 0.0
     }
     
@@ -132,22 +127,26 @@ class LocationViewController: UIViewController {
     }
     
     private func animateEnableLocationServicesButtonToSpinner() {
+        guard let enableLocationServicesButton = enableLocationServicesButton else {
+            return
+        }
+        
         enableLocationServicesButtonWidth?.active = false
         let backgroundImage = UIImage(named: "btn location clean")! // TODO: swiftgen
-        enableLocationServicesButton?.setTitle(nil, forState: .Normal)
-        enableLocationServicesButton?.setBackgroundImage(backgroundImage, forState: .Normal)
-        enableLocationServicesButton?.contentEdgeInsets = UIEdgeInsetsZero
+        enableLocationServicesButton.setTitle(nil, forState: .Normal)
+        enableLocationServicesButton.setBackgroundImage(backgroundImage, forState: .Normal)
+        enableLocationServicesButton.contentEdgeInsets = UIEdgeInsetsZero
         
         let spinner = UIImage(named: "icon_m_spinner_black")! // TODO: swiftgen
         spinnerImageView.translatesAutoresizingMaskIntoConstraints = false
         spinnerImageView.image = spinner
         spinnerImageView.alpha = 0.0
-        enableLocationServicesButton?.addSubview(spinnerImageView)
-        enableLocationServicesButton?.addConstraint(NSLayoutConstraint(item: spinnerImageView, attribute: .CenterX, relatedBy: .Equal, toItem: enableLocationServicesButton!, attribute: .CenterX, multiplier: 1, constant: 0)) // TODO: !
-        enableLocationServicesButton?.addConstraint(NSLayoutConstraint(item: spinnerImageView, attribute: .CenterY, relatedBy: .Equal, toItem: enableLocationServicesButton!, attribute: .CenterY, multiplier: 1, constant: 0)) // TODO: !
+        enableLocationServicesButton.addSubview(spinnerImageView)
+        enableLocationServicesButton.addConstraint(NSLayoutConstraint(item: spinnerImageView, attribute: .CenterX, relatedBy: .Equal, toItem: enableLocationServicesButton, attribute: .CenterX, multiplier: 1, constant: 0))
+        enableLocationServicesButton.addConstraint(NSLayoutConstraint(item: spinnerImageView, attribute: .CenterY, relatedBy: .Equal, toItem: enableLocationServicesButton, attribute: .CenterY, multiplier: 1, constant: 0))
         
         UIView.animateWithDuration(0.3, animations: {
-            self.enableLocationServicesButton?.frame.size.width = 0
+            enableLocationServicesButton.frame.size.width = 0
         }, completion: { _ in
             UIView.animateWithDuration(0.9, delay: 0, options: UIViewAnimationOptions.CurveEaseIn, animations: {
                 self.spinnerImageView.alpha = 1.0
@@ -165,7 +164,8 @@ class LocationViewController: UIViewController {
                 } else {
                     UIView.animateWithDuration(1.0, delay: 0, options: [UIViewAnimationOptions.CurveEaseOut], animations: {
                         self.spinnerImageView.transform = CGAffineTransformRotate(self.spinnerImageView.transform, CGFloat(M_PI))
-                        self.spinnerImageView.alpha = 0.0
+                        self.spinnerImageView.alpha = 0
+                        self.spinnerImageView.removeFromSuperview()
                         }, completion: nil)
                 }
         })
