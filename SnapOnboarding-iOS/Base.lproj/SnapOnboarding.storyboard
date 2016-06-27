@@ -174,7 +174,7 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vi vil spørre deg på et senere tidspunkt, når vi trenger lokasjonen din, for eksempel ved et nytt salg." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Og-sM-3rO" userLabel="willAskLaterLabel" customClass="SnapOnboardingHeadlineLabel" customModule="SnapOnboarding_iOS" customModuleProvider="target">
-                                <rect key="frame" x="108" y="380" width="385" height="86"/>
+                                <rect key="frame" x="108" y="380" width="385" height="96"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="400" id="cBg-0u-kaL"/>
                                 </constraints>
@@ -232,7 +232,7 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                             <constraint firstItem="Tnx-e1-m8T" firstAttribute="top" secondItem="ScQ-wx-E74" secondAttribute="bottom" constant="17" id="tFI-3S-C0c"/>
                             <constraint firstItem="GPV-cC-643" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="CMB-oQ-19v" secondAttribute="leading" constant="38" id="trG-Rd-WUn"/>
                             <constraint firstItem="ANS-Dj-bV5" firstAttribute="top" secondItem="GPV-cC-643" secondAttribute="bottom" constant="22" id="wrW-tJ-cyL"/>
-                            <constraint firstItem="Tnx-e1-m8T" firstAttribute="top" secondItem="2Og-sM-3rO" secondAttribute="bottom" constant="36" id="yv8-en-iPl"/>
+                            <constraint firstItem="Tnx-e1-m8T" firstAttribute="top" secondItem="2Og-sM-3rO" secondAttribute="bottom" constant="26" id="yv8-en-iPl"/>
                         </constraints>
                     </view>
                     <connections>

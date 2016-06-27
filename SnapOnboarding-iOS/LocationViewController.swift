@@ -22,7 +22,7 @@ class LocationViewController: UIViewController {
     }
     
     @IBAction func notNowButtonTapped(sender: UIButton) {
-        // TODO: Display will ask later label
+        configureWillAskLaterLabelForNotNow()
     }
     
     func configureForViewModel(viewModel: SnapOnboardingViewModel.LocationViewModel) {
@@ -42,7 +42,6 @@ class LocationViewController: UIViewController {
         configureHeadlineLabel()
         configureEnableLocationServicesButton()
         configureNotNowButton()
-        configureWillAskLaterLabel()
     }
     
     private func configureNextButton() {
@@ -66,8 +65,36 @@ class LocationViewController: UIViewController {
         notNowButton?.setTitle(viewModel?.notNow, forState: .Normal)
     }
     
-    private func configureWillAskLaterLabel() {
+    private func prepareForWillAskLaterLabel() {
+        enableLocationServicesButton?.hidden = true
+        notNowButton?.hidden = true
+    }
+    
+    private func configureWillAskLaterLabelForNotNow() {
+        prepareForWillAskLaterLabel()
         willAskLaterLabel?.updateTextWithHeader(viewModel?.willAskLaterTitle, text: viewModel?.willAskLaterBody)
+        willAskLaterLabel?.hidden = false
+    }
+    
+    private func configureWillAskLaterLabelForLocationDisabled() {
+        prepareForWillAskLaterLabel()
+        
+        guard let wowYouDeclinedBody = viewModel?.wowYouDeclinedBody else {
+            return
+        }
+        
+        let attributedText = NSMutableAttributedString(string: wowYouDeclinedBody)
+        let angleSignColor = UIColor(red: 254/255.0, green: 232/255.0, blue: 5/255.0, alpha: 1.0)
+        
+        for index in viewModel!.wowYouDeclinedBody!.characters.indices {
+            if wowYouDeclinedBody[index] == ">" || wowYouDeclinedBody[index] == "›" {
+                let int = wowYouDeclinedBody.startIndex.distanceTo(index)
+                attributedText.replaceCharactersInRange(NSRange(int ... int), withAttributedString: NSAttributedString(string: String(wowYouDeclinedBody[index]), attributes: [NSForegroundColorAttributeName : angleSignColor]))
+            }
+        }
+        
+        willAskLaterLabel?.updateAttributedTextWithHeader(viewModel?.wowYouDeclinedTitle, text: attributedText)
+        willAskLaterLabel?.hidden = false
     }
 
 }

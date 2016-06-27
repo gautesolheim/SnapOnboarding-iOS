@@ -27,7 +27,7 @@ class ViewController: UIViewController {
         let storyboard = UIStoryboard(name: "SnapOnboarding", bundle: nil)
         let onboardingViewController = storyboard.instantiateViewControllerWithIdentifier("snapOnboardingViewController") as! SnapOnboardingViewController
         
-        let viewModel = createSampleViewModelEnglish()
+        let viewModel = createSampleViewModelNorwegian()
         let configuration = SnapOnboardingConfiguration(delegate: self, viewModel: viewModel)
         
         onboardingViewController.applyConfiguration(configuration)
@@ -56,7 +56,7 @@ class ViewController: UIViewController {
         locationViewModel.willAskLaterTitle = "Den er god!"
         locationViewModel.willAskLaterBody = "Vi vil spørre deg på et senere tidspunkt, når vi trenger lokasjonen din, for eksempel ved et nytt salg."
         locationViewModel.wowYouDeclinedTitle = "Oi, du avslo stedstjenester!"
-        locationViewModel.wowYouDeclinedBody = "Om du ønsker å skru det på senere, gå til: System innstillinger › Personvern › Stedstjenester › Snapsale"
+        locationViewModel.wowYouDeclinedBody = "Om du ønsker å skru det på senere, gå til: System innstillinger > Personvern › Stedstjenester › Snapsale"
         
         var loginViewModel = SnapOnboardingViewModel.LoginViewModel()
         loginViewModel.continueWithFacebook = "Fortsett med Facebook"
