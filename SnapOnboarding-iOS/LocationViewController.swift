@@ -13,16 +13,31 @@ class LocationViewController: UIViewController {
     var delegate: LocationViewControllerDelegate?
     private var viewModel: SnapOnboardingViewModel.LocationViewModel?
     
+    private var spinnerImageView = UIImageView()
+    private var shouldAnimateSpinner = true
+    
     @IBAction func nextButtonTapped(sender: UIButton) {
         delegate?.locationNextButtonTapped()
     }
     
     @IBAction func enableLocationServicesButtonTapped(sender: UIButton) {
         delegate?.enableLocationServicesTapped()
+        animateEnableLocationServicesButtonToSpinner()
     }
     
     @IBAction func notNowButtonTapped(sender: UIButton) {
-        configureWillAskLaterLabelForNotNow()
+        //configureWillAskLaterLabelForNotNow()
+        
+        // Reset for testing
+        if shouldAnimateSpinner {
+            shouldAnimateSpinner = false
+        } else {
+            shouldAnimateSpinner = true
+            enableLocationServicesButton?.setBackgroundImage(UIImage(named: "btn location"), forState: .Normal)
+            enableLocationServicesButtonWidth?.active = true
+            spinnerImageView.removeFromSuperview()
+            configureEnableLocationServicesButton()
+        }
     }
     
     func configureForViewModel(viewModel: SnapOnboardingViewModel.LocationViewModel) {
@@ -95,6 +110,44 @@ class LocationViewController: UIViewController {
         
         willAskLaterLabel?.updateAttributedTextWithHeader(viewModel?.wowYouDeclinedTitle, text: attributedText)
         willAskLaterLabel?.hidden = false
+    }
+    
+    private func animateEnableLocationServicesButtonToSpinner() {
+        enableLocationServicesButtonWidth?.active = false
+        let backgroundImage = UIImage(named: "btn location clean")! // TODO: swiftgen
+        enableLocationServicesButton?.setTitle(nil, forState: .Normal)
+        enableLocationServicesButton?.setBackgroundImage(backgroundImage, forState: .Normal)
+        
+        let spinner = UIImage(named: "icon_m_spinner_black")! // TODO: swiftgen
+        spinnerImageView.image = spinner
+        spinnerImageView.translatesAutoresizingMaskIntoConstraints = false
+        spinnerImageView.alpha = 0.0
+        enableLocationServicesButton?.addSubview(spinnerImageView)
+        enableLocationServicesButton?.addConstraint(NSLayoutConstraint(item: enableLocationServicesButton!, attribute: .CenterX, relatedBy: .Equal, toItem: spinnerImageView, attribute: .CenterX, multiplier: 1, constant: 0))
+        enableLocationServicesButton?.addConstraint(NSLayoutConstraint(item: enableLocationServicesButton!, attribute: .CenterY, relatedBy: .Equal, toItem: spinnerImageView, attribute: .CenterY, multiplier: 1, constant: 1))
+        
+        UIView.animateWithDuration(0.3, animations: {
+            self.enableLocationServicesButton?.frame.size.width = 0
+        }, completion: { _ in
+            UIView.animateWithDuration(1.2, delay: 0, options: UIViewAnimationOptions.CurveEaseIn, animations: {
+                self.spinnerImageView.alpha = 1.0
+                }, completion: nil)
+            self.animateEnableLocationServicesButtonSpinner()
+        })
+    }
+    
+    private func animateEnableLocationServicesButtonSpinner() {
+        UIView.animateWithDuration(0.3, delay: 0, options: UIViewAnimationOptions.CurveLinear, animations: {
+            self.spinnerImageView.transform = CGAffineTransformRotate(self.spinnerImageView.transform, CGFloat(M_PI_2))
+            }, completion: { _ in
+                if self.shouldAnimateSpinner {
+                    self.animateEnableLocationServicesButtonSpinner()
+                } else {
+                    UIView.animateWithDuration(0.5, delay: 0, options: [UIViewAnimationOptions.CurveEaseOut], animations: {
+                        self.spinnerImageView.transform = CGAffineTransformRotate(self.spinnerImageView.transform, CGFloat(M_PI_2))
+                        }, completion: nil)
+                }
+        })
     }
 
 }

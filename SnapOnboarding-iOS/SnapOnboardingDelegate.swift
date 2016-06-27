@@ -1,11 +1,3 @@
-import Foundation
-
-public enum LocationServicesStatus {
-    case NotRequestedYet
-    case Enabled
-    case Disabled
-}
-
 public protocol SnapOnboardingDelegate: class {
     
     func termsAndConditionsTapped()

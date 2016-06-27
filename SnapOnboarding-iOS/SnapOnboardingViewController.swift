@@ -13,20 +13,21 @@ private enum EmbedSegueIdentifier: String {
     case LoginViewController = "loginContainerViewEmbed"
 }
 
+public enum LocationServicesStatus {
+    case NotYetRequested
+    case Enabled
+    case Disabled
+}
+
 public class SnapOnboardingViewController: UIViewController {
     
     @IBOutlet private var scrollView: UIScrollView?
     @IBOutlet private var pageControl: UIPageControl?
     @IBOutlet private var termsAndConditionsLabel: TTTAttributedLabel?
     
-    private var backgroundColor: UIColor?
     private var delegate: SnapOnboardingDelegate?
     private var viewModel: SnapOnboardingViewModel?
-    
-    public func applyConfiguration(configuration: SnapOnboardingConfiguration) {
-        self.delegate = configuration.delegate
-        self.viewModel = configuration.viewModel
-    }
+    var locationServicesStatus: LocationServicesStatus = .NotYetRequested
     
     // MARK: UIViewController life cycle
     
@@ -34,6 +35,10 @@ public class SnapOnboardingViewController: UIViewController {
         super.viewDidLoad()
         
         assert(viewModel != nil)
+    }
+    
+    public override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
         
         configureTermsAndConditionsLabel()
     }
@@ -62,7 +67,7 @@ public class SnapOnboardingViewController: UIViewController {
         })
         
         if let gothamRoundedMedium = SnapFonts.gothamRoundedMediumOfSize(10) {
-            termsAndConditionsLabel?.linkAttributes = [NSFontAttributeName : gothamRoundedMedium]
+            termsAndConditionsLabel?.linkAttributes = [NSFontAttributeName : gothamRoundedMedium, NSForegroundColorAttributeName : UIColor.whiteColor()]
             termsAndConditionsLabel?.activeLinkAttributes = nil
         }
         
@@ -134,6 +139,26 @@ public class SnapOnboardingViewController: UIViewController {
             destinationViewController?.delegate = self
             destinationViewController?.configureForViewModel(viewModel.loginViewModel)
         default: break
+        }
+    }
+    
+}
+
+// MARK: - SnapOnboardingViewControllerProtocol
+
+extension SnapOnboardingViewController: SnapOnboardingViewControllerProtocol {
+    
+    public func applyConfiguration(configuration: SnapOnboardingConfiguration) {
+        self.delegate = configuration.delegate
+        self.viewModel = configuration.viewModel
+    }
+    
+    public func locationServicesStatusChanged(status: Bool) {
+        switch status {
+        case true:
+            locationServicesStatus = .Enabled
+        case false:
+            locationServicesStatus = .Disabled
         }
     }
     

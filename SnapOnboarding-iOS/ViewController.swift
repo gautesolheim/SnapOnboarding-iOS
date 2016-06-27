@@ -12,6 +12,8 @@ import SnapTagsView
 
 class ViewController: UIViewController {
     
+    private var onboardingViewController: SnapOnboardingViewController?
+    
     private var didPresent = false
     
     override func viewDidAppear(animated: Bool) {
@@ -25,13 +27,13 @@ class ViewController: UIViewController {
     
     private func presentOnboardingViewController() {
         let storyboard = UIStoryboard(name: "SnapOnboarding", bundle: nil)
-        let onboardingViewController = storyboard.instantiateViewControllerWithIdentifier("snapOnboardingViewController") as! SnapOnboardingViewController
+        onboardingViewController = storyboard.instantiateViewControllerWithIdentifier("snapOnboardingViewController") as? SnapOnboardingViewController
         
         let viewModel = createSampleViewModelNorwegian()
         let configuration = SnapOnboardingConfiguration(delegate: self, viewModel: viewModel)
         
-        onboardingViewController.applyConfiguration(configuration)
-        presentViewController(onboardingViewController, animated: false, completion: nil)
+        onboardingViewController?.applyConfiguration(configuration)
+        presentViewController(onboardingViewController!, animated: false, completion: nil)
     }
     
     private func createSampleViewModelNorwegian() -> SnapOnboardingViewModel {
@@ -137,6 +139,18 @@ extension ViewController: SnapOnboardingDelegate {
     
     func enableLocationServicesTapped() {
         print("enable-location-services-tapped")
+        
+        var status = false
+        
+        let alertController = UIAlertController(title: "Enable Location Services?", message: nil, preferredStyle: .Alert)
+        alertController.addAction(UIAlertAction(title: "Enable", style: .Default, handler: { _ in
+            status = true
+        }))
+        alertController.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
+        
+        onboardingViewController?.presentViewController(alertController, animated: true, completion: {
+            self.onboardingViewController?.locationServicesStatusChanged(status)
+        })
     }
     
     
