@@ -513,8 +513,8 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="items-pattern" translatesAutoresizingMaskIntoConstraints="NO" id="BBq-cU-apg">
                                         <rect key="frame" x="0.0" y="0.0" width="520" height="235"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="logo snapsale" translatesAutoresizingMaskIntoConstraints="NO" id="Rkx-wm-l9O">
-                                        <rect key="frame" x="214" y="69" width="92" height="91"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo snapsale" translatesAutoresizingMaskIntoConstraints="NO" id="Rkx-wm-l9O">
+                                        <rect key="frame" x="205" y="63" width="110" height="110"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Rkx-wm-l9O" secondAttribute="height" multiplier="1:1" id="x8F-wC-Fw3"/>
                                         </constraints>
@@ -525,7 +525,7 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                                     <constraint firstAttribute="trailing" secondItem="BBq-cU-apg" secondAttribute="trailing" id="Phb-lk-azW"/>
                                     <constraint firstItem="BBq-cU-apg" firstAttribute="top" secondItem="DIb-IE-TZ2" secondAttribute="top" id="bHE-20-sSZ"/>
                                     <constraint firstItem="Rkx-wm-l9O" firstAttribute="centerX" secondItem="DIb-IE-TZ2" secondAttribute="centerX" id="dfm-sp-CnW"/>
-                                    <constraint firstItem="Rkx-wm-l9O" firstAttribute="height" secondItem="BBq-cU-apg" secondAttribute="height" multiplier="0.4" id="jRn-hu-Qm2"/>
+                                    <constraint firstItem="Rkx-wm-l9O" firstAttribute="height" secondItem="BBq-cU-apg" secondAttribute="height" multiplier="0.47" id="jRn-hu-Qm2"/>
                                     <constraint firstItem="BBq-cU-apg" firstAttribute="leading" secondItem="DIb-IE-TZ2" secondAttribute="leading" id="lSa-iF-e6R"/>
                                     <constraint firstAttribute="bottom" secondItem="BBq-cU-apg" secondAttribute="bottom" id="rRs-J3-fh4"/>
                                 </constraints>

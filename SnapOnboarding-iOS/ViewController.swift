@@ -58,7 +58,7 @@ class ViewController: UIViewController {
         locationViewModel.willAskLaterTitle = "Den er god!"
         locationViewModel.willAskLaterBody = "Vi vil spørre deg på et senere tidspunkt, når vi trenger lokasjonen din, for eksempel ved et nytt salg."
         locationViewModel.wowYouDeclinedTitle = "Oi, du avslo stedstjenester!"
-        locationViewModel.wowYouDeclinedBody = "Om du ønsker å skru det på senere, gå til: System innstillinger › Personvern › Stedstjenester › Snapsale"
+        locationViewModel.wowYouDeclinedBody = "Om du ønsker å skru det på senere, gå til: System-innstillinger › Personvern › Stedstjenester › Snapsale"
         locationViewModel.didEnableLocationServicesTitle = "Takk!"
         locationViewModel.didEnableLocationServicesBody = "Du skrudde på stedstjenester, og får derfor maksimalt utbytte av tjenesten."
         
@@ -144,11 +144,14 @@ extension ViewController: SnapOnboardingDelegate {
     func enableLocationServicesTapped() {
         print("enable-location-services-tapped")
         
-        let alertController = UIAlertController(title: "Enable Location Services?", message: nil, preferredStyle: .Alert)
-        alertController.addAction(UIAlertAction(title: "Enable", style: .Default, handler: { _ in
+        let alertController = UIAlertController(
+            title: "Vil du gi «Snapsale» tilgang til plasseringen din når du bruker appen?",
+            message: "Snapsale trenger din posisjon for å beregne avstand til salg",
+            preferredStyle: .Alert)
+        alertController.addAction(UIAlertAction(title: "TILLAT", style: .Cancel, handler: { _ in
             self.onboardingViewController?.locationServicesStatusChanged(true)
         }))
-        alertController.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: { _ in
+        alertController.addAction(UIAlertAction(title: "Ikke tillat", style: .Default, handler: { _ in
             self.onboardingViewController?.locationServicesStatusChanged(false)
         }))
         
