@@ -143,7 +143,7 @@ class LocationViewController: UIViewController {
         spinnerImageView.alpha = 0.0
         enableLocationServicesButton.addSubview(spinnerImageView)
         enableLocationServicesButton.addConstraint(NSLayoutConstraint(item: spinnerImageView, attribute: .CenterX, relatedBy: .Equal, toItem: enableLocationServicesButton, attribute: .CenterX, multiplier: 1, constant: 0))
-        enableLocationServicesButton.addConstraint(NSLayoutConstraint(item: spinnerImageView, attribute: .CenterY, relatedBy: .Equal, toItem: enableLocationServicesButton, attribute: .CenterY, multiplier: 1, constant: 0))
+        enableLocationServicesButton.addConstraint(NSLayoutConstraint(item: spinnerImageView, attribute: .CenterY, relatedBy: .Equal, toItem: enableLocationServicesButton, attribute: .CenterY, multiplier: 1, constant: -1))
         
         UIView.animateWithDuration(0.3, animations: {
             enableLocationServicesButton.frame.size.width = 0
