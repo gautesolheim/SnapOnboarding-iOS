@@ -2,18 +2,7 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "btn login instagram.pdf",
-      "resizing" : {
-        "mode" : "3-part-horizontal",
-        "center" : {
-          "mode" : "tile",
-          "width" : 1
-        },
-        "cap-insets" : {
-          "right" : 27,
-          "left" : 46
-        }
-      }
+      "filename" : "btn login instagram.pdf"
     }
   ],
   "info" : {
