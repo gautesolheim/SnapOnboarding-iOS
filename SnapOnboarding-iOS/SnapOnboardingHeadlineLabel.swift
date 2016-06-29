@@ -29,18 +29,6 @@ import SnapFonts_iOS
         }
     }
     
-//    func updateTextWithHeader(header: String?, text: String?) {
-//        if let header = header, body = text {
-//            var headerAttributes = attributes
-//            headerAttributes[NSFontAttributeName] = SnapFonts.gothamRoundedMediumOfSize(font.pointSize)
-//            let updatedText = NSMutableAttributedString(string: header, attributes: headerAttributes)
-//            
-//            updatedText.appendAttributedString(NSAttributedString(string: "\n"))
-//            updatedText.appendAttributedString(NSAttributedString(string: body, attributes: attributes))
-//            attributedText = updatedText
-//        }
-//    }
-    
     func updateTextWithHeader(header: String?, text: String?) {
         if let text = text {
             updateAttributedTextWithHeader(header, text: NSMutableAttributedString(string: text))

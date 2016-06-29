@@ -23,7 +23,14 @@ public class SnapOnboardingViewController: UIViewController {
     private var viewModel: SnapOnboardingViewModel?
     
     private var locationViewController: LocationViewControllerProtocol?
-    private var userHasRespondedToLocationServices = false
+    private var userHasRespondedToLocationServices = false {
+        didSet {
+            if userHasRespondedToLocationServices {
+                scrollView?.contentSize.width = view.frame.width * 3
+                print("set-new-content-width")
+            }
+        }
+    }
     
     // MARK: UIViewController life cycle
     
@@ -164,11 +171,11 @@ extension SnapOnboardingViewController: SnapOnboardingViewControllerProtocol {
 
 extension SnapOnboardingViewController: UIScrollViewDelegate {
     
-    // TEMP for "in between"
+    // TEMP for restricted scrolling to third page, see also userHasRespondedToLocationServices didSet
     override public func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-//        scrollView?.contentSize.width = view.frame.width * 2
+        scrollView?.contentSize.width = view.frame.width * 2
     }
     
     public func scrollViewDidScroll(scrollView: UIScrollView) {
@@ -178,22 +185,6 @@ extension SnapOnboardingViewController: UIScrollViewDelegate {
 //        } else {
 //            scrollView.scrollEnabled = true
 //        }
-        
-        // Very dynamic
-//        if !userHasRespondedToLocationServices && scrollView.contentOffset.x > view.frame.width {
-//            scrollView.contentSize.width = view.frame.width * 2
-//        }
-        
-        // In between
-//        if !userHasRespondedToLocationServices && scrollView.contentOffset.x > view.frame.width + 60 {
-//            var offset = scrollView.contentOffset
-//            offset.x = view.frame.width
-//            scrollView.setContentOffset(offset, animated: true)
-//            scrollView.scrollEnabled = false
-//        } else {
-//            scrollView.scrollEnabled = true
-//        }
-
         
         updatePageControl()
     }

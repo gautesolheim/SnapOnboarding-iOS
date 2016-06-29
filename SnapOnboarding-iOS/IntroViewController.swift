@@ -5,6 +5,10 @@ protocol IntroViewControllerProtocol: class {
 //    func configureForViewModel(viewModel: IntroViewModel)
 }
 
+private enum EmbedSegueIdentifier: String {
+    case TagsCollectionViewController = "tagsContainerViewEmbed"
+}
+
 class IntroViewController: UIViewController {
 
     @IBOutlet private var nextButton: UIButton?
@@ -41,6 +45,20 @@ class IntroViewController: UIViewController {
     
     private func configureHeadlineLabel() {
         headlineLabel?.updateText(viewModel?.introHeadline)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        guard let identifier = segue.identifier, viewModel = viewModel else {
+            return
+        }
+        
+        switch identifier {
+        case EmbedSegueIdentifier.TagsCollectionViewController.rawValue:
+            let destinationViewController = segue.destinationViewController as? TagsCollectionViewController
+            let viewModel = TagsViewModel(data: viewModel.tags)
+            destinationViewController?.configureForViewModel(viewModel)
+        default: break
+        }
     }
 
 }

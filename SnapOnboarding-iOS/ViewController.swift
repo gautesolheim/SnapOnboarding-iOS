@@ -46,8 +46,8 @@ class ViewController: UIViewController {
         var introViewModel = SnapOnboardingViewModel.IntroViewModel()
         introViewModel.next = "Neste"
         introViewModel.introHeadline = "Å legge ut salg er raskt og enkelt. Vi tagger og kategoriserer annonser med smart bildegjenkjenning."
-        introViewModel.tags = createTagRepresentationsFromStrings(
-            ["Veske", "MichaelKors", "JetSetTravel", "Skinn", "Beige", "Accessoirer"]
+        introViewModel.tags = createTagRepresentationsForStrings(
+            ["Veske", "MichaelKors", "JetSetTravel", "Skinn", "Beige", "Accessoirer", "INVONIPHONE6"]
         )
         
         var locationViewModel = SnapOnboardingViewModel.LocationViewModel()
@@ -87,8 +87,8 @@ class ViewController: UIViewController {
         var introViewModel = SnapOnboardingViewModel.IntroViewModel()
         introViewModel.next = "Next"
         introViewModel.introHeadline = "Publishing sales is fast and easy. We tag and categorize ads with clever image recognition."
-        introViewModel.tags = createTagRepresentationsFromStrings(
-            ["Purse", "MichaelKors", "JetSetTravel", "Leather", "Beige", "Accessories"]
+        introViewModel.tags = createTagRepresentationsForStrings(
+            ["Purse", "MichaelKors", "JetSetTravel", "Leather", "Beige", "Accessories", "INVONIPHONE6"]
         )
         
         var locationViewModel = SnapOnboardingViewModel.LocationViewModel()
@@ -118,7 +118,7 @@ class ViewController: UIViewController {
         return model
     }
     
-    private func createTagRepresentationsFromStrings(strings: [String]) -> [SnapTagRepresentation] {
+    private func createTagRepresentationsForStrings(strings: [String]) -> [SnapTagRepresentation] {
         var snapTagRepresentations = [SnapTagRepresentation]()
         strings.forEach { tag in
             let tagRepresentation = SnapTagRepresentation()
@@ -148,11 +148,11 @@ extension ViewController: SnapOnboardingDelegate {
             title: "Vil du gi «Snapsale» tilgang til plasseringen din når du bruker appen?",
             message: "Snapsale trenger din posisjon for å beregne avstand til salg",
             preferredStyle: .Alert)
-        alertController.addAction(UIAlertAction(title: "TILLAT", style: .Cancel, handler: { _ in
-            self.onboardingViewController?.locationServicesStatusChanged(true)
-        }))
         alertController.addAction(UIAlertAction(title: "Ikke tillat", style: .Default, handler: { _ in
             self.onboardingViewController?.locationServicesStatusChanged(false)
+        }))
+        alertController.addAction(UIAlertAction(title: "Tillat", style: .Default, handler: { _ in
+            self.onboardingViewController?.locationServicesStatusChanged(true)
         }))
         
         onboardingViewController?.presentViewController(alertController, animated: true, completion: nil)

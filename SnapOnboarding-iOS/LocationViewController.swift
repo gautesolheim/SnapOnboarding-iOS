@@ -25,8 +25,11 @@ class LocationViewController: UIViewController {
     
     @IBAction func nextButtonTapped(sender: UIButton) {
         delegate?.locationNextButtonTapped()
-        locationServicesStatus = .WaitingForResponse
-        animateEnableLocationServicesButtonToSpinner()
+        
+        if locationServicesStatus == .NotYetRequested {
+            locationServicesStatus = .WaitingForResponse
+            animateEnableLocationServicesButtonToSpinner()
+        }
     }
     
     @IBAction func enableLocationServicesButtonTapped(sender: UIButton) {
@@ -36,6 +39,7 @@ class LocationViewController: UIViewController {
     }
     
     @IBAction func notNowButtonTapped(sender: UIButton) {
+        delegate?.notNowButtonTapped()
         configureWillAskLaterLabelForNotNow()
     }
 
