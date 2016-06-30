@@ -1,4 +1,5 @@
 import UIKit
+import SnapFonts_iOS
 
 enum LocationServicesStatus {
     case NotYetRequested
@@ -177,6 +178,8 @@ class LocationViewController: UIViewController {
 
 }
 
+// MARK: - LocationViewControllerProtocol
+
 extension LocationViewController: LocationViewControllerProtocol {
     
     func configureForViewModel(viewModel: SnapOnboardingViewModel.LocationViewModel) {
@@ -195,3 +198,22 @@ extension LocationViewController: LocationViewControllerProtocol {
     }
     
 }
+
+// MARK: - ScreenSizesProtocol
+
+extension LocationViewController {
+    
+    func setupFor3_5Inch() {
+        nextButton?.contentEdgeInsets.top -= 5
+        
+        headlineLabel?.font = SnapFonts.gothamRoundedBookOfSize(17)
+        headlineLabel?.lineSpacin = 4
+    }
+    
+    func setupFor4_0Inch() {
+        headlineLabel?.font = SnapFonts.gothamRoundedBookOfSize(19)
+        headlineLabel?.lineSpacin = 5
+    }
+
+}
+
