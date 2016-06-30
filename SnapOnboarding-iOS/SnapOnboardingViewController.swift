@@ -131,16 +131,16 @@ public class SnapOnboardingViewController: UIViewController {
         switch identifier {
             case EmbedSegueIdentifier.IntroViewController.rawValue:
             let destinationViewController = segue.destinationViewController as? IntroViewController
-            destinationViewController?.delegate = self
+            destinationViewController?.delegate = self as IntroViewControllerDelegate
             destinationViewController?.configureForViewModel(viewModel.introViewModel)
             case EmbedSegueIdentifier.LocationViewController.rawValue:
             let destinationViewController = segue.destinationViewController as? LocationViewController
-            destinationViewController?.delegate = self
+            destinationViewController?.delegate = self as LocationViewControllerDelegate
             destinationViewController?.configureForViewModel(viewModel.locationViewModel)
             locationViewController = destinationViewController
             case EmbedSegueIdentifier.LoginViewController.rawValue:
             let destinationViewController = segue.destinationViewController as? LoginViewController
-            destinationViewController?.delegate = self
+            destinationViewController?.delegate = self as LoginViewControllerDelegate
             destinationViewController?.configureForViewModel(viewModel.loginViewModel)
         default: break
         }

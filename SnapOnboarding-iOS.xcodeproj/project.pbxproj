@@ -32,6 +32,7 @@
 		9FADA8B61D1974DF00746E71 /* LoginViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FADA8B51D1974DF00746E71 /* LoginViewControllerDelegate.swift */; };
 		9FAFCDE71D23C4AC00CE3DE8 /* TagsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAFCDE61D23C4AC00CE3DE8 /* TagsCollectionViewController.swift */; };
 		9FAFCDE91D23CDF600CE3DE8 /* SnapTagsView-DefaultImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FAFCDE81D23CDF600CE3DE8 /* SnapTagsView-DefaultImages.xcassets */; };
+		9FE045311D25596800BCA50A /* UIViewController+ScreenSizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE045301D25596800BCA50A /* UIViewController+ScreenSizes.swift */; };
 		BA21D5C4938B290234DFD18A /* Pods_SnapOnboarding_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A76A7E5A385D5EAABCF2AFEA /* Pods_SnapOnboarding_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -89,6 +90,7 @@
 		9FADA8B51D1974DF00746E71 /* LoginViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewControllerDelegate.swift; sourceTree = "<group>"; };
 		9FAFCDE61D23C4AC00CE3DE8 /* TagsCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagsCollectionViewController.swift; sourceTree = "<group>"; };
 		9FAFCDE81D23CDF600CE3DE8 /* SnapTagsView-DefaultImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = "SnapTagsView-DefaultImages.xcassets"; path = "../SnapTagsView-DefaultImages.xcassets"; sourceTree = "<group>"; };
+		9FE045301D25596800BCA50A /* UIViewController+ScreenSizes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+ScreenSizes.swift"; sourceTree = "<group>"; };
 		A76A7E5A385D5EAABCF2AFEA /* Pods_SnapOnboarding_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnapOnboarding_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7FD148DE0B50B30630A0909 /* Pods-SnapOnboarding-iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapOnboarding-iOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SnapOnboarding-iOSTests/Pods-SnapOnboarding-iOSTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -229,6 +231,7 @@
 				9F150B741D17CF4800C3D716 /* SnapOnboarding.storyboard */,
 				9F4CE0B91D0EB2A000A6A1FB /* Assets.xcassets */,
 				9F62A27B1D2412C200079B56 /* UIImageView+Borders.swift */,
+				9FE045301D25596800BCA50A /* UIViewController+ScreenSizes.swift */,
 			);
 			path = "SnapOnboarding-iOS";
 			sourceTree = "<group>";
@@ -526,6 +529,7 @@
 			files = (
 				9F9C7D3B1D16CE9A006203B7 /* LocationViewController.swift in Sources */,
 				9F25D07E1D1AE30B00B56D6A /* SnapOnboardingHeadlineLabel.swift in Sources */,
+				9FE045311D25596800BCA50A /* UIViewController+ScreenSizes.swift in Sources */,
 				9FAFCDE71D23C4AC00CE3DE8 /* TagsCollectionViewController.swift in Sources */,
 				9F1E9B0B1D0EE54A00E0EC40 /* SnapOnboardingConfiguration.swift in Sources */,
 				9F62A27C1D2412C200079B56 /* UIImageView+Borders.swift in Sources */,

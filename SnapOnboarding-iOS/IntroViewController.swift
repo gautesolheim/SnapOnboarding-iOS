@@ -1,4 +1,5 @@
 import UIKit
+import SnapFonts_iOS
 
 protocol IntroViewControllerProtocol: class {
 //    var delegate: IntroViewControllerDelegate? { get set }
@@ -13,6 +14,11 @@ class IntroViewController: UIViewController {
 
     @IBOutlet private var nextButton: UIButton?
     @IBOutlet private var headlineLabel: SnapOnboardingHeadlineLabel?
+    
+    
+    
+    @IBOutlet private var tagsContainerViewHeight: NSLayoutConstraint?
+    @IBOutlet private var sparklingViewToSuperViewHeightRelation: NSLayoutConstraint?
     
     var delegate: IntroViewControllerDelegate?
     private var viewModel: SnapOnboardingViewModel.IntroViewModel?
@@ -29,6 +35,8 @@ class IntroViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupForScreenSize(UIScreen.mainScreen().bounds)
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -36,6 +44,7 @@ class IntroViewController: UIViewController {
         
         configureNextButton()
         configureHeadlineLabel()
+        headlineLabel?.layoutIfNeeded()
     }
     
     private func configureNextButton() {
@@ -63,6 +72,29 @@ class IntroViewController: UIViewController {
 
 }
 
+// MARK: - IntroViewControllerProtocol
+
 extension IntroViewController: IntroViewControllerProtocol {
+    
+}
+
+// MARK: - ScreenSizesProtocol
+
+extension IntroViewController {
+    
+    func setupFor3_5Inch() {
+        nextButton?.contentEdgeInsets.top -= 5
+        
+        headlineLabel?.font = SnapFonts.gothamRoundedBookOfSize(17)
+        headlineLabel?.lineSpacin = 4
+        
+        tagsContainerViewHeight?.constant = 30
+        sparklingViewToSuperViewHeightRelation?.constant -= 10
+    }
+    
+    func setupFor4_0Inch() {
+        headlineLabel?.font = SnapFonts.gothamRoundedBookOfSize(19)
+        headlineLabel?.lineSpacin = 5
+    }
     
 }
