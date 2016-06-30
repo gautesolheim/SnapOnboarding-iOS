@@ -26,11 +26,7 @@ extension UIImageView {
         }
         set(radius) {
             layer.cornerRadius = radius
-            
-            layer.shadowColor = UIColor.yellowColor().CGColor
-            layer.shadowOffset = CGSize(width: 4, height: 4)
-            layer.shadowOpacity = 1
-            layer.shadowRadius = 3
+            layer.masksToBounds = radius > 0.0
         }
     }
     
