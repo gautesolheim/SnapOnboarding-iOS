@@ -175,7 +175,7 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                                     <constraint firstAttribute="width" constant="240" id="PaX-Wy-oVD"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Følg selgere og produkter nær deg! Aldri gå glipp av et kupp igjen." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GPV-cC-643" userLabel="headlineLabel" customClass="SnapOnboardingHeadlineLabel" customModule="SnapOnboarding_iOS" customModuleProvider="target">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Følg selgere og produkter nær deg! Aldri gå glipp av et kupp igjen." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GPV-cC-643" userLabel="headlineLabel" customClass="SnapOnboardingHeadlineLabel" customModule="SnapOnboarding_iOS" customModuleProvider="target">
                                 <rect key="frame" x="20" y="40" width="560" height="56"/>
                                 <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="21"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -186,7 +186,7 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Vi vil spørre deg på et senere tidspunkt, når vi trenger lokasjonen din, for eksempel ved et nytt salg." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Og-sM-3rO" userLabel="willAskLaterLabel" customClass="SnapOnboardingHeadlineLabel" customModule="SnapOnboarding_iOS" customModuleProvider="target">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vi vil spørre deg på et senere tidspunkt, når vi trenger lokasjonen din, for eksempel ved et nytt salg." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Og-sM-3rO" userLabel="willAskLaterLabel" customClass="SnapOnboardingHeadlineLabel" customModule="SnapOnboarding_iOS" customModuleProvider="target">
                                 <rect key="frame" x="108" y="397" width="385" height="79"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="400" id="cBg-0u-kaL"/>
@@ -228,13 +228,13 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                                     <action selector="notNowButtonTapped:" destination="tuq-Zg-aCA" eventType="touchUpInside" id="HKa-Gl-7Mr"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r5E-HZ-yPq" userLabel="headlineSparklingSpacer">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r5E-HZ-yPq" userLabel="headlineSparklingSpacer">
                                 <rect key="frame" x="180" y="96" width="240" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="sUZ-2o-i3x"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ANS-Dj-bV5" userLabel="sparklingView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ANS-Dj-bV5" userLabel="sparklingView">
                                 <rect key="frame" x="20" y="130" width="560" height="229"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zhm-Jz-ST7" userLabel="neighborhoodView">
@@ -268,7 +268,7 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                                     <constraint firstItem="zhm-Jz-ST7" firstAttribute="centerX" secondItem="ANS-Dj-bV5" secondAttribute="centerX" id="tGn-Dv-PrW"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J6z-PJ-dva" userLabel="bottomSpacer">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J6z-PJ-dva" userLabel="bottomSpacer">
                                 <rect key="frame" x="180" y="359" width="240" height="38"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="ndx-H9-wIn"/>
@@ -335,7 +335,7 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                         <rect key="frame" x="0.0" y="0.0" width="600" height="502"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="keh-ad-7Sj" userLabel="nextButton">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="keh-ad-7Sj" userLabel="nextButton">
                                 <rect key="frame" x="525" y="0.0" width="75" height="46"/>
                                 <fontDescription key="fontDescription" name="GothamRounded-Medium" family="Gotham Rounded" pointSize="13"/>
                                 <inset key="contentEdgeInsets" minX="15" minY="15" maxX="15" maxY="15"/>
@@ -346,7 +346,7 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                                     <action selector="nextButtonTapped:" destination="msg-6e-T6i" eventType="touchUpInside" id="0EP-YZ-exR"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Å legge ut salg er raskt og enkelt. Vi tagger og kategoriserer annonser med smart bildegjenkjenning." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6QU-g5-Hyl" userLabel="headlineLabel" customClass="SnapOnboardingHeadlineLabel" customModule="SnapOnboarding_iOS" customModuleProvider="target">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Å legge ut salg er raskt og enkelt. Vi tagger og kategoriserer annonser med smart bildegjenkjenning." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6QU-g5-Hyl" userLabel="headlineLabel" customClass="SnapOnboardingHeadlineLabel" customModule="SnapOnboarding_iOS" customModuleProvider="target">
                                 <rect key="frame" x="20" y="40" width="560" height="57"/>
                                 <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="21"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -357,13 +357,13 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bZw-jc-PYY" userLabel="headlineSparklingSpacer">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bZw-jc-PYY" userLabel="headlineSparklingSpacer">
                                 <rect key="frame" x="180" y="97" width="240" height="23"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="Ai5-Uq-dY2"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V9z-WP-6mg" userLabel="sparklingView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V9z-WP-6mg" userLabel="sparklingView">
                                 <rect key="frame" x="20" y="120" width="560" height="316"/>
                                 <subviews>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Anb-9C-0O1" userLabel="tagsContainerView">
@@ -378,8 +378,8 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gRh-VQ-57i" userLabel="phoneView">
                                         <rect key="frame" x="196" y="14" width="168" height="183"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="veske" translatesAutoresizingMaskIntoConstraints="NO" id="seo-Z1-3P5">
-                                                <rect key="frame" x="11" y="38" width="146" height="145"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="veske" translatesAutoresizingMaskIntoConstraints="NO" id="seo-Z1-3P5">
+                                                <rect key="frame" x="11" y="37" width="146" height="146"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="seo-Z1-3P5" secondAttribute="height" multiplier="1:1" id="Nxh-EF-us4"/>
                                                 </constraints>
@@ -422,14 +422,14 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                                             <constraint firstAttribute="width" constant="12" id="ywv-YI-ADM"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="E0z-Ye-6wd" userLabel="star2">
-                                        <rect key="frame" x="372" y="45" width="7" height="34"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="E0z-Ye-6wd" userLabel="star2">
+                                        <rect key="frame" x="372" y="46" width="7" height="34"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="7" id="mHJ-Pt-5eC"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="7Cw-8k-Os3" userLabel="star3">
-                                        <rect key="frame" x="136" y="95" width="7" height="34"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="7Cw-8k-Os3" userLabel="star3">
+                                        <rect key="frame" x="150" y="78" width="7" height="34"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="7" id="y83-LV-dPq"/>
                                         </constraints>
@@ -496,7 +496,7 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                                     <constraint firstItem="gRh-VQ-57i" firstAttribute="top" secondItem="V9z-WP-6mg" secondAttribute="top" constant="14" id="z9d-vW-Lxr"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yq7-1l-rO5" userLabel="bottomSpacer">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yq7-1l-rO5" userLabel="bottomSpacer">
                                 <rect key="frame" x="180" y="436" width="240" height="66"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="c6p-Z5-HTD"/>
@@ -562,33 +562,10 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y4x-Xm-ZL4" userLabel="topSpacer">
-                                <rect key="frame" x="180" y="0.0" width="240" height="44"/>
+                                <rect key="frame" x="180" y="0.0" width="240" height="39"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="jL5-vl-r0V"/>
+                                    <constraint firstAttribute="height" constant="39" id="jL5-vl-r0V"/>
                                     <constraint firstAttribute="width" constant="240" id="rhG-ff-djY"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DIb-IE-TZ2" userLabel="sparklingView">
-                                <rect key="frame" x="151" y="44" width="299" height="246"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo snapsale" translatesAutoresizingMaskIntoConstraints="NO" id="Rkx-wm-l9O">
-                                        <rect key="frame" x="92" y="65" width="116" height="116"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="Rkx-wm-l9O" secondAttribute="height" multiplier="1:1" id="x8F-wC-Fw3"/>
-                                        </constraints>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="items-pattern" translatesAutoresizingMaskIntoConstraints="NO" id="BBq-cU-apg">
-                                        <rect key="frame" x="0.0" y="0.0" width="299" height="246"/>
-                                    </imageView>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="Rkx-wm-l9O" firstAttribute="centerY" secondItem="DIb-IE-TZ2" secondAttribute="centerY" id="LsI-wg-wbu"/>
-                                    <constraint firstAttribute="trailing" secondItem="BBq-cU-apg" secondAttribute="trailing" id="Phb-lk-azW"/>
-                                    <constraint firstItem="BBq-cU-apg" firstAttribute="top" secondItem="DIb-IE-TZ2" secondAttribute="top" id="bHE-20-sSZ"/>
-                                    <constraint firstItem="Rkx-wm-l9O" firstAttribute="centerX" secondItem="DIb-IE-TZ2" secondAttribute="centerX" id="dfm-sp-CnW"/>
-                                    <constraint firstItem="Rkx-wm-l9O" firstAttribute="height" secondItem="BBq-cU-apg" secondAttribute="height" multiplier="0.47" id="jRn-hu-Qm2"/>
-                                    <constraint firstItem="BBq-cU-apg" firstAttribute="leading" secondItem="DIb-IE-TZ2" secondAttribute="leading" id="lSa-iF-e6R"/>
-                                    <constraint firstAttribute="bottom" secondItem="BBq-cU-apg" secondAttribute="bottom" id="rRs-J3-fh4"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iZI-f9-ZQP" userLabel="continueWithInstagramButton">
@@ -641,9 +618,43 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8TP-as-s39" userLabel="sparklingContinueSpacer">
-                                <rect key="frame" x="180" y="290" width="240" height="37"/>
+                                <rect key="frame" x="180" y="293" width="240" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="kAu-ID-jet"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DIb-IE-TZ2" userLabel="sparklingView">
+                                <rect key="frame" x="20" y="39" width="560" height="254"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="al6-WW-aFx" userLabel="itemsView">
+                                        <rect key="frame" x="162" y="0.0" width="236" height="254"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo snapsale" translatesAutoresizingMaskIntoConstraints="NO" id="Rkx-wm-l9O">
+                                                <rect key="frame" x="61" y="86" width="115" height="82"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="Rkx-wm-l9O" secondAttribute="height" multiplier="288:206" id="OoP-Rl-J3t"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="items-pattern" translatesAutoresizingMaskIntoConstraints="NO" id="BBq-cU-apg">
+                                                <rect key="frame" x="0.0" y="0.0" width="236" height="254"/>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Rkx-wm-l9O" firstAttribute="centerX" secondItem="al6-WW-aFx" secondAttribute="centerX" id="2FF-2X-zo3"/>
+                                            <constraint firstAttribute="width" secondItem="al6-WW-aFx" secondAttribute="height" multiplier="579:623" id="JUw-4l-JpK"/>
+                                            <constraint firstAttribute="bottom" secondItem="BBq-cU-apg" secondAttribute="bottom" id="Lqc-ol-Fn8"/>
+                                            <constraint firstItem="BBq-cU-apg" firstAttribute="leading" secondItem="al6-WW-aFx" secondAttribute="leading" id="SuE-SY-iCK"/>
+                                            <constraint firstItem="BBq-cU-apg" firstAttribute="top" secondItem="al6-WW-aFx" secondAttribute="top" id="fLj-Bq-Nik"/>
+                                            <constraint firstItem="Rkx-wm-l9O" firstAttribute="centerY" secondItem="al6-WW-aFx" secondAttribute="centerY" id="jGP-M2-c4R"/>
+                                            <constraint firstAttribute="trailing" secondItem="BBq-cU-apg" secondAttribute="trailing" id="mNK-rE-Le9"/>
+                                            <constraint firstItem="Rkx-wm-l9O" firstAttribute="height" secondItem="BBq-cU-apg" secondAttribute="height" multiplier="0.32" id="nL0-BF-MXg"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="al6-WW-aFx" secondAttribute="bottom" id="Bbk-m0-Gh0"/>
+                                    <constraint firstItem="al6-WW-aFx" firstAttribute="top" secondItem="DIb-IE-TZ2" secondAttribute="top" id="C3i-rW-ye6"/>
+                                    <constraint firstItem="al6-WW-aFx" firstAttribute="centerX" secondItem="DIb-IE-TZ2" secondAttribute="centerX" id="Jb1-l2-0Kv"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -652,7 +663,7 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                             <constraint firstItem="8TP-as-s39" firstAttribute="top" secondItem="DIb-IE-TZ2" secondAttribute="bottom" id="6LC-Ti-HiF"/>
                             <constraint firstItem="LxE-Ac-dOb" firstAttribute="top" secondItem="iZI-f9-ZQP" secondAttribute="bottom" constant="9" id="I5A-7Q-3xE"/>
                             <constraint firstItem="LxE-Ac-dOb" firstAttribute="centerX" secondItem="JFE-Tf-2Hq" secondAttribute="centerX" id="LH2-bu-0P3"/>
-                            <constraint firstAttribute="width" relation="greaterThanOrEqual" secondItem="DIb-IE-TZ2" secondAttribute="width" constant="70" id="NTd-cK-xBM"/>
+                            <constraint firstAttribute="width" secondItem="DIb-IE-TZ2" secondAttribute="width" constant="40" id="NTd-cK-xBM"/>
                             <constraint firstItem="8TP-as-s39" firstAttribute="centerX" secondItem="JFE-Tf-2Hq" secondAttribute="centerX" id="SBG-cd-VEF"/>
                             <constraint firstItem="y4x-Xm-ZL4" firstAttribute="centerX" secondItem="JFE-Tf-2Hq" secondAttribute="centerX" id="UUf-nU-PGL"/>
                             <constraint firstItem="8TP-as-s39" firstAttribute="height" secondItem="y4x-Xm-ZL4" secondAttribute="height" multiplier="0.86" id="Ujr-iu-mLH"/>
