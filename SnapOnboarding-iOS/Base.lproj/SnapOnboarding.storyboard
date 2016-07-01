@@ -339,28 +339,29 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                                     <action selector="nextButtonTapped:" destination="msg-6e-T6i" eventType="touchUpInside" id="0EP-YZ-exR"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Å legge ut salg er raskt og enkelt. Vi tagger og kategoriserer annonser med smart bildegjenkjenning." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6QU-g5-Hyl" userLabel="headlineLabel" customClass="SnapOnboardingHeadlineLabel" customModule="SnapOnboarding_iOS" customModuleProvider="target">
-                                <rect key="frame" x="20" y="34" width="560" height="126"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Å legge ut salg er raskt og enkelt. Vi tagger og kategoriserer annonser med smart bildegjenkjenning." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6QU-g5-Hyl" userLabel="headlineLabel" customClass="SnapOnboardingHeadlineLabel" customModule="SnapOnboarding_iOS" customModuleProvider="target">
+                                <rect key="frame" x="20" y="44" width="560" height="56"/>
+                                <color key="backgroundColor" red="0.98138898610000003" green="0.017540564759999999" blue="0.37062424420000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="21"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="lineSpacin">
-                                        <real key="value" value="5"/>
+                                        <real key="value" value="6"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bZw-jc-PYY" userLabel="headlineSparklingSpacer">
-                                <rect key="frame" x="180" y="160" width="240" height="16"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bZw-jc-PYY" userLabel="headlineSparklingSpacer">
+                                <rect key="frame" x="180" y="100" width="240" height="27"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="Ai5-Uq-dY2"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V9z-WP-6mg" userLabel="sparklingView">
-                                <rect key="frame" x="20" y="176" width="560" height="316"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V9z-WP-6mg" userLabel="sparklingView">
+                                <rect key="frame" x="20" y="127" width="560" height="317"/>
                                 <subviews>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Anb-9C-0O1" userLabel="tagsContainerView">
-                                        <rect key="frame" x="0.0" y="228" width="560" height="70"/>
+                                        <rect key="frame" x="0.0" y="229" width="560" height="70"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="70" id="gVG-uD-cFW"/>
                                         </constraints>
@@ -369,10 +370,10 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                                         </connections>
                                     </containerView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gRh-VQ-57i" userLabel="phoneView">
-                                        <rect key="frame" x="196" y="14" width="168" height="183"/>
+                                        <rect key="frame" x="196" y="14" width="168" height="184"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="veske" translatesAutoresizingMaskIntoConstraints="NO" id="seo-Z1-3P5">
-                                                <rect key="frame" x="11" y="37" width="146" height="146"/>
+                                                <rect key="frame" x="11" y="38" width="146" height="146"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="seo-Z1-3P5" secondAttribute="height" multiplier="1:1" id="Nxh-EF-us4"/>
                                                 </constraints>
@@ -389,7 +390,7 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                                                 </userDefinedRuntimeAttributes>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iphone" translatesAutoresizingMaskIntoConstraints="NO" id="FZD-BA-24j">
-                                                <rect key="frame" x="0.0" y="0.0" width="168" height="183"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="168" height="184"/>
                                             </imageView>
                                         </subviews>
                                         <constraints>
@@ -422,7 +423,7 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="7Cw-8k-Os3" userLabel="star3">
-                                        <rect key="frame" x="150" y="78" width="7" height="34"/>
+                                        <rect key="frame" x="150" y="79" width="7" height="34"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="7" id="y83-LV-dPq"/>
                                         </constraints>
@@ -440,19 +441,19 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="nua-ml-mTp" userLabel="star7">
-                                        <rect key="frame" x="103" y="194" width="7" height="34"/>
+                                        <rect key="frame" x="103" y="195" width="7" height="34"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="7" id="OfO-Mb-dVm"/>
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="fgQ-qf-9pL" userLabel="star8">
-                                        <rect key="frame" x="219" y="299" width="9" height="34"/>
+                                        <rect key="frame" x="219" y="300" width="9" height="34"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="9" id="di4-m6-d2i"/>
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="X9U-Te-nxi" userLabel="star6">
-                                        <rect key="frame" x="338" y="209" width="12" height="14"/>
+                                        <rect key="frame" x="338" y="210" width="12" height="14"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="12" id="hrw-Zz-3H6"/>
                                             <constraint firstAttribute="height" constant="14" id="zAV-rO-cSV"/>
@@ -489,22 +490,30 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                                     <constraint firstItem="gRh-VQ-57i" firstAttribute="top" secondItem="V9z-WP-6mg" secondAttribute="top" constant="14" id="z9d-vW-Lxr"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yq7-1l-rO5" userLabel="bottomSpacer">
-                                <rect key="frame" x="180" y="492" width="240" height="10"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yq7-1l-rO5" userLabel="bottomSpacer">
+                                <rect key="frame" x="180" y="444" width="240" height="58"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="c6p-Z5-HTD"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ul5-Tp-YXG" userLabel="topSpacer">
+                                <rect key="frame" x="180" y="25" width="240" height="19"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="aLm-4c-wkd"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="hAr-PC-4Lk"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.0" blue="0.34509804844856262" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="V9z-WP-6mg" firstAttribute="height" secondItem="OvS-2d-WuL" secondAttribute="height" multiplier="0.63" id="BFA-bE-wDG"/>
-                            <constraint firstItem="6QU-g5-Hyl" firstAttribute="height" secondItem="OvS-2d-WuL" secondAttribute="height" multiplier="0.25" id="Jtl-fW-m4O"/>
+                            <constraint firstItem="ul5-Tp-YXG" firstAttribute="centerX" secondItem="OvS-2d-WuL" secondAttribute="centerX" id="BgC-sl-4vW"/>
+                            <constraint firstItem="bZw-jc-PYY" firstAttribute="height" secondItem="OvS-2d-WuL" secondAttribute="height" multiplier="0.046" id="EmF-sl-9Iq"/>
                             <constraint firstItem="yq7-1l-rO5" firstAttribute="top" secondItem="V9z-WP-6mg" secondAttribute="bottom" id="KED-JG-E7c"/>
+                            <constraint firstItem="ul5-Tp-YXG" firstAttribute="top" secondItem="jnX-Zh-1IU" secondAttribute="bottom" constant="25" id="LIL-8F-5LV"/>
                             <constraint firstItem="V9z-WP-6mg" firstAttribute="top" secondItem="bZw-jc-PYY" secondAttribute="bottom" id="Lu2-iF-Bh2"/>
                             <constraint firstItem="6QU-g5-Hyl" firstAttribute="centerX" secondItem="OvS-2d-WuL" secondAttribute="centerX" id="OSW-6o-GGR"/>
                             <constraint firstItem="bZw-jc-PYY" firstAttribute="top" secondItem="6QU-g5-Hyl" secondAttribute="bottom" id="Pai-YF-8XD"/>
-                            <constraint firstItem="6QU-g5-Hyl" firstAttribute="top" secondItem="jnX-Zh-1IU" secondAttribute="bottom" constant="34" id="RGj-23-MVL"/>
                             <constraint firstAttribute="trailing" secondItem="keh-ad-7Sj" secondAttribute="trailing" id="Vxe-Qr-13W"/>
                             <constraint firstItem="yq7-1l-rO5" firstAttribute="centerX" secondItem="OvS-2d-WuL" secondAttribute="centerX" id="Zbk-so-y5z"/>
                             <constraint firstItem="V9z-WP-6mg" firstAttribute="centerX" secondItem="OvS-2d-WuL" secondAttribute="centerX" id="bb3-en-dS7"/>
@@ -512,10 +521,11 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                                 <variation key="widthClass=regular" constant="200"/>
                             </constraint>
                             <constraint firstItem="bZw-jc-PYY" firstAttribute="centerX" secondItem="OvS-2d-WuL" secondAttribute="centerX" id="gnA-BO-O86"/>
-                            <constraint firstItem="bZw-jc-PYY" firstAttribute="height" secondItem="6QU-g5-Hyl" secondAttribute="height" multiplier="0.125" id="l8Q-0c-xCP"/>
                             <constraint firstItem="keh-ad-7Sj" firstAttribute="top" secondItem="jnX-Zh-1IU" secondAttribute="bottom" id="pm3-SW-4Rd"/>
                             <constraint firstItem="yq7-1l-rO5" firstAttribute="height" relation="greaterThanOrEqual" secondItem="OvS-2d-WuL" secondAttribute="height" multiplier="0.02" priority="750" id="q2p-mc-OQm"/>
+                            <constraint firstItem="6QU-g5-Hyl" firstAttribute="top" secondItem="ul5-Tp-YXG" secondAttribute="bottom" id="qYd-eZ-w3Q"/>
                             <constraint firstItem="knZ-Sh-tcc" firstAttribute="top" secondItem="yq7-1l-rO5" secondAttribute="bottom" id="t4e-lC-E7H"/>
+                            <constraint firstItem="ul5-Tp-YXG" firstAttribute="height" secondItem="OvS-2d-WuL" secondAttribute="height" multiplier="0.039" id="vDU-gf-Gzo"/>
                             <constraint firstAttribute="width" secondItem="6QU-g5-Hyl" secondAttribute="width" constant="40" id="wNx-8o-gAE">
                                 <variation key="widthClass=regular" constant="300"/>
                             </constraint>
