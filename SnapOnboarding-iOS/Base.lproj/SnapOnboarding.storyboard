@@ -638,16 +638,96 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="items-pattern" translatesAutoresizingMaskIntoConstraints="NO" id="BBq-cU-apg">
                                                 <rect key="frame" x="0.0" y="0.0" width="236" height="254"/>
                                             </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="vj6-hP-y2W" userLabel="star0">
+                                                <rect key="frame" x="214" y="8" width="9" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="9" id="mDT-Wq-Tao"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="eZ7-Pl-CKs" userLabel="star1">
+                                                <rect key="frame" x="39" y="17" width="9" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="9" id="ODx-Pc-eG9"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="koN-v6-nc7" userLabel="star2">
+                                                <rect key="frame" x="156" y="60" width="7" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="7" id="5g8-6E-sZB"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="fMq-Xf-V1c" userLabel="star3">
+                                                <rect key="frame" x="59" y="92" width="12" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="12" id="dCv-y1-iYU"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="xFM-9c-KHt" userLabel="star4">
+                                                <rect key="frame" x="20" y="132" width="9" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="9" id="nV1-T3-IQP"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="2lV-dU-6ex" userLabel="star5">
+                                                <rect key="frame" x="206" y="147" width="9" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="9" id="GHB-Oa-jnR"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="h0a-sr-xre" userLabel="star6">
+                                                <rect key="frame" x="162" y="174" width="12" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="12" id="zGJ-M2-a4Z"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="X7f-ab-Q3t" userLabel="star7">
+                                                <rect key="frame" x="81" y="186" width="7" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="7" id="PSb-yy-HVd"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="Ea6-o5-kuO" userLabel="star8">
+                                                <rect key="frame" x="189" y="209" width="9" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="9" id="EFn-dN-01c"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="PtL-Va-9Um" userLabel="star9">
+                                                <rect key="frame" x="19" y="217" width="9" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="9" id="R4n-C6-e8E"/>
+                                                </constraints>
+                                            </imageView>
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="Rkx-wm-l9O" firstAttribute="centerX" secondItem="al6-WW-aFx" secondAttribute="centerX" id="2FF-2X-zo3"/>
+                                            <constraint firstItem="xFM-9c-KHt" firstAttribute="centerX" secondItem="al6-WW-aFx" secondAttribute="centerX" multiplier="0.21" id="3gw-8U-Om4"/>
+                                            <constraint firstItem="vj6-hP-y2W" firstAttribute="centerY" secondItem="al6-WW-aFx" secondAttribute="centerY" multiplier="0.2" id="5u7-oK-HWd"/>
+                                            <constraint firstItem="X7f-ab-Q3t" firstAttribute="centerX" secondItem="al6-WW-aFx" secondAttribute="centerX" multiplier="0.72" id="FBw-aR-Yxs"/>
+                                            <constraint firstItem="2lV-dU-6ex" firstAttribute="centerX" secondItem="al6-WW-aFx" secondAttribute="centerX" multiplier="1.78" id="I1d-R9-cQ0"/>
                                             <constraint firstAttribute="width" secondItem="al6-WW-aFx" secondAttribute="height" multiplier="579:623" id="JUw-4l-JpK"/>
+                                            <constraint firstItem="fMq-Xf-V1c" firstAttribute="centerX" secondItem="al6-WW-aFx" secondAttribute="centerX" multiplier="0.55" id="Kyo-LX-3Ie"/>
                                             <constraint firstAttribute="bottom" secondItem="BBq-cU-apg" secondAttribute="bottom" id="Lqc-ol-Fn8"/>
+                                            <constraint firstItem="Ea6-o5-kuO" firstAttribute="centerX" secondItem="al6-WW-aFx" secondAttribute="centerX" multiplier="1.64" id="OOL-ub-hF6"/>
                                             <constraint firstItem="BBq-cU-apg" firstAttribute="leading" secondItem="al6-WW-aFx" secondAttribute="leading" id="SuE-SY-iCK"/>
+                                            <constraint firstItem="xFM-9c-KHt" firstAttribute="centerY" secondItem="al6-WW-aFx" secondAttribute="centerY" multiplier="1.17" id="XSy-OD-QhQ"/>
+                                            <constraint firstItem="X7f-ab-Q3t" firstAttribute="centerY" secondItem="al6-WW-aFx" secondAttribute="centerY" multiplier="1.6" id="YOg-A2-oBj"/>
+                                            <constraint firstItem="eZ7-Pl-CKs" firstAttribute="centerX" secondItem="al6-WW-aFx" secondAttribute="centerX" multiplier="0.37" id="aLf-li-aTw"/>
+                                            <constraint firstItem="vj6-hP-y2W" firstAttribute="centerX" secondItem="al6-WW-aFx" secondAttribute="centerX" multiplier="1.85" id="bPh-Kp-MJt"/>
+                                            <constraint firstItem="koN-v6-nc7" firstAttribute="centerY" secondItem="al6-WW-aFx" secondAttribute="centerY" multiplier="0.6" id="bR6-Nu-ary"/>
+                                            <constraint firstItem="PtL-Va-9Um" firstAttribute="centerY" secondItem="al6-WW-aFx" secondAttribute="centerY" multiplier="1.84" id="bRH-A5-wcD"/>
+                                            <constraint firstItem="PtL-Va-9Um" firstAttribute="centerX" secondItem="al6-WW-aFx" secondAttribute="centerX" multiplier="0.2" id="cCO-PU-RS2"/>
+                                            <constraint firstItem="fMq-Xf-V1c" firstAttribute="centerY" secondItem="al6-WW-aFx" secondAttribute="centerY" multiplier="0.86" id="cp0-ND-ejm"/>
+                                            <constraint firstItem="eZ7-Pl-CKs" firstAttribute="centerY" secondItem="al6-WW-aFx" secondAttribute="centerY" multiplier="0.27" id="dKc-24-aXj"/>
                                             <constraint firstItem="BBq-cU-apg" firstAttribute="top" secondItem="al6-WW-aFx" secondAttribute="top" id="fLj-Bq-Nik"/>
                                             <constraint firstItem="Rkx-wm-l9O" firstAttribute="centerY" secondItem="al6-WW-aFx" secondAttribute="centerY" id="jGP-M2-c4R"/>
+                                            <constraint firstItem="koN-v6-nc7" firstAttribute="centerX" secondItem="al6-WW-aFx" secondAttribute="centerX" multiplier="1.35" id="k0Q-cE-qa4"/>
                                             <constraint firstAttribute="trailing" secondItem="BBq-cU-apg" secondAttribute="trailing" id="mNK-rE-Le9"/>
+                                            <constraint firstItem="h0a-sr-xre" firstAttribute="centerY" secondItem="al6-WW-aFx" secondAttribute="centerY" multiplier="1.5" id="moJ-8k-nJA"/>
                                             <constraint firstItem="Rkx-wm-l9O" firstAttribute="height" secondItem="BBq-cU-apg" secondAttribute="height" multiplier="0.32" id="nL0-BF-MXg"/>
+                                            <constraint firstItem="Ea6-o5-kuO" firstAttribute="centerY" secondItem="al6-WW-aFx" secondAttribute="centerY" multiplier="1.78" id="rQq-fj-6ek"/>
+                                            <constraint firstItem="h0a-sr-xre" firstAttribute="centerX" secondItem="al6-WW-aFx" secondAttribute="centerX" multiplier="1.42" id="riq-cu-g7z"/>
+                                            <constraint firstItem="2lV-dU-6ex" firstAttribute="centerY" secondItem="al6-WW-aFx" secondAttribute="centerY" multiplier="1.29" id="zfi-qx-8vi"/>
                                         </constraints>
                                     </view>
                                 </subviews>
