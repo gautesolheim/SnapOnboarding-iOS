@@ -217,13 +217,7 @@ extension SnapOnboardingViewController: IntroViewControllerDelegate {
 extension SnapOnboardingViewController: LocationViewControllerDelegate {
     
     func locationNextButtonTapped() {
-        if userHasRespondedToLocationServices {
-            scrollToNextPage()
-        } else {
-            delegate?.enableLocationServicesTapped()
-            userHasRespondedToLocationServices = true
-        }
-        
+        scrollToNextPage()
     }
     
     func enableLocationServicesTapped() {

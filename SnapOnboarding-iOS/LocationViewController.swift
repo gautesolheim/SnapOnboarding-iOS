@@ -29,11 +29,6 @@ class LocationViewController: UIViewController {
     
     @IBAction func nextButtonTapped(sender: UIButton) {
         delegate?.locationNextButtonTapped()
-        
-        if locationServicesStatus == .NotYetRequested {
-            locationServicesStatus = .WaitingForResponse
-            animateEnableLocationServicesButtonToSpinner()
-        }
     }
     
     @IBAction func enableLocationServicesButtonTapped(sender: UIButton) {
