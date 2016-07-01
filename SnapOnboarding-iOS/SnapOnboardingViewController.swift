@@ -26,14 +26,7 @@ public class SnapOnboardingViewController: UIViewController {
     private var viewModel: SnapOnboardingViewModel?
     
     private var locationViewController: LocationViewControllerProtocol?
-    private var userHasRespondedToLocationServices = false {
-        didSet {
-            if userHasRespondedToLocationServices {
-                scrollView?.contentSize.width = view.frame.width * 3
-                print("set-new-content-width")
-            }
-        }
-    }
+    private var userHasRespondedToLocationServices = false
     
     // MARK: UIViewController life cycle
     
@@ -187,21 +180,7 @@ extension SnapOnboardingViewController {
 
 extension SnapOnboardingViewController: UIScrollViewDelegate {
     
-    // TEMP for restricted scrolling to third page, see also userHasRespondedToLocationServices didSet
-    override public func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        scrollView?.contentSize.width = view.frame.width * 2
-    }
-    
     public func scrollViewDidScroll(scrollView: UIScrollView) {
-        // Static
-//        if !userHasRespondedToLocationServices && scrollView.contentOffset.x > view.frame.width + 1 {
-//            scrollView.scrollEnabled = false
-//        } else {
-//            scrollView.scrollEnabled = true
-//        }
-        
         updatePageControl()
     }
     

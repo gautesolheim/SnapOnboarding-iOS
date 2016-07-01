@@ -321,7 +321,7 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PcZ-cZ-ktu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="567" y="1235"/>
+            <point key="canvasLocation" x="697" y="1235"/>
         </scene>
         <!--introViewController-->
         <scene sceneID="Mtt-oe-dxY">
@@ -348,7 +348,6 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Å legge ut salg er raskt og enkelt. Vi tagger og kategoriserer annonser med smart bildegjenkjenning." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6QU-g5-Hyl" userLabel="headlineLabel" customClass="SnapOnboardingHeadlineLabel" customModule="SnapOnboarding_iOS" customModuleProvider="target">
                                 <rect key="frame" x="20" y="40" width="560" height="57"/>
-                                <color key="backgroundColor" red="0.98138898610000003" green="0.017540564759999999" blue="0.37062424420000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="21"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -562,17 +561,24 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                         <rect key="frame" x="0.0" y="0.0" width="600" height="502"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y4x-Xm-ZL4" userLabel="topSpacer">
+                                <rect key="frame" x="180" y="0.0" width="240" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="jL5-vl-r0V"/>
+                                    <constraint firstAttribute="width" constant="240" id="rhG-ff-djY"/>
+                                </constraints>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DIb-IE-TZ2" userLabel="sparklingView">
-                                <rect key="frame" x="40" y="47" width="520" height="235"/>
+                                <rect key="frame" x="151" y="44" width="299" height="246"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="items-pattern" translatesAutoresizingMaskIntoConstraints="NO" id="BBq-cU-apg">
-                                        <rect key="frame" x="0.0" y="0.0" width="520" height="235"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo snapsale" translatesAutoresizingMaskIntoConstraints="NO" id="Rkx-wm-l9O">
-                                        <rect key="frame" x="205" y="63" width="110" height="110"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="logo snapsale" translatesAutoresizingMaskIntoConstraints="NO" id="Rkx-wm-l9O">
+                                        <rect key="frame" x="77" y="82" width="145" height="144"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Rkx-wm-l9O" secondAttribute="height" multiplier="1:1" id="x8F-wC-Fw3"/>
                                         </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="items-pattern" translatesAutoresizingMaskIntoConstraints="NO" id="BBq-cU-apg">
+                                        <rect key="frame" x="0.0" y="0.0" width="299" height="246"/>
                                     </imageView>
                                 </subviews>
                                 <constraints>
@@ -634,18 +640,29 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                                     <action selector="skipLoginButtonTapped:" destination="0qE-Ud-UlA" eventType="touchUpInside" id="96b-TX-vhA"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8TP-as-s39" userLabel="sparklingContinueSpacer">
+                                <rect key="frame" x="180" y="290" width="240" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="kAu-ID-jet"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.0" blue="0.34509804844856262" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="DIb-IE-TZ2" firstAttribute="top" secondItem="6VU-A7-cWa" secondAttribute="bottom" constant="47" id="7mc-zJ-dOn"/>
-                            <constraint firstItem="DIb-IE-TZ2" firstAttribute="leading" secondItem="JFE-Tf-2Hq" secondAttribute="leading" constant="40" id="E66-6j-YDR"/>
+                            <constraint firstItem="8TP-as-s39" firstAttribute="top" secondItem="DIb-IE-TZ2" secondAttribute="bottom" id="6LC-Ti-HiF"/>
                             <constraint firstItem="LxE-Ac-dOb" firstAttribute="top" secondItem="iZI-f9-ZQP" secondAttribute="bottom" constant="9" id="I5A-7Q-3xE"/>
-                            <constraint firstItem="hVU-s5-rUl" firstAttribute="top" secondItem="DIb-IE-TZ2" secondAttribute="bottom" constant="45" id="JvG-V6-r7i"/>
                             <constraint firstItem="LxE-Ac-dOb" firstAttribute="centerX" secondItem="JFE-Tf-2Hq" secondAttribute="centerX" id="LH2-bu-0P3"/>
-                            <constraint firstAttribute="trailing" secondItem="DIb-IE-TZ2" secondAttribute="trailing" constant="40" id="PG6-H2-TCF"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" secondItem="DIb-IE-TZ2" secondAttribute="width" constant="70" id="NTd-cK-xBM"/>
+                            <constraint firstItem="8TP-as-s39" firstAttribute="centerX" secondItem="JFE-Tf-2Hq" secondAttribute="centerX" id="SBG-cd-VEF"/>
+                            <constraint firstItem="y4x-Xm-ZL4" firstAttribute="centerX" secondItem="JFE-Tf-2Hq" secondAttribute="centerX" id="UUf-nU-PGL"/>
+                            <constraint firstItem="8TP-as-s39" firstAttribute="height" secondItem="y4x-Xm-ZL4" secondAttribute="height" multiplier="0.86" id="Ujr-iu-mLH"/>
+                            <constraint firstItem="DIb-IE-TZ2" firstAttribute="centerX" secondItem="JFE-Tf-2Hq" secondAttribute="centerX" id="bO2-Nr-jqM"/>
                             <constraint firstItem="iZI-f9-ZQP" firstAttribute="top" secondItem="hVU-s5-rUl" secondAttribute="bottom" constant="16" id="gwF-82-QbO"/>
+                            <constraint firstItem="y4x-Xm-ZL4" firstAttribute="top" secondItem="6VU-A7-cWa" secondAttribute="bottom" id="hAd-WB-P3o"/>
+                            <constraint firstItem="DIb-IE-TZ2" firstAttribute="top" secondItem="y4x-Xm-ZL4" secondAttribute="bottom" id="s5L-mL-dib"/>
                             <constraint firstItem="hVU-s5-rUl" firstAttribute="centerX" secondItem="JFE-Tf-2Hq" secondAttribute="centerX" id="u46-yW-LFl"/>
                             <constraint firstItem="lpC-Qa-pWA" firstAttribute="top" secondItem="LxE-Ac-dOb" secondAttribute="bottom" constant="17" id="uJ2-pc-QXe"/>
+                            <constraint firstItem="hVU-s5-rUl" firstAttribute="top" secondItem="8TP-as-s39" secondAttribute="bottom" id="vJ1-Y9-9gM"/>
                             <constraint firstItem="iZI-f9-ZQP" firstAttribute="centerX" secondItem="JFE-Tf-2Hq" secondAttribute="centerX" id="vdE-gO-8fk"/>
                         </constraints>
                     </view>
@@ -655,11 +672,13 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                         <outlet property="continueWithInstagramButton" destination="iZI-f9-ZQP" id="M98-5b-NzK"/>
                         <outlet property="continueWithInstagramButtonWidth" destination="h7t-YZ-m0x" id="jmw-Wg-m0K"/>
                         <outlet property="skipLoginButton" destination="LxE-Ac-dOb" id="IeJ-Gz-WQh"/>
+                        <outlet property="skipLoginButtonBottomToSuperViewBottom" destination="uJ2-pc-QXe" id="BKn-w1-rt1"/>
+                        <outlet property="topSpacerHeight" destination="jL5-vl-r0V" id="a94-91-UzV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7I0-p0-avN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1491" y="1235.5"/>
+            <point key="canvasLocation" x="1491" y="1235"/>
         </scene>
         <!--Tags Collection View Controller-->
         <scene sceneID="XFA-ep-vWh">

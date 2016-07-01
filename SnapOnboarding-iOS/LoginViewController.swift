@@ -8,6 +8,8 @@ class LoginViewController: UIViewController {
     
     @IBOutlet private var continueWithFacebookButtonWidth: NSLayoutConstraint?
     @IBOutlet private var continueWithInstagramButtonWidth: NSLayoutConstraint?
+    @IBOutlet private var topSpacerHeight: NSLayoutConstraint?
+    @IBOutlet private var skipLoginButtonBottomToSuperViewBottom: NSLayoutConstraint?
     
     @IBAction func continueWithFacebookButtonTapped(sender: UIButton) {
         delegate?.facebookSignupTapped()
@@ -32,6 +34,8 @@ class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupForScreenSize(UIScreen.mainScreen().bounds)
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -73,3 +77,20 @@ class LoginViewController: UIViewController {
     }
 
 }
+
+// MARK: - ScreenSizesProtocol
+
+extension LoginViewController {
+    
+    func setupFor3_5Inch() {
+        topSpacerHeight?.constant -= 22
+        
+        skipLoginButtonBottomToSuperViewBottom?.constant -= 17
+    }
+    
+    func setupFor4_0Inch() {
+        topSpacerHeight?.constant -= 12
+    }
+    
+}
+
