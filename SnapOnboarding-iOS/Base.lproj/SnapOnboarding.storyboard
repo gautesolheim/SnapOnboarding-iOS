@@ -240,7 +240,7 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zhm-Jz-ST7" userLabel="neighborhoodView">
                                         <rect key="frame" x="150" y="0.0" width="259" height="229"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_tumbleweed" translatesAutoresizingMaskIntoConstraints="NO" id="DaA-wS-kSZ">
+                                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_tumbleweed" translatesAutoresizingMaskIntoConstraints="NO" id="DaA-wS-kSZ">
                                                 <rect key="frame" x="215" y="211" width="18" height="16"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="DaA-wS-kSZ" secondAttribute="height" multiplier="17:15" id="mpo-kP-qqM"/>
@@ -249,15 +249,63 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="illustration_neighborhood" translatesAutoresizingMaskIntoConstraints="NO" id="ByJ-H5-kiJ" userLabel="neighborhood">
                                                 <rect key="frame" x="0.0" y="0.0" width="259" height="229"/>
                                             </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="ZGO-tJ-NHo" userLabel="star0">
+                                                <rect key="frame" x="199" y="7" width="12" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="12" id="j5q-nv-Z9s"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="dsT-Zc-8Wq" userLabel="star1">
+                                                <rect key="frame" x="75" y="25" width="7" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="7" id="vnU-Be-7jn"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="APG-V8-8ef" userLabel="star2">
+                                                <rect key="frame" x="226" y="60" width="9" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="9" id="Wim-2Z-dX4"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="Vpf-e1-O4r" userLabel="star3">
+                                                <rect key="frame" x="8" y="76" width="9" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="9" id="7ax-B5-8tu"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="rGl-Gx-3rh" userLabel="star4">
+                                                <rect key="frame" x="60" y="107" width="12" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="12" id="v9d-kj-Elj"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="DM0-HF-9Z6" userLabel="star5">
+                                                <rect key="frame" x="227" y="158" width="9" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="9" id="x1m-zf-Wu7"/>
+                                                </constraints>
+                                            </imageView>
                                         </subviews>
                                         <constraints>
+                                            <constraint firstItem="rGl-Gx-3rh" firstAttribute="centerX" secondItem="zhm-Jz-ST7" secondAttribute="centerX" multiplier="0.51" id="0dk-LU-9Hz"/>
+                                            <constraint firstItem="rGl-Gx-3rh" firstAttribute="centerY" secondItem="zhm-Jz-ST7" secondAttribute="centerY" multiplier="1.08" id="19v-oZ-s2i"/>
+                                            <constraint firstItem="APG-V8-8ef" firstAttribute="centerY" secondItem="zhm-Jz-ST7" secondAttribute="centerY" multiplier="0.67" id="3H1-Hz-lkO"/>
+                                            <constraint firstItem="Vpf-e1-O4r" firstAttribute="centerX" secondItem="zhm-Jz-ST7" secondAttribute="centerX" multiplier="0.1" id="4aq-95-vkB"/>
+                                            <constraint firstItem="dsT-Zc-8Wq" firstAttribute="centerY" secondItem="zhm-Jz-ST7" secondAttribute="centerY" multiplier="0.37" id="JPw-T0-PCN"/>
+                                            <constraint firstItem="APG-V8-8ef" firstAttribute="centerX" secondItem="zhm-Jz-ST7" secondAttribute="centerX" multiplier="1.78" id="OnK-gx-Adb"/>
                                             <constraint firstItem="ByJ-H5-kiJ" firstAttribute="leading" secondItem="zhm-Jz-ST7" secondAttribute="leading" id="PM2-9R-mxT"/>
                                             <constraint firstAttribute="bottom" secondItem="ByJ-H5-kiJ" secondAttribute="bottom" id="Sc7-ig-Mdz"/>
                                             <constraint firstItem="ByJ-H5-kiJ" firstAttribute="top" secondItem="zhm-Jz-ST7" secondAttribute="top" id="YaQ-xn-OwR"/>
+                                            <constraint firstItem="dsT-Zc-8Wq" firstAttribute="centerX" secondItem="zhm-Jz-ST7" secondAttribute="centerX" multiplier="0.61" id="bhp-W3-pui"/>
+                                            <constraint firstItem="Vpf-e1-O4r" firstAttribute="centerY" secondItem="zhm-Jz-ST7" secondAttribute="centerY" multiplier="0.82" id="f0p-W5-9Jb"/>
+                                            <constraint firstItem="ZGO-tJ-NHo" firstAttribute="centerY" secondItem="zhm-Jz-ST7" secondAttribute="centerY" multiplier="0.21" id="fqh-ac-aAC"/>
                                             <constraint firstItem="DaA-wS-kSZ" firstAttribute="centerY" secondItem="ByJ-H5-kiJ" secondAttribute="centerY" multiplier="1.915" id="muW-PK-NMb"/>
+                                            <constraint firstItem="DM0-HF-9Z6" firstAttribute="centerY" secondItem="zhm-Jz-ST7" secondAttribute="centerY" multiplier="1.52" id="n40-mR-c9Z"/>
+                                            <constraint firstItem="DM0-HF-9Z6" firstAttribute="centerX" secondItem="zhm-Jz-ST7" secondAttribute="centerX" multiplier="1.79" id="n7m-BB-kHN"/>
                                             <constraint firstAttribute="width" secondItem="zhm-Jz-ST7" secondAttribute="height" multiplier="249:221" id="q7h-4E-vSI"/>
                                             <constraint firstItem="DaA-wS-kSZ" firstAttribute="width" secondItem="ByJ-H5-kiJ" secondAttribute="width" multiplier="0.07" id="sEU-YK-iKD"/>
                                             <constraint firstItem="DaA-wS-kSZ" firstAttribute="centerX" secondItem="ByJ-H5-kiJ" secondAttribute="centerX" multiplier="1.73" id="wG5-Wy-op3"/>
+                                            <constraint firstItem="ZGO-tJ-NHo" firstAttribute="centerX" secondItem="zhm-Jz-ST7" secondAttribute="centerX" multiplier="1.58" id="wMR-Vr-HC2"/>
                                             <constraint firstAttribute="trailing" secondItem="ByJ-H5-kiJ" secondAttribute="trailing" id="z5v-t8-OeY"/>
                                         </constraints>
                                     </view>
@@ -795,7 +843,7 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
         <image name="btn login facebook" width="74" height="54"/>
         <image name="btn login instagram" width="74" height="54"/>
         <image name="icon_tumbleweed" width="17" height="15"/>
-        <image name="illustration_neighborhood" width="249" height="221"/>
+        <image name="illustration_neighborhood" width="1020" height="964"/>
         <image name="iphone" width="190" height="208"/>
         <image name="items-pattern" width="299" height="307"/>
         <image name="link skip" width="45" height="25"/>
