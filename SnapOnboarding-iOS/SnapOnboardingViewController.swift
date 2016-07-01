@@ -19,6 +19,9 @@ public class SnapOnboardingViewController: UIViewController {
     @IBOutlet private var pageControl: UIPageControl?
     @IBOutlet private var termsAndConditionsLabel: TTTAttributedLabel?
     
+    @IBOutlet private var termsAndConditionsLabelBottomToSuperViewBottom: NSLayoutConstraint?
+    @IBOutlet private var pageControlBottomToTermsAndConditionsTop: NSLayoutConstraint?
+    
     private var delegate: SnapOnboardingDelegate?
     private var viewModel: SnapOnboardingViewModel?
     
@@ -38,6 +41,8 @@ public class SnapOnboardingViewController: UIViewController {
         super.viewDidLoad()
         
         assert(viewModel != nil)
+        
+        setupForScreenSize(UIScreen.mainScreen().bounds)
     }
     
     public override func viewWillAppear(animated: Bool) {
@@ -163,6 +168,17 @@ extension SnapOnboardingViewController: SnapOnboardingViewControllerProtocol {
         if status {
             scrollToNextPage()
         }
+    }
+    
+}
+
+// MARK: - ScreenSizesProtocol
+
+extension SnapOnboardingViewController {
+    
+    func setupFor3_5Inch() {
+        pageControlBottomToTermsAndConditionsTop?.constant -= 3
+        termsAndConditionsLabelBottomToSuperViewBottom?.constant -= 5
     }
     
 }

@@ -15,7 +15,7 @@ class IntroViewController: UIViewController {
     @IBOutlet private var nextButton: UIButton?
     @IBOutlet private var headlineLabel: SnapOnboardingHeadlineLabel?
     
-    
+    @IBOutlet private var bottomSpacer: UIView?
     
     @IBOutlet private var tagsContainerViewHeight: NSLayoutConstraint?
     @IBOutlet private var sparklingViewToSuperViewHeightRelation: NSLayoutConstraint?
@@ -44,7 +44,6 @@ class IntroViewController: UIViewController {
         
         configureNextButton()
         configureHeadlineLabel()
-        headlineLabel?.layoutIfNeeded()
     }
     
     private func configureNextButton() {
@@ -93,7 +92,7 @@ extension IntroViewController {
     }
     
     func setupFor4_0Inch() {
-        headlineLabel?.font = SnapFonts.gothamRoundedBookOfSize(19)
+        headlineLabel?.font = SnapFonts.gothamRoundedBookOfSize(18)
         headlineLabel?.lineSpacin = 5
     }
     

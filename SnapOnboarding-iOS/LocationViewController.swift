@@ -17,6 +17,9 @@ class LocationViewController: UIViewController {
     @IBOutlet private var willAskLaterLabel: SnapOnboardingHeadlineLabel?
     
     @IBOutlet private var enableLocationServicesButtonWidth: NSLayoutConstraint?
+    @IBOutlet private var sparklingViewToSuperViewHeightRelation: NSLayoutConstraint?
+    @IBOutlet private var notNowButtonBottomToSuperViewBottom: NSLayoutConstraint?
+    @IBOutlet private var willAskLaterLabelBottomToSuperViewBottom: NSLayoutConstraint?
     
     var delegate: LocationViewControllerDelegate?
     private var viewModel: SnapOnboardingViewModel.LocationViewModel?
@@ -48,6 +51,8 @@ class LocationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupForScreenSize(UIScreen.mainScreen().bounds)
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -208,11 +213,21 @@ extension LocationViewController {
         
         headlineLabel?.font = SnapFonts.gothamRoundedBookOfSize(17)
         headlineLabel?.lineSpacin = 4
+        
+        willAskLaterLabel?.font = SnapFonts.gothamRoundedBookOfSize(14)
+        
+        sparklingViewToSuperViewHeightRelation?.constant -= 30
+        notNowButtonBottomToSuperViewBottom?.constant -= 17
+        willAskLaterLabelBottomToSuperViewBottom?.constant -= 10
     }
     
     func setupFor4_0Inch() {
-        headlineLabel?.font = SnapFonts.gothamRoundedBookOfSize(19)
+        headlineLabel?.font = SnapFonts.gothamRoundedBookOfSize(18)
         headlineLabel?.lineSpacin = 5
+        
+        willAskLaterLabel?.font = SnapFonts.gothamRoundedBookOfSize(14)
+        
+        sparklingViewToSuperViewHeightRelation?.constant -= 20
     }
 
 }
