@@ -5,6 +5,7 @@ class LoginViewController: UIViewController {
     @IBOutlet private var continueWithFacebookButton: UIButton?
     @IBOutlet private var continueWithInstagramButton: UIButton?
     @IBOutlet private var skipLoginButton: UIButton?
+    @IBOutlet private(set) var sparklingStars: [UIImageView]?
     
     @IBOutlet private var continueWithFacebookButtonWidth: NSLayoutConstraint?
     @IBOutlet private var continueWithInstagramButtonWidth: NSLayoutConstraint?
@@ -45,6 +46,9 @@ class LoginViewController: UIViewController {
         configureContinueWithInstagramButton()
         configureSkipLoginButton()
         alignFacebookAndInstagramButtons()
+        
+        let duration: NSTimeInterval = 2
+        beginAnimatingSparklingStarsWithDuration(duration)
     }
     
     private func configureContinueWithFacebookButton() {
@@ -76,6 +80,12 @@ class LoginViewController: UIViewController {
         }
     }
 
+}
+
+// MARK: - HasSparklingStars
+
+extension LoginViewController: HasSparklingStars {
+    
 }
 
 // MARK: - ScreenSizesProtocol

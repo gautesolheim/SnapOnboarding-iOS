@@ -175,7 +175,7 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                                     <constraint firstAttribute="width" constant="240" id="PaX-Wy-oVD"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Følg selgere og produkter nær deg! Aldri gå glipp av et kupp igjen." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GPV-cC-643" userLabel="headlineLabel" customClass="SnapOnboardingHeadlineLabel" customModule="SnapOnboarding_iOS" customModuleProvider="target">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Følg selgere og produkter nær deg! Aldri gå glipp av et kupp igjen." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GPV-cC-643" userLabel="headlineLabel" customClass="SnapOnboardingHeadlineLabel" customModule="SnapOnboarding_iOS" customModuleProvider="target">
                                 <rect key="frame" x="20" y="40" width="560" height="56"/>
                                 <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="21"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -186,7 +186,7 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vi vil spørre deg på et senere tidspunkt, når vi trenger lokasjonen din, for eksempel ved et nytt salg." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Og-sM-3rO" userLabel="willAskLaterLabel" customClass="SnapOnboardingHeadlineLabel" customModule="SnapOnboarding_iOS" customModuleProvider="target">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Vi vil spørre deg på et senere tidspunkt, når vi trenger lokasjonen din, for eksempel ved et nytt salg." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Og-sM-3rO" userLabel="willAskLaterLabel" customClass="SnapOnboardingHeadlineLabel" customModule="SnapOnboarding_iOS" customModuleProvider="target">
                                 <rect key="frame" x="108" y="397" width="385" height="79"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="400" id="cBg-0u-kaL"/>
@@ -228,13 +228,13 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                                     <action selector="notNowButtonTapped:" destination="tuq-Zg-aCA" eventType="touchUpInside" id="HKa-Gl-7Mr"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r5E-HZ-yPq" userLabel="headlineSparklingSpacer">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r5E-HZ-yPq" userLabel="headlineSparklingSpacer">
                                 <rect key="frame" x="180" y="96" width="240" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="sUZ-2o-i3x"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ANS-Dj-bV5" userLabel="sparklingView">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ANS-Dj-bV5" userLabel="sparklingView">
                                 <rect key="frame" x="20" y="130" width="560" height="229"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zhm-Jz-ST7" userLabel="neighborhoodView">
@@ -364,7 +364,7 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                                     <constraint firstItem="zhm-Jz-ST7" firstAttribute="centerX" secondItem="ANS-Dj-bV5" secondAttribute="centerX" id="tGn-Dv-PrW"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J6z-PJ-dva" userLabel="bottomSpacer">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J6z-PJ-dva" userLabel="bottomSpacer">
                                 <rect key="frame" x="180" y="359" width="240" height="38"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="ndx-H9-wIn"/>
@@ -413,6 +413,12 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                         <outlet property="sparklingViewToSuperViewHeightRelation" destination="2fr-bU-udp" id="U84-7c-LVL"/>
                         <outlet property="willAskLaterLabel" destination="2Og-sM-3rO" id="Xo3-rc-Dde"/>
                         <outlet property="willAskLaterLabelBottomToSuperViewBottom" destination="yv8-en-iPl" id="Xiw-La-zYv"/>
+                        <outletCollection property="sparklingStars" destination="ZGO-tJ-NHo" collectionClass="NSMutableArray" id="2lj-I7-wWi"/>
+                        <outletCollection property="sparklingStars" destination="dsT-Zc-8Wq" collectionClass="NSMutableArray" id="iqw-R6-9p2"/>
+                        <outletCollection property="sparklingStars" destination="APG-V8-8ef" collectionClass="NSMutableArray" id="jNf-kq-1ga"/>
+                        <outletCollection property="sparklingStars" destination="Vpf-e1-O4r" collectionClass="NSMutableArray" id="Hog-B0-bvz"/>
+                        <outletCollection property="sparklingStars" destination="rGl-Gx-3rh" collectionClass="NSMutableArray" id="SDl-za-GdK"/>
+                        <outletCollection property="sparklingStars" destination="DM0-HF-9Z6" collectionClass="NSMutableArray" id="eVi-Gc-UuU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PcZ-cZ-ktu" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -431,7 +437,7 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                         <rect key="frame" x="0.0" y="0.0" width="600" height="502"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="keh-ad-7Sj" userLabel="nextButton">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="keh-ad-7Sj" userLabel="nextButton">
                                 <rect key="frame" x="525" y="0.0" width="75" height="46"/>
                                 <fontDescription key="fontDescription" name="GothamRounded-Medium" family="Gotham Rounded" pointSize="13"/>
                                 <inset key="contentEdgeInsets" minX="15" minY="15" maxX="15" maxY="15"/>
@@ -443,7 +449,7 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Å legge ut salg er raskt og enkelt. Vi tagger og kategoriserer annonser med smart bildegjenkjenning." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6QU-g5-Hyl" userLabel="headlineLabel" customClass="SnapOnboardingHeadlineLabel" customModule="SnapOnboarding_iOS" customModuleProvider="target">
-                                <rect key="frame" x="20" y="40" width="560" height="51"/>
+                                <rect key="frame" x="20" y="40" width="560" height="57"/>
                                 <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="21"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -454,13 +460,13 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bZw-jc-PYY" userLabel="headlineSparklingSpacer">
-                                <rect key="frame" x="180" y="91" width="240" height="23"/>
+                                <rect key="frame" x="180" y="97" width="240" height="23"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="Ai5-Uq-dY2"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V9z-WP-6mg" userLabel="sparklingView">
-                                <rect key="frame" x="20" y="114" width="560" height="316"/>
+                                <rect key="frame" x="20" y="120" width="560" height="316"/>
                                 <subviews>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Anb-9C-0O1" userLabel="tagsContainerView">
                                         <rect key="frame" x="0.0" y="228" width="560" height="70"/>
@@ -531,6 +537,13 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                                             <constraint firstAttribute="width" constant="9" id="UjZ-qb-128"/>
                                         </constraints>
                                     </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="X9U-Te-nxi" userLabel="star6">
+                                        <rect key="frame" x="338" y="209" width="12" height="14"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="12" id="hrw-Zz-3H6"/>
+                                            <constraint firstAttribute="height" constant="14" id="zAV-rO-cSV"/>
+                                        </constraints>
+                                    </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="nua-ml-mTp" userLabel="star7">
                                         <rect key="frame" x="103" y="194" width="7" height="34"/>
                                         <constraints>
@@ -541,13 +554,6 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                                         <rect key="frame" x="219" y="299" width="9" height="34"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="9" id="di4-m6-d2i"/>
-                                        </constraints>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="X9U-Te-nxi" userLabel="star6">
-                                        <rect key="frame" x="338" y="209" width="12" height="14"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="12" id="hrw-Zz-3H6"/>
-                                            <constraint firstAttribute="height" constant="14" id="zAV-rO-cSV"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>
@@ -582,7 +588,7 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yq7-1l-rO5" userLabel="bottomSpacer">
-                                <rect key="frame" x="180" y="430" width="240" height="72"/>
+                                <rect key="frame" x="180" y="436" width="240" height="66"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="c6p-Z5-HTD"/>
                                 </constraints>
@@ -628,6 +634,15 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                         <outlet property="nextButton" destination="keh-ad-7Sj" id="9U6-Rr-HqM"/>
                         <outlet property="sparklingViewToSuperViewHeightRelation" destination="BFA-bE-wDG" id="adw-Dm-U3D"/>
                         <outlet property="tagsContainerViewHeight" destination="gVG-uD-cFW" id="S14-dF-jvw"/>
+                        <outletCollection property="sparklingStars" destination="s1t-sP-bgy" collectionClass="NSMutableArray" id="FnP-x1-09a"/>
+                        <outletCollection property="sparklingStars" destination="cRw-Dt-0k7" collectionClass="NSMutableArray" id="Svm-Oh-AXd"/>
+                        <outletCollection property="sparklingStars" destination="E0z-Ye-6wd" collectionClass="NSMutableArray" id="cCq-3h-Q5G"/>
+                        <outletCollection property="sparklingStars" destination="7Cw-8k-Os3" collectionClass="NSMutableArray" id="Dwj-6K-2Ln"/>
+                        <outletCollection property="sparklingStars" destination="Sjr-yo-vV6" collectionClass="NSMutableArray" id="9Oo-pf-sSb"/>
+                        <outletCollection property="sparklingStars" destination="RJR-xC-x7D" collectionClass="NSMutableArray" id="Qtz-GP-3sD"/>
+                        <outletCollection property="sparklingStars" destination="nua-ml-mTp" collectionClass="NSMutableArray" id="f6p-TQ-sEd"/>
+                        <outletCollection property="sparklingStars" destination="fgQ-qf-9pL" collectionClass="NSMutableArray" id="q3A-EL-WVM"/>
+                        <outletCollection property="sparklingStars" destination="X9U-Te-nxi" collectionClass="NSMutableArray" id="V7H-c7-yhy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pQy-kG-wUh" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -850,6 +865,16 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                         <outlet property="skipLoginButton" destination="LxE-Ac-dOb" id="IeJ-Gz-WQh"/>
                         <outlet property="skipLoginButtonBottomToSuperViewBottom" destination="uJ2-pc-QXe" id="BKn-w1-rt1"/>
                         <outlet property="topSpacerHeight" destination="jL5-vl-r0V" id="a94-91-UzV"/>
+                        <outletCollection property="sparklingStars" destination="vj6-hP-y2W" collectionClass="NSMutableArray" id="LOm-zl-5JI"/>
+                        <outletCollection property="sparklingStars" destination="eZ7-Pl-CKs" collectionClass="NSMutableArray" id="kRH-nh-SiX"/>
+                        <outletCollection property="sparklingStars" destination="koN-v6-nc7" collectionClass="NSMutableArray" id="EYk-49-gih"/>
+                        <outletCollection property="sparklingStars" destination="fMq-Xf-V1c" collectionClass="NSMutableArray" id="jbl-c4-r7c"/>
+                        <outletCollection property="sparklingStars" destination="xFM-9c-KHt" collectionClass="NSMutableArray" id="HPb-9T-d56"/>
+                        <outletCollection property="sparklingStars" destination="2lV-dU-6ex" collectionClass="NSMutableArray" id="fyQ-BP-Kax"/>
+                        <outletCollection property="sparklingStars" destination="h0a-sr-xre" collectionClass="NSMutableArray" id="CUa-jP-9QT"/>
+                        <outletCollection property="sparklingStars" destination="X7f-ab-Q3t" collectionClass="NSMutableArray" id="G6U-Jw-6qk"/>
+                        <outletCollection property="sparklingStars" destination="Ea6-o5-kuO" collectionClass="NSMutableArray" id="7JO-0F-ZAM"/>
+                        <outletCollection property="sparklingStars" destination="PtL-Va-9Um" collectionClass="NSMutableArray" id="w5O-42-eQ9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7I0-p0-avN" userLabel="First Responder" sceneMemberID="firstResponder"/>

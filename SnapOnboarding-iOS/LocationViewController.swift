@@ -15,6 +15,7 @@ class LocationViewController: UIViewController {
     @IBOutlet private var enableLocationServicesButton: UIButton?
     @IBOutlet private var notNowButton: UIButton?
     @IBOutlet private var willAskLaterLabel: SnapOnboardingHeadlineLabel?
+    @IBOutlet private(set) var sparklingStars: [UIImageView]?
     
     @IBOutlet private var enableLocationServicesButtonWidth: NSLayoutConstraint?
     @IBOutlet private var sparklingViewToSuperViewHeightRelation: NSLayoutConstraint?
@@ -57,7 +58,12 @@ class LocationViewController: UIViewController {
         configureHeadlineLabel()
         configureEnableLocationServicesButton()
         configureNotNowButton()
+        
+        let duration: NSTimeInterval = 2
+        beginAnimatingSparklingStarsWithDuration(duration)
     }
+    
+    // MARK: UIView configuration
     
     private func configureNextButton() {
         let title = viewModel?.next?.uppercaseString
@@ -120,6 +126,8 @@ class LocationViewController: UIViewController {
     private func prepareForWillAskLaterLabelAppearance() {
         willAskLaterLabel?.alpha = 0.0
     }
+    
+    // MARK: UIView animation
     
     private func animateWillAskLaterLabelAppearanceWithDuration(duration: Double) {
         willAskLaterLabel?.hidden = false
@@ -196,6 +204,12 @@ extension LocationViewController: LocationViewControllerProtocol {
             configureWillAskLaterLabelForLocationDisabled()
         }
     }
+    
+}
+
+// MARK: - HasSparklingStars
+
+extension LocationViewController: HasSparklingStars {
     
 }
 

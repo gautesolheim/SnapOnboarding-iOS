@@ -14,8 +14,8 @@ class IntroViewController: UIViewController {
 
     @IBOutlet private var nextButton: UIButton?
     @IBOutlet private var headlineLabel: SnapOnboardingHeadlineLabel?
-    
     @IBOutlet private var bottomSpacer: UIView?
+    @IBOutlet private(set) var sparklingStars: [UIImageView]?
     
     @IBOutlet private var tagsContainerViewHeight: NSLayoutConstraint?
     @IBOutlet private var sparklingViewToSuperViewHeightRelation: NSLayoutConstraint?
@@ -44,15 +44,9 @@ class IntroViewController: UIViewController {
         
         configureNextButton()
         configureHeadlineLabel()
-    }
-    
-    private func configureNextButton() {
-        let title = viewModel?.next?.uppercaseString
-        nextButton?.setTitle(title, forState: .Normal)
-    }
-    
-    private func configureHeadlineLabel() {
-        headlineLabel?.updateText(viewModel?.introHeadline)
+        
+        let duration: NSTimeInterval = 2
+        beginAnimatingSparklingStarsWithDuration(duration)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -68,12 +62,29 @@ class IntroViewController: UIViewController {
         default: break
         }
     }
+    
+    // MARK: UIView configuration
+    
+    private func configureNextButton() {
+        let title = viewModel?.next?.uppercaseString
+        nextButton?.setTitle(title, forState: .Normal)
+    }
+    
+    private func configureHeadlineLabel() {
+        headlineLabel?.updateText(viewModel?.introHeadline)
+    }
 
 }
 
 // MARK: - IntroViewControllerProtocol
 
 extension IntroViewController: IntroViewControllerProtocol {
+    
+}
+
+// MARK: - HasSparklingStars
+
+extension IntroViewController: HasSparklingStars {
     
 }
 
