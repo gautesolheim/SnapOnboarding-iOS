@@ -26,7 +26,6 @@ public class SnapOnboardingViewController: UIViewController {
     private var viewModel: SnapOnboardingViewModel?
     
     private var locationViewController: LocationViewControllerProtocol?
-    private var userHasRespondedToLocationServices = false
     
     // MARK: UIViewController life cycle
     
@@ -104,11 +103,11 @@ public class SnapOnboardingViewController: UIViewController {
     
     // MARK: UIContentContainer
     
+    // Adjust scrollView's contentOffset on orientation change
     override public func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransitionToSize(size, withTransitionCoordinator: coordinator)
         
         let currentPage = pageControl?.currentPage ?? 0
-        
         coordinator.animateAlongsideTransition({ _ in
             let newOffset = CGPoint(x: CGFloat(currentPage) * size.width, y: 0)
             self.scrollView?.setContentOffset(newOffset, animated: true)
@@ -222,11 +221,6 @@ extension SnapOnboardingViewController: LocationViewControllerDelegate {
     
     func enableLocationServicesTapped() {
         delegate?.enableLocationServicesTapped()
-        userHasRespondedToLocationServices = true
-    }
-    
-    func notNowButtonTapped() {
-        userHasRespondedToLocationServices = true
     }
     
 }

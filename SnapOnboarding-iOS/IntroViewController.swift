@@ -1,11 +1,6 @@
 import UIKit
 import SnapFonts_iOS
 
-protocol IntroViewControllerProtocol: class {
-//    var delegate: IntroViewControllerDelegate? { get set }
-//    func configureForViewModel(viewModel: IntroViewModel)
-}
-
 private enum EmbedSegueIdentifier: String {
     case TagsCollectionViewController = "tagsContainerViewEmbed"
 }
@@ -36,6 +31,8 @@ class IntroViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        assert(viewModel != nil)
+        
         setupForScreenSize(UIScreen.mainScreen().bounds)
     }
     
@@ -46,7 +43,7 @@ class IntroViewController: UIViewController {
         configureHeadlineLabel()
         
         let duration: NSTimeInterval = 2
-        beginAnimatingSparklingStarsWithDuration(duration)
+        animateSparklingStarsWithCycleDuration(duration)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -79,6 +76,8 @@ class IntroViewController: UIViewController {
 // MARK: - IntroViewControllerProtocol
 
 extension IntroViewController: IntroViewControllerProtocol {
+    
+    // TODO
     
 }
 

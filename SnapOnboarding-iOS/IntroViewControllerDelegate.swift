@@ -1,4 +1,4 @@
-internal protocol IntroViewControllerDelegate: class {
+protocol IntroViewControllerDelegate: class {
     
     func introNextButtonTapped()
     

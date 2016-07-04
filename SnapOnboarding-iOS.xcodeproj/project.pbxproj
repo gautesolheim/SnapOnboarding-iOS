@@ -26,6 +26,8 @@
 		9F59C6401D17043900CAD9F7 /* IntroViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F59C63F1D17043900CAD9F7 /* IntroViewControllerDelegate.swift */; };
 		9F59C6431D17072C00CAD9F7 /* LocationViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F59C6421D17072C00CAD9F7 /* LocationViewControllerDelegate.swift */; };
 		9F93DF471D2A615C006D16B9 /* HasSparklingStars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F93DF461D2A615C006D16B9 /* HasSparklingStars.swift */; };
+		9F93DF491D2A7BE0006D16B9 /* IntroViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F93DF481D2A7BE0006D16B9 /* IntroViewControllerProtocol.swift */; };
+		9F93DF4B1D2A7CBD006D16B9 /* LoginViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F93DF4A1D2A7CBD006D16B9 /* LoginViewControllerProtocol.swift */; };
 		9F9C7D391D16CE89006203B7 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9C7D381D16CE89006203B7 /* IntroViewController.swift */; };
 		9F9C7D3B1D16CE9A006203B7 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9C7D3A1D16CE9A006203B7 /* LocationViewController.swift */; };
 		9F9C7D3D1D16CEA6006203B7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9C7D3C1D16CEA6006203B7 /* LoginViewController.swift */; };
@@ -84,6 +86,8 @@
 		9F59C63F1D17043900CAD9F7 /* IntroViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroViewControllerDelegate.swift; sourceTree = "<group>"; };
 		9F59C6421D17072C00CAD9F7 /* LocationViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationViewControllerDelegate.swift; sourceTree = "<group>"; };
 		9F93DF461D2A615C006D16B9 /* HasSparklingStars.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HasSparklingStars.swift; sourceTree = "<group>"; };
+		9F93DF481D2A7BE0006D16B9 /* IntroViewControllerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroViewControllerProtocol.swift; sourceTree = "<group>"; };
+		9F93DF4A1D2A7CBD006D16B9 /* LoginViewControllerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewControllerProtocol.swift; sourceTree = "<group>"; };
 		9F9C7D381D16CE89006203B7 /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		9F9C7D3A1D16CE9A006203B7 /* LocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		9F9C7D3C1D16CEA6006203B7 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -136,13 +140,6 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		9F0D2E081D2126010085BA12 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Views;
-			sourceTree = "<group>";
-		};
 		9F1E9B051D0EDDEB00E0EC40 /* Example */ = {
 			isa = PBXGroup;
 			children = (
@@ -167,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				9F9C7D381D16CE89006203B7 /* IntroViewController.swift */,
+				9F93DF481D2A7BE0006D16B9 /* IntroViewControllerProtocol.swift */,
 				9F59C63F1D17043900CAD9F7 /* IntroViewControllerDelegate.swift */,
 				9FAFCDE61D23C4AC00CE3DE8 /* TagsCollectionViewController.swift */,
 				9FAFCDE81D23CDF600CE3DE8 /* SnapTagsView-DefaultImages.xcassets */,
@@ -177,10 +175,9 @@
 		9F38E0B81D12C4B700164E38 /* Location View Controller */ = {
 			isa = PBXGroup;
 			children = (
-				9F0D2E081D2126010085BA12 /* Views */,
-				9F59C6421D17072C00CAD9F7 /* LocationViewControllerDelegate.swift */,
 				9F9C7D3A1D16CE9A006203B7 /* LocationViewController.swift */,
 				9F0D2E0E1D215EB90085BA12 /* LocationViewControllerProtocol.swift */,
+				9F59C6421D17072C00CAD9F7 /* LocationViewControllerDelegate.swift */,
 			);
 			name = "Location View Controller";
 			sourceTree = "<group>";
@@ -189,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				9F9C7D3C1D16CEA6006203B7 /* LoginViewController.swift */,
+				9F93DF4A1D2A7CBD006D16B9 /* LoginViewControllerProtocol.swift */,
 				9FADA8B51D1974DF00746E71 /* LoginViewControllerDelegate.swift */,
 			);
 			name = "Login View Controller";
@@ -225,13 +223,13 @@
 				9F1E9B0A1D0EE54A00E0EC40 /* SnapOnboardingConfiguration.swift */,
 				9F0D2E0B1D214E830085BA12 /* SnapOnboardingViewControllerProtocol.swift */,
 				9F1E9B061D0EE2F900E0EC40 /* SnapOnboardingViewController.swift */,
+				9F93DF461D2A615C006D16B9 /* HasSparklingStars.swift */,
 				9F38E0B71D12C49300164E38 /* Intro View Controller */,
 				9F38E0B81D12C4B700164E38 /* Location View Controller */,
 				9F38E0B91D12C4C200164E38 /* Login View Controller */,
 				9F150B741D17CF4800C3D716 /* SnapOnboarding.storyboard */,
 				9F4CE0B91D0EB2A000A6A1FB /* Assets.xcassets */,
 				9FE045301D25596800BCA50A /* UIViewController+ScreenSizes.swift */,
-				9F93DF461D2A615C006D16B9 /* HasSparklingStars.swift */,
 			);
 			path = "SnapOnboarding-iOS";
 			sourceTree = "<group>";
@@ -537,10 +535,12 @@
 				9F1E9B071D0EE2F900E0EC40 /* SnapOnboardingViewController.swift in Sources */,
 				9F9C7D3D1D16CEA6006203B7 /* LoginViewController.swift in Sources */,
 				9F9C7D391D16CE89006203B7 /* IntroViewController.swift in Sources */,
+				9F93DF491D2A7BE0006D16B9 /* IntroViewControllerProtocol.swift in Sources */,
 				9F59C6401D17043900CAD9F7 /* IntroViewControllerDelegate.swift in Sources */,
 				9F1E9B161D104E7200E0EC40 /* SnapOnboardingDelegate.swift in Sources */,
 				9F59C6431D17072C00CAD9F7 /* LocationViewControllerDelegate.swift in Sources */,
 				9F0D2E0C1D214E830085BA12 /* SnapOnboardingViewControllerProtocol.swift in Sources */,
+				9F93DF4B1D2A7CBD006D16B9 /* LoginViewControllerProtocol.swift in Sources */,
 				9F0D2E0F1D215EB90085BA12 /* LocationViewControllerProtocol.swift in Sources */,
 				9F93DF471D2A615C006D16B9 /* HasSparklingStars.swift in Sources */,
 				9FADA8B61D1974DF00746E71 /* LoginViewControllerDelegate.swift in Sources */,

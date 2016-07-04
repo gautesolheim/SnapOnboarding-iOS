@@ -1,4 +1,3 @@
-import Foundation
 import SnapTagsView
 import SnapFonts_iOS
 
@@ -23,10 +22,10 @@ class TagsCollectionViewController: SnapTagsCollectionViewController {
     
     func createConfiguration() -> SnapTagsViewConfiguration {
         var config = SnapTagsViewConfiguration()
-        config.spacing = 10.0
+        config.spacing = 10
         config.horizontalMargin = 0
         config.verticalMargin = 0
-        config.contentHeight = 13.0
+        config.contentHeight = 13
         config.alignment = .Center
         
         return config
@@ -48,14 +47,14 @@ class TagsCollectionViewController: SnapTagsCollectionViewController {
         
         var offState = onState
         offState.buttonImage = UIImage.SnapTagsViewAssets.RedCloseButton.image
-        offState.buttonTransform = CGAffineTransformRotate(CGAffineTransformIdentity, CGFloat(M_PI*45.0/180.0))
+        offState.buttonTransform = CGAffineTransformRotate(CGAffineTransformIdentity, CGFloat(M_PI * 45 / 180.0))
         offState.backgroundColor = UIColor.whiteColor()
         offState.textColor = UIColor.roseColor()
-        offState.borderColor = UIColor(red: 229.0/255.0, green: 229.0/255.0, blue: 229.0/255.0, alpha: 1.0)
+        offState.borderColor = UIColor(red: 229/255.0, green: 229/255.0, blue: 229/255.0, alpha: 1)
         offState.borderWidth = 0
         
         var highlightedOnState = onState
-        highlightedOnState.backgroundColor = UIColor(red: 229.0/255.0, green: 0.0, blue: 79.0/255.0, alpha: 1.0)
+        highlightedOnState.backgroundColor = UIColor(red: 229/255.0, green: 0/255.0, blue: 79/255.0, alpha: 1)
         
         let highlightedOffState = highlightedOnState
         

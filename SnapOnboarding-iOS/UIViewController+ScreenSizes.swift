@@ -9,7 +9,7 @@ import UIKit
 
 extension UIViewController: ScreenSizesProtocol {
     
-    // @param: UIScreen.mainScreen().bounds (Swift 3: UIScreen.main().bounds
+    // @param: UIScreen.mainScreen().bounds (Swift 3: UIScreen.main().bounds)
     public func setupForScreenSize(size: CGRect) {
         let mySelf = self as ScreenSizesProtocol
         let height = size.height

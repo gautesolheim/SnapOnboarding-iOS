@@ -27,14 +27,12 @@ class LoginViewController: UIViewController {
     var delegate: LoginViewControllerDelegate?
     private var viewModel: SnapOnboardingViewModel.LoginViewModel?
     
-    func configureForViewModel(viewModel: SnapOnboardingViewModel.LoginViewModel) {
-        self.viewModel = viewModel
-    }
-    
     // MARK: UIViewController life cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        assert(viewModel != nil)
         
         setupForScreenSize(UIScreen.mainScreen().bounds)
     }
@@ -48,7 +46,7 @@ class LoginViewController: UIViewController {
         alignFacebookAndInstagramButtons()
         
         let duration: NSTimeInterval = 2
-        beginAnimatingSparklingStarsWithDuration(duration)
+        animateSparklingStarsWithCycleDuration(duration)
     }
     
     private func configureContinueWithFacebookButton() {
@@ -80,6 +78,14 @@ class LoginViewController: UIViewController {
         }
     }
 
+}
+
+extension LoginViewController: LoginViewControllerProtocol {
+    
+    func configureForViewModel(viewModel: SnapOnboardingViewModel.LoginViewModel) {
+        self.viewModel = viewModel
+    }
+    
 }
 
 // MARK: - HasSparklingStars

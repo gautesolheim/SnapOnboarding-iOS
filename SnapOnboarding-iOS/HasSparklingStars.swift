@@ -8,21 +8,21 @@ protocol HasSparklingStars: class {
 
 extension HasSparklingStars {
     
-    func beginAnimatingSparklingStarsWithDuration(duration: NSTimeInterval) {
+    func animateSparklingStarsWithCycleDuration(duration: NSTimeInterval) {
         guard let sparklingStars = sparklingStars else {
             return
         }
         
-        for item in sparklingStars {
+        for star in sparklingStars {
             let delay: NSTimeInterval = Double(arc4random_uniform(UInt32(duration) * 100)) * 0.01
             
             UIView.animateWithDuration(duration, delay: delay, options: [UIViewAnimationOptions.CurveEaseInOut], animations: {
-                item.transform = CGAffineTransformMakeScale(1.5, 1.5)
+                star.transform = CGAffineTransformMakeScale(1.5, 1.5)
                 }, completion: { _ in
                     UIView.animateWithDuration(duration, delay: 0, options: [UIViewAnimationOptions.CurveEaseInOut], animations: {
-                        item.transform = CGAffineTransformMakeScale(0.7, 0.7)
+                        star.transform = CGAffineTransformMakeScale(0.7, 0.7)
                         }, completion: { _ in
-                            self.animateSparklingStarWithDuration(duration, star: item)
+                            self.animateSparklingStarWithDuration(duration, star: star)
                     })
             })
         }

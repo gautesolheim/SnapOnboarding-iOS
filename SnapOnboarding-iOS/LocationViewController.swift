@@ -39,7 +39,6 @@ class LocationViewController: UIViewController {
     }
     
     @IBAction func notNowButtonTapped(sender: UIButton) {
-        delegate?.notNowButtonTapped()
         configureWillAskLaterLabelForNotNow()
     }
 
@@ -47,6 +46,8 @@ class LocationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        assert(viewModel != nil)
         
         setupForScreenSize(UIScreen.mainScreen().bounds)
     }
@@ -60,14 +61,13 @@ class LocationViewController: UIViewController {
         configureNotNowButton()
         
         let duration: NSTimeInterval = 2
-        beginAnimatingSparklingStarsWithDuration(duration)
+        animateSparklingStarsWithCycleDuration(duration)
     }
     
     // MARK: UIView configuration
     
     private func configureNextButton() {
-        let title = viewModel?.next?.uppercaseString
-        nextButton?.setTitle(title, forState: .Normal)
+        nextButton?.setTitle(viewModel?.next?.uppercaseString, forState: .Normal)
     }
     
     private func configureHeadlineLabel() {
@@ -86,17 +86,12 @@ class LocationViewController: UIViewController {
         notNowButton?.setTitle(viewModel?.notNow, forState: .Normal)
     }
     
-    private func configureWillAskLaterLabelForNotNow() {
-        prepareForWillAskLaterLabelAppearance()
-        
-        willAskLaterLabel?.updateTextWithHeader(viewModel?.willAskLaterTitle, text: viewModel?.willAskLaterBody)
-        
+    private func configureWillAskLaterLabelForThankYou() {
+        willAskLaterLabel?.updateTextWithHeader(viewModel?.didEnableLocationServicesTitle, text: viewModel?.didEnableLocationServicesBody)
         animateWillAskLaterLabelAppearanceWithDuration(0.1)
     }
     
     private func configureWillAskLaterLabelForLocationDisabled() {
-        prepareForWillAskLaterLabelAppearance()
-        
         guard let wowYouDeclinedBody = viewModel?.wowYouDeclinedBody else {
             return
         }
@@ -115,21 +110,15 @@ class LocationViewController: UIViewController {
         animateWillAskLaterLabelAppearanceWithDuration(0.1)
     }
     
-    private func configureWillAskLaterLabelForThankYou() {
-        prepareForWillAskLaterLabelAppearance()
-        
-        willAskLaterLabel?.updateTextWithHeader(viewModel?.didEnableLocationServicesTitle, text: viewModel?.didEnableLocationServicesBody)
-        
+    private func configureWillAskLaterLabelForNotNow() {
+        willAskLaterLabel?.updateTextWithHeader(viewModel?.willAskLaterTitle, text: viewModel?.willAskLaterBody)
         animateWillAskLaterLabelAppearanceWithDuration(0.1)
-    }
-    
-    private func prepareForWillAskLaterLabelAppearance() {
-        willAskLaterLabel?.alpha = 0.0
     }
     
     // MARK: UIView animation
     
     private func animateWillAskLaterLabelAppearanceWithDuration(duration: Double) {
+        willAskLaterLabel?.alpha = 0
         willAskLaterLabel?.hidden = false
         
         UIView.animateWithDuration(duration, animations: {
@@ -195,11 +184,10 @@ extension LocationViewController: LocationViewControllerProtocol {
     }
     
     func locationServicesStatusChanged(status: Bool) {
-        switch status {
-        case true:
+        if status {
             locationServicesStatus = .Enabled
             configureWillAskLaterLabelForThankYou()
-        case false:
+        } else {
             locationServicesStatus = .Disabled
             configureWillAskLaterLabelForLocationDisabled()
         }

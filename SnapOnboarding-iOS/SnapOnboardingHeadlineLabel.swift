@@ -17,9 +17,7 @@ import SnapFonts_iOS
     
     @IBInspectable var header: String? {
         didSet {
-            if let text = text {
-                updateTextWithHeader(header, text: text)
-            }
+            updateTextWithHeader(header, text: text)
         }
     }
     
