@@ -21,16 +21,16 @@ class SnapOnboarding_iOSTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock {
-        }
-        
-    }
+//    func testExample() {
+//        // This is an example of a functional test case.
+//        // Use XCTAssert and related functions to verify your tests produce the correct results.
+//    }
+//    
+//    func testPerformanceExample() {
+//        // This is an example of a performance test case.
+//        self.measureBlock {
+//        }
+//        
+//    }
     
 }

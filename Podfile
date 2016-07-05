@@ -20,4 +20,10 @@ target 'SnapOnboarding-iOS' do
 
   end
 
+  target 'SnapOnboarding-iOSSnapshotTests' do
+    inherit! :search_paths
+
+    pod 'SnapSnapshotBase'
+  end
+
 end

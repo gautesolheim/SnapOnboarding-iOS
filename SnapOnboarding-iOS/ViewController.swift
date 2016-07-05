@@ -36,7 +36,7 @@ class ViewController: UIViewController {
         presentViewController(onboardingViewController!, animated: false, completion: nil)
     }
     
-    private func createSampleViewModelNorwegian() -> SnapOnboardingViewModel {
+    func createSampleViewModelNorwegian() -> SnapOnboardingViewModel {
         var termsViewModel = SnapOnboardingViewModel.TermsViewModel()
         let footer = "Ved bruk av tjenesten Snapsale godtar du Vilkårene for bruk og Retningslinjer for personvern"
         termsViewModel.termsAndPrivacyFooter = footer
@@ -77,7 +77,7 @@ class ViewController: UIViewController {
         return model
     }
     
-    private func createSampleViewModelEnglish() -> SnapOnboardingViewModel {
+    func createSampleViewModelEnglish() -> SnapOnboardingViewModel {
         var termsViewModel = SnapOnboardingViewModel.TermsViewModel()
         let footer = "You accept our Privacy Policy and Terms And Conditions by using the service Snapsale."
         termsViewModel.termsAndPrivacyFooter = footer

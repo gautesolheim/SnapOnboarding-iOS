@@ -31,11 +31,13 @@
 		9F9C7D391D16CE89006203B7 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9C7D381D16CE89006203B7 /* IntroViewController.swift */; };
 		9F9C7D3B1D16CE9A006203B7 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9C7D3A1D16CE9A006203B7 /* LocationViewController.swift */; };
 		9F9C7D3D1D16CEA6006203B7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9C7D3C1D16CEA6006203B7 /* LoginViewController.swift */; };
+		9FA4EE0E1D2B9FC4002EAEFF /* IntroViewControllerSnapshots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA4EE0D1D2B9FC4002EAEFF /* IntroViewControllerSnapshots.swift */; };
 		9FADA8B61D1974DF00746E71 /* LoginViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FADA8B51D1974DF00746E71 /* LoginViewControllerDelegate.swift */; };
 		9FAFCDE71D23C4AC00CE3DE8 /* TagsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAFCDE61D23C4AC00CE3DE8 /* TagsCollectionViewController.swift */; };
 		9FAFCDE91D23CDF600CE3DE8 /* SnapTagsView-DefaultImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FAFCDE81D23CDF600CE3DE8 /* SnapTagsView-DefaultImages.xcassets */; };
 		9FE045311D25596800BCA50A /* UIViewController+ScreenSizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE045301D25596800BCA50A /* UIViewController+ScreenSizes.swift */; };
 		BA21D5C4938B290234DFD18A /* Pods_SnapOnboarding_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A76A7E5A385D5EAABCF2AFEA /* Pods_SnapOnboarding_iOS.framework */; };
+		EE0938165DDC98F1F1623420 /* Pods_SnapOnboarding_iOSSnapshotTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E0A569848B53D292D44843C /* Pods_SnapOnboarding_iOSSnapshotTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,15 +55,24 @@
 			remoteGlobalIDString = 9F4CE0AE1D0EB29F00A6A1FB;
 			remoteInfo = "SnapOnboarding-iOS";
 		};
+		9FA4EE101D2B9FC4002EAEFF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9F4CE0A71D0EB29F00A6A1FB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9F4CE0AE1D0EB29F00A6A1FB;
+			remoteInfo = "SnapOnboarding-iOS";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		058FF73DE5D90C7A5E7E65FB /* Pods-SnapOnboarding-iOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapOnboarding-iOSUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SnapOnboarding-iOSUITests/Pods-SnapOnboarding-iOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		0D506531B2C045BC775ECF99 /* Pods-SnapOnboarding-iOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapOnboarding-iOSUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SnapOnboarding-iOSUITests/Pods-SnapOnboarding-iOSUITests.release.xcconfig"; sourceTree = "<group>"; };
+		192CECEEDD4AEAC14DD3D401 /* Pods-SnapOnboarding-iOSSnapshotTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapOnboarding-iOSSnapshotTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SnapOnboarding-iOSSnapshotTests/Pods-SnapOnboarding-iOSSnapshotTests.release.xcconfig"; sourceTree = "<group>"; };
 		2B6EDB55121C9D11510752EE /* Pods_SnapOnboarding_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnapOnboarding_iOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D15C0E862D794A7AA1142D8 /* Pods_SnapOnboarding_iOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnapOnboarding_iOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		536EFA56B0C768995691AFF3 /* Pods-SnapOnboarding-iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapOnboarding-iOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SnapOnboarding-iOSTests/Pods-SnapOnboarding-iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		61FA61E55698DC3EA237BB46 /* Pods-SnapOnboarding-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapOnboarding-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SnapOnboarding-iOS/Pods-SnapOnboarding-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		7E0A569848B53D292D44843C /* Pods_SnapOnboarding_iOSSnapshotTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnapOnboarding_iOSSnapshotTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83E0D5046DFCB39BD51FA799 /* Pods-SnapOnboarding-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapOnboarding-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-SnapOnboarding-iOS/Pods-SnapOnboarding-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		9F0D2E0B1D214E830085BA12 /* SnapOnboardingViewControllerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapOnboardingViewControllerProtocol.swift; sourceTree = "<group>"; };
 		9F0D2E0E1D215EB90085BA12 /* LocationViewControllerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationViewControllerProtocol.swift; sourceTree = "<group>"; };
@@ -77,10 +88,10 @@
 		9F4CE0B91D0EB2A000A6A1FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F4CE0BC1D0EB2A000A6A1FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9F4CE0BE1D0EB2A000A6A1FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "SnapOnboarding-iOS/Info.plist"; sourceTree = "<group>"; };
-		9F4CE0C31D0EB2A000A6A1FB /* SnapOnboarding-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SnapOnboarding-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F4CE0C31D0EB2A000A6A1FB /* Unit_tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Unit_tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F4CE0C71D0EB2A000A6A1FB /* SnapOnboarding_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapOnboarding_iOSTests.swift; sourceTree = "<group>"; };
 		9F4CE0C91D0EB2A000A6A1FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9F4CE0CE1D0EB2A000A6A1FB /* SnapOnboarding-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SnapOnboarding-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F4CE0CE1D0EB2A000A6A1FB /* UI_tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UI_tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F4CE0D21D0EB2A000A6A1FB /* SnapOnboarding_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapOnboarding_iOSUITests.swift; sourceTree = "<group>"; };
 		9F4CE0D41D0EB2A000A6A1FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F59C63F1D17043900CAD9F7 /* IntroViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroViewControllerDelegate.swift; sourceTree = "<group>"; };
@@ -91,10 +102,14 @@
 		9F9C7D381D16CE89006203B7 /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		9F9C7D3A1D16CE9A006203B7 /* LocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		9F9C7D3C1D16CEA6006203B7 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		9FA4EE0B1D2B9FC4002EAEFF /* Snapshot_tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Snapshot_tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9FA4EE0D1D2B9FC4002EAEFF /* IntroViewControllerSnapshots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewControllerSnapshots.swift; sourceTree = "<group>"; };
+		9FA4EE0F1D2B9FC4002EAEFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9FADA8B51D1974DF00746E71 /* LoginViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewControllerDelegate.swift; sourceTree = "<group>"; };
 		9FAFCDE61D23C4AC00CE3DE8 /* TagsCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagsCollectionViewController.swift; sourceTree = "<group>"; };
 		9FAFCDE81D23CDF600CE3DE8 /* SnapTagsView-DefaultImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = "SnapTagsView-DefaultImages.xcassets"; path = "../SnapTagsView-DefaultImages.xcassets"; sourceTree = "<group>"; };
 		9FE045301D25596800BCA50A /* UIViewController+ScreenSizes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+ScreenSizes.swift"; sourceTree = "<group>"; };
+		A0879122D4563E1A3D362F8D /* Pods-SnapOnboarding-iOSSnapshotTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapOnboarding-iOSSnapshotTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SnapOnboarding-iOSSnapshotTests/Pods-SnapOnboarding-iOSSnapshotTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A76A7E5A385D5EAABCF2AFEA /* Pods_SnapOnboarding_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnapOnboarding_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7FD148DE0B50B30630A0909 /* Pods-SnapOnboarding-iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapOnboarding-iOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SnapOnboarding-iOSTests/Pods-SnapOnboarding-iOSTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -124,6 +139,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9FA4EE081D2B9FC4002EAEFF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE0938165DDC98F1F1623420 /* Pods_SnapOnboarding_iOSSnapshotTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -136,6 +159,8 @@
 				E7FD148DE0B50B30630A0909 /* Pods-SnapOnboarding-iOSTests.release.xcconfig */,
 				058FF73DE5D90C7A5E7E65FB /* Pods-SnapOnboarding-iOSUITests.debug.xcconfig */,
 				0D506531B2C045BC775ECF99 /* Pods-SnapOnboarding-iOSUITests.release.xcconfig */,
+				A0879122D4563E1A3D362F8D /* Pods-SnapOnboarding-iOSSnapshotTests.debug.xcconfig */,
+				192CECEEDD4AEAC14DD3D401 /* Pods-SnapOnboarding-iOSSnapshotTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -197,8 +222,7 @@
 			children = (
 				9F4CE0B11D0EB2A000A6A1FB /* SnapOnboarding-iOS */,
 				9F1E9B051D0EDDEB00E0EC40 /* Example */,
-				9F4CE0C61D0EB2A000A6A1FB /* SnapOnboarding-iOSTests */,
-				9F4CE0D11D0EB2A000A6A1FB /* SnapOnboarding-iOSUITests */,
+				9FA4EE161D2BA27D002EAEFF /* Tests */,
 				9F4CE0B01D0EB29F00A6A1FB /* Products */,
 				01C7450FE35E7D7651EBF792 /* Pods */,
 				DA9F3647897C00CAF312E1F6 /* Frameworks */,
@@ -209,8 +233,9 @@
 			isa = PBXGroup;
 			children = (
 				9F4CE0AF1D0EB29F00A6A1FB /* SnapOnboarding-iOS.app */,
-				9F4CE0C31D0EB2A000A6A1FB /* SnapOnboarding-iOSTests.xctest */,
-				9F4CE0CE1D0EB2A000A6A1FB /* SnapOnboarding-iOSUITests.xctest */,
+				9F4CE0C31D0EB2A000A6A1FB /* Unit_tests.xctest */,
+				9F4CE0CE1D0EB2A000A6A1FB /* UI_tests.xctest */,
+				9FA4EE0B1D2B9FC4002EAEFF /* Snapshot_tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -234,22 +259,45 @@
 			path = "SnapOnboarding-iOS";
 			sourceTree = "<group>";
 		};
-		9F4CE0C61D0EB2A000A6A1FB /* SnapOnboarding-iOSTests */ = {
+		9F4CE0C61D0EB2A000A6A1FB /* Unit tests */ = {
 			isa = PBXGroup;
 			children = (
 				9F4CE0C71D0EB2A000A6A1FB /* SnapOnboarding_iOSTests.swift */,
 				9F4CE0C91D0EB2A000A6A1FB /* Info.plist */,
 			);
+			name = "Unit tests";
 			path = "SnapOnboarding-iOSTests";
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
-		9F4CE0D11D0EB2A000A6A1FB /* SnapOnboarding-iOSUITests */ = {
+		9F4CE0D11D0EB2A000A6A1FB /* UI Tests */ = {
 			isa = PBXGroup;
 			children = (
 				9F4CE0D21D0EB2A000A6A1FB /* SnapOnboarding_iOSUITests.swift */,
 				9F4CE0D41D0EB2A000A6A1FB /* Info.plist */,
 			);
+			name = "UI Tests";
 			path = "SnapOnboarding-iOSUITests";
+			sourceTree = SOURCE_ROOT;
+		};
+		9FA4EE0C1D2B9FC4002EAEFF /* Snapshot tests */ = {
+			isa = PBXGroup;
+			children = (
+				9FA4EE0D1D2B9FC4002EAEFF /* IntroViewControllerSnapshots.swift */,
+				9FA4EE0F1D2B9FC4002EAEFF /* Info.plist */,
+			);
+			name = "Snapshot tests";
+			path = "SnapOnboarding-iOSSnapshotTests";
+			sourceTree = SOURCE_ROOT;
+		};
+		9FA4EE161D2BA27D002EAEFF /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				9FA4EE0C1D2B9FC4002EAEFF /* Snapshot tests */,
+				9F4CE0D11D0EB2A000A6A1FB /* UI Tests */,
+				9F4CE0C61D0EB2A000A6A1FB /* Unit tests */,
+			);
+			name = Tests;
+			path = "SnapOnboarding-iOS";
 			sourceTree = "<group>";
 		};
 		DA9F3647897C00CAF312E1F6 /* Frameworks */ = {
@@ -258,6 +306,7 @@
 				A76A7E5A385D5EAABCF2AFEA /* Pods_SnapOnboarding_iOS.framework */,
 				2B6EDB55121C9D11510752EE /* Pods_SnapOnboarding_iOSTests.framework */,
 				4D15C0E862D794A7AA1142D8 /* Pods_SnapOnboarding_iOSUITests.framework */,
+				7E0A569848B53D292D44843C /* Pods_SnapOnboarding_iOSSnapshotTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -285,9 +334,9 @@
 			productReference = 9F4CE0AF1D0EB29F00A6A1FB /* SnapOnboarding-iOS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		9F4CE0C21D0EB2A000A6A1FB /* SnapOnboarding-iOSTests */ = {
+		9F4CE0C21D0EB2A000A6A1FB /* Unit_tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9F4CE0DA1D0EB2A000A6A1FB /* Build configuration list for PBXNativeTarget "SnapOnboarding-iOSTests" */;
+			buildConfigurationList = 9F4CE0DA1D0EB2A000A6A1FB /* Build configuration list for PBXNativeTarget "Unit_tests" */;
 			buildPhases = (
 				0B0202478826022E5CE9AC37 /* [CP] Check Pods Manifest.lock */,
 				9F4CE0BF1D0EB2A000A6A1FB /* Sources */,
@@ -301,14 +350,14 @@
 			dependencies = (
 				9F4CE0C51D0EB2A000A6A1FB /* PBXTargetDependency */,
 			);
-			name = "SnapOnboarding-iOSTests";
+			name = Unit_tests;
 			productName = "SnapOnboarding-iOSTests";
-			productReference = 9F4CE0C31D0EB2A000A6A1FB /* SnapOnboarding-iOSTests.xctest */;
+			productReference = 9F4CE0C31D0EB2A000A6A1FB /* Unit_tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		9F4CE0CD1D0EB2A000A6A1FB /* SnapOnboarding-iOSUITests */ = {
+		9F4CE0CD1D0EB2A000A6A1FB /* UI_tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9F4CE0DD1D0EB2A000A6A1FB /* Build configuration list for PBXNativeTarget "SnapOnboarding-iOSUITests" */;
+			buildConfigurationList = 9F4CE0DD1D0EB2A000A6A1FB /* Build configuration list for PBXNativeTarget "UI_tests" */;
 			buildPhases = (
 				38B48B3CC7B8170D53E42B74 /* [CP] Check Pods Manifest.lock */,
 				9F4CE0CA1D0EB2A000A6A1FB /* Sources */,
@@ -321,10 +370,31 @@
 			dependencies = (
 				9F4CE0D01D0EB2A000A6A1FB /* PBXTargetDependency */,
 			);
-			name = "SnapOnboarding-iOSUITests";
+			name = UI_tests;
 			productName = "SnapOnboarding-iOSUITests";
-			productReference = 9F4CE0CE1D0EB2A000A6A1FB /* SnapOnboarding-iOSUITests.xctest */;
+			productReference = 9F4CE0CE1D0EB2A000A6A1FB /* UI_tests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		9FA4EE0A1D2B9FC4002EAEFF /* Snapshot_tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9FA4EE141D2B9FC4002EAEFF /* Build configuration list for PBXNativeTarget "Snapshot_tests" */;
+			buildPhases = (
+				5C6D00BD01FD8FBC07F11072 /* [CP] Check Pods Manifest.lock */,
+				9FA4EE071D2B9FC4002EAEFF /* Sources */,
+				9FA4EE081D2B9FC4002EAEFF /* Frameworks */,
+				9FA4EE091D2B9FC4002EAEFF /* Resources */,
+				494E323973086BA35C6491B3 /* [CP] Embed Pods Frameworks */,
+				C6A59BDEFA6E5687999F71E1 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9FA4EE111D2B9FC4002EAEFF /* PBXTargetDependency */,
+			);
+			name = Snapshot_tests;
+			productName = "SnapOnboarding-iOSSnapshotTests";
+			productReference = 9FA4EE0B1D2B9FC4002EAEFF /* Snapshot_tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -348,6 +418,10 @@
 						CreatedOnToolsVersion = 7.3.1;
 						TestTargetID = 9F4CE0AE1D0EB29F00A6A1FB;
 					};
+					9FA4EE0A1D2B9FC4002EAEFF = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 9F4CE0AE1D0EB29F00A6A1FB;
+					};
 				};
 			};
 			buildConfigurationList = 9F4CE0AA1D0EB29F00A6A1FB /* Build configuration list for PBXProject "SnapOnboarding-iOS" */;
@@ -363,8 +437,9 @@
 			projectRoot = "";
 			targets = (
 				9F4CE0AE1D0EB29F00A6A1FB /* SnapOnboarding-iOS */,
-				9F4CE0C21D0EB2A000A6A1FB /* SnapOnboarding-iOSTests */,
-				9F4CE0CD1D0EB2A000A6A1FB /* SnapOnboarding-iOSUITests */,
+				9FA4EE0A1D2B9FC4002EAEFF /* Snapshot_tests */,
+				9F4CE0CD1D0EB2A000A6A1FB /* UI_tests */,
+				9F4CE0C21D0EB2A000A6A1FB /* Unit_tests */,
 			);
 		};
 /* End PBXProject section */
@@ -390,6 +465,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		9F4CE0CC1D0EB2A000A6A1FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9FA4EE091D2B9FC4002EAEFF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -474,6 +556,36 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SnapOnboarding-iOS/Pods-SnapOnboarding-iOS-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		494E323973086BA35C6491B3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SnapOnboarding-iOSSnapshotTests/Pods-SnapOnboarding-iOSSnapshotTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5C6D00BD01FD8FBC07F11072 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		71038536529FD24C7F8FB0A0 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -517,6 +629,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SnapOnboarding-iOSUITests/Pods-SnapOnboarding-iOSUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C6A59BDEFA6E5687999F71E1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SnapOnboarding-iOSSnapshotTests/Pods-SnapOnboarding-iOSSnapshotTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -564,6 +691,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9FA4EE071D2B9FC4002EAEFF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FA4EE0E1D2B9FC4002EAEFF /* IntroViewControllerSnapshots.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -576,6 +711,11 @@
 			isa = PBXTargetDependency;
 			target = 9F4CE0AE1D0EB29F00A6A1FB /* SnapOnboarding-iOS */;
 			targetProxy = 9F4CE0CF1D0EB2A000A6A1FB /* PBXContainerItemProxy */;
+		};
+		9FA4EE111D2B9FC4002EAEFF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9F4CE0AE1D0EB29F00A6A1FB /* SnapOnboarding-iOS */;
+			targetProxy = 9FA4EE101D2B9FC4002EAEFF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -776,6 +916,34 @@
 			};
 			name = Release;
 		};
+		9FA4EE121D2B9FC4002EAEFF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0879122D4563E1A3D362F8D /* Pods-SnapOnboarding-iOSSnapshotTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "SnapOnboarding-iOSSnapshotTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gautesolheim.SnapOnboarding-iOSSnapshotTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SnapOnboarding-iOS.app/SnapOnboarding-iOS";
+			};
+			name = Debug;
+		};
+		9FA4EE131D2B9FC4002EAEFF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 192CECEEDD4AEAC14DD3D401 /* Pods-SnapOnboarding-iOSSnapshotTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "SnapOnboarding-iOSSnapshotTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gautesolheim.SnapOnboarding-iOSSnapshotTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SnapOnboarding-iOS.app/SnapOnboarding-iOS";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -797,7 +965,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9F4CE0DA1D0EB2A000A6A1FB /* Build configuration list for PBXNativeTarget "SnapOnboarding-iOSTests" */ = {
+		9F4CE0DA1D0EB2A000A6A1FB /* Build configuration list for PBXNativeTarget "Unit_tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9F4CE0DB1D0EB2A000A6A1FB /* Debug */,
@@ -806,11 +974,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9F4CE0DD1D0EB2A000A6A1FB /* Build configuration list for PBXNativeTarget "SnapOnboarding-iOSUITests" */ = {
+		9F4CE0DD1D0EB2A000A6A1FB /* Build configuration list for PBXNativeTarget "UI_tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9F4CE0DE1D0EB2A000A6A1FB /* Debug */,
 				9F4CE0DF1D0EB2A000A6A1FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9FA4EE141D2B9FC4002EAEFF /* Build configuration list for PBXNativeTarget "Snapshot_tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9FA4EE121D2B9FC4002EAEFF /* Debug */,
+				9FA4EE131D2B9FC4002EAEFF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

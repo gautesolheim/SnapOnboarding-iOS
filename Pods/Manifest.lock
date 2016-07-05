@@ -1,7 +1,14 @@
 PODS:
+  - FBSnapshotTestCase (2.1.1):
+    - FBSnapshotTestCase/SwiftSupport (= 2.1.1)
+  - FBSnapshotTestCase/Core (2.1.1)
+  - FBSnapshotTestCase/SwiftSupport (2.1.1):
+    - FBSnapshotTestCase/Core
   - KTCenterFlowLayout (1.3)
   - NSLayoutConstraint+ExpressionFormat (0.1.0)
   - SnapFonts-iOS (1.0.0)
+  - SnapSnapshotBase (1.0.0):
+    - FBSnapshotTestCase
   - SnapTagsView (0.6.2):
     - KTCenterFlowLayout
     - NSLayoutConstraint+ExpressionFormat
@@ -13,18 +20,21 @@ PODS:
 
 DEPENDENCIES:
   - SnapFonts-iOS
+  - SnapSnapshotBase
   - SnapTagsView
   - TTTAttributedLabel
 
 SPEC CHECKSUMS:
+  FBSnapshotTestCase: 432afd8d059ccef7f207225894840a03fbcf7474
   KTCenterFlowLayout: 2905970d36c653d9a7736c20bfa0d37dcf797d6b
   NSLayoutConstraint+ExpressionFormat: 031af30af4d036658c02e33070622ed993318b8a
   SnapFonts-iOS: d6eb7e76f92c78bfbe0830c706c66b631157d77e
+  SnapSnapshotBase: a5b1bc0b0e0dc359b0320b927234b73487e28b62
   SnapTagsView: 32e1d3577c18abfeed698e790e81bd64d977023c
   TTTAttributedLabel: 8cffe8e127e4e82ff3af1e5386d4cd0ad000b656
   UICollectionViewLeftAlignedLayout: 830bf6fa5bab9f9b464f62e3384f9d2e00b3c0f6
   UICollectionViewRightAlignedLayout: 823eef8c567eba4a44c21bc2ffcb0d0d5f361e2d
 
-PODFILE CHECKSUM: 97299ca0e340eb35cfa6ea45f0cd77112184ab9a
+PODFILE CHECKSUM: b5c76eee43ac22e6c148535014b14d2198fdeddc
 
 COCOAPODS: 1.0.1

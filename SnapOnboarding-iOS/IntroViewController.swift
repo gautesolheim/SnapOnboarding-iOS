@@ -46,6 +46,10 @@ class IntroViewController: UIViewController {
         animateSparklingStarsWithCycleDuration(duration)
     }
     
+    override func viewDidLayoutSubviews() {
+        print("view-did-layout-subviews")
+    }
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         guard let identifier = segue.identifier, viewModel = viewModel else {
             return

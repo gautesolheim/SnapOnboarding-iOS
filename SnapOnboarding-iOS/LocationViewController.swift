@@ -96,6 +96,7 @@ class LocationViewController: UIViewController {
             return
         }
         
+        // Color arrows yellow
         let attributedText = NSMutableAttributedString(string: wowYouDeclinedBody)
         let angleSignColor = UIColor(red: 254/255.0, green: 232/255.0, blue: 5/255.0, alpha: 1.0)
         
