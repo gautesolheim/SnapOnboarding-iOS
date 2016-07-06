@@ -15,7 +15,7 @@ private enum EmbedSegueIdentifier: String {
 
 public class SnapOnboardingViewController: UIViewController {
     
-    @IBOutlet private var scrollView: UIScrollView?
+    @IBOutlet internal var scrollView: UIScrollView?
     @IBOutlet private var pageControl: UIPageControl?
     @IBOutlet private var termsAndConditionsLabel: TTTAttributedLabel?
     
@@ -53,7 +53,7 @@ public class SnapOnboardingViewController: UIViewController {
     
     // MARK: UIView configuration
     
-    private func configureTermsAndConditionsLabel() {
+    internal func configureTermsAndConditionsLabel() {
         guard let termsViewModel = viewModel?.termsViewModel, termsAndConditionsText = termsViewModel.termsAndPrivacyFooter else {
             return
         }
@@ -169,8 +169,8 @@ extension SnapOnboardingViewController: SnapOnboardingViewControllerProtocol {
 extension SnapOnboardingViewController {
     
     func setupFor3_5Inch() {
-        pageControlBottomToTermsAndConditionsTop?.constant -= 3
-        termsAndConditionsLabelBottomToSuperViewBottom?.constant -= 5
+        pageControlBottomToTermsAndConditionsTop?.constant = 11
+        termsAndConditionsLabelBottomToSuperViewBottom?.constant = 11
     }
     
 }

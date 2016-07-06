@@ -22,10 +22,6 @@ class IntroViewController: UIViewController {
         delegate?.introNextButtonTapped()
     }
     
-    func configureForViewModel(viewModel: SnapOnboardingViewModel.IntroViewModel) {
-        self.viewModel = viewModel
-    }
-    
     // MARK: UIViewController life cycle
     
     override func viewDidLoad() {
@@ -44,10 +40,6 @@ class IntroViewController: UIViewController {
         
         let duration: NSTimeInterval = 2
         animateSparklingStarsWithCycleDuration(duration)
-    }
-    
-    override func viewDidLayoutSubviews() {
-        print("view-did-layout-subviews")
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -81,28 +73,28 @@ class IntroViewController: UIViewController {
 
 extension IntroViewController: IntroViewControllerProtocol {
     
-    // TODO
+    func configureForViewModel(viewModel: SnapOnboardingViewModel.IntroViewModel) {
+        self.viewModel = viewModel
+    }
     
 }
 
 // MARK: - HasSparklingStars
 
-extension IntroViewController: HasSparklingStars {
-    
-}
+extension IntroViewController: HasSparklingStars {}
 
 // MARK: - ScreenSizesProtocol
 
 extension IntroViewController {
     
     func setupFor3_5Inch() {
-        nextButton?.contentEdgeInsets.top -= 5
+        nextButton?.contentEdgeInsets.top = 10
         
         headlineLabel?.font = SnapFonts.gothamRoundedBookOfSize(17)
         headlineLabel?.lineSpacin = 4
         
         tagsContainerViewHeight?.constant = 30
-        sparklingViewToSuperViewHeightRelation?.constant -= 10
+        sparklingViewToSuperViewHeightRelation?.constant = -10
     }
     
     func setupFor4_0Inch() {

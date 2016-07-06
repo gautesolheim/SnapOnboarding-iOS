@@ -1,7 +1,7 @@
 import SnapSnapshotBase
 @testable import SnapOnboarding_iOS
 
-class IntroViewControllerSnapshots: FBSnapshotBase {
+class LoginViewControllerSnapshots: FBSnapshotBase {
     
     var vc: SnapOnboardingViewController!
     
@@ -13,7 +13,7 @@ class IntroViewControllerSnapshots: FBSnapshotBase {
         let configuration = SnapOnboardingConfiguration(delegate: delegate, viewModel: viewModel)
         vc.applyConfiguration(configuration)
         
-        currentPage = 0
+        currentPage = 2
         
         sut = vc.view
         sut.setNeedsDisplay()
@@ -31,7 +31,7 @@ class IntroViewControllerSnapshots: FBSnapshotBase {
     
 }
 
-extension IntroViewController {
+extension LoginViewController {
     
     override func viewWillLayoutSubviews() {
         setupForScreenSize(parentViewController!.view.frame)

@@ -32,6 +32,10 @@
 		9F9C7D3B1D16CE9A006203B7 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9C7D3A1D16CE9A006203B7 /* LocationViewController.swift */; };
 		9F9C7D3D1D16CEA6006203B7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9C7D3C1D16CEA6006203B7 /* LoginViewController.swift */; };
 		9FA4EE0E1D2B9FC4002EAEFF /* IntroViewControllerSnapshots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA4EE0D1D2B9FC4002EAEFF /* IntroViewControllerSnapshots.swift */; };
+		9FA4EE1A1D2BDDD0002EAEFF /* LocationViewControllerSnapshots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA4EE191D2BDDD0002EAEFF /* LocationViewControllerSnapshots.swift */; };
+		9FA4EE1C1D2BDEE8002EAEFF /* LoginViewControllerSnapshots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA4EE1B1D2BDEE8002EAEFF /* LoginViewControllerSnapshots.swift */; };
+		9FA4EE1E1D2BE9E5002EAEFF /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA4EE1D1D2BE9E5002EAEFF /* Helpers.swift */; };
+		9FA4EE221D2BF555002EAEFF /* SnapOnboardingViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA4EE211D2BF555002EAEFF /* SnapOnboardingViewController+.swift */; };
 		9FADA8B61D1974DF00746E71 /* LoginViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FADA8B51D1974DF00746E71 /* LoginViewControllerDelegate.swift */; };
 		9FAFCDE71D23C4AC00CE3DE8 /* TagsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAFCDE61D23C4AC00CE3DE8 /* TagsCollectionViewController.swift */; };
 		9FAFCDE91D23CDF600CE3DE8 /* SnapTagsView-DefaultImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FAFCDE81D23CDF600CE3DE8 /* SnapTagsView-DefaultImages.xcassets */; };
@@ -105,6 +109,10 @@
 		9FA4EE0B1D2B9FC4002EAEFF /* Snapshot_tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Snapshot_tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FA4EE0D1D2B9FC4002EAEFF /* IntroViewControllerSnapshots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewControllerSnapshots.swift; sourceTree = "<group>"; };
 		9FA4EE0F1D2B9FC4002EAEFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9FA4EE191D2BDDD0002EAEFF /* LocationViewControllerSnapshots.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationViewControllerSnapshots.swift; sourceTree = "<group>"; };
+		9FA4EE1B1D2BDEE8002EAEFF /* LoginViewControllerSnapshots.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewControllerSnapshots.swift; sourceTree = "<group>"; };
+		9FA4EE1D1D2BE9E5002EAEFF /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		9FA4EE211D2BF555002EAEFF /* SnapOnboardingViewController+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SnapOnboardingViewController+.swift"; sourceTree = "<group>"; };
 		9FADA8B51D1974DF00746E71 /* LoginViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewControllerDelegate.swift; sourceTree = "<group>"; };
 		9FAFCDE61D23C4AC00CE3DE8 /* TagsCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagsCollectionViewController.swift; sourceTree = "<group>"; };
 		9FAFCDE81D23CDF600CE3DE8 /* SnapTagsView-DefaultImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = "SnapTagsView-DefaultImages.xcassets"; path = "../SnapTagsView-DefaultImages.xcassets"; sourceTree = "<group>"; };
@@ -282,7 +290,11 @@
 		9FA4EE0C1D2B9FC4002EAEFF /* Snapshot tests */ = {
 			isa = PBXGroup;
 			children = (
+				9FA4EE1D1D2BE9E5002EAEFF /* Helpers.swift */,
+				9FA4EE211D2BF555002EAEFF /* SnapOnboardingViewController+.swift */,
 				9FA4EE0D1D2B9FC4002EAEFF /* IntroViewControllerSnapshots.swift */,
+				9FA4EE191D2BDDD0002EAEFF /* LocationViewControllerSnapshots.swift */,
+				9FA4EE1B1D2BDEE8002EAEFF /* LoginViewControllerSnapshots.swift */,
 				9FA4EE0F1D2B9FC4002EAEFF /* Info.plist */,
 			);
 			name = "Snapshot tests";
@@ -695,7 +707,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FA4EE221D2BF555002EAEFF /* SnapOnboardingViewController+.swift in Sources */,
 				9FA4EE0E1D2B9FC4002EAEFF /* IntroViewControllerSnapshots.swift in Sources */,
+				9FA4EE1A1D2BDDD0002EAEFF /* LocationViewControllerSnapshots.swift in Sources */,
+				9FA4EE1E1D2BE9E5002EAEFF /* Helpers.swift in Sources */,
+				9FA4EE1C1D2BDEE8002EAEFF /* LoginViewControllerSnapshots.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -198,25 +198,23 @@ extension LocationViewController: LocationViewControllerProtocol {
 
 // MARK: - HasSparklingStars
 
-extension LocationViewController: HasSparklingStars {
-    
-}
+extension LocationViewController: HasSparklingStars {}
 
 // MARK: - ScreenSizesProtocol
 
 extension LocationViewController {
     
     func setupFor3_5Inch() {
-        nextButton?.contentEdgeInsets.top -= 5
-        
+        nextButton?.contentEdgeInsets.top = 10
+
         headlineLabel?.font = SnapFonts.gothamRoundedBookOfSize(17)
         headlineLabel?.lineSpacin = 4
-        
+
         willAskLaterLabel?.font = SnapFonts.gothamRoundedBookOfSize(14)
-        
-        sparklingViewToSuperViewHeightRelation?.constant -= 30
-        notNowButtonBottomToSuperViewBottom?.constant -= 17
-        willAskLaterLabelBottomToSuperViewBottom?.constant -= 10
+
+        sparklingViewToSuperViewHeightRelation?.constant = -30
+        notNowButtonBottomToSuperViewBottom?.constant = 0
+        willAskLaterLabelBottomToSuperViewBottom?.constant = 16
     }
     
     func setupFor4_0Inch() {
@@ -225,7 +223,7 @@ extension LocationViewController {
         
         willAskLaterLabel?.font = SnapFonts.gothamRoundedBookOfSize(14)
         
-        sparklingViewToSuperViewHeightRelation?.constant -= 20
+        sparklingViewToSuperViewHeightRelation?.constant = -20
     }
 
 }

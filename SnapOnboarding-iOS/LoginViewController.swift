@@ -90,22 +90,20 @@ extension LoginViewController: LoginViewControllerProtocol {
 
 // MARK: - HasSparklingStars
 
-extension LoginViewController: HasSparklingStars {
-    
-}
+extension LoginViewController: HasSparklingStars {}
 
 // MARK: - ScreenSizesProtocol
 
 extension LoginViewController {
     
     func setupFor3_5Inch() {
-        topSpacerHeight?.constant -= 22
+        topSpacerHeight?.constant = 17
         
-        skipLoginButtonBottomToSuperViewBottom?.constant -= 17
+        skipLoginButtonBottomToSuperViewBottom?.constant = 0
     }
     
     func setupFor4_0Inch() {
-        topSpacerHeight?.constant -= 12
+        topSpacerHeight?.constant = 27
     }
     
 }

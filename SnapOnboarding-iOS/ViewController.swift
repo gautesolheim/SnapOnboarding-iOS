@@ -1,11 +1,3 @@
-//
-//  ViewController.swift
-//  SnapOnboarding-iOS
-//
-//  Created by Gaute Solheim on 13.06.2016.
-//  Copyright © 2016 Gaute Solheim. All rights reserved.
-//
-
 import UIKit
 import SnapFonts_iOS
 import SnapTagsView
