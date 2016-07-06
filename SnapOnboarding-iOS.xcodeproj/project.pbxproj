@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2F92F97CE6EF2D1642567673 /* Pods_SnapOnboarding_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B6EDB55121C9D11510752EE /* Pods_SnapOnboarding_iOSTests.framework */; };
-		4F748D93E19F3A967840C8BA /* Pods_SnapOnboarding_iOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D15C0E862D794A7AA1142D8 /* Pods_SnapOnboarding_iOSUITests.framework */; };
+		68977CBE70BF75CDA4286904 /* Pods_Unit_tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BC522B19FA904B2534AB51D /* Pods_Unit_tests.framework */; };
+		7968C0EB21EA8A42992D5508 /* Pods_UI_tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47A64326D226F615D66F4BF8 /* Pods_UI_tests.framework */; };
 		9F0D2E0C1D214E830085BA12 /* SnapOnboardingViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0D2E0B1D214E830085BA12 /* SnapOnboardingViewControllerProtocol.swift */; };
 		9F0D2E0F1D215EB90085BA12 /* LocationViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0D2E0E1D215EB90085BA12 /* LocationViewControllerProtocol.swift */; };
 		9F150B721D17CF4800C3D716 /* SnapOnboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F150B741D17CF4800C3D716 /* SnapOnboarding.storyboard */; };
@@ -40,8 +40,8 @@
 		9FAFCDE71D23C4AC00CE3DE8 /* TagsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAFCDE61D23C4AC00CE3DE8 /* TagsCollectionViewController.swift */; };
 		9FAFCDE91D23CDF600CE3DE8 /* SnapTagsView-DefaultImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FAFCDE81D23CDF600CE3DE8 /* SnapTagsView-DefaultImages.xcassets */; };
 		9FE045311D25596800BCA50A /* UIViewController+ScreenSizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE045301D25596800BCA50A /* UIViewController+ScreenSizes.swift */; };
-		BA21D5C4938B290234DFD18A /* Pods_SnapOnboarding_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A76A7E5A385D5EAABCF2AFEA /* Pods_SnapOnboarding_iOS.framework */; };
-		EE0938165DDC98F1F1623420 /* Pods_SnapOnboarding_iOSSnapshotTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E0A569848B53D292D44843C /* Pods_SnapOnboarding_iOSSnapshotTests.framework */; };
+		A2EE881DC709833A592E2278 /* Pods_SnapOnboarding_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CE1A0F3BE5E7F085708FC4A /* Pods_SnapOnboarding_iOS.framework */; };
+		C83A03FF27ECB305B5ACC77B /* Pods_Snapshot_tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B674D9AA7F85CFEF2BC5ECF /* Pods_Snapshot_tests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,11 +72,16 @@
 		058FF73DE5D90C7A5E7E65FB /* Pods-SnapOnboarding-iOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapOnboarding-iOSUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SnapOnboarding-iOSUITests/Pods-SnapOnboarding-iOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		0D506531B2C045BC775ECF99 /* Pods-SnapOnboarding-iOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapOnboarding-iOSUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SnapOnboarding-iOSUITests/Pods-SnapOnboarding-iOSUITests.release.xcconfig"; sourceTree = "<group>"; };
 		192CECEEDD4AEAC14DD3D401 /* Pods-SnapOnboarding-iOSSnapshotTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapOnboarding-iOSSnapshotTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SnapOnboarding-iOSSnapshotTests/Pods-SnapOnboarding-iOSSnapshotTests.release.xcconfig"; sourceTree = "<group>"; };
-		2B6EDB55121C9D11510752EE /* Pods_SnapOnboarding_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnapOnboarding_iOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4D15C0E862D794A7AA1142D8 /* Pods_SnapOnboarding_iOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnapOnboarding_iOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1EC396F9B6B9A8CD643D85C2 /* Pods-UI_tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UI_tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UI_tests/Pods-UI_tests.debug.xcconfig"; sourceTree = "<group>"; };
+		47A64326D226F615D66F4BF8 /* Pods_UI_tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UI_tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		536EFA56B0C768995691AFF3 /* Pods-SnapOnboarding-iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapOnboarding-iOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SnapOnboarding-iOSTests/Pods-SnapOnboarding-iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5573800E118BCDDF5A032055 /* Pods-Snapshot_tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Snapshot_tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Snapshot_tests/Pods-Snapshot_tests.debug.xcconfig"; sourceTree = "<group>"; };
+		5B674D9AA7F85CFEF2BC5ECF /* Pods_Snapshot_tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Snapshot_tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5CE1A0F3BE5E7F085708FC4A /* Pods_SnapOnboarding_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnapOnboarding_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		61FA61E55698DC3EA237BB46 /* Pods-SnapOnboarding-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapOnboarding-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SnapOnboarding-iOS/Pods-SnapOnboarding-iOS.debug.xcconfig"; sourceTree = "<group>"; };
-		7E0A569848B53D292D44843C /* Pods_SnapOnboarding_iOSSnapshotTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnapOnboarding_iOSSnapshotTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		71ECF7E836A5A74BF1CD8FBC /* Pods-UI_tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UI_tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-UI_tests/Pods-UI_tests.release.xcconfig"; sourceTree = "<group>"; };
+		7BC522B19FA904B2534AB51D /* Pods_Unit_tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Unit_tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7FCA76CA7F6C45E23D378798 /* Pods-Unit_tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Unit_tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Unit_tests/Pods-Unit_tests.release.xcconfig"; sourceTree = "<group>"; };
 		83E0D5046DFCB39BD51FA799 /* Pods-SnapOnboarding-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapOnboarding-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-SnapOnboarding-iOS/Pods-SnapOnboarding-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		9F0D2E0B1D214E830085BA12 /* SnapOnboardingViewControllerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapOnboardingViewControllerProtocol.swift; sourceTree = "<group>"; };
 		9F0D2E0E1D215EB90085BA12 /* LocationViewControllerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationViewControllerProtocol.swift; sourceTree = "<group>"; };
@@ -118,7 +123,8 @@
 		9FAFCDE81D23CDF600CE3DE8 /* SnapTagsView-DefaultImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = "SnapTagsView-DefaultImages.xcassets"; path = "../SnapTagsView-DefaultImages.xcassets"; sourceTree = "<group>"; };
 		9FE045301D25596800BCA50A /* UIViewController+ScreenSizes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+ScreenSizes.swift"; sourceTree = "<group>"; };
 		A0879122D4563E1A3D362F8D /* Pods-SnapOnboarding-iOSSnapshotTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapOnboarding-iOSSnapshotTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SnapOnboarding-iOSSnapshotTests/Pods-SnapOnboarding-iOSSnapshotTests.debug.xcconfig"; sourceTree = "<group>"; };
-		A76A7E5A385D5EAABCF2AFEA /* Pods_SnapOnboarding_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnapOnboarding_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DDE74454A009859318ED6D47 /* Pods-Snapshot_tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Snapshot_tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Snapshot_tests/Pods-Snapshot_tests.release.xcconfig"; sourceTree = "<group>"; };
+		E3EE7B5BF699CD4FA4123D14 /* Pods-Unit_tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Unit_tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Unit_tests/Pods-Unit_tests.debug.xcconfig"; sourceTree = "<group>"; };
 		E7FD148DE0B50B30630A0909 /* Pods-SnapOnboarding-iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapOnboarding-iOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SnapOnboarding-iOSTests/Pods-SnapOnboarding-iOSTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -127,7 +133,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA21D5C4938B290234DFD18A /* Pods_SnapOnboarding_iOS.framework in Frameworks */,
+				A2EE881DC709833A592E2278 /* Pods_SnapOnboarding_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,7 +141,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F92F97CE6EF2D1642567673 /* Pods_SnapOnboarding_iOSTests.framework in Frameworks */,
+				68977CBE70BF75CDA4286904 /* Pods_Unit_tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,7 +149,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F748D93E19F3A967840C8BA /* Pods_SnapOnboarding_iOSUITests.framework in Frameworks */,
+				7968C0EB21EA8A42992D5508 /* Pods_UI_tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,7 +157,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE0938165DDC98F1F1623420 /* Pods_SnapOnboarding_iOSSnapshotTests.framework in Frameworks */,
+				C83A03FF27ECB305B5ACC77B /* Pods_Snapshot_tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,6 +175,12 @@
 				0D506531B2C045BC775ECF99 /* Pods-SnapOnboarding-iOSUITests.release.xcconfig */,
 				A0879122D4563E1A3D362F8D /* Pods-SnapOnboarding-iOSSnapshotTests.debug.xcconfig */,
 				192CECEEDD4AEAC14DD3D401 /* Pods-SnapOnboarding-iOSSnapshotTests.release.xcconfig */,
+				5573800E118BCDDF5A032055 /* Pods-Snapshot_tests.debug.xcconfig */,
+				DDE74454A009859318ED6D47 /* Pods-Snapshot_tests.release.xcconfig */,
+				1EC396F9B6B9A8CD643D85C2 /* Pods-UI_tests.debug.xcconfig */,
+				71ECF7E836A5A74BF1CD8FBC /* Pods-UI_tests.release.xcconfig */,
+				E3EE7B5BF699CD4FA4123D14 /* Pods-Unit_tests.debug.xcconfig */,
+				7FCA76CA7F6C45E23D378798 /* Pods-Unit_tests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -315,10 +327,10 @@
 		DA9F3647897C00CAF312E1F6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A76A7E5A385D5EAABCF2AFEA /* Pods_SnapOnboarding_iOS.framework */,
-				2B6EDB55121C9D11510752EE /* Pods_SnapOnboarding_iOSTests.framework */,
-				4D15C0E862D794A7AA1142D8 /* Pods_SnapOnboarding_iOSUITests.framework */,
-				7E0A569848B53D292D44843C /* Pods_SnapOnboarding_iOSSnapshotTests.framework */,
+				5CE1A0F3BE5E7F085708FC4A /* Pods_SnapOnboarding_iOS.framework */,
+				5B674D9AA7F85CFEF2BC5ECF /* Pods_Snapshot_tests.framework */,
+				47A64326D226F615D66F4BF8 /* Pods_UI_tests.framework */,
+				7BC522B19FA904B2534AB51D /* Pods_Unit_tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -520,7 +532,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SnapOnboarding-iOSTests/Pods-SnapOnboarding-iOSTests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Unit_tests/Pods-Unit_tests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		32DB1EE53E6A863A94C2348B /* [CP] Check Pods Manifest.lock */ = {
@@ -580,7 +592,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SnapOnboarding-iOSSnapshotTests/Pods-SnapOnboarding-iOSSnapshotTests-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Snapshot_tests/Pods-Snapshot_tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		5C6D00BD01FD8FBC07F11072 /* [CP] Check Pods Manifest.lock */ = {
@@ -625,7 +637,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SnapOnboarding-iOSTests/Pods-SnapOnboarding-iOSTests-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Unit_tests/Pods-Unit_tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C5495BECF1786582F30B703E /* [CP] Copy Pods Resources */ = {
@@ -640,7 +652,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SnapOnboarding-iOSUITests/Pods-SnapOnboarding-iOSUITests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UI_tests/Pods-UI_tests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C6A59BDEFA6E5687999F71E1 /* [CP] Copy Pods Resources */ = {
@@ -655,7 +667,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SnapOnboarding-iOSSnapshotTests/Pods-SnapOnboarding-iOSSnapshotTests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Snapshot_tests/Pods-Snapshot_tests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -884,7 +896,7 @@
 		};
 		9F4CE0DB1D0EB2A000A6A1FB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 536EFA56B0C768995691AFF3 /* Pods-SnapOnboarding-iOSTests.debug.xcconfig */;
+			baseConfigurationReference = E3EE7B5BF699CD4FA4123D14 /* Pods-Unit_tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "SnapOnboarding-iOSTests/Info.plist";
@@ -897,7 +909,7 @@
 		};
 		9F4CE0DC1D0EB2A000A6A1FB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E7FD148DE0B50B30630A0909 /* Pods-SnapOnboarding-iOSTests.release.xcconfig */;
+			baseConfigurationReference = 7FCA76CA7F6C45E23D378798 /* Pods-Unit_tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "SnapOnboarding-iOSTests/Info.plist";
@@ -910,7 +922,7 @@
 		};
 		9F4CE0DE1D0EB2A000A6A1FB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 058FF73DE5D90C7A5E7E65FB /* Pods-SnapOnboarding-iOSUITests.debug.xcconfig */;
+			baseConfigurationReference = 1EC396F9B6B9A8CD643D85C2 /* Pods-UI_tests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = "SnapOnboarding-iOSUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -922,7 +934,7 @@
 		};
 		9F4CE0DF1D0EB2A000A6A1FB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0D506531B2C045BC775ECF99 /* Pods-SnapOnboarding-iOSUITests.release.xcconfig */;
+			baseConfigurationReference = 71ECF7E836A5A74BF1CD8FBC /* Pods-UI_tests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = "SnapOnboarding-iOSUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -934,7 +946,7 @@
 		};
 		9FA4EE121D2B9FC4002EAEFF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A0879122D4563E1A3D362F8D /* Pods-SnapOnboarding-iOSSnapshotTests.debug.xcconfig */;
+			baseConfigurationReference = 5573800E118BCDDF5A032055 /* Pods-Snapshot_tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "SnapOnboarding-iOSSnapshotTests/Info.plist";
@@ -948,7 +960,7 @@
 		};
 		9FA4EE131D2B9FC4002EAEFF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 192CECEEDD4AEAC14DD3D401 /* Pods-SnapOnboarding-iOSSnapshotTests.release.xcconfig */;
+			baseConfigurationReference = DDE74454A009859318ED6D47 /* Pods-Snapshot_tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "SnapOnboarding-iOSSnapshotTests/Info.plist";

@@ -10,20 +10,20 @@ target 'SnapOnboarding-iOS' do
   pod 'SnapFonts-iOS'
   pod 'SnapTagsView'
 
-  target 'SnapOnboarding-iOSTests' do
+  target 'Unit_tests' do
     inherit! :search_paths
 
   end
 
-  target 'SnapOnboarding-iOSUITests' do
+  target 'UI_tests' do
     inherit! :search_paths
 
   end
 
-  target 'SnapOnboarding-iOSSnapshotTests' do
+  target 'Snapshot_tests' do
     inherit! :search_paths
 
-    pod 'SnapSnapshotBase'
+    pod 'SnapFBSnapshotBase'
   end
 
 end

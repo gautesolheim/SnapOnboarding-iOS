@@ -11,7 +11,7 @@ extension SnapOnboardingViewController {
     }
     
     override public func viewDidLayoutSubviews() {
-        // Will reset on layoutSubviews, and must therefore be set after
+        // Will reset on layoutSubviews, and must therefore be set afterwards
         scrollView?.contentOffset.x = view.frame.width * CGFloat(currentPage)
     }
     

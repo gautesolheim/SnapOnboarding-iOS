@@ -18,6 +18,8 @@ class IntroViewController: UIViewController {
     var delegate: IntroViewControllerDelegate?
     private var viewModel: SnapOnboardingViewModel.IntroViewModel?
     
+    lazy var screenSize: CGRect = UIScreen.mainScreen().bounds
+    
     @IBAction func nextButtonTapped(sender: UIButton) {
         delegate?.introNextButtonTapped()
     }
@@ -29,7 +31,7 @@ class IntroViewController: UIViewController {
         
         assert(viewModel != nil)
         
-        setupForScreenSize(UIScreen.mainScreen().bounds)
+        setupForScreenSize(screenSize)
     }
     
     override func viewWillAppear(animated: Bool) {

@@ -27,6 +27,8 @@ class LoginViewController: UIViewController {
     var delegate: LoginViewControllerDelegate?
     private var viewModel: SnapOnboardingViewModel.LoginViewModel?
     
+    lazy var screenSize: CGRect = UIScreen.mainScreen().bounds
+    
     // MARK: UIViewController life cycle
 
     override func viewDidLoad() {
@@ -34,7 +36,7 @@ class LoginViewController: UIViewController {
         
         assert(viewModel != nil)
         
-        setupForScreenSize(UIScreen.mainScreen().bounds)
+        setupForScreenSize(screenSize)
     }
     
     override func viewWillAppear(animated: Bool) {

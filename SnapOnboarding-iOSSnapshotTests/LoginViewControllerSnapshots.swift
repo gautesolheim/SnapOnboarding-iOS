@@ -1,4 +1,4 @@
-import SnapSnapshotBase
+import SnapFBSnapshotBase
 @testable import SnapOnboarding_iOS
 
 class LoginViewControllerSnapshots: FBSnapshotBase {
@@ -13,11 +13,12 @@ class LoginViewControllerSnapshots: FBSnapshotBase {
         let configuration = SnapOnboardingConfiguration(delegate: delegate, viewModel: viewModel)
         vc.applyConfiguration(configuration)
         
-        currentPage = 2
-        
         sut = vc.view
         sut.setNeedsDisplay()
         sut.layoutIfNeeded()
+        
+        // Setup the view
+        currentPage = 2
         
         super.setUp()
         recordMode = self.recordAll || false

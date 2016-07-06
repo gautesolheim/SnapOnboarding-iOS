@@ -27,6 +27,8 @@ public class SnapOnboardingViewController: UIViewController {
     
     private var locationViewController: LocationViewControllerProtocol?
     
+    lazy var screenSize: CGRect = UIScreen.mainScreen().bounds
+    
     // MARK: UIViewController life cycle
     
     public override func viewDidLoad() {
@@ -34,7 +36,7 @@ public class SnapOnboardingViewController: UIViewController {
         
         assert(viewModel != nil)
         
-        setupForScreenSize(UIScreen.mainScreen().bounds)
+        setupForScreenSize(screenSize)
     }
     
     public override func viewWillAppear(animated: Bool) {
