@@ -13,15 +13,17 @@ class LocationViewControllerSnapshots: FBSnapshotBase {
         let configuration = SnapOnboardingConfiguration(delegate: delegate, viewModel: viewModel)
         vc.applyConfiguration(configuration)
         
-        sut = vc.view
-        sut.setNeedsDisplay()
-        sut.layoutIfNeeded()
+        // Prevent device size adjustments before a simulated frame is set, i.e. from viewDidLoad
+        vc.screenSize = CGRect(x: 0, y: 0, width: 0, height: 0)
         
-        // Setup the view
+        backingViewController = vc
+        sut = vc.view
+        
+        // Setup the loaded view
         currentPage = 1
         
         super.setUp()
-        recordMode = self.recordAll || false
+        recordMode = recordAll || false
     }
     
     override func tearDown() {

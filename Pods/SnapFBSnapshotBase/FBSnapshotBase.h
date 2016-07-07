@@ -19,11 +19,13 @@
 
 @interface FBSnapshotBase : FBSnapshotTestCase
 
+@property (nonatomic, strong) UIViewController *backingViewController;
 @property (nonatomic, strong) UIView *sut;
 @property (nonatomic, assign) BOOL recordAll;
 
 - (void)snapshotVerifyView:(UIView*)view;
 
+// Can this be removed?
 - (void)testIphone6Portrait;
 
 @end

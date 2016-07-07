@@ -132,15 +132,18 @@ public class SnapOnboardingViewController: UIViewController {
             let destinationViewController = segue.destinationViewController as? IntroViewController
             destinationViewController?.delegate = self as IntroViewControllerDelegate
             destinationViewController?.configureForViewModel(viewModel.introViewModel)
+            destinationViewController?.screenSize = screenSize
             case EmbedSegueIdentifier.LocationViewController.rawValue:
             let destinationViewController = segue.destinationViewController as? LocationViewController
             destinationViewController?.delegate = self as LocationViewControllerDelegate
             destinationViewController?.configureForViewModel(viewModel.locationViewModel)
+            destinationViewController?.screenSize = screenSize
             locationViewController = destinationViewController
             case EmbedSegueIdentifier.LoginViewController.rawValue:
             let destinationViewController = segue.destinationViewController as? LoginViewController
             destinationViewController?.delegate = self as LoginViewControllerDelegate
             destinationViewController?.configureForViewModel(viewModel.loginViewModel)
+            destinationViewController?.screenSize = screenSize
         default: break
         }
     }
