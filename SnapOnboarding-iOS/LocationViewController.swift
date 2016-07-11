@@ -227,6 +227,13 @@ extension LocationViewController {
         
         sparklingViewToSuperViewHeightRelation?.constant = -20
     }
+    
+    func setupForIpad() {
+        nextButton?.titleLabel?.font = SnapFonts.gothamRoundedMediumOfSize(16)
+        nextButton?.contentEdgeInsets = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 23)
+        
+        headlineLabel?.font = SnapFonts.gothamRoundedBookOfSize(26)
+    }
 
 }
 

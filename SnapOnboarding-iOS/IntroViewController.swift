@@ -9,12 +9,14 @@ class IntroViewController: UIViewController {
 
     @IBOutlet private var nextButton: UIButton?
     @IBOutlet private var headlineLabel: SnapOnboardingHeadlineLabel?
-    @IBOutlet private var bottomSpacer: UIView?
     @IBOutlet private(set) var sparklingStars: [UIImageView]?
     
+    @IBOutlet private var headlineSparklingSpacerHeightToSuperViewRelation: NSLayoutConstraint?
     @IBOutlet private var tagsContainerViewHeight: NSLayoutConstraint?
+    @IBOutlet private var tagsContainerViewTopToPhoneViewBottom: NSLayoutConstraint?
     @IBOutlet private var phoneViewTopToSparklingViewTop: NSLayoutConstraint?
     @IBOutlet private var phoneViewToSparklingViewHeightRelation: NSLayoutConstraint?
+    @IBOutlet private var phoneViewCenterYInContainer: NSLayoutConstraint?
     @IBOutlet private var sparklingViewToSuperViewHeightRelation: NSLayoutConstraint?
     
     var delegate: IntroViewControllerDelegate?
@@ -109,13 +111,19 @@ extension IntroViewController {
     func setupForIpad() {
         nextButton?.titleLabel?.font = SnapFonts.gothamRoundedMediumOfSize(16)
         nextButton?.contentEdgeInsets = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 23)
-        
+
         headlineLabel?.font = SnapFonts.gothamRoundedBookOfSize(26)
+        headlineSparklingSpacerHeightToSuperViewRelation?.constant = 30
+        tagsContainerViewHeight?.constant = 80
+        tagsContainerViewTopToPhoneViewBottom?.active = false
+        //
+        sparklingViewToSuperViewHeightRelation?.constant = -20
+        phoneViewToSparklingViewHeightRelation?.constant = 20
+        phoneViewTopToSparklingViewTop?.constant = 40
+        //
         
-        sparklingViewToSuperViewHeightRelation?.constant = 60
-        phoneViewTopToSparklingViewTop?.constant = 60
-        phoneViewToSparklingViewHeightRelation?.constant = -30
-        tagsContainerViewHeight?.constant = 130
+//        phoneViewCenterYInContainer?.constant = -100
+//        phoneViewCenterYInContainer?.active = true
     }
     
 }
