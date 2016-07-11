@@ -35,6 +35,8 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         
         assert(viewModel != nil)
+        
+        setupForScreenSize(screenSize)
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -49,7 +51,7 @@ class LoginViewController: UIViewController {
         animateSparklingStarsWithCycleDuration(duration)
     }
     
-    override func viewWillLayoutSubviews() {
+    override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
         setupForScreenSize(screenSize)
     }
     
@@ -102,13 +104,13 @@ extension LoginViewController: HasSparklingStars {}
 
 extension LoginViewController {
     
-    func setupFor3_5Inch() {
+    func setupFor3_5InchPortrait() {
         topSpacerHeight?.constant = 17
         
         skipLoginButtonBottomToSuperViewBottom?.constant = 0
     }
     
-    func setupFor4_0Inch() {
+    func setupFor4_0InchPortrait() {
         topSpacerHeight?.constant = 27
     }
     

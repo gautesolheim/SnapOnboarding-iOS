@@ -50,6 +50,8 @@ class LocationViewController: UIViewController {
         super.viewDidLoad()
         
         assert(viewModel != nil)
+        
+        setupForScreenSize(screenSize)
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -64,7 +66,7 @@ class LocationViewController: UIViewController {
         animateSparklingStarsWithCycleDuration(duration)
     }
     
-    override func viewWillLayoutSubviews() {
+    override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
         setupForScreenSize(screenSize)
     }
     
@@ -208,7 +210,7 @@ extension LocationViewController: HasSparklingStars {}
 
 extension LocationViewController {
     
-    func setupFor3_5Inch() {
+    func setupFor3_5InchPortrait() {
         nextButton?.contentEdgeInsets.top = 10
 
         headlineLabel?.font = SnapFonts.gothamRoundedBookOfSize(17)
@@ -221,7 +223,7 @@ extension LocationViewController {
         willAskLaterLabelBottomToSuperViewBottom?.constant = 16
     }
     
-    func setupFor4_0Inch() {
+    func setupFor4_0InchPortrait() {
         headlineLabel?.font = SnapFonts.gothamRoundedBookOfSize(18)
         headlineLabel?.lineSpacin = 5
         
@@ -230,7 +232,7 @@ extension LocationViewController {
         sparklingViewToSuperViewHeightRelation?.constant = -20
     }
     
-    func setupForIpad() {
+    func setupForIpadPortrait() {
         nextButton?.titleLabel?.font = SnapFonts.gothamRoundedMediumOfSize(16)
         nextButton?.contentEdgeInsets = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 23)
         

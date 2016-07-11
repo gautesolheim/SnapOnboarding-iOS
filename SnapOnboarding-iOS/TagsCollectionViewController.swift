@@ -18,17 +18,16 @@ class TagsCollectionViewController: SnapTagsCollectionViewController {
     }
     
     override func viewDidLoad() {
-        setupForScreenSize(UIScreen.mainScreen().bounds)
-        
         configuration = createConfiguration()
         buttonConfiguration = createButtonConfiguration()
+        setupForScreenSize(screenSize)
         
         super.viewDidLoad()
         
         scrollEnabled = false
     }
     
-    override func viewWillLayoutSubviews() {
+    override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
         setupForScreenSize(screenSize)
     }
     
@@ -84,7 +83,7 @@ class TagsCollectionViewController: SnapTagsCollectionViewController {
 
 extension TagsCollectionViewController {
     
-    func setupForIpad() {
+    func setupForIpadPortrait() {
         fontSize = 15
         spacing = 12
         insets = UIEdgeInsets(top: 9.5, left: 10.5, bottom: 9.5, right: 10.5)

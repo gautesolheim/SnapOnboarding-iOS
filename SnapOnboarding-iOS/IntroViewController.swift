@@ -36,6 +36,8 @@ class IntroViewController: UIViewController {
         super.viewDidLoad()
         
         assert(viewModel != nil)
+        
+        setupForScreenSize(screenSize)
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -48,7 +50,7 @@ class IntroViewController: UIViewController {
         animateSparklingStarsWithCycleDuration(duration)
     }
     
-    override func viewWillLayoutSubviews() {
+    override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
         setupForScreenSize(screenSize)
     }
     
@@ -97,7 +99,7 @@ extension IntroViewController: HasSparklingStars {}
 
 extension IntroViewController {
     
-    func setupFor3_5Inch() {
+    func setupFor3_5InchPortrait() {
         nextButton?.contentEdgeInsets.top = 10
         
         headlineLabel?.font = SnapFonts.gothamRoundedBookOfSize(17)
@@ -107,12 +109,12 @@ extension IntroViewController {
         sparklingViewToSuperViewHeightRelation?.constant = -10
     }
     
-    func setupFor4_0Inch() {
+    func setupFor4_0InchPortrait() {
         headlineLabel?.font = SnapFonts.gothamRoundedBookOfSize(18)
         headlineLabel?.lineSpacin = 5
     }
     
-    func setupForIpad() {
+    func setupForIpadPortrait() {
         nextButton?.titleLabel?.font = SnapFonts.gothamRoundedMediumOfSize(16)
         nextButton?.contentEdgeInsets = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 23)
 
@@ -127,6 +129,13 @@ extension IntroViewController {
         sparklingViewToSuperViewHeightRelation?.constant = -20
         phoneViewToSparklingViewHeightRelation?.constant = 20
         phoneViewTopToSparklingViewTop?.constant = 40
+    }
+    
+    func setupForIpadLandscape() {
+        setupForIpadPortrait()
+        
+        sparklingViewToSuperViewHeightRelation?.constant = 20
+        phoneViewTopToSparklingViewTop?.constant = 20
     }
     
 }

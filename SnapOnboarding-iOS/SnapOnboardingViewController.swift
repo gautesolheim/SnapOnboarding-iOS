@@ -35,16 +35,14 @@ public class SnapOnboardingViewController: UIViewController {
         super.viewDidLoad()
         
         assert(viewModel != nil)
+        
+        setupForScreenSize(screenSize)
     }
     
     public override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
         configureTermsAndConditionsLabel()
-    }
-    
-    override public func viewWillLayoutSubviews() {
-        setupForScreenSize(screenSize)
     }
     
     private func dismiss() {
@@ -111,6 +109,8 @@ public class SnapOnboardingViewController: UIViewController {
     override public func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransitionToSize(size, withTransitionCoordinator: coordinator)
         
+        setupForScreenSize(screenSize)
+        
         let currentPage = pageControl?.currentPage ?? 0
         coordinator.animateAlongsideTransition({ _ in
             let newOffset = CGPoint(x: CGFloat(currentPage) * size.width, y: 0)
@@ -175,7 +175,7 @@ extension SnapOnboardingViewController: SnapOnboardingViewControllerProtocol {
 
 extension SnapOnboardingViewController {
     
-    func setupFor3_5Inch() {
+    func setupFor3_5InchPortrait() {
         pageControlBottomToTermsAndConditionsTop?.constant = 11
         termsAndConditionsLabelBottomToSuperViewBottom?.constant = 11
     }
