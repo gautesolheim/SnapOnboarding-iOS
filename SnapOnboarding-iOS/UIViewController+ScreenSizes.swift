@@ -11,7 +11,6 @@ extension UIViewController: ScreenSizesProtocol {
     
     // @param: UIScreen.mainScreen().bounds (Swift 3: UIScreen.main().bounds)
     public func setupForScreenSize(size: CGRect) {
-        print("screenSize: \(size)")
         let mySelf = self as ScreenSizesProtocol
         let height = size.height
         

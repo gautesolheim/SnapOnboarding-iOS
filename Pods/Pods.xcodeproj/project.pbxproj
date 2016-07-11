@@ -19,7 +19,7 @@
 		196022EC9027F10428B868EAB288F2FF /* SnapTagRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F38D1AB88936CE03D62E01A021EB01 /* SnapTagRepresentation.swift */; };
 		1968C3B3D46A2274D65DA90978D9C478 /* UICollectionViewLeftAlignedLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78F276D48FE320FA696705DAF5F5C16C /* UICollectionViewLeftAlignedLayout.framework */; };
 		1AE6F782A1B7E8A434828600F5BADCEC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33ABD520F5322554FE95B490A79CE496 /* UIKit.framework */; };
-		1ED9308CD7386E4113880656A2F16DFB /* FBSnapshotBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DF9C317DDDB4DE0794C9FDF3EA575C3 /* FBSnapshotBase.m */; };
+		1B428AA565D34A43F2594CBE2348DA59 /* SnapFBSnapshotBase-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3151C3C6808A91B35E17B45C839DFFA6 /* SnapFBSnapshotBase-dummy.m */; };
 		21F73B012649E2253814B0D3578444B7 /* GothamRnd-MedIta.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3B955C9FCDA33B459C95F59382F7F857 /* GothamRnd-MedIta.otf */; };
 		2523BFA054D3BB223587CBF1EFBD34E5 /* UIColor+roseColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3CC359259CEFFDCEEB02E6A3A78ECC /* UIColor+roseColor.swift */; };
 		25605B5595DAB1BA83F3318FEE597325 /* SnapFonts-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F9B6D902CCCC046000ADAAB5ED169C0 /* SnapFonts-iOS-dummy.m */; };
@@ -47,10 +47,10 @@
 		5382475D6B041F3312F04F8BDA9E2A76 /* NSLayoutConstraint+ExpressionFormat-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CC387919799C5976010B97A19CDF452 /* NSLayoutConstraint+ExpressionFormat-dummy.m */; };
 		5AC545FFEF8FDC35058E1FB3AC76A6CB /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C611777489EB3F4273C1E33C6623BEA4 /* XCTest.framework */; };
 		5CC011162D1DD54E133E92380A864004 /* TTTAttributedLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = A89C75FD8EE6B45BD5DE22C796B71AEA /* TTTAttributedLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5ED903DE600896BC2341E87CAE64C575 /* FBSnapshotSwiftTestCase.h in Headers */ = {isa = PBXBuildFile; fileRef = B2FB6932D2A0CF74AE9CF6FE2E726910 /* FBSnapshotSwiftTestCase.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		60DAFA19D8DC0E7FC0D022E47118580B /* KTCenterFlowLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 718D3125C2708CCDAE1A987F1F1525E4 /* KTCenterFlowLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		61EBC5CF0D5E065C88028B49C6B8D3B3 /* UIImage+Diff.h in Headers */ = {isa = PBXBuildFile; fileRef = 57F754261DE904BA24E06B17F5BE93E6 /* UIImage+Diff.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		64711043DC6E2F0BBDF173B9DEF61CAD /* UICollectionViewRightAlignedLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 98D42C24BB7227BB3FBCD80ED214C10B /* UICollectionViewRightAlignedLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		64C332B267E957211C4EAA2A12F22B3A /* SnapFBSnapshotSwiftTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 64F03D5DF8A5873496704FA0B1531A65 /* SnapFBSnapshotSwiftTestCase.m */; };
 		64E43A4D7FAF5B31F7367C08733C8AF8 /* SnapTagsHorizontalScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D9D9EE3DC82A819C1460A5A1FF53F1 /* SnapTagsHorizontalScrollView.swift */; };
 		67C975F69CD04065BFA336BD20F4C8A0 /* Pods-SnapOnboarding-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 91F5BC4A531E99E15FC3E65BF3845236 /* Pods-SnapOnboarding-iOS-dummy.m */; };
 		68B245DB47CA60F8F9ADCA1E8CCDC324 /* UIApplication+StrictKeyWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 094D5C8905334C3970A715657150956B /* UIApplication+StrictKeyWindow.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -60,6 +60,7 @@
 		6E4A16BF4D27C48BB1FE1E1CF5E8B90E /* FBSnapshotTestCasePlatform.m in Sources */ = {isa = PBXBuildFile; fileRef = FF1E3478606D36AB7E2E90883CCF544C /* FBSnapshotTestCasePlatform.m */; };
 		6E81429B66F82688EAB7688C146D25B0 /* GothamRnd-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9A3B02E595ABC7BF5195F9DA60D87C47 /* GothamRnd-Bold.otf */; };
 		73B96724E9D2B03677BA3C2D24601D64 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C611777489EB3F4273C1E33C6623BEA4 /* XCTest.framework */; };
+		77EB23B8C7FB56AE2432FF142553CA1B /* SnapFBSnapshotBase.m in Sources */ = {isa = PBXBuildFile; fileRef = D8E1ACD492C85E1122144717EBB58AE1 /* SnapFBSnapshotBase.m */; };
 		7A6BD54D61B11F7C8BC6C41FAB9F2D84 /* Pods-Snapshot_tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 32FC418AC19FA9CAEFE2B3F086E218BC /* Pods-Snapshot_tests-dummy.m */; };
 		7CA6901D9CC902B7020DD5791F53776A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1BA70BC40EBD3F59CFA83415E15F0BD /* Foundation.framework */; };
 		7DEF48E2172480FB0349E3E08BB3B616 /* TTTAttributedLabel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F47BC69FEF5AA11E184B9E6AE85B943 /* TTTAttributedLabel-dummy.m */; };
@@ -70,11 +71,10 @@
 		84B2F3BD617C2A9EE0B40807C8A565FB /* GothamRnd-LightIta.otf in Resources */ = {isa = PBXBuildFile; fileRef = 638F6ED7F11D04D7D7A460581E6B26A5 /* GothamRnd-LightIta.otf */; };
 		85D178DFCA1BC67BBFB1188E34EC5B19 /* SwiftSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCADCB10036D08A6EF71530407542A22 /* SwiftSupport.swift */; };
 		8619425ED5044300860095469A00D988 /* UICollectionViewRightAlignedLayout-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B2B9F5CD8937658833FAFDAA5D199EDD /* UICollectionViewRightAlignedLayout-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		865D0FAB03DCBCA476706968099B34AB /* FBSnapshotSwiftTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 25ABF5E49BB7407FB2B91B7827A2489D /* FBSnapshotSwiftTestCase.m */; };
 		8ACF6A5515A175054E22414BF740EF14 /* FBSnapshotTestCase.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C97C8C2A31874A446CD24AC4B1A1689 /* FBSnapshotTestCase.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8CFAC39D332864BC2D0911401ED68DCC /* SnapFBSnapshotBase.h in Headers */ = {isa = PBXBuildFile; fileRef = 176116BC36F588AF35B97BDE01192959 /* SnapFBSnapshotBase.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8D556B39A5131039B4C6F2DC7A3D8F39 /* Pods-Snapshot_tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 84FB2000A663F3AF5B9932663CCF848E /* Pods-Snapshot_tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		952C6A703AC9C5F66186C21D259B8887 /* GothamRnd-BookIta.otf in Resources */ = {isa = PBXBuildFile; fileRef = 834EFE45BFF089C29186263C00330CBF /* GothamRnd-BookIta.otf */; };
-		9DC77589B93A1D4687ACDC2387AECADB /* FBSnapshotBase.h in Headers */ = {isa = PBXBuildFile; fileRef = 46D65CEF030D7E0D8A2F8EB70C8F56C7 /* FBSnapshotBase.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9F912BE256E46EF306B19E91EEF2E159 /* TTTAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = DD72B81711F945ACF39652D2D6442E1D /* TTTAttributedLabel.m */; };
 		9FA3B93CE0ECAC3CDC30890659AACF82 /* FBSnapshotTestCasePlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = F7A07755350D2C6D2E205C5A542829A8 /* FBSnapshotTestCasePlatform.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A2EB97C8C957C626EF6F5EEF9E59B7F0 /* Pods-UI_tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A270B520E2421C622D8DC4D963CB8A4 /* Pods-UI_tests-dummy.m */; };
@@ -91,6 +91,7 @@
 		BD38B26F4241F9F1FE8BFFF10252781D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33ABD520F5322554FE95B490A79CE496 /* UIKit.framework */; };
 		BFB8727E089EC25A05990436D329AA9A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33ABD520F5322554FE95B490A79CE496 /* UIKit.framework */; };
 		C360952381641F725C15758993A0F665 /* UIImage+Diff.m in Sources */ = {isa = PBXBuildFile; fileRef = C28B04D0453FDC74AC8E923720FE9B45 /* UIImage+Diff.m */; };
+		C432E0A858AFC17C5B797A2B54ABAE1B /* SnapFBSnapshotBase-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C499D343985C3B5600F569D06185AC7B /* SnapFBSnapshotBase-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C683F9D1472CDF25A921C3AFDD8BFA16 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1BA70BC40EBD3F59CFA83415E15F0BD /* Foundation.framework */; };
 		C6FA9BBDAE63931325CA7B96F6E55A3E /* Pods-UI_tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 996A3C63FC48441DA9E3FFE20F6DE5F1 /* Pods-UI_tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CB432BE025137ED68FB5A25AAE95EC69 /* SnapFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBDC24666CD072678B5591536A41491 /* SnapFonts.swift */; };
@@ -115,10 +116,9 @@
 		F0B3BC4CE7B1074981F32DDD032E9539 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33ABD520F5322554FE95B490A79CE496 /* UIKit.framework */; };
 		F318169FDAD86E0FC8DCAC5F348B2761 /* UICollectionViewRightAlignedLayout-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B437E33C0335839C332B717C286ACBA /* UICollectionViewRightAlignedLayout-dummy.m */; };
 		F366B775C22BBE1DBAC7BDB7DE8F0A26 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75BB6602A0A94E504D70F0A2155CDA95 /* QuartzCore.framework */; };
-		F3A76C1B5F6C7D935645E63D1FD7F65A /* SnapFBSnapshotBase-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6525D899FCBEB1B92B800BA4E424D829 /* SnapFBSnapshotBase-dummy.m */; };
 		F47158C234C50FFB069A1EF8AB26D9F1 /* FBSnapshotTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FAB76D31E474A08F67FB58DA1A73003 /* FBSnapshotTestController.m */; };
-		F5181424EE70F21A99D9A6A595EDC782 /* SnapFBSnapshotBase-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D6EBE791FB04119AC98D1592483BF1CB /* SnapFBSnapshotBase-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F76E3A4FCABD377199E68CC8CE6F7803 /* NSLayoutConstraint+ExpressionFormat-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FA61E8F9BCADA4D73A81B4752D001409 /* NSLayoutConstraint+ExpressionFormat-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FD663952652B0E1B37784F869CAE6331 /* SnapFBSnapshotSwiftTestCase.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E56664E55B2CA15641EED6C33EACA42 /* SnapFBSnapshotSwiftTestCase.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FF7CAA83DF32BD19D6E9B4FC57E9807F /* UICollectionViewLeftAlignedLayout-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB69106B6FFD5B9A6C705C7BA46D557 /* UICollectionViewLeftAlignedLayout-dummy.m */; };
 /* End PBXBuildFile section */
 
@@ -231,6 +231,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00255758850AC86371787CA5F0BFC909 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04B98B5DD047721419D26738A2381BFA /* SnapFonts-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "SnapFonts-iOS.modulemap"; sourceTree = "<group>"; };
 		092ED854C496EACD3C5BF0990E926945 /* Images.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Images.swift; path = SnapTagsView/Images.swift; sourceTree = "<group>"; };
 		094D5C8905334C3970A715657150956B /* UIApplication+StrictKeyWindow.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIApplication+StrictKeyWindow.h"; path = "FBSnapshotTestCase/Categories/UIApplication+StrictKeyWindow.h"; sourceTree = "<group>"; };
@@ -239,11 +240,11 @@
 		0A270B520E2421C622D8DC4D963CB8A4 /* Pods-UI_tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-UI_tests-dummy.m"; sourceTree = "<group>"; };
 		0B7EF3F8CBAADD5844831E4A950C8B42 /* GothamRnd-Book.otf */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; name = "GothamRnd-Book.otf"; path = "Fonts/GothamRnd-Book.otf"; sourceTree = "<group>"; };
 		0D1696367CA8DC62AC0D796E982840FA /* UICollectionViewLeftAlignedLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UICollectionViewLeftAlignedLayout.h; path = UICollectionViewLeftAlignedLayout/UICollectionViewLeftAlignedLayout.h; sourceTree = "<group>"; };
-		0DF9C317DDDB4DE0794C9FDF3EA575C3 /* FBSnapshotBase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = FBSnapshotBase.m; sourceTree = "<group>"; };
 		0E221D055F4F6650848927D6CAD6308D /* GothamRnd-Medium.otf */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; name = "GothamRnd-Medium.otf"; path = "Fonts/GothamRnd-Medium.otf"; sourceTree = "<group>"; };
 		0E867FD8027334E8EFE19D5C4C256573 /* FBSnapshotTestCase.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FBSnapshotTestCase.xcconfig; sourceTree = "<group>"; };
 		0EA0FF9E0A929C3CA48E0FA91C1A5CDC /* NSLayoutConstraint+ExpressionFormat.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+ExpressionFormat.m"; sourceTree = "<group>"; };
 		0FAB76D31E474A08F67FB58DA1A73003 /* FBSnapshotTestController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestController.m; path = FBSnapshotTestCase/FBSnapshotTestController.m; sourceTree = "<group>"; };
+		176116BC36F588AF35B97BDE01192959 /* SnapFBSnapshotBase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SnapFBSnapshotBase.h; path = SnapFBSnapshotBase/SnapFBSnapshotBase.h; sourceTree = "<group>"; };
 		177F10B86B160253C183CEFDF22977D0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17F63D5E7EBB3035BEF252A286218CF3 /* UIFont+GothamRnd.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIFont+GothamRnd.swift"; path = "SnapTagsView/UIFont+GothamRnd.swift"; sourceTree = "<group>"; };
 		1A7CD576B8DA53FB5E28DF2774696700 /* SnapTagsView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SnapTagsView-dummy.m"; sourceTree = "<group>"; };
@@ -251,13 +252,13 @@
 		21EE24B294D8CE1D62DDAAC0339BB9C3 /* SnapTagsView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SnapTagsView.xcconfig; sourceTree = "<group>"; };
 		2260DE290EF43F5FE048395CC38F0F0E /* SnapTagsViewConfiguration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SnapTagsViewConfiguration.swift; path = SnapTagsView/SnapTagsViewConfiguration.swift; sourceTree = "<group>"; };
 		2420B373F76CE58D3DA4EB35E9535CCE /* TTTAttributedLabel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TTTAttributedLabel-prefix.pch"; sourceTree = "<group>"; };
-		25ABF5E49BB7407FB2B91B7827A2489D /* FBSnapshotSwiftTestCase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = FBSnapshotSwiftTestCase.m; sourceTree = "<group>"; };
 		2615FDD3A2648431A728BC5FA763ACA1 /* SnapTagsButtonDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SnapTagsButtonDelegate.swift; path = SnapTagsView/SnapTagsButtonDelegate.swift; sourceTree = "<group>"; };
 		28C752F8EEABBB219804C709340FE5D3 /* Pods-Unit_tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Unit_tests-umbrella.h"; sourceTree = "<group>"; };
 		2C6CF7CCE49467B96EF56673E85A6277 /* SnapTagsView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SnapTagsView-prefix.pch"; sourceTree = "<group>"; };
 		2DBDED81E30274CF1C575659074626BE /* Pods-UI_tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-UI_tests-frameworks.sh"; sourceTree = "<group>"; };
 		2F58140377C6D723BCA8C37D2843DDC5 /* FBSnapshotTestController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestController.h; path = FBSnapshotTestCase/FBSnapshotTestController.h; sourceTree = "<group>"; };
 		2F9B6D902CCCC046000ADAAB5ED169C0 /* SnapFonts-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SnapFonts-iOS-dummy.m"; sourceTree = "<group>"; };
+		3151C3C6808A91B35E17B45C839DFFA6 /* SnapFBSnapshotBase-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SnapFBSnapshotBase-dummy.m"; sourceTree = "<group>"; };
 		31998A4E6DC0A52CCF2D36BD0AF7CC9D /* Pods-Unit_tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Unit_tests.release.xcconfig"; sourceTree = "<group>"; };
 		31A200E98199015B6270A644D1CD9203 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		321C4C85D7A29D9BAB5C5D8AF265E087 /* SnapTagCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SnapTagCell.swift; path = SnapTagsView/SnapTagCell.swift; sourceTree = "<group>"; };
@@ -271,10 +272,10 @@
 		3B955C9FCDA33B459C95F59382F7F857 /* GothamRnd-MedIta.otf */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; name = "GothamRnd-MedIta.otf"; path = "Fonts/GothamRnd-MedIta.otf"; sourceTree = "<group>"; };
 		3B9B2225D6EF01446FD9ABA6C8FE9122 /* Pods-SnapOnboarding-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SnapOnboarding-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		3D0D6AE2A79413C8E24954345153A7F8 /* Pods-UI_tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UI_tests.debug.xcconfig"; sourceTree = "<group>"; };
+		3E56664E55B2CA15641EED6C33EACA42 /* SnapFBSnapshotSwiftTestCase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SnapFBSnapshotSwiftTestCase.h; path = SnapFBSnapshotBase/SnapFBSnapshotSwiftTestCase.h; sourceTree = "<group>"; };
 		3E8528D29CAC3EF69263F75EC5E0B553 /* Pods-Snapshot_tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Snapshot_tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		409A0BC25C2F34484BFD956034B2849E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		41B306F4D9427C9B23903475E71497FC /* UIImage+Compare.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Compare.m"; path = "FBSnapshotTestCase/Categories/UIImage+Compare.m"; sourceTree = "<group>"; };
-		46D65CEF030D7E0D8A2F8EB70C8F56C7 /* FBSnapshotBase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FBSnapshotBase.h; sourceTree = "<group>"; };
 		48C9430FB8B4DB7CD07EB498C10C1BD5 /* FBSnapshotTestCase-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FBSnapshotTestCase-umbrella.h"; sourceTree = "<group>"; };
 		4C97C8C2A31874A446CD24AC4B1A1689 /* FBSnapshotTestCase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestCase.h; path = FBSnapshotTestCase/FBSnapshotTestCase.h; sourceTree = "<group>"; };
 		4FBC91700190924DBB59D6A0C428CEEE /* Fonts.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Fonts.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -284,12 +285,11 @@
 		57F754261DE904BA24E06B17F5BE93E6 /* UIImage+Diff.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Diff.h"; path = "FBSnapshotTestCase/Categories/UIImage+Diff.h"; sourceTree = "<group>"; };
 		5B81439CB743560BA2EA8832EA7A7E0A /* LocalizedStrings.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LocalizedStrings.swift; path = SnapTagsView/LocalizedStrings.swift; sourceTree = "<group>"; };
 		5C0E0501EB52C57A2432D3CF98FA637B /* TTTAttributedLabel-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TTTAttributedLabel-umbrella.h"; sourceTree = "<group>"; };
-		60F15AA91A74096BB11C904D794C9F02 /* SnapFBSnapshotBase.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SnapFBSnapshotBase.xcconfig; sourceTree = "<group>"; };
 		61112203889B452C414A23245F1ED4ED /* Pods-UI_tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-UI_tests-resources.sh"; sourceTree = "<group>"; };
 		621A20671C657AC7B17D279946464593 /* SnapTagButtonConfiguration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SnapTagButtonConfiguration.swift; path = SnapTagsView/SnapTagButtonConfiguration.swift; sourceTree = "<group>"; };
 		62FBA82EDA6E51EDC9A29B7532F0B566 /* SnapSearchBarController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SnapSearchBarController.swift; path = SnapTagsView/SnapSearchBarController.swift; sourceTree = "<group>"; };
 		638F6ED7F11D04D7D7A460581E6B26A5 /* GothamRnd-LightIta.otf */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; name = "GothamRnd-LightIta.otf"; path = "Fonts/GothamRnd-LightIta.otf"; sourceTree = "<group>"; };
-		6525D899FCBEB1B92B800BA4E424D829 /* SnapFBSnapshotBase-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SnapFBSnapshotBase-dummy.m"; sourceTree = "<group>"; };
+		64F03D5DF8A5873496704FA0B1531A65 /* SnapFBSnapshotSwiftTestCase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SnapFBSnapshotSwiftTestCase.m; path = SnapFBSnapshotBase/SnapFBSnapshotSwiftTestCase.m; sourceTree = "<group>"; };
 		6A08BE424948CE66EB157D30B9B4F724 /* Pods-SnapOnboarding-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-SnapOnboarding-iOS.modulemap"; sourceTree = "<group>"; };
 		6C26A1915D8A489A77F9E83D61644B51 /* GlobalHelpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GlobalHelpers.swift; path = SnapTagsView/GlobalHelpers.swift; sourceTree = "<group>"; };
 		6C593DD5C2F7511C13CB6AF24918E014 /* SnapTagCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = SnapTagCell.xib; path = SnapTagsView/SnapTagCell.xib; sourceTree = "<group>"; };
@@ -314,7 +314,6 @@
 		834EFE45BFF089C29186263C00330CBF /* GothamRnd-BookIta.otf */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; name = "GothamRnd-BookIta.otf"; path = "Fonts/GothamRnd-BookIta.otf"; sourceTree = "<group>"; };
 		84FB2000A663F3AF5B9932663CCF848E /* Pods-Snapshot_tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Snapshot_tests-umbrella.h"; sourceTree = "<group>"; };
 		86D82CB21C9D83C4CA7ACBBA49B0BE1B /* GothamRnd-BoldIta.otf */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; name = "GothamRnd-BoldIta.otf"; path = "Fonts/GothamRnd-BoldIta.otf"; sourceTree = "<group>"; };
-		87D4C6DAE19FCDA0CB6C76EAC6D910B4 /* SnapFBSnapshotBase-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SnapFBSnapshotBase-prefix.pch"; sourceTree = "<group>"; };
 		899A239DB47B044DDB50B0F7BF8DF797 /* SnapTagsView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SnapTagsView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BB69106B6FFD5B9A6C705C7BA46D557 /* UICollectionViewLeftAlignedLayout-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UICollectionViewLeftAlignedLayout-dummy.m"; sourceTree = "<group>"; };
 		8F25DEA53AAF7C8E1A5ED1D13D7104B2 /* Pods-SnapOnboarding-iOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SnapOnboarding-iOS-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -335,7 +334,7 @@
 		9EC7DF2CDCC1D4D103A49A52B49F4D3C /* ButtonStateConfiguration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ButtonStateConfiguration.swift; path = SnapTagsView/ButtonStateConfiguration.swift; sourceTree = "<group>"; };
 		9F43FEA01A2C99C8629F509186DD9297 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A011BF884608752DB496842EDF85806C /* Pods-Snapshot_tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Snapshot_tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		A02AF15CB6370EFF349C781557E7497A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A3704635071276D4D8712587DE5897A4 /* SnapFBSnapshotBase.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SnapFBSnapshotBase.xcconfig; sourceTree = "<group>"; };
 		A562FCBE446BC77A01B5EB23B56FC506 /* FBSnapshotTestCase.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = FBSnapshotTestCase.modulemap; sourceTree = "<group>"; };
 		A7C25657E325AAA0F97254574F5DC842 /* KTCenterFlowLayout-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KTCenterFlowLayout-dummy.m"; sourceTree = "<group>"; };
 		A80168C5D4C3626D2B628576A091FFB7 /* Pods-UI_tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UI_tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -348,7 +347,6 @@
 		ADD6E193E4433D2680B0103C49618FA5 /* SnapTagsView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SnapTagsView-umbrella.h"; sourceTree = "<group>"; };
 		AE39900C0B3EF8870682869C436AD798 /* DefaultImages.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = DefaultImages.xcassets; path = SnapTagsView/DefaultImages.xcassets; sourceTree = "<group>"; };
 		B2B9F5CD8937658833FAFDAA5D199EDD /* UICollectionViewRightAlignedLayout-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UICollectionViewRightAlignedLayout-umbrella.h"; sourceTree = "<group>"; };
-		B2FB6932D2A0CF74AE9CF6FE2E726910 /* FBSnapshotSwiftTestCase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FBSnapshotSwiftTestCase.h; sourceTree = "<group>"; };
 		B31CA10F7BF01E4C9885B6524AEDA3BB /* KTCenterFlowLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KTCenterFlowLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B45965AA2A1AAAB3C6B794505C44B6FF /* TTTAttributedLabel.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = TTTAttributedLabel.modulemap; sourceTree = "<group>"; };
 		B662F12FD1A991F7CDCF46EFE9D64483 /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FBSnapshotTestCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -364,8 +362,10 @@
 		C04094AAA589FBE85FFB5AF534183EF1 /* UICollectionViewRightAlignedLayout-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UICollectionViewRightAlignedLayout-prefix.pch"; sourceTree = "<group>"; };
 		C28B04D0453FDC74AC8E923720FE9B45 /* UIImage+Diff.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Diff.m"; path = "FBSnapshotTestCase/Categories/UIImage+Diff.m"; sourceTree = "<group>"; };
 		C33DAD9590CDEAE0F67E49D26B2B56BA /* ImageConstants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageConstants.swift; path = SnapTagsView/ImageConstants.swift; sourceTree = "<group>"; };
+		C36B22C0A0F259BA3BC42091D04743F4 /* SnapFBSnapshotBase.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SnapFBSnapshotBase.modulemap; sourceTree = "<group>"; };
 		C37045A9DFE9849FFD9D7413677827C3 /* SnapFonts_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SnapFonts_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3AA274E000BF30A183C1AC1E4824A69 /* SnapTextSizer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SnapTextSizer.swift; path = SnapTagsView/SnapTextSizer.swift; sourceTree = "<group>"; };
+		C499D343985C3B5600F569D06185AC7B /* SnapFBSnapshotBase-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SnapFBSnapshotBase-umbrella.h"; sourceTree = "<group>"; };
 		C4A2A9417BD0137F21715B6FE5850919 /* UICollectionViewRightAlignedLayout.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = UICollectionViewRightAlignedLayout.xcconfig; sourceTree = "<group>"; };
 		C611777489EB3F4273C1E33C6623BEA4 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		C722A1316CCFDDEF37C3858455510B44 /* FBSnapshotTestCase-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FBSnapshotTestCase-dummy.m"; sourceTree = "<group>"; };
@@ -382,16 +382,17 @@
 		CFA4A3C8F9B1A48B88966D0676BB32CD /* ResourceBundle-Fonts-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-Fonts-Info.plist"; sourceTree = "<group>"; };
 		D1BA70BC40EBD3F59CFA83415E15F0BD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		D2DBC59D6251BCD008DE211DD9C77766 /* SnapTagsCollectionViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SnapTagsCollectionViewController.swift; path = SnapTagsView/SnapTagsCollectionViewController.swift; sourceTree = "<group>"; };
-		D6EBE791FB04119AC98D1592483BF1CB /* SnapFBSnapshotBase-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SnapFBSnapshotBase-umbrella.h"; sourceTree = "<group>"; };
 		D782CB6C4FF8410AC4C7FA11F4DFCE70 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D7B25B9CAF8721DA060D6B57EEBBF038 /* Pods-SnapOnboarding-iOS-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SnapOnboarding-iOS-frameworks.sh"; sourceTree = "<group>"; };
 		D8711AAF8221265C9E93DD472409FF30 /* Pods-Unit_tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Unit_tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		D8E1ACD492C85E1122144717EBB58AE1 /* SnapFBSnapshotBase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SnapFBSnapshotBase.m; path = SnapFBSnapshotBase/SnapFBSnapshotBase.m; sourceTree = "<group>"; };
 		DB4A8F0D22CDA86F9C9F2A65FD378D8C /* Pods-Snapshot_tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Snapshot_tests.release.xcconfig"; sourceTree = "<group>"; };
 		DC134746DA409BF2506643B9460BCFA3 /* KTCenterFlowLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KTCenterFlowLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCADCB10036D08A6EF71530407542A22 /* SwiftSupport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftSupport.swift; path = FBSnapshotTestCase/SwiftSupport.swift; sourceTree = "<group>"; };
 		DD72B81711F945ACF39652D2D6442E1D /* TTTAttributedLabel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TTTAttributedLabel.m; path = TTTAttributedLabel/TTTAttributedLabel.m; sourceTree = "<group>"; };
 		DDCED14029E3B4191A8BD156E7AEA3DD /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E0B3829566B259D56D339DFD3EBB1898 /* Pods-Unit_tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Unit_tests-resources.sh"; sourceTree = "<group>"; };
+		E2B1C82CB94672FCFAC1D4B08C7D1046 /* SnapFBSnapshotBase-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SnapFBSnapshotBase-prefix.pch"; sourceTree = "<group>"; };
 		E38C779D65F23002C4ACD3B6646B6FB0 /* UICollectionViewLeftAlignedLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = UICollectionViewLeftAlignedLayout.m; path = UICollectionViewLeftAlignedLayout/UICollectionViewLeftAlignedLayout.m; sourceTree = "<group>"; };
 		E427339EC44A8E5101E6D1907EE1DEEA /* UICollectionViewLeftAlignedLayout.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = UICollectionViewLeftAlignedLayout.xcconfig; sourceTree = "<group>"; };
 		E45F1DC65524D758FAE923E669E67D48 /* UICollectionViewRightAlignedLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UICollectionViewRightAlignedLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -407,7 +408,6 @@
 		FA61E8F9BCADA4D73A81B4752D001409 /* NSLayoutConstraint+ExpressionFormat-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+ExpressionFormat-umbrella.h"; sourceTree = "<group>"; };
 		FE3F09AD7EF6C8A980B8B8777B5A7C90 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/CoreText.framework; sourceTree = DEVELOPER_DIR; };
 		FE4A866C3B414C63417DD7D12B1BC1E6 /* UICollectionViewLeftAlignedLayout-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UICollectionViewLeftAlignedLayout-umbrella.h"; sourceTree = "<group>"; };
-		FF1C8ADFC9D3807D94AC22A7914E25E4 /* SnapFBSnapshotBase.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SnapFBSnapshotBase.modulemap; sourceTree = "<group>"; };
 		FF1E3478606D36AB7E2E90883CCF544C /* FBSnapshotTestCasePlatform.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestCasePlatform.m; path = FBSnapshotTestCase/FBSnapshotTestCasePlatform.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -542,6 +542,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F6B2493F8591DC4F894E018A12EA570 /* SnapFBSnapshotBase */ = {
+			isa = PBXGroup;
+			children = (
+				176116BC36F588AF35B97BDE01192959 /* SnapFBSnapshotBase.h */,
+				D8E1ACD492C85E1122144717EBB58AE1 /* SnapFBSnapshotBase.m */,
+				3E56664E55B2CA15641EED6C33EACA42 /* SnapFBSnapshotSwiftTestCase.h */,
+				64F03D5DF8A5873496704FA0B1531A65 /* SnapFBSnapshotSwiftTestCase.m */,
+				91977C37763504B861964D2FDB4D8572 /* Support Files */,
+			);
+			path = SnapFBSnapshotBase;
+			sourceTree = "<group>";
+		};
 		2DDA10887CA9CCF106ECF98449CB52D7 /* NSLayoutConstraint+ExpressionFormat */ = {
 			isa = PBXGroup;
 			children = (
@@ -703,27 +715,13 @@
 			);
 			sourceTree = "<group>";
 		};
-		80803FED17C8D8F4ED4A169C09AAEA6F /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				A02AF15CB6370EFF349C781557E7497A /* Info.plist */,
-				FF1C8ADFC9D3807D94AC22A7914E25E4 /* SnapFBSnapshotBase.modulemap */,
-				60F15AA91A74096BB11C904D794C9F02 /* SnapFBSnapshotBase.xcconfig */,
-				6525D899FCBEB1B92B800BA4E424D829 /* SnapFBSnapshotBase-dummy.m */,
-				87D4C6DAE19FCDA0CB6C76EAC6D910B4 /* SnapFBSnapshotBase-prefix.pch */,
-				D6EBE791FB04119AC98D1592483BF1CB /* SnapFBSnapshotBase-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/SnapFBSnapshotBase";
-			sourceTree = "<group>";
-		};
 		888046A08C77B78EAEA52E6F6F2E8B0E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				4171273C75F230068F43EF80405E410B /* FBSnapshotTestCase */,
 				9DD3167FACA97C34D096018C5FA7EC21 /* KTCenterFlowLayout */,
 				2DDA10887CA9CCF106ECF98449CB52D7 /* NSLayoutConstraint+ExpressionFormat */,
-				F3E15FA8A9FC5C0508A7AC30A4137E11 /* SnapFBSnapshotBase */,
+				0F6B2493F8591DC4F894E018A12EA570 /* SnapFBSnapshotBase */,
 				C1B8C1B77D421C4DF9D0792858F1D9AD /* SnapFonts-iOS */,
 				404DD56E36E519F72BE131527A655CD7 /* SnapTagsView */,
 				3A4AFD5981C2C78413BCEA7AD8A3D306 /* TTTAttributedLabel */,
@@ -745,6 +743,20 @@
 			);
 			name = "Support Files";
 			path = "../Target Support Files/UICollectionViewLeftAlignedLayout";
+			sourceTree = "<group>";
+		};
+		91977C37763504B861964D2FDB4D8572 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				00255758850AC86371787CA5F0BFC909 /* Info.plist */,
+				C36B22C0A0F259BA3BC42091D04743F4 /* SnapFBSnapshotBase.modulemap */,
+				A3704635071276D4D8712587DE5897A4 /* SnapFBSnapshotBase.xcconfig */,
+				3151C3C6808A91B35E17B45C839DFFA6 /* SnapFBSnapshotBase-dummy.m */,
+				E2B1C82CB94672FCFAC1D4B08C7D1046 /* SnapFBSnapshotBase-prefix.pch */,
+				C499D343985C3B5600F569D06185AC7B /* SnapFBSnapshotBase-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SnapFBSnapshotBase";
 			sourceTree = "<group>";
 		};
 		9DD3167FACA97C34D096018C5FA7EC21 /* KTCenterFlowLayout */ = {
@@ -943,18 +955,6 @@
 			path = "../Target Support Files/UICollectionViewRightAlignedLayout";
 			sourceTree = "<group>";
 		};
-		F3E15FA8A9FC5C0508A7AC30A4137E11 /* SnapFBSnapshotBase */ = {
-			isa = PBXGroup;
-			children = (
-				46D65CEF030D7E0D8A2F8EB70C8F56C7 /* FBSnapshotBase.h */,
-				0DF9C317DDDB4DE0794C9FDF3EA575C3 /* FBSnapshotBase.m */,
-				B2FB6932D2A0CF74AE9CF6FE2E726910 /* FBSnapshotSwiftTestCase.h */,
-				25ABF5E49BB7407FB2B91B7827A2489D /* FBSnapshotSwiftTestCase.m */,
-				80803FED17C8D8F4ED4A169C09AAEA6F /* Support Files */,
-			);
-			path = SnapFBSnapshotBase;
-			sourceTree = "<group>";
-		};
 		F96D3297766B0CE496B1F264D0640AD6 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -1029,13 +1029,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3D5E75BD09A34DDC91B0DC61F8684626 /* Headers */ = {
+		19A008D4D95B60926DA7D0725967AC45 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9DC77589B93A1D4687ACDC2387AECADB /* FBSnapshotBase.h in Headers */,
-				5ED903DE600896BC2341E87CAE64C575 /* FBSnapshotSwiftTestCase.h in Headers */,
-				F5181424EE70F21A99D9A6A595EDC782 /* SnapFBSnapshotBase-umbrella.h in Headers */,
+				C432E0A858AFC17C5B797A2B54ABAE1B /* SnapFBSnapshotBase-umbrella.h in Headers */,
+				8CFAC39D332864BC2D0911401ED68DCC /* SnapFBSnapshotBase.h in Headers */,
+				FD663952652B0E1B37784F869CAE6331 /* SnapFBSnapshotSwiftTestCase.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1187,9 +1187,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3F7B19F1BD18C0D414DC2A64F5D8B5F0 /* Build configuration list for PBXNativeTarget "SnapFBSnapshotBase" */;
 			buildPhases = (
-				4B1ACE5A55DBCF43321092EBDCBFDAAD /* Sources */,
+				B5C0CF4A4957573251C1293C76DCC149 /* Sources */,
 				56C8F5875B645978D1F23E60FF7CDB6F /* Frameworks */,
-				3D5E75BD09A34DDC91B0DC61F8684626 /* Headers */,
+				19A008D4D95B60926DA7D0725967AC45 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -1468,16 +1468,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4B1ACE5A55DBCF43321092EBDCBFDAAD /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1ED9308CD7386E4113880656A2F16DFB /* FBSnapshotBase.m in Sources */,
-				865D0FAB03DCBCA476706968099B34AB /* FBSnapshotSwiftTestCase.m in Sources */,
-				F3A76C1B5F6C7D935645E63D1FD7F65A /* SnapFBSnapshotBase-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		4FB2DC7692B6C6F787D6144D984614A1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1565,6 +1555,16 @@
 				11C22C7B844DF31A5EBDC9AC132C5E94 /* UIImage+Compare.m in Sources */,
 				C360952381641F725C15758993A0F665 /* UIImage+Diff.m in Sources */,
 				D5C30BC656C11AF60394E3180A217BB1 /* UIImage+Snapshot.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5C0CF4A4957573251C1293C76DCC149 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B428AA565D34A43F2594CBE2348DA59 /* SnapFBSnapshotBase-dummy.m in Sources */,
+				77EB23B8C7FB56AE2432FF142553CA1B /* SnapFBSnapshotBase.m in Sources */,
+				64C332B267E957211C4EAA2A12F22B3A /* SnapFBSnapshotSwiftTestCase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1988,7 +1988,7 @@
 		};
 		5E2BB00109C3FFE7C4AF147FA79D2FB1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 60F15AA91A74096BB11C904D794C9F02 /* SnapFBSnapshotBase.xcconfig */;
+			baseConfigurationReference = A3704635071276D4D8712587DE5897A4 /* SnapFBSnapshotBase.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -2559,7 +2559,7 @@
 		};
 		FDFBA8D726BB4EB1B5A1FA48A6C77C23 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 60F15AA91A74096BB11C904D794C9F02 /* SnapFBSnapshotBase.xcconfig */;
+			baseConfigurationReference = A3704635071276D4D8712587DE5897A4 /* SnapFBSnapshotBase.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;

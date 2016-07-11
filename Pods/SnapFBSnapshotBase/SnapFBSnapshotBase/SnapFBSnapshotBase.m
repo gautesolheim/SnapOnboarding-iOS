@@ -1,30 +1,28 @@
-#import "FBSnapshotBase.h"
+#import "SnapFBSnapshotBase.h"
 
 // Because we cannot make this an abstract class.
 // Source: http://stackoverflow.com/questions/23490133/shared-tests-in-xctest-test-suites - read it!
-#define DONT_RUN_TEST_IF_PARENT if ([NSStringFromClass([self class]) isEqualToString:@"FBSnapshotBase"]) { return; }
+#define DONT_RUN_TEST_IF_PARENT if ([NSStringFromClass([self class]) isEqualToString:@"SnapFBSnapshotBase"]) { return; }
 
-@implementation FBSnapshotBase : FBSnapshotTestCase
-
-UIViewController *parentViewController;
+@implementation SnapFBSnapshotBase : FBSnapshotTestCase {
+    
+    UIViewController *_parentViewController;
+}
 
 - (void)setUp {
     self.recordAll = NO;
     
-    if (self.backingViewController == nil) {
-        NSLog(@"Cannot account for size classes: backingViewController == nil");
+    if (self.sutBackingViewController == nil) {
+        NSLog(@"Cannot account for size classes: sutBackingViewController == nil");
     } else {
-        parentViewController = [[UIViewController alloc] init];
-        [parentViewController addChildViewController:self.backingViewController];
+        _parentViewController = [[UIViewController alloc] init];
+        [_parentViewController addChildViewController:self.sutBackingViewController];
     }
     
     [super setUp];
 }
 
 - (void)tearDown {
-    parentViewController = nil;
-    self.backingViewController = nil;
-    
     [super tearDown];
 }
 
@@ -38,8 +36,8 @@ UIViewController *parentViewController;
     DONT_RUN_TEST_IF_PARENT
     
     CGRect frame = kIphone4PortraitRect;
-    UIUserInterfaceSizeClass *horizontalSizeClass = UIUserInterfaceSizeClassCompact;
-    UIUserInterfaceSizeClass *verticalSizeClass = UIUserInterfaceSizeClassRegular;
+    UIUserInterfaceSizeClass horizontalSizeClass = [kIphone4PortraitSizeClasses[0] integerValue];
+    UIUserInterfaceSizeClass verticalSizeClass = [kIphone4PortraitSizeClasses[1] integerValue];
     
     [self configureSutForFrame:frame withHorizontalSizeClass:horizontalSizeClass withVerticalSizeClass:verticalSizeClass];
     FBSnapshotVerifyView(self.sut, nil);
@@ -49,8 +47,8 @@ UIViewController *parentViewController;
     DONT_RUN_TEST_IF_PARENT
     
     CGRect frame = kIphone5PortraitRect;
-    UIUserInterfaceSizeClass *horizontalSizeClass = UIUserInterfaceSizeClassCompact;
-    UIUserInterfaceSizeClass *verticalSizeClass = UIUserInterfaceSizeClassRegular;
+    UIUserInterfaceSizeClass horizontalSizeClass = [kIphone5PortraitSizeClasses[0] integerValue];
+    UIUserInterfaceSizeClass verticalSizeClass = [kIphone5PortraitSizeClasses[1] integerValue];
     
     [self configureSutForFrame:frame withHorizontalSizeClass:horizontalSizeClass withVerticalSizeClass:verticalSizeClass];
     FBSnapshotVerifyView(self.sut, nil);
@@ -60,8 +58,8 @@ UIViewController *parentViewController;
     DONT_RUN_TEST_IF_PARENT
     
     CGRect frame = kIphone6PortraitRect;
-    UIUserInterfaceSizeClass *horizontalSizeClass = UIUserInterfaceSizeClassCompact;
-    UIUserInterfaceSizeClass *verticalSizeClass = UIUserInterfaceSizeClassRegular;
+    UIUserInterfaceSizeClass horizontalSizeClass = [kIphone6PortraitSizeClasses[0] integerValue];
+    UIUserInterfaceSizeClass verticalSizeClass = [kIphone6PortraitSizeClasses[1] integerValue];
     
     [self configureSutForFrame:frame withHorizontalSizeClass:horizontalSizeClass withVerticalSizeClass:verticalSizeClass];
     FBSnapshotVerifyView(self.sut, nil);
@@ -71,8 +69,8 @@ UIViewController *parentViewController;
     DONT_RUN_TEST_IF_PARENT
     
     CGRect frame = kIphone6PlusPortraitRect;
-    UIUserInterfaceSizeClass *horizontalSizeClass = UIUserInterfaceSizeClassCompact;
-    UIUserInterfaceSizeClass *verticalSizeClass = UIUserInterfaceSizeClassRegular;
+    UIUserInterfaceSizeClass horizontalSizeClass = [kIphone6PlusPortraitSizeClasses[0] integerValue];
+    UIUserInterfaceSizeClass verticalSizeClass = [kIphone6PlusPortraitSizeClasses[1] integerValue];
     
     [self configureSutForFrame:frame withHorizontalSizeClass:horizontalSizeClass withVerticalSizeClass:verticalSizeClass];
     FBSnapshotVerifyView(self.sut, nil);
@@ -82,8 +80,8 @@ UIViewController *parentViewController;
     DONT_RUN_TEST_IF_PARENT
     
     CGRect frame = kIphone4LandscapeRect;
-    UIUserInterfaceSizeClass *horizontalSizeClass = UIUserInterfaceSizeClassCompact;
-    UIUserInterfaceSizeClass *verticalSizeClass = UIUserInterfaceSizeClassCompact;
+    UIUserInterfaceSizeClass horizontalSizeClass = [kIphone4LandscapeSizeClasses[0] integerValue];
+    UIUserInterfaceSizeClass verticalSizeClass = [kIphone4LandscapeSizeClasses[1] integerValue];
     
     [self configureSutForFrame:frame withHorizontalSizeClass:horizontalSizeClass withVerticalSizeClass:verticalSizeClass];
     FBSnapshotVerifyView(self.sut, nil);
@@ -93,8 +91,8 @@ UIViewController *parentViewController;
     DONT_RUN_TEST_IF_PARENT
     
     CGRect frame = kIphone5LandscapeRect;
-    UIUserInterfaceSizeClass *horizontalSizeClass = UIUserInterfaceSizeClassCompact;
-    UIUserInterfaceSizeClass *verticalSizeClass = UIUserInterfaceSizeClassCompact;
+    UIUserInterfaceSizeClass horizontalSizeClass = [kIphone5LandscapeSizeClasses[0] integerValue];
+    UIUserInterfaceSizeClass verticalSizeClass = [kIphone5LandscapeSizeClasses[1] integerValue];
     
     [self configureSutForFrame:frame withHorizontalSizeClass:horizontalSizeClass withVerticalSizeClass:verticalSizeClass];
     FBSnapshotVerifyView(self.sut, nil);
@@ -104,8 +102,8 @@ UIViewController *parentViewController;
     DONT_RUN_TEST_IF_PARENT
     
     CGRect frame = kIphone6LandscapeRect;
-    UIUserInterfaceSizeClass *horizontalSizeClass = UIUserInterfaceSizeClassCompact;
-    UIUserInterfaceSizeClass *verticalSizeClass = UIUserInterfaceSizeClassCompact;
+    UIUserInterfaceSizeClass horizontalSizeClass = [kIphone6LandscapeSizeClasses[0] integerValue];
+    UIUserInterfaceSizeClass verticalSizeClass = [kIphone6LandscapeSizeClasses[1] integerValue];
     
     [self configureSutForFrame:frame withHorizontalSizeClass:horizontalSizeClass withVerticalSizeClass:verticalSizeClass];
     FBSnapshotVerifyView(self.sut, nil);
@@ -115,8 +113,8 @@ UIViewController *parentViewController;
     DONT_RUN_TEST_IF_PARENT
     
     CGRect frame = kIphone6PlusLandscapeRect;
-    UIUserInterfaceSizeClass *horizontalSizeClass = UIUserInterfaceSizeClassRegular;
-    UIUserInterfaceSizeClass *verticalSizeClass = UIUserInterfaceSizeClassCompact;
+    UIUserInterfaceSizeClass horizontalSizeClass = [kIphone6PlusLandscapeSizeClasses[0] integerValue];
+    UIUserInterfaceSizeClass verticalSizeClass = [kIphone6PlusLandscapeSizeClasses[1] integerValue];
     
     [self configureSutForFrame:frame withHorizontalSizeClass:horizontalSizeClass withVerticalSizeClass:verticalSizeClass];
     FBSnapshotVerifyView(self.sut, nil);
@@ -126,8 +124,8 @@ UIViewController *parentViewController;
     DONT_RUN_TEST_IF_PARENT
     
     CGRect frame = kIpadPortraitRect;
-    UIUserInterfaceSizeClass *horizontalSizeClass = UIUserInterfaceSizeClassRegular;
-    UIUserInterfaceSizeClass *verticalSizeClass = UIUserInterfaceSizeClassRegular;
+    UIUserInterfaceSizeClass horizontalSizeClass = [kIpadPortraitSizeClasses[0] integerValue];
+    UIUserInterfaceSizeClass verticalSizeClass = [kIpadPortraitSizeClasses[1] integerValue];
     
     [self configureSutForFrame:frame withHorizontalSizeClass:horizontalSizeClass withVerticalSizeClass:verticalSizeClass];
     FBSnapshotVerifyView(self.sut, nil);
@@ -137,8 +135,8 @@ UIViewController *parentViewController;
     DONT_RUN_TEST_IF_PARENT
     
     CGRect frame = kIpadLandscapeRect;
-    UIUserInterfaceSizeClass *horizontalSizeClass = UIUserInterfaceSizeClassRegular;
-    UIUserInterfaceSizeClass *verticalSizeClass = UIUserInterfaceSizeClassRegular;
+    UIUserInterfaceSizeClass horizontalSizeClass = [kIpadLandscapeSizeClasses[0] integerValue];
+    UIUserInterfaceSizeClass verticalSizeClass = [kIpadLandscapeSizeClasses[1] integerValue];
     
     [self configureSutForFrame:frame withHorizontalSizeClass:horizontalSizeClass withVerticalSizeClass:verticalSizeClass];
     FBSnapshotVerifyView(self.sut, nil);
@@ -148,8 +146,8 @@ UIViewController *parentViewController;
     DONT_RUN_TEST_IF_PARENT
     
     CGRect frame = kIpadMultitaskingLandscapeTwoToOneMainRect;
-    UIUserInterfaceSizeClass *horizontalSizeClass = UIUserInterfaceSizeClassRegular;
-    UIUserInterfaceSizeClass *verticalSizeClass = UIUserInterfaceSizeClassRegular;
+    UIUserInterfaceSizeClass horizontalSizeClass = [kIpadMultitaskingLandscapeTwoToOneMainSizeClasses[0] integerValue];
+    UIUserInterfaceSizeClass verticalSizeClass = [kIpadMultitaskingLandscapeTwoToOneMainSizeClasses[1] integerValue];
     
     [self configureSutForFrame:frame withHorizontalSizeClass:horizontalSizeClass withVerticalSizeClass:verticalSizeClass];
     FBSnapshotVerifyView(self.sut, nil);
@@ -159,8 +157,8 @@ UIViewController *parentViewController;
     DONT_RUN_TEST_IF_PARENT
     
     CGRect frame = kIpadMultitaskingLandscapeTwoToOneAltRect;
-    UIUserInterfaceSizeClass *horizontalSizeClass = UIUserInterfaceSizeClassCompact;
-    UIUserInterfaceSizeClass *verticalSizeClass = UIUserInterfaceSizeClassRegular;
+    UIUserInterfaceSizeClass horizontalSizeClass = [kIpadMultitaskingLandscapeTwoToOneAltSizeClasses[0] integerValue];
+    UIUserInterfaceSizeClass verticalSizeClass = [kIpadMultitaskingLandscapeTwoToOneAltSizeClasses[1] integerValue];
     
     [self configureSutForFrame:frame withHorizontalSizeClass:horizontalSizeClass withVerticalSizeClass:verticalSizeClass];
     FBSnapshotVerifyView(self.sut, nil);
@@ -170,8 +168,8 @@ UIViewController *parentViewController;
     DONT_RUN_TEST_IF_PARENT
     
     CGRect frame = kIpadMultitaskingLandscapeOneToOneMainAndAltRect;
-    UIUserInterfaceSizeClass *horizontalSizeClass = UIUserInterfaceSizeClassCompact;
-    UIUserInterfaceSizeClass *verticalSizeClass = UIUserInterfaceSizeClassRegular;
+    UIUserInterfaceSizeClass horizontalSizeClass = [kIpadMultitaskingLandscapeOneToOneMainAndAltSizeClasses[0] integerValue];
+    UIUserInterfaceSizeClass verticalSizeClass = [kIpadMultitaskingLandscapeOneToOneMainAndAltSizeClasses[1] integerValue];
     
     [self configureSutForFrame:frame withHorizontalSizeClass:horizontalSizeClass withVerticalSizeClass:verticalSizeClass];
     FBSnapshotVerifyView(self.sut, nil);
@@ -181,8 +179,8 @@ UIViewController *parentViewController;
     DONT_RUN_TEST_IF_PARENT
     
     CGRect frame = kIpadMultitaskingPortraitOneToOneMainRect;
-    UIUserInterfaceSizeClass *horizontalSizeClass = UIUserInterfaceSizeClassCompact;
-    UIUserInterfaceSizeClass *verticalSizeClass = UIUserInterfaceSizeClassRegular;
+    UIUserInterfaceSizeClass horizontalSizeClass = [kIpadMultitaskingPortraitOneToOneMainSizeClasses[0] integerValue];
+    UIUserInterfaceSizeClass verticalSizeClass = [kIpadMultitaskingPortraitOneToOneMainSizeClasses[1] integerValue];
     
     [self configureSutForFrame:frame withHorizontalSizeClass:horizontalSizeClass withVerticalSizeClass:verticalSizeClass];
     FBSnapshotVerifyView(self.sut, nil);
@@ -192,30 +190,25 @@ UIViewController *parentViewController;
     DONT_RUN_TEST_IF_PARENT
     
     CGRect frame = kIpadMultitaskingPortraitOneToOneAltRect;
-    UIUserInterfaceSizeClass *horizontalSizeClass = UIUserInterfaceSizeClassCompact;
-    UIUserInterfaceSizeClass *verticalSizeClass = UIUserInterfaceSizeClassRegular;
+    UIUserInterfaceSizeClass horizontalSizeClass = [kIpadMultitaskingPortraitOneToOneAltSizeClasses[0] integerValue];
+    UIUserInterfaceSizeClass verticalSizeClass = [kIpadMultitaskingPortraitOneToOneAltSizeClasses[1] integerValue];
     
     [self configureSutForFrame:frame withHorizontalSizeClass:horizontalSizeClass withVerticalSizeClass:verticalSizeClass];
     FBSnapshotVerifyView(self.sut, nil);
 }
 
-- (void)configureSutForFrame:(CGRect)frame withHorizontalSizeClass:(UIUserInterfaceSizeClass *)horizontalSizeClass withVerticalSizeClass:(UIUserInterfaceSizeClass *)verticalSizeClass {
+- (void)configureSutForFrame:(CGRect)frame withHorizontalSizeClass:(UIUserInterfaceSizeClass)horizontalSizeClass withVerticalSizeClass:(UIUserInterfaceSizeClass)verticalSizeClass {
     
     self.sut.frame = frame;
     
-    if (self.backingViewController != nil) {
+    if (self.sutBackingViewController != nil) {
         UITraitCollection *traitCollectionHorizontal = [UITraitCollection traitCollectionWithHorizontalSizeClass:horizontalSizeClass];
         UITraitCollection *traitCollectionVertical = [UITraitCollection traitCollectionWithVerticalSizeClass:verticalSizeClass];
         
-        UITraitCollection *traitCollection = [UITraitCollection traitCollectionWithTraitsFromCollections:[NSArray arrayWithObjects:traitCollectionHorizontal, traitCollectionVertical, nil]];
-        [parentViewController setOverrideTraitCollection:traitCollection forChildViewController:self.backingViewController];
+        UITraitCollection *traitCollection = [UITraitCollection traitCollectionWithTraitsFromCollections:@[traitCollectionHorizontal, traitCollectionVertical]];
+        [_parentViewController setOverrideTraitCollection:traitCollection forChildViewController:self.sutBackingViewController];
     }
     
-}
-
-- (NSString *)getReferenceImageDirectoryWithDefault:(NSString *)dir {
-    NSString *newDir = [super getReferenceImageDirectoryWithDefault:dir];
-    return newDir;
 }
 
 @end

@@ -1,7 +1,7 @@
 import SnapFBSnapshotBase
 @testable import SnapOnboarding_iOS
 
-class IntroViewControllerSnapshots: FBSnapshotBase {
+class IntroViewControllerSnapshots: SnapFBSnapshotBase {
     
     var vc: SnapOnboardingViewController!
     
@@ -16,14 +16,14 @@ class IntroViewControllerSnapshots: FBSnapshotBase {
         // Prevent device size adjustments before a simulated frame is set, i.e. from viewDidLoad
         vc.screenSize = CGRect(x: 0, y: 0, width: 0, height: 0)
         
-        backingViewController = vc
+        sutBackingViewController = vc
         sut = vc.view
         
         // Setup the loaded view
         currentPage = 0
         
         super.setUp()
-        recordMode = recordAll || true
+        recordMode = recordAll || false
     }
     
     override func tearDown() {

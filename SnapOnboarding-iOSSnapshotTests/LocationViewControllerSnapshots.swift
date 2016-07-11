@@ -1,7 +1,7 @@
 import SnapFBSnapshotBase
 @testable import SnapOnboarding_iOS
 
-class LocationViewControllerSnapshots: FBSnapshotBase {
+class LocationViewControllerSnapshots: SnapFBSnapshotBase {
     
     var vc: SnapOnboardingViewController!
     
@@ -16,7 +16,7 @@ class LocationViewControllerSnapshots: FBSnapshotBase {
         // Prevent device size adjustments before a simulated frame is set, i.e. from viewDidLoad
         vc.screenSize = CGRect(x: 0, y: 0, width: 0, height: 0)
         
-        backingViewController = vc
+        sutBackingViewController = vc
         sut = vc.view
         
         // Setup the loaded view
