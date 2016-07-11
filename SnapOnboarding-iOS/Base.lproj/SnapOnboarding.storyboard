@@ -452,6 +452,9 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Å legge ut salg er raskt og enkelt. Vi tagger og kategoriserer annonser med smart bildegjenkjenning." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6QU-g5-Hyl" userLabel="headlineLabel" customClass="SnapOnboardingHeadlineLabel" customModule="SnapOnboarding_iOS" customModuleProvider="target">
                                 <rect key="frame" x="20" y="40" width="560" height="57"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="700" id="cbA-I7-Ipr"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="21"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -654,8 +657,8 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                             <constraint firstItem="6QU-g5-Hyl" firstAttribute="top" secondItem="ul5-Tp-YXG" secondAttribute="bottom" id="qYd-eZ-w3Q"/>
                             <constraint firstItem="knZ-Sh-tcc" firstAttribute="top" secondItem="yq7-1l-rO5" secondAttribute="bottom" id="t4e-lC-E7H"/>
                             <constraint firstItem="ul5-Tp-YXG" firstAttribute="height" secondItem="OvS-2d-WuL" secondAttribute="height" multiplier="0.081" id="vDU-gf-Gzo"/>
-                            <constraint firstAttribute="width" secondItem="6QU-g5-Hyl" secondAttribute="width" constant="40" id="wNx-8o-gAE">
-                                <variation key="heightClass=regular-widthClass=regular" constant="300"/>
+                            <constraint firstAttribute="width" secondItem="6QU-g5-Hyl" secondAttribute="width" priority="999" constant="40" id="wNx-8o-gAE">
+                                <variation key="widthClass=regular" constant="200"/>
                             </constraint>
                         </constraints>
                     </view>

@@ -27,8 +27,6 @@ public class SnapOnboardingViewController: UIViewController {
     
     private var locationViewController: LocationViewControllerProtocol?
     
-    lazy var screenSize: CGRect = UIScreen.mainScreen().bounds
-    
     // MARK: UIViewController life cycle
     
     public override func viewDidLoad() {
@@ -36,7 +34,7 @@ public class SnapOnboardingViewController: UIViewController {
         
         assert(viewModel != nil)
         
-        setupForScreenSize(screenSize)
+        setupForScreenSize(UIScreen.mainScreen().bounds)
     }
     
     public override func viewWillAppear(animated: Bool) {
@@ -109,7 +107,7 @@ public class SnapOnboardingViewController: UIViewController {
     override public func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransitionToSize(size, withTransitionCoordinator: coordinator)
         
-        setupForScreenSize(screenSize)
+        setupForScreenSize(UIScreen.mainScreen().bounds)
         
         let currentPage = pageControl?.currentPage ?? 0
         coordinator.animateAlongsideTransition({ _ in
@@ -134,18 +132,15 @@ public class SnapOnboardingViewController: UIViewController {
             let destinationViewController = segue.destinationViewController as? IntroViewController
             destinationViewController?.delegate = self as IntroViewControllerDelegate
             destinationViewController?.configureForViewModel(viewModel.introViewModel)
-            destinationViewController?.screenSize = screenSize
             case EmbedSegueIdentifier.LocationViewController.rawValue:
             let destinationViewController = segue.destinationViewController as? LocationViewController
             destinationViewController?.delegate = self as LocationViewControllerDelegate
             destinationViewController?.configureForViewModel(viewModel.locationViewModel)
-            destinationViewController?.screenSize = screenSize
             locationViewController = destinationViewController
             case EmbedSegueIdentifier.LoginViewController.rawValue:
             let destinationViewController = segue.destinationViewController as? LoginViewController
             destinationViewController?.delegate = self as LoginViewControllerDelegate
             destinationViewController?.configureForViewModel(viewModel.loginViewModel)
-            destinationViewController?.screenSize = screenSize
         default: break
         }
     }

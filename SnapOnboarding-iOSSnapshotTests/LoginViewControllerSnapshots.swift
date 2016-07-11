@@ -13,9 +13,6 @@ class LoginViewControllerSnapshots: SnapFBSnapshotBase {
         let configuration = SnapOnboardingConfiguration(delegate: delegate, viewModel: viewModel)
         vc.applyConfiguration(configuration)
         
-        // Prevent device size adjustments before a simulated frame is set, i.e. from viewDidLoad
-        vc.screenSize = CGRect(x: 0, y: 0, width: 0, height: 0)
-        
         sutBackingViewController = vc
         sut = vc.view
         

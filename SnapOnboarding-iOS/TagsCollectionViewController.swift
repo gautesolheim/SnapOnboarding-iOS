@@ -11,8 +11,6 @@ class TagsCollectionViewController: SnapTagsCollectionViewController {
     private var spacing: CGFloat = 10
     private var insets = UIEdgeInsets(top: 8.5, left: 9.5, bottom: 8.5, right: 9.5)
     
-    lazy var screenSize: CGRect = UIScreen.mainScreen().bounds
-    
     func configureForViewModel(viewModel: TagsViewModel) {
         data = viewModel.data ?? [SnapTagRepresentation]()
     }
@@ -20,7 +18,6 @@ class TagsCollectionViewController: SnapTagsCollectionViewController {
     override func viewDidLoad() {
         configuration = createConfiguration()
         buttonConfiguration = createButtonConfiguration()
-        setupForScreenSize(screenSize)
         
         super.viewDidLoad()
         
@@ -28,7 +25,9 @@ class TagsCollectionViewController: SnapTagsCollectionViewController {
     }
     
     override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
-        setupForScreenSize(screenSize)
+        super.viewWillTransitionToSize(size, withTransitionCoordinator: coordinator)
+        
+        setupForScreenSize(UIScreen.mainScreen().bounds)
     }
     
     func createConfiguration() -> SnapTagsViewConfiguration {

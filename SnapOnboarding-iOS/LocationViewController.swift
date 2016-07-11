@@ -28,8 +28,6 @@ class LocationViewController: UIViewController {
     private var spinnerImageView = UIImageView()
     private var locationServicesStatus: LocationServicesStatus = .NotYetRequested
     
-    lazy var screenSize: CGRect = UIScreen.mainScreen().bounds
-    
     @IBAction func nextButtonTapped(sender: UIButton) {
         delegate?.locationNextButtonTapped()
     }
@@ -51,7 +49,7 @@ class LocationViewController: UIViewController {
         
         assert(viewModel != nil)
         
-        setupForScreenSize(screenSize)
+        setupForScreenSize(UIScreen.mainScreen().bounds)
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -67,7 +65,9 @@ class LocationViewController: UIViewController {
     }
     
     override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
-        setupForScreenSize(screenSize)
+        super.viewWillTransitionToSize(size, withTransitionCoordinator: coordinator)
+        
+        setupForScreenSize(UIScreen.mainScreen().bounds)
     }
     
     // MARK: UIView configuration

@@ -24,8 +24,6 @@ class IntroViewController: UIViewController {
     var delegate: IntroViewControllerDelegate?
     private var viewModel: SnapOnboardingViewModel.IntroViewModel?
     
-    lazy var screenSize: CGRect = UIScreen.mainScreen().bounds
-    
     @IBAction func nextButtonTapped(sender: UIButton) {
         delegate?.introNextButtonTapped()
     }
@@ -37,7 +35,7 @@ class IntroViewController: UIViewController {
         
         assert(viewModel != nil)
         
-        setupForScreenSize(screenSize)
+        setupForScreenSize(UIScreen.mainScreen().bounds)
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -51,7 +49,10 @@ class IntroViewController: UIViewController {
     }
     
     override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
-        setupForScreenSize(screenSize)
+        super.viewWillTransitionToSize(size, withTransitionCoordinator: coordinator)
+        
+        print("will-transition-to-size")
+        setupForScreenSize(UIScreen.mainScreen().bounds)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -133,9 +134,14 @@ extension IntroViewController {
     
     func setupForIpadLandscape() {
         setupForIpadPortrait()
-        
-        sparklingViewToSuperViewHeightRelation?.constant = 20
         phoneViewTopToSparklingViewTop?.constant = 20
+        
+        if view.frame.width == UIScreen.mainScreen().bounds.width {
+            sparklingViewToSuperViewHeightRelation?.constant = 20
+        } else {
+            star6CenterYToSparklingViewCenterYRelation?.constant = 10
+            phoneViewToSparklingViewHeightRelation?.constant = 10
+        }
     }
     
 }
