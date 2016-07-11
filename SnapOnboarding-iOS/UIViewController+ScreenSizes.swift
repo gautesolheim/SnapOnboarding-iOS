@@ -5,6 +5,8 @@ import UIKit
     optional func setupFor4_0Inch()
     optional func setupFor4_7Inch()
     optional func setupFor5_5Inch()
+    optional func setupForIpad()
+    optional func setupForIpadPro()
 }
 
 extension UIViewController: ScreenSizesProtocol {
@@ -27,6 +29,12 @@ extension UIViewController: ScreenSizesProtocol {
         case 414:
             // iPhone 6+, 6s+ PORTRAIT
             mySelf.setupFor5_5Inch?()
+        case 768:
+            // iPad Mini, iPad Air
+            mySelf.setupForIpad?()
+        case 1024:
+            // iPad Pro 12,9"
+            mySelf.setupForIpadPro?()
         default: break
         }
     }

@@ -7,14 +7,20 @@ struct TagsViewModel {
 
 class TagsCollectionViewController: SnapTagsCollectionViewController {
     
+    private var fontSize: CGFloat = 13
+    private var spacing: CGFloat = 10
+    private var insets = UIEdgeInsets(top: 8.5, left: 9.5, bottom: 8.5, right: 9.5)
+    
     func configureForViewModel(viewModel: TagsViewModel) {
         data = viewModel.data ?? [SnapTagRepresentation]()
-        
-        configuration = createConfiguration()
-        buttonConfiguration = createButtonConfiguration()
     }
     
     override func viewDidLoad() {
+        setupForScreenSize(UIScreen.mainScreen().bounds)
+        
+        configuration = createConfiguration()
+        buttonConfiguration = createButtonConfiguration()
+        
         super.viewDidLoad()
         
         scrollEnabled = false
@@ -22,10 +28,10 @@ class TagsCollectionViewController: SnapTagsCollectionViewController {
     
     func createConfiguration() -> SnapTagsViewConfiguration {
         var config = SnapTagsViewConfiguration()
-        config.spacing = 10
+        config.spacing = spacing
         config.horizontalMargin = 0
         config.verticalMargin = 0
-        config.contentHeight = 13
+        config.contentHeight = fontSize
         config.alignment = .Center
         
         return config
@@ -33,10 +39,10 @@ class TagsCollectionViewController: SnapTagsCollectionViewController {
     
     func createButtonConfiguration() -> SnapTagButtonConfiguration {
         var config = SnapTagButtonConfiguration()
-        config.font = SnapFonts.gothamRoundedMediumOfSize(13)
+        config.font = SnapFonts.gothamRoundedMediumOfSize(fontSize)
         config.canBeTurnedOnAndOff = true
         config.margin = UIEdgeInsetsZero
-        config.labelInset = UIEdgeInsets(top: 8.5, left: 9.5, bottom: 8.5, right: 9.5)
+        config.labelInset = insets
         
         var onState = ButtonStateConfiguration()
         onState.buttonImage = UIImage.SnapTagsViewAssets.YellowCloseButton.image
@@ -64,6 +70,18 @@ class TagsCollectionViewController: SnapTagsCollectionViewController {
         config.highlightedWhileOffState = highlightedOffState
         
         return config
+    }
+    
+}
+
+// MARK: ScreenSizesProtocol
+
+extension TagsCollectionViewController {
+    
+    func setupForIpad() {
+        fontSize = 15
+        spacing = 12
+        insets = UIEdgeInsets(top: 9.5, left: 10.5, bottom: 9.5, right: 10.5)
     }
     
 }

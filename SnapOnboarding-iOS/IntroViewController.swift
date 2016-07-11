@@ -13,6 +13,8 @@ class IntroViewController: UIViewController {
     @IBOutlet private(set) var sparklingStars: [UIImageView]?
     
     @IBOutlet private var tagsContainerViewHeight: NSLayoutConstraint?
+    @IBOutlet private var phoneViewTopToSparklingViewTop: NSLayoutConstraint?
+    @IBOutlet private var phoneViewToSparklingViewHeightRelation: NSLayoutConstraint?
     @IBOutlet private var sparklingViewToSuperViewHeightRelation: NSLayoutConstraint?
     
     var delegate: IntroViewControllerDelegate?
@@ -102,6 +104,18 @@ extension IntroViewController {
     func setupFor4_0Inch() {
         headlineLabel?.font = SnapFonts.gothamRoundedBookOfSize(18)
         headlineLabel?.lineSpacin = 5
+    }
+    
+    func setupForIpad() {
+        nextButton?.titleLabel?.font = SnapFonts.gothamRoundedMediumOfSize(16)
+        nextButton?.contentEdgeInsets = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 23)
+        
+        headlineLabel?.font = SnapFonts.gothamRoundedBookOfSize(26)
+        
+        sparklingViewToSuperViewHeightRelation?.constant = 60
+        phoneViewTopToSparklingViewTop?.constant = 60
+        phoneViewToSparklingViewHeightRelation?.constant = -30
+        tagsContainerViewHeight?.constant = 130
     }
     
 }
