@@ -436,7 +436,7 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                         <viewControllerLayoutGuide type="bottom" id="knZ-Sh-tcc"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="OvS-2d-WuL">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="502"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="keh-ad-7Sj" userLabel="nextButton">
@@ -451,7 +451,7 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Å legge ut salg er raskt og enkelt. Vi tagger og kategoriserer annonser med smart bildegjenkjenning." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6QU-g5-Hyl" userLabel="headlineLabel" customClass="SnapOnboardingHeadlineLabel" customModule="SnapOnboarding_iOS" customModuleProvider="target">
-                                <rect key="frame" x="20" y="48" width="560" height="57"/>
+                                <rect key="frame" x="20" y="40" width="560" height="57"/>
                                 <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="21"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -462,29 +462,29 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bZw-jc-PYY" userLabel="headlineSparklingSpacer">
-                                <rect key="frame" x="180" y="105" width="240" height="27"/>
+                                <rect key="frame" x="180" y="97" width="240" height="23"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="Ai5-Uq-dY2"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yq7-1l-rO5" userLabel="bottomSpacer">
-                                <rect key="frame" x="180" y="510" width="240" height="90"/>
+                                <rect key="frame" x="180" y="436" width="240" height="66"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="c6p-Z5-HTD"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ul5-Tp-YXG" userLabel="topSpacer">
-                                <rect key="frame" x="180" y="0.0" width="240" height="48"/>
+                                <rect key="frame" x="180" y="0.0" width="240" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="aLm-4c-wkd"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="hAr-PC-4Lk"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V9z-WP-6mg" userLabel="sparklingView">
-                                <rect key="frame" x="20" y="132" width="560" height="378"/>
+                                <rect key="frame" x="20" y="120" width="560" height="316"/>
                                 <subviews>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Anb-9C-0O1" userLabel="tagsContainerView">
-                                        <rect key="frame" x="0.0" y="290" width="560" height="70"/>
+                                        <rect key="frame" x="0.0" y="228" width="560" height="70"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="70" id="gVG-uD-cFW"/>
                                         </constraints>
@@ -493,16 +493,16 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                                         </connections>
                                     </containerView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gRh-VQ-57i" userLabel="phoneView">
-                                        <rect key="frame" x="180" y="14" width="200" height="219"/>
+                                        <rect key="frame" x="196" y="14" width="168" height="183"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="veske" translatesAutoresizingMaskIntoConstraints="NO" id="seo-Z1-3P5">
-                                                <rect key="frame" x="13" y="44" width="175" height="175"/>
+                                                <rect key="frame" x="11" y="36" width="147" height="147"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="seo-Z1-3P5" secondAttribute="height" multiplier="1:1" id="Nxh-EF-us4"/>
                                                 </constraints>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iphone" translatesAutoresizingMaskIntoConstraints="NO" id="FZD-BA-24j">
-                                                <rect key="frame" x="0.0" y="0.0" width="200" height="217"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="168" height="181"/>
                                             </imageView>
                                         </subviews>
                                         <constraints>
@@ -517,58 +517,78 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                                         </constraints>
                                     </view>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="s1t-sP-bgy" userLabel="star0">
-                                        <rect key="frame" x="175" y="-9" width="12" height="34"/>
+                                        <rect key="frame" x="191" y="-11" width="12" height="34"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="12" id="rtw-aC-oQN"/>
+                                            <constraint firstAttribute="width" constant="12" id="rtw-aC-oQN">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="14"/>
+                                            </constraint>
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="cRw-Dt-0k7" userLabel="star1">
-                                        <rect key="frame" x="402" y="12" width="12" height="34"/>
+                                        <rect key="frame" x="386" y="7" width="12" height="34"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="12" id="ywv-YI-ADM"/>
+                                            <constraint firstAttribute="width" constant="12" id="ywv-YI-ADM">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="14"/>
+                                            </constraint>
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="E0z-Ye-6wd" userLabel="star2">
-                                        <rect key="frame" x="388" y="59" width="7" height="34"/>
+                                        <rect key="frame" x="372" y="46" width="7" height="34"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="7" id="mHJ-Pt-5eC"/>
+                                            <constraint firstAttribute="width" constant="7" id="mHJ-Pt-5eC">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="9"/>
+                                            </constraint>
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="7Cw-8k-Os3" userLabel="star3">
-                                        <rect key="frame" x="134" y="97" width="7" height="34"/>
+                                        <rect key="frame" x="150" y="78" width="7" height="34"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="7" id="y83-LV-dPq"/>
+                                            <constraint firstAttribute="width" constant="7" id="y83-LV-dPq">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="9"/>
+                                            </constraint>
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="Sjr-yo-vV6" userLabel="star4">
-                                        <rect key="frame" x="164" y="134" width="9" height="34"/>
+                                        <rect key="frame" x="180" y="109" width="9" height="34"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="9" id="9kH-Ji-uHv"/>
+                                            <constraint firstAttribute="width" constant="9" id="9kH-Ji-uHv">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="11"/>
+                                            </constraint>
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="RJR-xC-x7D" userLabel="star5">
-                                        <rect key="frame" x="414" y="191" width="9" height="34"/>
+                                        <rect key="frame" x="398" y="157" width="9" height="34"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="9" id="UjZ-qb-128"/>
+                                            <constraint firstAttribute="width" constant="9" id="UjZ-qb-128">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="11"/>
+                                            </constraint>
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="X9U-Te-nxi" userLabel="star6">
-                                        <rect key="frame" x="338" y="254" width="12" height="14"/>
+                                        <rect key="frame" x="338" y="209" width="12" height="14"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="12" id="hrw-Zz-3H6"/>
-                                            <constraint firstAttribute="height" constant="14" id="zAV-rO-cSV"/>
+                                            <constraint firstAttribute="width" constant="12" id="hrw-Zz-3H6">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="14"/>
+                                            </constraint>
+                                            <constraint firstAttribute="height" constant="14" id="zAV-rO-cSV">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="15"/>
+                                            </constraint>
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="nua-ml-mTp" userLabel="star7">
-                                        <rect key="frame" x="103" y="248" width="7" height="34"/>
+                                        <rect key="frame" x="103" y="194" width="7" height="34"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="7" id="OfO-Mb-dVm"/>
+                                            <constraint firstAttribute="width" constant="7" id="OfO-Mb-dVm">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="9"/>
+                                            </constraint>
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="fgQ-qf-9pL" userLabel="star8">
-                                        <rect key="frame" x="219" y="361" width="9" height="34"/>
+                                        <rect key="frame" x="219" y="299" width="9" height="34"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="9" id="di4-m6-d2i"/>
+                                            <constraint firstAttribute="width" constant="9" id="di4-m6-d2i">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="11"/>
+                                            </constraint>
                                         </constraints>
                                     </imageView>
                                 </subviews>
@@ -592,7 +612,6 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                                     <constraint firstItem="gRh-VQ-57i" firstAttribute="leading" secondItem="Sjr-yo-vV6" secondAttribute="trailing" constant="7" id="Tsx-lc-F08">
                                         <variation key="widthClass=regular" constant="20"/>
                                     </constraint>
-                                    <constraint firstItem="gRh-VQ-57i" firstAttribute="centerY" secondItem="V9z-WP-6mg" secondAttribute="centerY" id="VkR-ov-lPw"/>
                                     <constraint firstItem="gRh-VQ-57i" firstAttribute="centerX" secondItem="V9z-WP-6mg" secondAttribute="centerX" id="W8B-zC-1qJ"/>
                                     <constraint firstItem="cRw-Dt-0k7" firstAttribute="leading" secondItem="gRh-VQ-57i" secondAttribute="trailing" constant="22" id="dV5-ez-FVm">
                                         <variation key="widthClass=regular" constant="40"/>
@@ -610,16 +629,6 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                                     <constraint firstItem="7Cw-8k-Os3" firstAttribute="centerY" secondItem="V9z-WP-6mg" secondAttribute="centerY" multiplier="0.6" id="z9U-R7-smW"/>
                                     <constraint firstItem="gRh-VQ-57i" firstAttribute="top" secondItem="V9z-WP-6mg" secondAttribute="top" constant="14" id="z9d-vW-Lxr"/>
                                 </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="VkR-ov-lPw"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=regular">
-                                    <mask key="constraints">
-                                        <exclude reference="JU4-GC-vjr"/>
-                                    </mask>
-                                </variation>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.0" blue="0.34509804844856262" alpha="1" colorSpace="calibratedRGB"/>
@@ -636,7 +645,7 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                             <constraint firstItem="yq7-1l-rO5" firstAttribute="centerX" secondItem="OvS-2d-WuL" secondAttribute="centerX" id="Zbk-so-y5z"/>
                             <constraint firstItem="V9z-WP-6mg" firstAttribute="centerX" secondItem="OvS-2d-WuL" secondAttribute="centerX" id="bb3-en-dS7"/>
                             <constraint firstAttribute="width" secondItem="V9z-WP-6mg" secondAttribute="width" constant="40" id="eO6-L6-e0b">
-                                <variation key="widthClass=regular" constant="250"/>
+                                <variation key="widthClass=regular" constant="200"/>
                             </constraint>
                             <constraint firstItem="bZw-jc-PYY" firstAttribute="centerX" secondItem="OvS-2d-WuL" secondAttribute="centerX" id="gnA-BO-O86"/>
                             <constraint firstItem="keh-ad-7Sj" firstAttribute="top" secondItem="jnX-Zh-1IU" secondAttribute="bottom" id="pm3-SW-4Rd"/>
@@ -653,10 +662,11 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                         <outlet property="headlineLabel" destination="6QU-g5-Hyl" id="boZ-NX-yUM"/>
                         <outlet property="headlineSparklingSpacerHeightToSuperViewRelation" destination="EmF-sl-9Iq" id="DDr-9D-kyj"/>
                         <outlet property="nextButton" destination="keh-ad-7Sj" id="9U6-Rr-HqM"/>
-                        <outlet property="phoneViewCenterYInContainer" destination="VkR-ov-lPw" id="Jos-S1-UYY"/>
                         <outlet property="phoneViewToSparklingViewHeightRelation" destination="4PY-eW-F2g" id="SEN-UG-umY"/>
                         <outlet property="phoneViewTopToSparklingViewTop" destination="z9d-vW-Lxr" id="Vg0-k9-ASf"/>
                         <outlet property="sparklingViewToSuperViewHeightRelation" destination="BFA-bE-wDG" id="adw-Dm-U3D"/>
+                        <outlet property="star6CenterYToSparklingViewCenterYRelation" destination="DpW-Sn-K4d" id="2fA-0z-kB3"/>
+                        <outlet property="star7CenterYToSparklingViewCenterYRelation" destination="AMe-vb-P17" id="9mA-8y-BiS"/>
                         <outlet property="tagsContainerViewHeight" destination="gVG-uD-cFW" id="S14-dF-jvw"/>
                         <outlet property="tagsContainerViewTopToPhoneViewBottom" destination="JU4-GC-vjr" id="gCb-v9-cdh"/>
                         <outletCollection property="sparklingStars" destination="s1t-sP-bgy" collectionClass="NSMutableArray" id="FnP-x1-09a"/>

@@ -35,8 +35,6 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         
         assert(viewModel != nil)
-        
-        setupForScreenSize(screenSize)
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -50,6 +48,12 @@ class LoginViewController: UIViewController {
         let duration: NSTimeInterval = 2
         animateSparklingStarsWithCycleDuration(duration)
     }
+    
+    override func viewWillLayoutSubviews() {
+        setupForScreenSize(screenSize)
+    }
+    
+    // MARK: UIView configuration
     
     private func configureContinueWithFacebookButton() {
         continueWithFacebookButton?.setTitle(viewModel?.continueWithFacebook?.uppercaseString, forState: .Normal)

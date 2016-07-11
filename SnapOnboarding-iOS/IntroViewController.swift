@@ -11,12 +11,14 @@ class IntroViewController: UIViewController {
     @IBOutlet private var headlineLabel: SnapOnboardingHeadlineLabel?
     @IBOutlet private(set) var sparklingStars: [UIImageView]?
     
+    @IBOutlet private var star6CenterYToSparklingViewCenterYRelation: NSLayoutConstraint?
+    @IBOutlet private var star7CenterYToSparklingViewCenterYRelation: NSLayoutConstraint?
+    
     @IBOutlet private var headlineSparklingSpacerHeightToSuperViewRelation: NSLayoutConstraint?
     @IBOutlet private var tagsContainerViewHeight: NSLayoutConstraint?
     @IBOutlet private var tagsContainerViewTopToPhoneViewBottom: NSLayoutConstraint?
     @IBOutlet private var phoneViewTopToSparklingViewTop: NSLayoutConstraint?
     @IBOutlet private var phoneViewToSparklingViewHeightRelation: NSLayoutConstraint?
-    @IBOutlet private var phoneViewCenterYInContainer: NSLayoutConstraint?
     @IBOutlet private var sparklingViewToSuperViewHeightRelation: NSLayoutConstraint?
     
     var delegate: IntroViewControllerDelegate?
@@ -34,8 +36,6 @@ class IntroViewController: UIViewController {
         super.viewDidLoad()
         
         assert(viewModel != nil)
-        
-        setupForScreenSize(screenSize)
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -46,6 +46,10 @@ class IntroViewController: UIViewController {
         
         let duration: NSTimeInterval = 2
         animateSparklingStarsWithCycleDuration(duration)
+    }
+    
+    override func viewWillLayoutSubviews() {
+        setupForScreenSize(screenSize)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -116,14 +120,13 @@ extension IntroViewController {
         headlineSparklingSpacerHeightToSuperViewRelation?.constant = 30
         tagsContainerViewHeight?.constant = 80
         tagsContainerViewTopToPhoneViewBottom?.active = false
-        //
+        
+        star6CenterYToSparklingViewCenterYRelation?.constant = 20
+        star7CenterYToSparklingViewCenterYRelation?.constant = 25
+        
         sparklingViewToSuperViewHeightRelation?.constant = -20
         phoneViewToSparklingViewHeightRelation?.constant = 20
         phoneViewTopToSparklingViewTop?.constant = 40
-        //
-        
-//        phoneViewCenterYInContainer?.constant = -100
-//        phoneViewCenterYInContainer?.active = true
     }
     
 }

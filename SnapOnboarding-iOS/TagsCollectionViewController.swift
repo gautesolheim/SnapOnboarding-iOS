@@ -11,6 +11,8 @@ class TagsCollectionViewController: SnapTagsCollectionViewController {
     private var spacing: CGFloat = 10
     private var insets = UIEdgeInsets(top: 8.5, left: 9.5, bottom: 8.5, right: 9.5)
     
+    lazy var screenSize: CGRect = UIScreen.mainScreen().bounds
+    
     func configureForViewModel(viewModel: TagsViewModel) {
         data = viewModel.data ?? [SnapTagRepresentation]()
     }
@@ -24,6 +26,10 @@ class TagsCollectionViewController: SnapTagsCollectionViewController {
         super.viewDidLoad()
         
         scrollEnabled = false
+    }
+    
+    override func viewWillLayoutSubviews() {
+        setupForScreenSize(screenSize)
     }
     
     func createConfiguration() -> SnapTagsViewConfiguration {

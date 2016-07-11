@@ -35,14 +35,16 @@ public class SnapOnboardingViewController: UIViewController {
         super.viewDidLoad()
         
         assert(viewModel != nil)
-        
-        setupForScreenSize(screenSize)
     }
     
     public override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
         configureTermsAndConditionsLabel()
+    }
+    
+    override public func viewWillLayoutSubviews() {
+        setupForScreenSize(screenSize)
     }
     
     private func dismiss() {
