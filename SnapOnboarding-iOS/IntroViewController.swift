@@ -135,7 +135,7 @@ extension IntroViewController {
         tagsContainerViewHeight?.constant = 80
         
         if size.width <= 320 {
-            sparklingViewToSuperViewHeightRelation?.constant = -80
+            sparklingViewToSuperViewHeightRelation?.constant = -110
             phoneViewToSparklingViewHeightRelation?.constant = -20
         } else {
             sparklingViewTopToHeadlineSparklingSpacerBottom?.constant = 10

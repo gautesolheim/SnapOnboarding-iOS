@@ -18,6 +18,7 @@ class LocationViewController: UIViewController {
     @IBOutlet private(set) var sparklingStars: [UIImageView]?
     
     @IBOutlet private var enableLocationServicesButtonWidth: NSLayoutConstraint?
+    @IBOutlet private var sparklingViewTopToHeadlineSparklingSpacerBottom: NSLayoutConstraint?
     @IBOutlet private var sparklingViewToSuperViewHeightRelation: NSLayoutConstraint?
     @IBOutlet private var notNowButtonBottomToSuperViewBottom: NSLayoutConstraint?
     @IBOutlet private var willAskLaterLabelBottomToSuperViewBottom: NSLayoutConstraint?
@@ -232,10 +233,21 @@ extension LocationViewController {
     
     func setupForIpadPortrait(size: CGSize) {
         configureNextButtonAndHeadlineLabelForIpad()
+        
+        sparklingViewToSuperViewHeightRelation?.constant = -20
+        
+        if size.width <= 320 {
+            sparklingViewTopToHeadlineSparklingSpacerBottom?.constant = 90
+        } else {
+            sparklingViewTopToHeadlineSparklingSpacerBottom?.constant = 70
+        }
     }
     
     func setupForIpadLandscape(size: CGSize) {
         configureNextButtonAndHeadlineLabelForIpad()
+        
+        sparklingViewToSuperViewHeightRelation?.constant = 20
+        sparklingViewTopToHeadlineSparklingSpacerBottom?.constant = 20
     }
     
     func setupForIpadProPortrait(size: CGSize) {
