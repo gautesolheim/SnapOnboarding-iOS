@@ -11,6 +11,7 @@ class IntroViewController: UIViewController {
     @IBOutlet private(set) var headlineLabel: SnapOnboardingHeadlineLabel?
     @IBOutlet private(set) var sparklingStars: [UIImageView]?
     
+    @IBOutlet private var topSpacerToSuperViewHeightRelation: NSLayoutConstraint?
     @IBOutlet private var sparklingViewTopToHeadlineSparklingSpacerBottom: NSLayoutConstraint?
     @IBOutlet private var tagsContainerViewHeight: NSLayoutConstraint?
     @IBOutlet private var tagsContainerViewTopToPhoneViewBottom: NSLayoutConstraint?
@@ -144,11 +145,38 @@ extension IntroViewController {
     }
     
     func setupForIpadProPortrait(size: CGSize) {
-        setupForIpadPortrait(size)
+        configureNextButtonAndHeadlineLabelForIpadPro()
+        
+        phoneViewTopToSparklingViewTop?.constant = 50
+        tagsContainerViewHeight?.constant = 90
+        
+        if size.width <= 375 {
+            topSpacerToSuperViewHeightRelation?.constant = 20
+            sparklingViewToSuperViewHeightRelation?.constant = -260
+            phoneViewToSparklingViewHeightRelation?.constant = -20
+        } else {
+            sparklingViewTopToHeadlineSparklingSpacerBottom?.constant = 40
+            sparklingViewToSuperViewHeightRelation?.constant = -100
+            phoneViewToSparklingViewHeightRelation?.constant = 30
+        }
     }
     
     func setupForIpadProLandscape(size: CGSize) {
-        setupForIpadLandscape(size)
+        configureNextButtonAndHeadlineLabelForIpadPro()
+        
+        phoneViewTopToSparklingViewTop?.constant = 30
+        tagsContainerViewHeight?.constant = 90
+        
+        if size.width <= 375 {
+            headlineLabel?.font = SnapFonts.gothamRoundedBookOfSize(30)
+            topSpacerToSuperViewHeightRelation?.constant = 10
+            sparklingViewToSuperViewHeightRelation?.constant = -160
+            phoneViewToSparklingViewHeightRelation?.constant = -20
+        } else {
+            sparklingViewTopToHeadlineSparklingSpacerBottom?.constant = 10
+            sparklingViewToSuperViewHeightRelation?.constant = -50
+            phoneViewToSparklingViewHeightRelation?.constant = 30
+        }
     }
     
 }

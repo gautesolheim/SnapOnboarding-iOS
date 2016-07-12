@@ -674,6 +674,7 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                         <outlet property="sparklingViewTopToHeadlineSparklingSpacerBottom" destination="Lu2-iF-Bh2" id="mxc-wd-26i"/>
                         <outlet property="tagsContainerViewHeight" destination="gVG-uD-cFW" id="S14-dF-jvw"/>
                         <outlet property="tagsContainerViewTopToPhoneViewBottom" destination="JU4-GC-vjr" id="gCb-v9-cdh"/>
+                        <outlet property="topSpacerToSuperViewHeightRelation" destination="vDU-gf-Gzo" id="nc6-sr-fUx"/>
                         <outletCollection property="sparklingStars" destination="s1t-sP-bgy" collectionClass="NSMutableArray" id="FnP-x1-09a"/>
                         <outletCollection property="sparklingStars" destination="cRw-Dt-0k7" collectionClass="NSMutableArray" id="Svm-Oh-AXd"/>
                         <outletCollection property="sparklingStars" destination="E0z-Ye-6wd" collectionClass="NSMutableArray" id="cCq-3h-Q5G"/>

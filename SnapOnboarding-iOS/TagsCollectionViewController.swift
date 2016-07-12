@@ -78,15 +78,33 @@ class TagsCollectionViewController: SnapTagsCollectionViewController {
 extension TagsCollectionViewController {
     
     func setupForIpadPortrait(size: CGSize) {
+        setupForIpad()
+    }
+    
+    func setupForIpadLandscape(size: CGSize) {
+        setupForIpad()
+    }
+    
+    func setupForIpadProPortrait(size: CGSize) {
+        setupForIpadPro()
+    }
+    
+    func setupForIpadProLandscape(size: CGSize) {
+        setupForIpadPro()
+    }
+    
+    // MARK: Helpers
+    
+    private func setupForIpad() {
         fontSize = 15
         spacing = 12
         insets = UIEdgeInsets(top: 9.5, left: 10.5, bottom: 9.5, right: 10.5)
     }
     
-    func setupForIpadLandscape(size: CGSize) {
-        fontSize = 15
-        spacing = 12
-        insets = UIEdgeInsets(top: 9.5, left: 10.5, bottom: 9.5, right: 10.5)
+    private func setupForIpadPro() {
+        fontSize = 17
+        spacing = 14
+        insets = UIEdgeInsets(top: 10.5, left: 11.5, bottom: 10.5, right: 11.5)
     }
     
 }

@@ -9,6 +9,7 @@ protocol HasNextButtonAndHeadlineLabel: class {
     func configureNextButtonAndHeadlineLabelFor3_5Inch()
     func configureNextButtonAndHeadlineLabelFor4_0Inch()
     func configureNextButtonAndHeadlineLabelForIpad()
+    func configureNextButtonAndHeadlineLabelForIpadPro()
     
 }
 
@@ -31,6 +32,14 @@ extension HasNextButtonAndHeadlineLabel {
         nextButton?.contentEdgeInsets = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 23)
         
         headlineLabel?.font = SnapFonts.gothamRoundedBookOfSize(26)
+    }
+    
+    func configureNextButtonAndHeadlineLabelForIpadPro() {
+        nextButton?.titleLabel?.font = SnapFonts.gothamRoundedMediumOfSize(20)
+        nextButton?.contentEdgeInsets = UIEdgeInsets(top: 25, left: 25, bottom: 25, right: 30)
+        
+        headlineLabel?.font = SnapFonts.gothamRoundedBookOfSize(34)
+        headlineLabel?.lineSpacin = 10
     }
     
 }

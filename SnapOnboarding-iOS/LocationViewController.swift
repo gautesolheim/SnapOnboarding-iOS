@@ -233,6 +233,18 @@ extension LocationViewController {
     func setupForIpadPortrait(size: CGSize) {
         configureNextButtonAndHeadlineLabelForIpad()
     }
+    
+    func setupForIpadLandscape(size: CGSize) {
+        configureNextButtonAndHeadlineLabelForIpad()
+    }
+    
+    func setupForIpadProPortrait(size: CGSize) {
+        configureNextButtonAndHeadlineLabelForIpadPro()
+    }
+    
+    func setupForIpadProLandscape(size: CGSize) {
+        configureNextButtonAndHeadlineLabelForIpadPro()
+    }
 
 }
 
