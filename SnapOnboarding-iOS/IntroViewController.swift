@@ -12,7 +12,6 @@ class IntroViewController: UIViewController {
     @IBOutlet private(set) var sparklingStars: [UIImageView]?
     
     @IBOutlet private var star6CenterYToSparklingViewCenterYRelation: NSLayoutConstraint?
-    @IBOutlet private var star7CenterYToSparklingViewCenterYRelation: NSLayoutConstraint?
     
     @IBOutlet private var sparklingViewTopToHeadlineSparklingSpacerBottom: NSLayoutConstraint?
     @IBOutlet private var tagsContainerViewHeight: NSLayoutConstraint?
@@ -123,7 +122,6 @@ extension IntroViewController {
         tagsContainerViewTopToPhoneViewBottom?.active = false
         
         star6CenterYToSparklingViewCenterYRelation?.constant = 20
-        star7CenterYToSparklingViewCenterYRelation?.constant = 25
         
         sparklingViewToSuperViewHeightRelation?.constant = -20
         sparklingViewTopToHeadlineSparklingSpacerBottom?.constant = 30
