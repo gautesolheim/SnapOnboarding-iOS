@@ -49,7 +49,7 @@ class LocationViewController: UIViewController {
         
         assert(viewModel != nil)
         
-        setupForScreenSize(UIScreen.mainScreen().bounds)
+        setupForScreenSize(SnapOnboardingViewController.screenSize)
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -67,7 +67,7 @@ class LocationViewController: UIViewController {
     override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransitionToSize(size, withTransitionCoordinator: coordinator)
         
-        setupForScreenSize(UIScreen.mainScreen().bounds)
+        setupForScreenSize(size)
     }
     
     // MARK: UIView configuration
@@ -232,7 +232,7 @@ extension LocationViewController {
         sparklingViewToSuperViewHeightRelation?.constant = -20
     }
     
-    func setupForIpadPortrait() {
+    func setupForIpadPortrait(size: CGSize) {
         nextButton?.titleLabel?.font = SnapFonts.gothamRoundedMediumOfSize(16)
         nextButton?.contentEdgeInsets = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 23)
         

@@ -451,9 +451,9 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Å legge ut salg er raskt og enkelt. Vi tagger og kategoriserer annonser med smart bildegjenkjenning." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6QU-g5-Hyl" userLabel="headlineLabel" customClass="SnapOnboardingHeadlineLabel" customModule="SnapOnboarding_iOS" customModuleProvider="target">
-                                <rect key="frame" x="20" y="40" width="560" height="57"/>
+                                <rect key="frame" x="25" y="40" width="550" height="88"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="700" id="cbA-I7-Ipr"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="550" id="cbA-I7-Ipr"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="21"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -465,13 +465,13 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bZw-jc-PYY" userLabel="headlineSparklingSpacer">
-                                <rect key="frame" x="180" y="97" width="240" height="23"/>
+                                <rect key="frame" x="180" y="128" width="240" height="23"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="Ai5-Uq-dY2"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yq7-1l-rO5" userLabel="bottomSpacer">
-                                <rect key="frame" x="180" y="436" width="240" height="66"/>
+                                <rect key="frame" x="180" y="467" width="240" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="c6p-Z5-HTD"/>
                                 </constraints>
@@ -484,7 +484,7 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V9z-WP-6mg" userLabel="sparklingView">
-                                <rect key="frame" x="50" y="120" width="500" height="316"/>
+                                <rect key="frame" x="50" y="151" width="500" height="316"/>
                                 <subviews>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Anb-9C-0O1" userLabel="tagsContainerView">
                                         <rect key="frame" x="0.0" y="228" width="500" height="70"/>
@@ -599,7 +599,7 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                                     <constraint firstItem="fgQ-qf-9pL" firstAttribute="centerX" secondItem="V9z-WP-6mg" secondAttribute="centerX" multiplier="0.8" id="1xu-Cn-9Ve"/>
                                     <constraint firstItem="s1t-sP-bgy" firstAttribute="trailing" secondItem="gRh-VQ-57i" secondAttribute="leading" constant="7" id="1yo-NX-Yaf"/>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="500" id="2f4-Qy-5Qk"/>
-                                    <constraint firstItem="gRh-VQ-57i" firstAttribute="height" secondItem="V9z-WP-6mg" secondAttribute="height" multiplier="0.58" id="4PY-eW-F2g"/>
+                                    <constraint firstItem="gRh-VQ-57i" firstAttribute="height" secondItem="V9z-WP-6mg" secondAttribute="height" multiplier="0.58" priority="751" id="4PY-eW-F2g"/>
                                     <constraint firstItem="Anb-9C-0O1" firstAttribute="top" relation="greaterThanOrEqual" secondItem="X9U-Te-nxi" secondAttribute="bottom" constant="5" id="5no-bM-2Uk"/>
                                     <constraint firstItem="Anb-9C-0O1" firstAttribute="leading" secondItem="V9z-WP-6mg" secondAttribute="leading" id="81F-tg-Ls5"/>
                                     <constraint firstItem="nua-ml-mTp" firstAttribute="centerY" secondItem="V9z-WP-6mg" secondAttribute="centerY" multiplier="1.4" priority="750" id="AMe-vb-P17"/>
@@ -628,6 +628,7 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                                     <constraint firstItem="X9U-Te-nxi" firstAttribute="centerX" secondItem="V9z-WP-6mg" secondAttribute="centerX" multiplier="1.23" id="lSr-BN-E3O"/>
                                     <constraint firstItem="Anb-9C-0O1" firstAttribute="top" relation="greaterThanOrEqual" secondItem="nua-ml-mTp" secondAttribute="bottom" id="lbd-yH-1BO"/>
                                     <constraint firstItem="s1t-sP-bgy" firstAttribute="centerY" secondItem="V9z-WP-6mg" secondAttribute="centerY" multiplier="0.04" id="nD3-6Z-voj"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" secondItem="gRh-VQ-57i" secondAttribute="width" priority="999" constant="60" id="ocL-ZX-K2L"/>
                                     <constraint firstItem="RJR-xC-x7D" firstAttribute="leading" secondItem="gRh-VQ-57i" secondAttribute="trailing" constant="34" id="vx4-Tm-voS"/>
                                     <constraint firstItem="E0z-Ye-6wd" firstAttribute="centerY" secondItem="V9z-WP-6mg" secondAttribute="centerY" multiplier="0.4" id="xaa-9B-zOt"/>
                                     <constraint firstItem="7Cw-8k-Os3" firstAttribute="centerY" secondItem="V9z-WP-6mg" secondAttribute="centerY" multiplier="0.6" id="z9U-R7-smW"/>
@@ -648,7 +649,7 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                             <constraint firstAttribute="trailing" secondItem="keh-ad-7Sj" secondAttribute="trailing" id="Vxe-Qr-13W"/>
                             <constraint firstItem="yq7-1l-rO5" firstAttribute="centerX" secondItem="OvS-2d-WuL" secondAttribute="centerX" id="Zbk-so-y5z"/>
                             <constraint firstItem="V9z-WP-6mg" firstAttribute="centerX" secondItem="OvS-2d-WuL" secondAttribute="centerX" id="bb3-en-dS7"/>
-                            <constraint firstAttribute="width" secondItem="V9z-WP-6mg" secondAttribute="width" priority="750" constant="40" id="eO6-L6-e0b">
+                            <constraint firstAttribute="width" secondItem="V9z-WP-6mg" secondAttribute="width" priority="999" constant="40" id="eO6-L6-e0b">
                                 <variation key="widthClass=regular" constant="200"/>
                             </constraint>
                             <constraint firstItem="bZw-jc-PYY" firstAttribute="centerX" secondItem="OvS-2d-WuL" secondAttribute="centerX" id="gnA-BO-O86"/>
@@ -664,11 +665,11 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                     </view>
                     <connections>
                         <outlet property="headlineLabel" destination="6QU-g5-Hyl" id="boZ-NX-yUM"/>
-                        <outlet property="headlineSparklingSpacerHeightToSuperViewRelation" destination="EmF-sl-9Iq" id="DDr-9D-kyj"/>
                         <outlet property="nextButton" destination="keh-ad-7Sj" id="9U6-Rr-HqM"/>
                         <outlet property="phoneViewToSparklingViewHeightRelation" destination="4PY-eW-F2g" id="SEN-UG-umY"/>
                         <outlet property="phoneViewTopToSparklingViewTop" destination="z9d-vW-Lxr" id="Vg0-k9-ASf"/>
                         <outlet property="sparklingViewToSuperViewHeightRelation" destination="BFA-bE-wDG" id="adw-Dm-U3D"/>
+                        <outlet property="sparklingViewTopToHeadlineSparklingSpacerBottom" destination="Lu2-iF-Bh2" id="mxc-wd-26i"/>
                         <outlet property="star6CenterYToSparklingViewCenterYRelation" destination="DpW-Sn-K4d" id="2fA-0z-kB3"/>
                         <outlet property="star7CenterYToSparklingViewCenterYRelation" destination="AMe-vb-P17" id="9mA-8y-BiS"/>
                         <outlet property="tagsContainerViewHeight" destination="gVG-uD-cFW" id="S14-dF-jvw"/>

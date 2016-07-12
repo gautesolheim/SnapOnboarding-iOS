@@ -34,7 +34,7 @@ class IntroViewControllerSnapshots: SnapFBSnapshotBase {
 extension IntroViewController {
     
     override func viewWillLayoutSubviews() {
-        setupForScreenSize(parentViewController!.view.frame)
+        setupForScreenSize(parentViewController!.view.frame.size)
     }
     
 }

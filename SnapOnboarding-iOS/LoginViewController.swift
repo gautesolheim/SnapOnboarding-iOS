@@ -34,7 +34,7 @@ class LoginViewController: UIViewController {
         
         assert(viewModel != nil)
         
-        setupForScreenSize(UIScreen.mainScreen().bounds)
+        setupForScreenSize(SnapOnboardingViewController.screenSize)
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -52,7 +52,7 @@ class LoginViewController: UIViewController {
     override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransitionToSize(size, withTransitionCoordinator: coordinator)
         
-        setupForScreenSize(UIScreen.mainScreen().bounds)
+        setupForScreenSize(size)
     }
     
     // MARK: UIView configuration

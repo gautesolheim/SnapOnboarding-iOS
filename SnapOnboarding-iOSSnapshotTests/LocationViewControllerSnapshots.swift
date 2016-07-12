@@ -34,7 +34,7 @@ class LocationViewControllerSnapshots: SnapFBSnapshotBase {
 extension LocationViewController {
     
     override func viewWillLayoutSubviews() {
-        setupForScreenSize(parentViewController!.view.frame)
+        setupForScreenSize(parentViewController!.view.frame.size)
     }
     
 }

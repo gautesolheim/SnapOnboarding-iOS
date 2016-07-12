@@ -5,50 +5,54 @@ import UIKit
     optional func setupFor4_0InchPortrait()
     optional func setupFor4_7InchPortrait()
     optional func setupFor5_5InchPortrait()
-    optional func setupForIpadPortrait()
-    optional func setupForIpadProPortrait()
+    optional func setupForIpadPortrait(size: CGSize)
+    optional func setupForIpadProPortrait(size: CGSize)
     
-    optional func setupForIpadLandscape()
-    optional func setupForIpadProLandscape()
+    optional func setupForIpadLandscape(size: CGSize)
+    optional func setupForIpadProLandscape(size: CGSize)
 }
 
 extension UIViewController: ScreenSizesProtocol {
     
-    // @param: UIScreen.mainScreen().bounds (Swift 3: UIScreen.main().bounds)
-    public func setupForScreenSize(size: CGRect) {
-        print("screen-size: \(size)")
+    class var screenSize: CGSize {
+        // Swift 3: UIScreen.main().bounds.size
+        return UIScreen.mainScreen().bounds.size
+    }
+    
+    // @param: screenSize
+    public func setupForScreenSize(size: CGSize) {
         let mySelf = self as ScreenSizesProtocol
-        let height = size.height
+        let width = size.width
         
-        switch(size.width) {
-        case 320 where height == 480:
+        switch size.height {
+        case 480 where width == 320:
             // iPhone 4, 4s PORTRAIT
             mySelf.setupFor3_5InchPortrait?()
-        case 320 where height == 568:
+        case 568 where width == 320:
             // iPhone 5, 5s, SE, iPod touch 5g PORTRAIT
             mySelf.setupFor4_0InchPortrait?()
-        case 375 where height == 667:
+        case 667 where width == 375:
             // iPhone 6, 6s PORTRAIT
             mySelf.setupFor4_7InchPortrait?()
-        case 414 where height == 736:
+        case 736 where width == 414:
             // iPhone 6+, 6s+ PORTRAIT
             mySelf.setupFor5_5InchPortrait?()
-        case 768 where height == 1024:
+        case 1024 where width == 768 || width == 438 || width == 320:
             // iPad Mini, iPad Air PORTRAIT
-            mySelf.setupForIpadPortrait?()
-        case 1024 where height == 1366:
+            mySelf.setupForIpadPortrait?(size)
+        case 1366:
             // iPad Pro 12,9" PORTRAIT
-            mySelf.setupForIpadProPortrait?()
-            
-        case 1024 where height == 768:
+            mySelf.setupForIpadProPortrait?(size)
+        
+        case 768:
             // iPad Mini, iPad Air LANDSCAPE
-            mySelf.setupForIpadLandscape?()
-        case 1366 where height == 1024:
+            mySelf.setupForIpadLandscape?(size)
+        case 1024:
             // iPad Pro 12,9" LANDSCAPE
-            mySelf.setupForIpadProLandscape?()
-            
+            mySelf.setupForIpadProLandscape?(size)
         default: break
         }
+        
     }
     
 }

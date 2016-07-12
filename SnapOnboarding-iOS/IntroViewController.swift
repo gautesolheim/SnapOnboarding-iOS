@@ -14,7 +14,7 @@ class IntroViewController: UIViewController {
     @IBOutlet private var star6CenterYToSparklingViewCenterYRelation: NSLayoutConstraint?
     @IBOutlet private var star7CenterYToSparklingViewCenterYRelation: NSLayoutConstraint?
     
-    @IBOutlet private var headlineSparklingSpacerHeightToSuperViewRelation: NSLayoutConstraint?
+    @IBOutlet private var sparklingViewTopToHeadlineSparklingSpacerBottom: NSLayoutConstraint?
     @IBOutlet private var tagsContainerViewHeight: NSLayoutConstraint?
     @IBOutlet private var tagsContainerViewTopToPhoneViewBottom: NSLayoutConstraint?
     @IBOutlet private var phoneViewTopToSparklingViewTop: NSLayoutConstraint?
@@ -35,7 +35,7 @@ class IntroViewController: UIViewController {
         
         assert(viewModel != nil)
         
-        setupForScreenSize(UIScreen.mainScreen().bounds)
+        setupForScreenSize(SnapOnboardingViewController.screenSize)
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -51,8 +51,7 @@ class IntroViewController: UIViewController {
     override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransitionToSize(size, withTransitionCoordinator: coordinator)
         
-        print("will-transition-to-size")
-        setupForScreenSize(UIScreen.mainScreen().bounds)
+        setupForScreenSize(size)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -115,12 +114,11 @@ extension IntroViewController {
         headlineLabel?.lineSpacin = 5
     }
     
-    func setupForIpadPortrait() {
+    func setupForIpadPortrait(size: CGSize) {
         nextButton?.titleLabel?.font = SnapFonts.gothamRoundedMediumOfSize(16)
         nextButton?.contentEdgeInsets = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 23)
 
         headlineLabel?.font = SnapFonts.gothamRoundedBookOfSize(26)
-        headlineSparklingSpacerHeightToSuperViewRelation?.constant = 30
         tagsContainerViewHeight?.constant = 80
         tagsContainerViewTopToPhoneViewBottom?.active = false
         
@@ -128,20 +126,37 @@ extension IntroViewController {
         star7CenterYToSparklingViewCenterYRelation?.constant = 25
         
         sparklingViewToSuperViewHeightRelation?.constant = -20
+        sparklingViewTopToHeadlineSparklingSpacerBottom?.constant = 30
         phoneViewToSparklingViewHeightRelation?.constant = 20
         phoneViewTopToSparklingViewTop?.constant = 40
+        
+        if size.width <= 320 {
+            sparklingViewToSuperViewHeightRelation?.constant = -120
+            sparklingViewTopToHeadlineSparklingSpacerBottom?.constant = 20
+        }
     }
     
-    func setupForIpadLandscape() {
-        setupForIpadPortrait()
+    func setupForIpadLandscape(size: CGSize) {
+        setupForIpadPortrait(size)
+        
+        star6CenterYToSparklingViewCenterYRelation?.constant = 10
+        sparklingViewToSuperViewHeightRelation?.constant = 0
+        sparklingViewTopToHeadlineSparklingSpacerBottom?.constant = 0
         phoneViewTopToSparklingViewTop?.constant = 20
         
-        if view.frame.width == UIScreen.mainScreen().bounds.width {
-            sparklingViewToSuperViewHeightRelation?.constant = 20
-        } else {
-            star6CenterYToSparklingViewCenterYRelation?.constant = 10
-            phoneViewToSparklingViewHeightRelation?.constant = 10
+        if size.width <= 320 {
+            star6CenterYToSparklingViewCenterYRelation?.constant = -10
+            sparklingViewToSuperViewHeightRelation?.constant = -80
+            phoneViewToSparklingViewHeightRelation?.constant = -20
         }
+    }
+    
+    func setupForIpadProPortrait(size: CGSize) {
+        setupForIpadPortrait(size)
+    }
+    
+    func setupForIpadProLandscape(size: CGSize) {
+        setupForIpadLandscape(size)
     }
     
 }

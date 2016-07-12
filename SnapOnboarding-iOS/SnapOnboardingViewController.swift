@@ -34,7 +34,7 @@ public class SnapOnboardingViewController: UIViewController {
         
         assert(viewModel != nil)
         
-        setupForScreenSize(UIScreen.mainScreen().bounds)
+        setupForScreenSize(SnapOnboardingViewController.screenSize)
     }
     
     public override func viewWillAppear(animated: Bool) {
@@ -107,7 +107,7 @@ public class SnapOnboardingViewController: UIViewController {
     override public func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransitionToSize(size, withTransitionCoordinator: coordinator)
         
-        setupForScreenSize(UIScreen.mainScreen().bounds)
+        setupForScreenSize(size)
         
         let currentPage = pageControl?.currentPage ?? 0
         coordinator.animateAlongsideTransition({ _ in

@@ -34,7 +34,7 @@ class LoginViewControllerSnapshots: SnapFBSnapshotBase {
 extension LoginViewController {
     
     override func viewWillLayoutSubviews() {
-        setupForScreenSize(parentViewController!.view.frame)
+        setupForScreenSize(parentViewController!.view.frame.size)
     }
     
 }
