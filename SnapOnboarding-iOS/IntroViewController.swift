@@ -137,6 +137,8 @@ extension IntroViewController {
             sparklingViewToSuperViewHeightRelation?.constant = -80
             phoneViewToSparklingViewHeightRelation?.constant = -20
         } else {
+            sparklingViewTopToHeadlineSparklingSpacerBottom?.constant = 10
+            sparklingViewToSuperViewHeightRelation?.constant = 20
             phoneViewToSparklingViewHeightRelation?.constant = 20
         }
     }
