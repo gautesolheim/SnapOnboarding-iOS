@@ -252,10 +252,26 @@ extension LocationViewController {
     
     func setupForIpadProPortrait(size: CGSize) {
         configureNextButtonAndHeadlineLabelForIpadPro()
+        
+        sparklingViewToSuperViewHeightRelation?.constant = -30
+        
+        if size.width <= 375 {
+            sparklingViewTopToHeadlineSparklingSpacerBottom?.constant = 160
+        } else {
+            sparklingViewTopToHeadlineSparklingSpacerBottom?.constant = 90
+        }
     }
     
     func setupForIpadProLandscape(size: CGSize) {
         configureNextButtonAndHeadlineLabelForIpadPro()
+        
+        sparklingViewToSuperViewHeightRelation?.constant = 20
+        
+        if size.width <= 375 {
+            sparklingViewTopToHeadlineSparklingSpacerBottom?.constant = 55
+        } else {
+            sparklingViewTopToHeadlineSparklingSpacerBottom?.constant = 20
+        }
     }
 
 }
