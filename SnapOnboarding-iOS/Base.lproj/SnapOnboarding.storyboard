@@ -895,7 +895,7 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                             <constraint firstAttribute="width" secondItem="DIb-IE-TZ2" secondAttribute="width" constant="40" id="NTd-cK-xBM"/>
                             <constraint firstItem="8TP-as-s39" firstAttribute="centerX" secondItem="JFE-Tf-2Hq" secondAttribute="centerX" id="SBG-cd-VEF"/>
                             <constraint firstItem="y4x-Xm-ZL4" firstAttribute="centerX" secondItem="JFE-Tf-2Hq" secondAttribute="centerX" id="UUf-nU-PGL"/>
-                            <constraint firstItem="8TP-as-s39" firstAttribute="height" secondItem="y4x-Xm-ZL4" secondAttribute="height" multiplier="0.86" id="Ujr-iu-mLH"/>
+                            <constraint firstItem="8TP-as-s39" firstAttribute="height" secondItem="y4x-Xm-ZL4" secondAttribute="height" multiplier="0.86" priority="999" id="Ujr-iu-mLH"/>
                             <constraint firstItem="DIb-IE-TZ2" firstAttribute="centerX" secondItem="JFE-Tf-2Hq" secondAttribute="centerX" id="bO2-Nr-jqM"/>
                             <constraint firstItem="iZI-f9-ZQP" firstAttribute="top" secondItem="hVU-s5-rUl" secondAttribute="bottom" constant="16" id="gwF-82-QbO"/>
                             <constraint firstItem="y4x-Xm-ZL4" firstAttribute="top" secondItem="6VU-A7-cWa" secondAttribute="bottom" id="hAd-WB-P3o"/>
@@ -913,7 +913,8 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                         <outlet property="continueWithInstagramButtonWidth" destination="h7t-YZ-m0x" id="jmw-Wg-m0K"/>
                         <outlet property="skipLoginButton" destination="LxE-Ac-dOb" id="IeJ-Gz-WQh"/>
                         <outlet property="skipLoginButtonBottomToSuperViewBottom" destination="uJ2-pc-QXe" id="BKn-w1-rt1"/>
-                        <outlet property="topSpacerHeight" destination="jL5-vl-r0V" id="a94-91-UzV"/>
+                        <outlet property="sparklingContinueSpacerToTopSpacerHeightRelation" destination="Ujr-iu-mLH" id="RLW-w0-rob"/>
+                        <outlet property="topSpacerHeight" destination="jL5-vl-r0V" id="UD3-AH-kVQ"/>
                         <outletCollection property="sparklingStars" destination="vj6-hP-y2W" collectionClass="NSMutableArray" id="LOm-zl-5JI"/>
                         <outletCollection property="sparklingStars" destination="eZ7-Pl-CKs" collectionClass="NSMutableArray" id="kRH-nh-SiX"/>
                         <outletCollection property="sparklingStars" destination="koN-v6-nc7" collectionClass="NSMutableArray" id="EYk-49-gih"/>

@@ -7,9 +7,10 @@ class LoginViewController: UIViewController {
     @IBOutlet private var skipLoginButton: UIButton?
     @IBOutlet private(set) var sparklingStars: [UIImageView]?
     
+    @IBOutlet private var topSpacerHeight: NSLayoutConstraint?
+    @IBOutlet private var sparklingContinueSpacerToTopSpacerHeightRelation: NSLayoutConstraint?
     @IBOutlet private var continueWithFacebookButtonWidth: NSLayoutConstraint?
     @IBOutlet private var continueWithInstagramButtonWidth: NSLayoutConstraint?
-    @IBOutlet private var topSpacerHeight: NSLayoutConstraint?
     @IBOutlet private var skipLoginButtonBottomToSuperViewBottom: NSLayoutConstraint?
     
     @IBAction func continueWithFacebookButtonTapped(sender: UIButton) {
@@ -112,6 +113,38 @@ extension LoginViewController {
     
     func setupFor4_0InchPortrait() {
         topSpacerHeight?.constant = 27
+    }
+    
+    func setupForIpadPortrait(size: CGSize) {
+        topSpacerHeight?.constant = 150
+        
+        if size.width <= 320 {
+            topSpacerHeight?.constant = 210
+        }
+    }
+    
+    func setupForIpadLandscape(size: CGSize) {
+        topSpacerHeight?.constant = 60
+        
+        if size.width <= 320 {
+            topSpacerHeight?.constant = 120
+        }
+    }
+    
+    func setupForIpadProPortrait(size: CGSize) {
+        topSpacerHeight?.constant = 250
+        
+        if size.width <= 375 {
+            topSpacerHeight?.constant = 360
+        }
+    }
+    
+    func setupForIpadProLandscape(size: CGSize) {
+        topSpacerHeight?.constant = 140
+        
+        if size.width <= 375 {
+            topSpacerHeight?.constant = 270
+        }
     }
     
 }
