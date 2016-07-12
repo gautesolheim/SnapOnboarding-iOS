@@ -10,8 +10,8 @@ enum LocationServicesStatus {
 
 class LocationViewController: UIViewController {
     
-    @IBOutlet private var nextButton: UIButton?
-    @IBOutlet private var headlineLabel: SnapOnboardingHeadlineLabel?
+    @IBOutlet private(set) var nextButton: UIButton?
+    @IBOutlet private(set) var headlineLabel: SnapOnboardingHeadlineLabel?
     @IBOutlet private var enableLocationServicesButton: UIButton?
     @IBOutlet private var notNowButton: UIButton?
     @IBOutlet private var willAskLaterLabel: SnapOnboardingHeadlineLabel?
@@ -206,15 +206,16 @@ extension LocationViewController: LocationViewControllerProtocol {
 
 extension LocationViewController: HasSparklingStars {}
 
+// MARK: - HasNextButtonAndHeadlineLabel
+
+extension LocationViewController: HasNextButtonAndHeadlineLabel {}
+
 // MARK: - ScreenSizesProtocol
 
 extension LocationViewController {
     
     func setupFor3_5InchPortrait() {
-        nextButton?.contentEdgeInsets.top = 10
-
-        headlineLabel?.font = SnapFonts.gothamRoundedBookOfSize(17)
-        headlineLabel?.lineSpacin = 4
+        configureNextButtonAndHeadlineLabelFor3_5Inch()
 
         willAskLaterLabel?.font = SnapFonts.gothamRoundedBookOfSize(14)
 
@@ -224,8 +225,7 @@ extension LocationViewController {
     }
     
     func setupFor4_0InchPortrait() {
-        headlineLabel?.font = SnapFonts.gothamRoundedBookOfSize(18)
-        headlineLabel?.lineSpacin = 5
+        configureNextButtonAndHeadlineLabelFor4_0Inch()
         
         willAskLaterLabel?.font = SnapFonts.gothamRoundedBookOfSize(14)
         
@@ -233,10 +233,7 @@ extension LocationViewController {
     }
     
     func setupForIpadPortrait(size: CGSize) {
-        nextButton?.titleLabel?.font = SnapFonts.gothamRoundedMediumOfSize(16)
-        nextButton?.contentEdgeInsets = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 23)
-        
-        headlineLabel?.font = SnapFonts.gothamRoundedBookOfSize(26)
+        configureNextButtonAndHeadlineLabelForIpad()
     }
 
 }

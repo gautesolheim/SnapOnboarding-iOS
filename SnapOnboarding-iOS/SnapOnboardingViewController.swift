@@ -166,17 +166,6 @@ extension SnapOnboardingViewController: SnapOnboardingViewControllerProtocol {
     
 }
 
-// MARK: - ScreenSizesProtocol
-
-extension SnapOnboardingViewController {
-    
-    func setupFor3_5InchPortrait() {
-        pageControlBottomToTermsAndConditionsTop?.constant = 11
-        termsAndConditionsLabelBottomToSuperViewBottom?.constant = 11
-    }
-    
-}
-
 // MARK: - UIScrollViewDelegate
 
 extension SnapOnboardingViewController: UIScrollViewDelegate {
@@ -241,6 +230,17 @@ extension SnapOnboardingViewController: LoginViewControllerDelegate {
     
     func skipLoginButtonTapped() {
         dismiss()
+    }
+    
+}
+
+// MARK: - ScreenSizesProtocol
+
+extension SnapOnboardingViewController {
+    
+    func setupFor3_5InchPortrait() {
+        pageControlBottomToTermsAndConditionsTop?.constant = 11
+        termsAndConditionsLabelBottomToSuperViewBottom?.constant = 11
     }
     
 }
