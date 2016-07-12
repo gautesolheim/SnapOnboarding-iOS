@@ -568,7 +568,7 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="X9U-Te-nxi" userLabel="star6">
-                                        <rect key="frame" x="301" y="209" width="12" height="14"/>
+                                        <rect key="frame" x="301" y="207" width="12" height="14"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="12" id="hrw-Zz-3H6">
                                                 <variation key="heightClass=regular-widthClass=regular" constant="14"/>
@@ -600,10 +600,9 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                                     <constraint firstItem="s1t-sP-bgy" firstAttribute="trailing" secondItem="gRh-VQ-57i" secondAttribute="leading" constant="7" id="1yo-NX-Yaf"/>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="500" id="2f4-Qy-5Qk"/>
                                     <constraint firstItem="gRh-VQ-57i" firstAttribute="height" secondItem="V9z-WP-6mg" secondAttribute="height" multiplier="0.58" priority="751" id="4PY-eW-F2g"/>
-                                    <constraint firstItem="Anb-9C-0O1" firstAttribute="top" relation="greaterThanOrEqual" secondItem="X9U-Te-nxi" secondAttribute="bottom" constant="5" id="5no-bM-2Uk"/>
                                     <constraint firstItem="Anb-9C-0O1" firstAttribute="leading" secondItem="V9z-WP-6mg" secondAttribute="leading" id="81F-tg-Ls5"/>
                                     <constraint firstItem="nua-ml-mTp" firstAttribute="centerY" secondItem="V9z-WP-6mg" secondAttribute="centerY" multiplier="1.55" priority="750" id="AMe-vb-P17"/>
-                                    <constraint firstItem="X9U-Te-nxi" firstAttribute="centerY" secondItem="V9z-WP-6mg" secondAttribute="centerY" multiplier="1.38" priority="750" id="DpW-Sn-K4d"/>
+                                    <constraint firstItem="X9U-Te-nxi" firstAttribute="centerY" secondItem="V9z-WP-6mg" secondAttribute="centerY" multiplier="1.3" priority="750" id="DpW-Sn-K4d"/>
                                     <constraint firstItem="fgQ-qf-9pL" firstAttribute="centerY" secondItem="V9z-WP-6mg" secondAttribute="centerY" multiplier="2" id="DvL-Qi-xPx"/>
                                     <constraint firstItem="RJR-xC-x7D" firstAttribute="centerY" secondItem="V9z-WP-6mg" secondAttribute="centerY" multiplier="1.1" id="GVH-cE-L9G"/>
                                     <constraint firstItem="cRw-Dt-0k7" firstAttribute="centerY" secondItem="V9z-WP-6mg" secondAttribute="centerY" multiplier="0.15" id="IAD-VA-DST"/>
@@ -625,6 +624,9 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                                         <variation key="widthClass=regular" constant="65"/>
                                     </constraint>
                                     <constraint firstAttribute="bottom" secondItem="Anb-9C-0O1" secondAttribute="bottom" constant="18" id="h06-mC-a9y"/>
+                                    <constraint firstItem="X9U-Te-nxi" firstAttribute="top" relation="greaterThanOrEqual" secondItem="gRh-VQ-57i" secondAttribute="bottom" constant="10" id="jMn-67-YeZ">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="13"/>
+                                    </constraint>
                                     <constraint firstItem="X9U-Te-nxi" firstAttribute="centerX" secondItem="V9z-WP-6mg" secondAttribute="centerX" multiplier="1.23" id="lSr-BN-E3O"/>
                                     <constraint firstItem="Anb-9C-0O1" firstAttribute="top" relation="greaterThanOrEqual" secondItem="nua-ml-mTp" secondAttribute="bottom" constant="5" id="lbd-yH-1BO"/>
                                     <constraint firstItem="s1t-sP-bgy" firstAttribute="centerY" secondItem="V9z-WP-6mg" secondAttribute="centerY" multiplier="0.04" id="nD3-6Z-voj"/>
@@ -670,7 +672,6 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                         <outlet property="phoneViewTopToSparklingViewTop" destination="z9d-vW-Lxr" id="Vg0-k9-ASf"/>
                         <outlet property="sparklingViewToSuperViewHeightRelation" destination="BFA-bE-wDG" id="adw-Dm-U3D"/>
                         <outlet property="sparklingViewTopToHeadlineSparklingSpacerBottom" destination="Lu2-iF-Bh2" id="mxc-wd-26i"/>
-                        <outlet property="star6CenterYToSparklingViewCenterYRelation" destination="DpW-Sn-K4d" id="2fA-0z-kB3"/>
                         <outlet property="tagsContainerViewHeight" destination="gVG-uD-cFW" id="S14-dF-jvw"/>
                         <outlet property="tagsContainerViewTopToPhoneViewBottom" destination="JU4-GC-vjr" id="gCb-v9-cdh"/>
                         <outletCollection property="sparklingStars" destination="s1t-sP-bgy" collectionClass="NSMutableArray" id="FnP-x1-09a"/>

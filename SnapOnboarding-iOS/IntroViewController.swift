@@ -11,8 +11,6 @@ class IntroViewController: UIViewController {
     @IBOutlet private var headlineLabel: SnapOnboardingHeadlineLabel?
     @IBOutlet private(set) var sparklingStars: [UIImageView]?
     
-    @IBOutlet private var star6CenterYToSparklingViewCenterYRelation: NSLayoutConstraint?
-    
     @IBOutlet private var sparklingViewTopToHeadlineSparklingSpacerBottom: NSLayoutConstraint?
     @IBOutlet private var tagsContainerViewHeight: NSLayoutConstraint?
     @IBOutlet private var tagsContainerViewTopToPhoneViewBottom: NSLayoutConstraint?
@@ -121,8 +119,6 @@ extension IntroViewController {
         tagsContainerViewHeight?.constant = 80
         tagsContainerViewTopToPhoneViewBottom?.active = false
         
-        star6CenterYToSparklingViewCenterYRelation?.constant = 20
-        
         sparklingViewToSuperViewHeightRelation?.constant = -20
         sparklingViewTopToHeadlineSparklingSpacerBottom?.constant = 30
         phoneViewToSparklingViewHeightRelation?.constant = 20
@@ -137,13 +133,11 @@ extension IntroViewController {
     func setupForIpadLandscape(size: CGSize) {
         setupForIpadPortrait(size)
         
-        star6CenterYToSparklingViewCenterYRelation?.constant = 10
         sparklingViewToSuperViewHeightRelation?.constant = 0
         sparklingViewTopToHeadlineSparklingSpacerBottom?.constant = 0
         phoneViewTopToSparklingViewTop?.constant = 20
         
         if size.width <= 320 {
-            star6CenterYToSparklingViewCenterYRelation?.constant = -10
             sparklingViewToSuperViewHeightRelation?.constant = -80
             phoneViewToSparklingViewHeightRelation?.constant = -20
         }
