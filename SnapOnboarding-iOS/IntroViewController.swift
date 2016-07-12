@@ -114,9 +114,9 @@ extension IntroViewController {
     func setupForIpadPortrait(size: CGSize) {
         configureNextButtonAndHeadlineLabelForIpad()
         
-        tagsContainerViewHeight?.constant = 80
-        phoneViewToSparklingViewHeightRelation?.constant = 20
         phoneViewTopToSparklingViewTop?.constant = 40
+        phoneViewToSparklingViewHeightRelation?.constant = 20
+        tagsContainerViewHeight?.constant = 80
         
         if size.width <= 320 {
             sparklingViewToSuperViewHeightRelation?.constant = -120
@@ -128,16 +128,16 @@ extension IntroViewController {
     }
     
     func setupForIpadLandscape(size: CGSize) {
-        setupForIpadPortrait(size)
+        configureNextButtonAndHeadlineLabelForIpad()
         
-        sparklingViewTopToHeadlineSparklingSpacerBottom?.constant = 0
         phoneViewTopToSparklingViewTop?.constant = 20
+        tagsContainerViewHeight?.constant = 80
         
         if size.width <= 320 {
             sparklingViewToSuperViewHeightRelation?.constant = -80
             phoneViewToSparklingViewHeightRelation?.constant = -20
         } else {
-            sparklingViewToSuperViewHeightRelation?.constant = 0
+            phoneViewToSparklingViewHeightRelation?.constant = 20
         }
     }
     
