@@ -38,3 +38,13 @@ extension IntroViewController {
     }
     
 }
+
+extension TagsCollectionViewController {
+    
+    override func viewWillLayoutSubviews() {
+        setupForScreenSize(parentViewController!.parentViewController!.view.frame.size)
+        configuration = createConfiguration()
+        buttonConfiguration = createButtonConfiguration()
+    }
+    
+}
