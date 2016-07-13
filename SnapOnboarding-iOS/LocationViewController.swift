@@ -15,7 +15,10 @@ class LocationViewController: UIViewController {
     @IBOutlet private var enableLocationServicesButton: UIButton?
     @IBOutlet private var notNowButton: UIButton?
     @IBOutlet private var willAskLaterLabel: SnapOnboardingHeadlineLabel?
+    @IBOutlet private var tumbleweed: UIImageView?
     @IBOutlet private(set) var sparklingStars: [UIImageView]?
+    @IBOutlet private var neighborhoodItems: [UIImageView]?
+    @IBOutlet private var neighborhoodView: UIView?
     
     @IBOutlet private var enableLocationServicesButtonWidth: NSLayoutConstraint?
     @IBOutlet private var sparklingViewTopToHeadlineSparklingSpacerBottom: NSLayoutConstraint?
@@ -116,6 +119,7 @@ class LocationViewController: UIViewController {
         
         willAskLaterLabel?.updateAttributedTextWithHeader(viewModel?.wowYouDeclinedTitle, text: attributedText)
         animateWillAskLaterLabelAppearanceWithDuration(0.1)
+        animateTumbleweedAppearanceWithDuration(0.1)
     }
     
     private func configureWillAskLaterLabelForNotNow() {
@@ -134,6 +138,88 @@ class LocationViewController: UIViewController {
             self.notNowButton?.alpha = 0
             self.willAskLaterLabel?.alpha = 1
         })
+    }
+    
+    private func animateTumbleweedAppearanceWithDuration(duration: Double) {
+        guard let neighborhoodView = neighborhoodView, tumbleweed = tumbleweed, sparklingStars = sparklingStars, neighborhoodItems = neighborhoodItems else {
+            return
+        }
+        
+        UIView.animateWithDuration(duration, animations: {
+            (sparklingStars + neighborhoodItems).forEach {
+                $0.alpha = 0.0
+            }
+            self.tumbleweed?.alpha = 1.0
+        })
+        
+        let pathRect = CGRect(x: 0, y: 0, width: neighborhoodView.frame.width, height: neighborhoodView.frame.height)
+        
+        let startPoint = CGPoint(x: pathRect.width / 10, y: pathRect.height / 1.10)
+        
+        let point1 = CGPoint(x: startPoint.x + pathRect.width / 6, y: startPoint.y + pathRect.height / 150)
+        let control1 = CGPoint(x: point1.x - pathRect.width / 12, y: point1.y - pathRect.height / 20)
+        
+        let point2 = CGPoint(x: point1.x + pathRect.width / 8, y: point1.y + pathRect.height / 50)
+        let control2 = CGPoint(x: point1.x + pathRect.width / 16, y: point1.y - pathRect.height / 30)
+        
+        let point3 = CGPoint(x: point2.x + pathRect.width / 10, y: point2.y + pathRect.height / 40)
+        let control3 = CGPoint(x: point2.x + pathRect.width / 20, y: point2.y - pathRect.height / 40)
+        
+        let point4 = CGPoint(x: point3.x + pathRect.width / 3, y: point3.y + pathRect.height / 80)
+        let control4 = CGPoint(x: point3.x + pathRect.width / 8, y: point3.y - pathRect.height / 80)
+        
+        let endPoint = point4
+        
+        let path = UIBezierPath()
+        path.moveToPoint(startPoint)
+        
+        path.addQuadCurveToPoint(point1, controlPoint: control1)
+        path.addQuadCurveToPoint(point2, controlPoint: control2)
+        path.addQuadCurveToPoint(point3, controlPoint: control3)
+        path.addQuadCurveToPoint(point4, controlPoint: control4)
+        
+        let pathShapeLayer = CAShapeLayer()
+        pathShapeLayer.frame = pathRect
+        pathShapeLayer.bounds = neighborhoodView.bounds
+        pathShapeLayer.path = path.CGPath
+//        pathShapeLayer.strokeColor = UIColor.blackColor().CGColor
+        pathShapeLayer.fillColor = nil
+//        pathShapeLayer.lineJoin = kCALineJoinBevel
+        
+        neighborhoodView.layer.addSublayer(pathShapeLayer)
+        
+        let tumbleweedAnimation = CAKeyframeAnimation(keyPath: "position")
+        tumbleweedAnimation.duration = 2
+        tumbleweedAnimation.path = pathShapeLayer.path
+        tumbleweedAnimation.calculationMode = kCAAnimationPaced
+        tumbleweedAnimation.delegate = self
+        tumbleweed.layer.addAnimation(tumbleweedAnimation, forKey: "position")
+        tumbleweed.frame.origin = CGPoint(x: endPoint.x - tumbleweed.frame.width / 2, y: endPoint.y - tumbleweed.frame.height / 2)
+        
+        animateTumbleweedRotationWithTotalDuration(tumbleweedAnimation.duration, halfRotations: 10, currentDuration: 0)
+    }
+    
+    private func animateTumbleweedRotationWithTotalDuration(totalDuration: Double, halfRotations: Int, currentDuration: Double) {
+        guard let tumbleweed = tumbleweed else {
+            return
+        }
+        
+        let duration = totalDuration / Double(halfRotations)
+        
+        let options: UIViewAnimationOptions = currentDuration == 0 ? .CurveEaseIn : .CurveLinear
+        var completion: ((Bool) -> Void)? = { _ in
+            let currentDuration = currentDuration + duration
+            self.animateTumbleweedRotationWithTotalDuration(totalDuration, halfRotations: halfRotations, currentDuration: currentDuration)
+            print(currentDuration)
+        }
+        
+        if currentDuration > totalDuration - duration * 2 {
+            completion = nil
+        }
+        
+        UIView.animateWithDuration(duration, delay: 0, options: options, animations: {
+            tumbleweed.transform = CGAffineTransformRotate(tumbleweed.transform, CGFloat(M_PI_2))
+        }, completion: completion)
     }
     
     private func animateEnableLocationServicesButtonToSpinner() {

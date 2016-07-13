@@ -23,9 +23,10 @@
 		9F4CE0B81D0EB2A000A6A1FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F4CE0B61D0EB2A000A6A1FB /* Main.storyboard */; };
 		9F4CE0BA1D0EB2A000A6A1FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F4CE0B91D0EB2A000A6A1FB /* Assets.xcassets */; };
 		9F4CE0BD1D0EB2A000A6A1FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F4CE0BB1D0EB2A000A6A1FB /* LaunchScreen.storyboard */; };
-		9F4CE0C81D0EB2A000A6A1FB /* SnapOnboarding_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4CE0C71D0EB2A000A6A1FB /* SnapOnboarding_iOSTests.swift */; };
+		9F4CE0C81D0EB2A000A6A1FB /* SnapOnboardingDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4CE0C71D0EB2A000A6A1FB /* SnapOnboardingDelegateTests.swift */; };
 		9F59C6401D17043900CAD9F7 /* IntroViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F59C63F1D17043900CAD9F7 /* IntroViewControllerDelegate.swift */; };
 		9F59C6431D17072C00CAD9F7 /* LocationViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F59C6421D17072C00CAD9F7 /* LocationViewControllerDelegate.swift */; };
+		9F92207E1D359CC2006CDA84 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA4EE1D1D2BE9E5002EAEFF /* Helpers.swift */; };
 		9F93DF471D2A615C006D16B9 /* HasSparklingStars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F93DF461D2A615C006D16B9 /* HasSparklingStars.swift */; };
 		9F93DF491D2A7BE0006D16B9 /* IntroViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F93DF481D2A7BE0006D16B9 /* IntroViewControllerProtocol.swift */; };
 		9F93DF4B1D2A7CBD006D16B9 /* LoginViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F93DF4A1D2A7CBD006D16B9 /* LoginViewControllerProtocol.swift */; };
@@ -100,7 +101,7 @@
 		9F4CE0BC1D0EB2A000A6A1FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9F4CE0BE1D0EB2A000A6A1FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "SnapOnboarding-iOS/Info.plist"; sourceTree = "<group>"; };
 		9F4CE0C31D0EB2A000A6A1FB /* Unit_tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Unit_tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9F4CE0C71D0EB2A000A6A1FB /* SnapOnboarding_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapOnboarding_iOSTests.swift; sourceTree = "<group>"; };
+		9F4CE0C71D0EB2A000A6A1FB /* SnapOnboardingDelegateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapOnboardingDelegateTests.swift; sourceTree = "<group>"; };
 		9F4CE0C91D0EB2A000A6A1FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F4CE0CE1D0EB2A000A6A1FB /* UI_tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UI_tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F4CE0D21D0EB2A000A6A1FB /* SnapOnboarding_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapOnboarding_iOSUITests.swift; sourceTree = "<group>"; };
@@ -285,7 +286,7 @@
 		9F4CE0C61D0EB2A000A6A1FB /* Unit tests */ = {
 			isa = PBXGroup;
 			children = (
-				9F4CE0C71D0EB2A000A6A1FB /* SnapOnboarding_iOSTests.swift */,
+				9F4CE0C71D0EB2A000A6A1FB /* SnapOnboardingDelegateTests.swift */,
 				9F4CE0C91D0EB2A000A6A1FB /* Info.plist */,
 			);
 			name = "Unit tests";
@@ -707,7 +708,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F4CE0C81D0EB2A000A6A1FB /* SnapOnboarding_iOSTests.swift in Sources */,
+				9F4CE0C81D0EB2A000A6A1FB /* SnapOnboardingDelegateTests.swift in Sources */,
+				9F92207E1D359CC2006CDA84 /* Helpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
