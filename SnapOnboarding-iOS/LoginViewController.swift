@@ -58,7 +58,7 @@ class LoginViewController: UIViewController {
     
     // MARK: UIView configuration
     
-    private func configureContinueWithFacebookButton() {
+    internal func configureContinueWithFacebookButton() {
         continueWithFacebookButton?.setTitle(viewModel?.continueWithFacebook?.uppercaseString, forState: .Normal)
         let intrinsicContentWidth = continueWithFacebookButton?.intrinsicContentSize().width ?? 245
         let rightPadding: CGFloat = 25
@@ -66,7 +66,7 @@ class LoginViewController: UIViewController {
         continueWithFacebookButtonWidth?.constant = requiredWidth
     }
     
-    private func configureContinueWithInstagramButton() {
+    internal func configureContinueWithInstagramButton() {
         continueWithInstagramButton?.setTitle(viewModel?.continueWithInstagram?.uppercaseString, forState: .Normal)
         let intrinsicContentWidth = continueWithInstagramButton?.intrinsicContentSize().width ?? 245
         let rightPadding: CGFloat = 25
@@ -74,11 +74,11 @@ class LoginViewController: UIViewController {
         continueWithInstagramButtonWidth?.constant = requiredWidth
     }
     
-    private func configureSkipLoginButton() {
+    internal func configureSkipLoginButton() {
         skipLoginButton?.setTitle(viewModel?.skipWithoutLogin, forState: .Normal)
     }
     
-    private func alignFacebookAndInstagramButtons() {
+    internal func alignFacebookAndInstagramButtons() {
         if let facebookWidth = continueWithFacebookButtonWidth?.constant, instagramWidth = continueWithInstagramButtonWidth?.constant {
             let difference = facebookWidth - instagramWidth
             if (-6 ... 6).contains(difference) {

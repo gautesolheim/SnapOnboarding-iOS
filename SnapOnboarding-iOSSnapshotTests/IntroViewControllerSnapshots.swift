@@ -9,7 +9,7 @@ class IntroViewControllerSnapshots: SnapFBSnapshotBase {
         vc = getSnapOnboardingViewController()
         
         let delegate = mockSnapOnboardingDelegate()
-        let viewModel = mockSnapOnboardingViewModelNorwegian()
+        let viewModel = mockSnapOnboardingViewModelEnglish()
         let configuration = SnapOnboardingConfiguration(delegate: delegate, viewModel: viewModel)
         vc.applyConfiguration(configuration)
         
@@ -35,6 +35,10 @@ extension IntroViewController {
     
     override func viewWillLayoutSubviews() {
         setupForScreenSize(parentViewController!.view.frame.size)
+        
+        // viewDidLoad configuration
+        configureNextButton()
+        configureHeadlineLabel()
     }
     
 }

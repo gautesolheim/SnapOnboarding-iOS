@@ -25,6 +25,11 @@ func mockSnapOnboardingViewModelNorwegian() -> SnapOnboardingViewModel {
     return exampleViewController.createSampleViewModelNorwegian()
 }
 
+func mockSnapOnboardingViewModelEnglish() -> SnapOnboardingViewModel {
+    let exampleViewController = ViewController()
+    return exampleViewController.createSampleViewModelEnglish()
+}
+
 func getSnapOnboardingViewController() -> SnapOnboardingViewController {
     let storyboard = UIStoryboard(name: "SnapOnboarding", bundle: NSBundle.mainBundle())
     return storyboard.instantiateViewControllerWithIdentifier("snapOnboardingViewController") as! SnapOnboardingViewController

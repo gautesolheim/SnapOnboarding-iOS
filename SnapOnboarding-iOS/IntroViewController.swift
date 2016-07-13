@@ -68,12 +68,12 @@ class IntroViewController: UIViewController {
     
     // MARK: UIView configuration
     
-    private func configureNextButton() {
+    internal func configureNextButton() {
         let title = viewModel?.next?.uppercaseString
         nextButton?.setTitle(title, forState: .Normal)
     }
     
-    private func configureHeadlineLabel() {
+    internal func configureHeadlineLabel() {
         headlineLabel?.updateText(viewModel?.introHeadline)
     }
 

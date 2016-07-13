@@ -76,15 +76,15 @@ class LocationViewController: UIViewController {
     
     // MARK: UIView configuration
     
-    private func configureNextButton() {
+    internal func configureNextButton() {
         nextButton?.setTitle(viewModel?.next?.uppercaseString, forState: .Normal)
     }
     
-    private func configureHeadlineLabel() {
+    internal func configureHeadlineLabel() {
         headlineLabel?.updateText(viewModel?.locationHeadline)
     }
     
-    private func configureEnableLocationServicesButton() {
+    internal func configureEnableLocationServicesButton() {
         enableLocationServicesButton?.setTitle(viewModel?.enableLocationServices?.uppercaseString, forState: .Normal)
         let intrinsicContentWidth = enableLocationServicesButton?.intrinsicContentSize().width ?? 245
         let rightPadding: CGFloat = 26
@@ -92,7 +92,7 @@ class LocationViewController: UIViewController {
         enableLocationServicesButtonWidth?.constant = width
     }
     
-    private func configureNotNowButton() {
+    internal func configureNotNowButton() {
         notNowButton?.setTitle(viewModel?.notNow, forState: .Normal)
     }
     
