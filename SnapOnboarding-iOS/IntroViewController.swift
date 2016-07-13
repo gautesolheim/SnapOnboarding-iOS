@@ -110,6 +110,10 @@ extension IntroViewController {
     
     func setupFor4_0InchPortrait() {
         configureNextButtonAndHeadlineLabelFor4_0Inch()
+        
+        sparklingViewTopToHeadlineSparklingSpacerBottom?.constant = -10
+        sparklingViewToSuperViewHeightRelation?.constant = 10
+        phoneViewToSparklingViewHeightRelation?.constant = -5
     }
     
     func setupForIpadPortrait(size: CGSize) {
