@@ -110,7 +110,7 @@ class LocationViewController: UIViewController {
         let attributedText = NSMutableAttributedString(string: wowYouDeclinedBody)
         let angleSignColor = UIColor(red: 254/255.0, green: 232/255.0, blue: 5/255.0, alpha: 1.0)
         
-        for index in viewModel!.wowYouDeclinedBody!.characters.indices {
+        for index in wowYouDeclinedBody.characters.indices {
             if wowYouDeclinedBody[index] == ">" || wowYouDeclinedBody[index] == "›" {
                 let int = wowYouDeclinedBody.startIndex.distanceTo(index)
                 attributedText.replaceCharactersInRange(NSRange(int ... int), withAttributedString: NSAttributedString(string: String(wowYouDeclinedBody[index]), attributes: [NSForegroundColorAttributeName : angleSignColor]))
@@ -232,12 +232,12 @@ class LocationViewController: UIViewController {
         }
         
         enableLocationServicesButtonWidth?.active = false
-        let backgroundImage = UIImage(named: "btn location clean")! // TODO: swiftgen
+        let backgroundImage = UIImage(asset: Asset.Btn_Location_Clean)
         enableLocationServicesButton.setTitle(nil, forState: .Normal)
         enableLocationServicesButton.setBackgroundImage(backgroundImage, forState: .Normal)
         enableLocationServicesButton.contentEdgeInsets = UIEdgeInsetsZero
         
-        let spinner = UIImage(named: "icon_m_spinner_black")! // TODO: swiftgen
+        let spinner = UIImage(asset: Asset.Icon_m_spinner_black)
         spinnerImageView.translatesAutoresizingMaskIntoConstraints = false
         spinnerImageView.image = spinner
         spinnerImageView.alpha = 0.0

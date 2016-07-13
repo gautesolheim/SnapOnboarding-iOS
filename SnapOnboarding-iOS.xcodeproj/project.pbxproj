@@ -12,6 +12,7 @@
 		9F08635E1D35355600C56883 /* HasNextButtonAndHeadlineLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F08635D1D35355600C56883 /* HasNextButtonAndHeadlineLabel.swift */; };
 		9F0D2E0C1D214E830085BA12 /* SnapOnboardingViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0D2E0B1D214E830085BA12 /* SnapOnboardingViewControllerProtocol.swift */; };
 		9F0D2E0F1D215EB90085BA12 /* LocationViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0D2E0E1D215EB90085BA12 /* LocationViewControllerProtocol.swift */; };
+		9F10E8351D3696190049069B /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F10E8341D3696190049069B /* Images.swift */; };
 		9F150B721D17CF4800C3D716 /* SnapOnboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F150B741D17CF4800C3D716 /* SnapOnboarding.storyboard */; };
 		9F1E9B071D0EE2F900E0EC40 /* SnapOnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1E9B061D0EE2F900E0EC40 /* SnapOnboardingViewController.swift */; };
 		9F1E9B0B1D0EE54A00E0EC40 /* SnapOnboardingConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1E9B0A1D0EE54A00E0EC40 /* SnapOnboardingConfiguration.swift */; };
@@ -88,6 +89,7 @@
 		9F08635D1D35355600C56883 /* HasNextButtonAndHeadlineLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HasNextButtonAndHeadlineLabel.swift; sourceTree = "<group>"; };
 		9F0D2E0B1D214E830085BA12 /* SnapOnboardingViewControllerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapOnboardingViewControllerProtocol.swift; sourceTree = "<group>"; };
 		9F0D2E0E1D215EB90085BA12 /* LocationViewControllerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationViewControllerProtocol.swift; sourceTree = "<group>"; };
+		9F10E8341D3696190049069B /* Images.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Images.swift; path = Helpers/Constants/Images.swift; sourceTree = "<group>"; };
 		9F150B731D17CF4800C3D716 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SnapOnboarding.storyboard; sourceTree = "<group>"; };
 		9F1E9B061D0EE2F900E0EC40 /* SnapOnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapOnboardingViewController.swift; sourceTree = "<group>"; };
 		9F1E9B0A1D0EE54A00E0EC40 /* SnapOnboardingConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapOnboardingConfiguration.swift; sourceTree = "<group>"; };
@@ -188,6 +190,22 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		9F10E8321D3695D80049069B /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				9F10E8331D3695ED0049069B /* Constants */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		9F10E8331D3695ED0049069B /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				9F10E8341D3696190049069B /* Images.swift */,
+			);
+			name = Constants;
+			sourceTree = "<group>";
+		};
 		9F1E9B051D0EDDEB00E0EC40 /* Example */ = {
 			isa = PBXGroup;
 			children = (
@@ -266,6 +284,7 @@
 		9F4CE0B11D0EB2A000A6A1FB /* SnapOnboarding-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				9F10E8321D3695D80049069B /* Helpers */,
 				9F25D07C1D1AE2D300B56D6A /* Views */,
 				9F1E9B151D104E7200E0EC40 /* SnapOnboardingDelegate.swift */,
 				9F1E9B0A1D0EE54A00E0EC40 /* SnapOnboardingConfiguration.swift */,
@@ -688,6 +707,7 @@
 				9FAFCDE71D23C4AC00CE3DE8 /* TagsCollectionViewController.swift in Sources */,
 				9F1E9B0B1D0EE54A00E0EC40 /* SnapOnboardingConfiguration.swift in Sources */,
 				9F4CE0B51D0EB2A000A6A1FB /* ViewController.swift in Sources */,
+				9F10E8351D3696190049069B /* Images.swift in Sources */,
 				9F1E9B071D0EE2F900E0EC40 /* SnapOnboardingViewController.swift in Sources */,
 				9F9C7D3D1D16CEA6006203B7 /* LoginViewController.swift in Sources */,
 				9F9C7D391D16CE89006203B7 /* IntroViewController.swift in Sources */,
