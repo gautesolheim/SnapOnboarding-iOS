@@ -22,6 +22,7 @@ class ViewController: UIViewController {
         onboardingViewController = storyboard.instantiateViewControllerWithIdentifier("snapOnboardingViewController") as? SnapOnboardingViewController
         
         let viewModel = createSampleViewModelNorwegian()
+//        let viewModel = createSampleViewModelEnglish()
         let configuration = SnapOnboardingConfiguration(delegate: self, viewModel: viewModel)
         
         onboardingViewController?.applyConfiguration(configuration)

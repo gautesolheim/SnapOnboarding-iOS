@@ -2,6 +2,8 @@ import UIKit
 @testable import SnapOnboarding_iOS
 
 var currentPage = 0
+var viewModel = mockSnapOnboardingViewModelNorwegian()
+//var viewModel = mockSnapOnboardingViewModelEnglish()
 
 extension SnapOnboardingViewController {
     

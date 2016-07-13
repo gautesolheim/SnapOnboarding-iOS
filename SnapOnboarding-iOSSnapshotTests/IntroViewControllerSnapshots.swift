@@ -3,13 +3,10 @@ import SnapFBSnapshotBase
 
 class IntroViewControllerSnapshots: SnapFBSnapshotBase {
     
-    var vc: SnapOnboardingViewController!
-    
     override func setUp() {
-        vc = getSnapOnboardingViewController()
+        let vc = getSnapOnboardingViewController()
         
         let delegate = mockSnapOnboardingDelegate()
-        let viewModel = mockSnapOnboardingViewModelEnglish()
         let configuration = SnapOnboardingConfiguration(delegate: delegate, viewModel: viewModel)
         vc.applyConfiguration(configuration)
         
@@ -24,8 +21,6 @@ class IntroViewControllerSnapshots: SnapFBSnapshotBase {
     }
     
     override func tearDown() {
-        vc = nil
-        
         super.tearDown()
     }
     
@@ -35,10 +30,6 @@ extension IntroViewController {
     
     override func viewWillLayoutSubviews() {
         setupForScreenSize(parentViewController!.view.frame.size)
-        
-        // viewDidLoad configuration
-        configureNextButton()
-        configureHeadlineLabel()
     }
     
 }

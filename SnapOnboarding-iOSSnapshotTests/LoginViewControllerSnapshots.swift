@@ -9,7 +9,6 @@ class LoginViewControllerSnapshots: SnapFBSnapshotBase {
         vc = getSnapOnboardingViewController()
         
         let delegate = mockSnapOnboardingDelegate()
-        let viewModel = mockSnapOnboardingViewModelEnglish()
         let configuration = SnapOnboardingConfiguration(delegate: delegate, viewModel: viewModel)
         vc.applyConfiguration(configuration)
         
@@ -35,12 +34,6 @@ extension LoginViewController {
     
     override func viewWillLayoutSubviews() {
         setupForScreenSize(parentViewController!.view.frame.size)
-        
-        // viewDidLoad configuration
-        configureContinueWithFacebookButton()
-        configureContinueWithInstagramButton()
-        configureSkipLoginButton()
-        alignFacebookAndInstagramButtons()
     }
     
 }
