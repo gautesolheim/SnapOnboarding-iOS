@@ -169,10 +169,9 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Z2-ne-xTk" userLabel="topSpacer">
-                                <rect key="frame" x="180" y="0.0" width="240" height="40"/>
+                                <rect key="frame" x="250" y="0.0" width="100" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="8Dv-HR-AvP"/>
-                                    <constraint firstAttribute="width" constant="240" id="PaX-Wy-oVD"/>
+                                    <constraint firstAttribute="width" constant="100" id="PaX-Wy-oVD"/>
                                 </constraints>
                             </view>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vi vil spørre deg på et senere tidspunkt, når vi trenger lokasjonen din, for eksempel ved et nytt salg." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Og-sM-3rO" userLabel="willAskLaterLabel" customClass="SnapOnboardingHeadlineLabel" customModule="SnapOnboarding_iOS" customModuleProvider="target">
@@ -218,13 +217,13 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r5E-HZ-yPq" userLabel="headlineSparklingSpacer">
-                                <rect key="frame" x="180" y="97" width="240" height="34"/>
+                                <rect key="frame" x="250" y="91" width="100" height="34"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="sUZ-2o-i3x"/>
+                                    <constraint firstAttribute="width" constant="100" id="sUZ-2o-i3x"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ANS-Dj-bV5" userLabel="sparklingView">
-                                <rect key="frame" x="20" y="131" width="560" height="229"/>
+                                <rect key="frame" x="20" y="125" width="560" height="229"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zhm-Jz-ST7" userLabel="neighborhoodView">
                                         <rect key="frame" x="151" y="0.0" width="259" height="229"/>
@@ -356,13 +355,13 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J6z-PJ-dva" userLabel="bottomSpacer">
-                                <rect key="frame" x="180" y="360" width="240" height="37"/>
+                                <rect key="frame" x="250" y="354" width="100" height="43"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="ndx-H9-wIn"/>
+                                    <constraint firstAttribute="width" constant="100" id="ndx-H9-wIn"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Følg selgere og produkter nær deg! Aldri gå glipp av et kupp igjen." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GPV-cC-643" userLabel="headlineLabel" customClass="SnapOnboardingHeadlineLabel" customModule="SnapOnboarding_iOS" customModuleProvider="target">
-                                <rect key="frame" x="25" y="40" width="550" height="57"/>
+                                <rect key="frame" x="25" y="40" width="550" height="51"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="550" id="N2o-xB-Fhk"/>
                                 </constraints>
@@ -467,7 +466,7 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Å legge ut salg er raskt og enkelt. Vi tagger og kategoriserer annonser med smart bildegjenkjenning." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6QU-g5-Hyl" userLabel="headlineLabel" customClass="SnapOnboardingHeadlineLabel" customModule="SnapOnboarding_iOS" customModuleProvider="target">
-                                <rect key="frame" x="25" y="40" width="550" height="88"/>
+                                <rect key="frame" x="25" y="40" width="550" height="76"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="550" id="cbA-I7-Ipr"/>
                                 </constraints>
@@ -481,26 +480,25 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bZw-jc-PYY" userLabel="headlineSparklingSpacer">
-                                <rect key="frame" x="180" y="128" width="240" height="23"/>
+                                <rect key="frame" x="250" y="116" width="100" height="23"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="Ai5-Uq-dY2"/>
+                                    <constraint firstAttribute="width" constant="100" id="Ai5-Uq-dY2"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yq7-1l-rO5" userLabel="bottomSpacer">
-                                <rect key="frame" x="180" y="467" width="240" height="35"/>
+                                <rect key="frame" x="250" y="455" width="100" height="47"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="c6p-Z5-HTD"/>
+                                    <constraint firstAttribute="width" constant="100" id="c6p-Z5-HTD"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ul5-Tp-YXG" userLabel="topSpacer">
-                                <rect key="frame" x="180" y="0.0" width="240" height="40"/>
+                                <rect key="frame" x="250" y="0.0" width="100" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="aLm-4c-wkd"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="hAr-PC-4Lk"/>
+                                    <constraint firstAttribute="width" constant="100" id="aLm-4c-wkd"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V9z-WP-6mg" userLabel="sparklingView">
-                                <rect key="frame" x="50" y="151" width="500" height="316"/>
+                                <rect key="frame" x="50" y="139" width="500" height="316"/>
                                 <subviews>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Anb-9C-0O1" userLabel="tagsContainerView">
                                         <rect key="frame" x="0.0" y="228" width="500" height="70"/>
@@ -719,10 +717,10 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y4x-Xm-ZL4" userLabel="topSpacer">
-                                <rect key="frame" x="180" y="0.0" width="240" height="39"/>
+                                <rect key="frame" x="250" y="0.0" width="100" height="39"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="39" id="jL5-vl-r0V"/>
-                                    <constraint firstAttribute="width" constant="240" id="rhG-ff-djY"/>
+                                    <constraint firstAttribute="width" constant="100" id="rhG-ff-djY"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iZI-f9-ZQP" userLabel="continueWithInstagramButton">
@@ -775,9 +773,9 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8TP-as-s39" userLabel="sparklingContinueSpacer">
-                                <rect key="frame" x="180" y="293" width="240" height="34"/>
+                                <rect key="frame" x="250" y="293" width="100" height="34"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="kAu-ID-jet"/>
+                                    <constraint firstAttribute="width" constant="100" id="kAu-ID-jet"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DIb-IE-TZ2" userLabel="sparklingView">

@@ -215,7 +215,7 @@
 			children = (
 				9F5543311D37B74A00FAD486 /* Views */,
 				9F58FA321D37CF7500A43FEE /* Protocols */,
-				9F58FA311D37CF4E00A43FEE /* SnapOnboardingViewController */,
+				9F58FA311D37CF4E00A43FEE /* Snap Onboarding View Controller */,
 				9F55432E1D37B71700FAD486 /* Intro View Controller */,
 				9F55432F1D37B72A00FAD486 /* Location View Controller */,
 				9F5543301D37B73A00FAD486 /* Login View Controller */,
@@ -285,7 +285,7 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
-		9F58FA311D37CF4E00A43FEE /* SnapOnboardingViewController */ = {
+		9F58FA311D37CF4E00A43FEE /* Snap Onboarding View Controller */ = {
 			isa = PBXGroup;
 			children = (
 				9F5543191D37B71300FAD486 /* SnapOnboardingViewControllerProtocol.swift */,
@@ -293,7 +293,7 @@
 				9F5543151D37B71300FAD486 /* SnapOnboardingConfiguration.swift */,
 				9F5543161D37B71300FAD486 /* SnapOnboardingDelegate.swift */,
 			);
-			name = SnapOnboardingViewController;
+			name = "Snap Onboarding View Controller";
 			sourceTree = "<group>";
 		};
 		9F58FA321D37CF7500A43FEE /* Protocols */ = {
