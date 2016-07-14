@@ -17,7 +17,7 @@ public class SnapOnboardingViewController: UIViewController {
     
     @IBOutlet internal var scrollView: UIScrollView?
     @IBOutlet private var pageControl: UIPageControl?
-    @IBOutlet private var termsAndConditionsLabel: TTTAttributedLabel?
+    @IBOutlet private(set) var termsAndConditionsLabel: TTTAttributedLabel?
     
     @IBOutlet private var termsAndConditionsLabelBottomToSuperViewBottom: NSLayoutConstraint?
     @IBOutlet private var pageControlBottomToTermsAndConditionsTop: NSLayoutConstraint?

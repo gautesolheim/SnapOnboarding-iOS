@@ -12,7 +12,7 @@ class LocationViewController: UIViewController {
     
     @IBOutlet private(set) var nextButton: UIButton?
     @IBOutlet private(set) var headlineLabel: SnapOnboardingHeadlineLabel?
-    @IBOutlet private var enableLocationServicesButton: UIButton?
+    @IBOutlet private(set) var enableLocationServicesButton: UIButton?
     @IBOutlet private var notNowButton: UIButton?
     @IBOutlet private var willAskLaterLabel: SnapOnboardingHeadlineLabel?
     @IBOutlet private var tumbleweed: UIImageView?

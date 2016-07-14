@@ -15,7 +15,7 @@
     if (self.sutBackingViewController == nil) {
         NSLog(@"Cannot account for size classes: sutBackingViewController == nil");
     } else {
-        // Force appearance (viewWillAppear call) of sutBackingViewController and children, and invisible status bar on snapshots
+        // Force appearance (viewWill/DidAppear call) of sutBackingViewController and children, and invisible status bar on snapshots
         [UIApplication sharedApplication].keyWindow.rootViewController = self.sutBackingViewController;
         [UIApplication sharedApplication].keyWindow.rootViewController = nil;
         

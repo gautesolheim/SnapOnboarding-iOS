@@ -2,9 +2,9 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
-    @IBOutlet private var continueWithFacebookButton: UIButton?
-    @IBOutlet private var continueWithInstagramButton: UIButton?
-    @IBOutlet private var skipLoginButton: UIButton?
+    @IBOutlet private(set) var continueWithFacebookButton: UIButton?
+    @IBOutlet private(set) var continueWithInstagramButton: UIButton?
+    @IBOutlet private(set) var skipLoginButton: UIButton?
     @IBOutlet private(set) var sparklingStars: [UIImageView]?
     
     @IBOutlet private var topSpacerHeight: NSLayoutConstraint?
