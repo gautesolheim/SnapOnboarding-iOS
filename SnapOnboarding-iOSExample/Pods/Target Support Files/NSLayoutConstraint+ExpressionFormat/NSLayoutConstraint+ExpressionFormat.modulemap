@@ -1,0 +1,6 @@
+framework module NSLayoutConstraint_ExpressionFormat {
+  umbrella header "NSLayoutConstraint+ExpressionFormat-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,6 @@
+framework module SnapTagsView {
+  umbrella header "SnapTagsView-umbrella.h"
+
+  export *
+  module * { export * }
+}
