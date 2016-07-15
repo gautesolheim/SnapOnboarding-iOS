@@ -27,7 +27,7 @@
         <!--SnapOnboardingViewController-->
         <scene sceneID="ass-MY-NDH">
             <objects>
-                <viewController storyboardIdentifier="snapOnboardingViewController" id="tNM-nG-5BO" userLabel="SnapOnboardingViewController" customClass="SnapOnboardingViewController" customModule="SnapOnboarding_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SnapOnboardingViewController" id="tNM-nG-5BO" userLabel="SnapOnboardingViewController" customClass="SnapOnboardingViewController" customModule="SnapOnboarding_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xlC-2N-PmR"/>
                         <viewControllerLayoutGuide type="bottom" id="bqD-gD-GKI"/>
@@ -45,19 +45,19 @@
                                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zp8-Mv-jdd" userLabel="Intro Container View">
                                                 <rect key="frame" x="0.0" y="0.0" width="600" height="502"/>
                                                 <connections>
-                                                    <segue destination="msg-6e-T6i" kind="embed" identifier="introContainerViewEmbed" id="W5f-MQ-aEW"/>
+                                                    <segue destination="msg-6e-T6i" kind="embed" identifier="IntroContainerViewEmbed" id="W5f-MQ-aEW"/>
                                                 </connections>
                                             </containerView>
                                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wxa-xb-Waf" userLabel="Location Container View">
                                                 <rect key="frame" x="600" y="0.0" width="600" height="502"/>
                                                 <connections>
-                                                    <segue destination="tuq-Zg-aCA" kind="embed" identifier="locationContainerViewEmbed" id="3Vt-HL-aw0"/>
+                                                    <segue destination="tuq-Zg-aCA" kind="embed" identifier="LocationContainerViewEmbed" id="3Vt-HL-aw0"/>
                                                 </connections>
                                             </containerView>
                                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wKY-ec-gks" userLabel="Login Container View">
                                                 <rect key="frame" x="1200" y="0.0" width="600" height="502"/>
                                                 <connections>
-                                                    <segue destination="0qE-Ud-UlA" kind="embed" identifier="loginContainerViewEmbed" id="DZq-As-WfN"/>
+                                                    <segue destination="0qE-Ud-UlA" kind="embed" identifier="LoginContainerViewEmbed" id="DZq-As-WfN"/>
                                                 </connections>
                                             </containerView>
                                         </subviews>
@@ -147,7 +147,7 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
         <!--locationViewController-->
         <scene sceneID="h5M-Gs-Mlh">
             <objects>
-                <viewController storyboardIdentifier="locationViewController" id="tuq-Zg-aCA" userLabel="locationViewController" customClass="LocationViewController" customModule="SnapOnboarding_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="tuq-Zg-aCA" userLabel="locationViewController" customClass="LocationViewController" customModule="SnapOnboarding_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="uCB-4V-4gp"/>
                         <viewControllerLayoutGuide type="bottom" id="Tnx-e1-m8T"/>
@@ -217,13 +217,13 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r5E-HZ-yPq" userLabel="headlineSparklingSpacer">
-                                <rect key="frame" x="250" y="91" width="100" height="34"/>
+                                <rect key="frame" x="250" y="97" width="100" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="sUZ-2o-i3x"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ANS-Dj-bV5" userLabel="sparklingView">
-                                <rect key="frame" x="20" y="125" width="560" height="229"/>
+                                <rect key="frame" x="20" y="131" width="560" height="229"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zhm-Jz-ST7" userLabel="neighborhoodView">
                                         <rect key="frame" x="151" y="0.0" width="259" height="229"/>
@@ -355,13 +355,13 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J6z-PJ-dva" userLabel="bottomSpacer">
-                                <rect key="frame" x="250" y="354" width="100" height="43"/>
+                                <rect key="frame" x="250" y="360" width="100" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="ndx-H9-wIn"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Følg selgere og produkter nær deg! Aldri gå glipp av et kupp igjen." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GPV-cC-643" userLabel="headlineLabel" customClass="SnapOnboardingHeadlineLabel" customModule="SnapOnboarding_iOS" customModuleProvider="target">
-                                <rect key="frame" x="25" y="40" width="550" height="51"/>
+                                <rect key="frame" x="25" y="40" width="550" height="57"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="550" id="N2o-xB-Fhk"/>
                                 </constraints>
@@ -445,7 +445,7 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
         <!--introViewController-->
         <scene sceneID="Mtt-oe-dxY">
             <objects>
-                <viewController storyboardIdentifier="introViewController" id="msg-6e-T6i" userLabel="introViewController" customClass="IntroViewController" customModule="SnapOnboarding_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="msg-6e-T6i" userLabel="introViewController" customClass="IntroViewController" customModule="SnapOnboarding_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jnX-Zh-1IU"/>
                         <viewControllerLayoutGuide type="bottom" id="knZ-Sh-tcc"/>
@@ -466,7 +466,7 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Å legge ut salg er raskt og enkelt. Vi tagger og kategoriserer annonser med smart bildegjenkjenning." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6QU-g5-Hyl" userLabel="headlineLabel" customClass="SnapOnboardingHeadlineLabel" customModule="SnapOnboarding_iOS" customModuleProvider="target">
-                                <rect key="frame" x="25" y="40" width="550" height="76"/>
+                                <rect key="frame" x="25" y="40" width="550" height="88"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="550" id="cbA-I7-Ipr"/>
                                 </constraints>
@@ -480,13 +480,13 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bZw-jc-PYY" userLabel="headlineSparklingSpacer">
-                                <rect key="frame" x="250" y="116" width="100" height="23"/>
+                                <rect key="frame" x="250" y="128" width="100" height="23"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="Ai5-Uq-dY2"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yq7-1l-rO5" userLabel="bottomSpacer">
-                                <rect key="frame" x="250" y="455" width="100" height="47"/>
+                                <rect key="frame" x="250" y="467" width="100" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="c6p-Z5-HTD"/>
                                 </constraints>
@@ -498,7 +498,7 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V9z-WP-6mg" userLabel="sparklingView">
-                                <rect key="frame" x="50" y="139" width="500" height="316"/>
+                                <rect key="frame" x="50" y="151" width="500" height="316"/>
                                 <subviews>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Anb-9C-0O1" userLabel="tagsContainerView">
                                         <rect key="frame" x="0.0" y="228" width="500" height="70"/>
@@ -506,7 +506,7 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                                             <constraint firstAttribute="height" constant="70" id="gVG-uD-cFW"/>
                                         </constraints>
                                         <connections>
-                                            <segue destination="aK4-bP-Kev" kind="embed" identifier="tagsContainerViewEmbed" id="PfU-An-3vB"/>
+                                            <segue destination="aK4-bP-Kev" kind="embed" identifier="TagsContainerViewEmbed" id="PfU-An-3vB"/>
                                         </connections>
                                     </containerView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gRh-VQ-57i" userLabel="phoneView">
@@ -707,7 +707,7 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
         <!--loginViewController-->
         <scene sceneID="4Vf-ZG-nv7">
             <objects>
-                <viewController storyboardIdentifier="loginViewController" id="0qE-Ud-UlA" userLabel="loginViewController" customClass="LoginViewController" customModule="SnapOnboarding_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="0qE-Ud-UlA" userLabel="loginViewController" customClass="LoginViewController" customModule="SnapOnboarding_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6VU-A7-cWa"/>
                         <viewControllerLayoutGuide type="bottom" id="lpC-Qa-pWA"/>

@@ -21,7 +21,7 @@ class ViewController: UIViewController {
     private func presentOnboardingViewController() {
         let podBundle = NSBundle(forClass: SnapOnboardingViewController.self)
         let storyboard = UIStoryboard(name: "SnapOnboarding", bundle: podBundle)
-        onboardingViewController = storyboard.instantiateViewControllerWithIdentifier("snapOnboardingViewController") as? SnapOnboardingViewController
+        onboardingViewController = storyboard.instantiateViewControllerWithIdentifier("SnapOnboardingViewController") as? SnapOnboardingViewController
         
         let viewModel = createSampleViewModelNorwegian()
 //        let viewModel = createSampleViewModelEnglish()
