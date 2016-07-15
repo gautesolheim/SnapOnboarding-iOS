@@ -1,0 +1,11 @@
+source 'https://github.com/CocoaPods/Specs.git'
+source 'https://github.com/skylib/SnapPods.git'
+
+platform :ios, '8.0'
+
+target 'SnapOnboarding-iOSExample' do
+  use_frameworks!
+
+  pod 'SnapOnboarding-iOS', :path => '../'
+
+end
