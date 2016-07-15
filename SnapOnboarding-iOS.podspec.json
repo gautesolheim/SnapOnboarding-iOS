@@ -1,7 +1,7 @@
 {
   "name": "SnapOnboarding-iOS",
   "version": "1.0.0",
-  "summary": "The onboarding used in Snapsale's iOS app.",
+  "summary": "The first-launch onboarding used in Snapsale's iOS app.",
   "homepage": "https://github.com/skylib",
   "license": {
     "type": "BSD",
