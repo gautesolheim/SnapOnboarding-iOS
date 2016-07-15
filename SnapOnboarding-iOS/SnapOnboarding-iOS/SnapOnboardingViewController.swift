@@ -8,9 +8,9 @@ private enum TermsAndConditionsURL: String {
 }
 
 private enum EmbedSegueIdentifier: String {
-    case IntroViewController = "introContainerViewEmbed"
-    case LocationViewController = "locationContainerViewEmbed"
-    case LoginViewController = "loginContainerViewEmbed"
+    case IntroViewController = "IntroContainerViewEmbed"
+    case LocationViewController = "LocationContainerViewEmbed"
+    case LoginViewController = "LoginContainerViewEmbed"
 }
 
 public class SnapOnboardingViewController: UIViewController {

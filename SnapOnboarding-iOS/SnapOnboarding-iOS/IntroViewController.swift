@@ -2,7 +2,7 @@ import UIKit
 import SnapFonts_iOS
 
 private enum EmbedSegueIdentifier: String {
-    case TagsCollectionViewController = "tagsContainerViewEmbed"
+    case TagsCollectionViewController = "TagsContainerViewEmbed"
 }
 
 class IntroViewController: UIViewController {

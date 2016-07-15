@@ -115,5 +115,5 @@ private func createTagRepresentationsForStrings(strings: [String]) -> [SnapTagRe
 
 func getSnapOnboardingViewController() -> SnapOnboardingViewController {
     let storyboard = UIStoryboard(name: "SnapOnboarding", bundle: NSBundle.mainBundle())
-    return storyboard.instantiateViewControllerWithIdentifier("snapOnboardingViewController") as! SnapOnboardingViewController
+    return storyboard.instantiateViewControllerWithIdentifier("SnapOnboardingViewController") as! SnapOnboardingViewController
 }
