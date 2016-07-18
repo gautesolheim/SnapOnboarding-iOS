@@ -500,7 +500,7 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V9z-WP-6mg" userLabel="sparklingView">
                                 <rect key="frame" x="50" y="151" width="500" height="316"/>
                                 <subviews>
-                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Anb-9C-0O1" userLabel="tagsContainerView">
+                                    <containerView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Anb-9C-0O1" userLabel="tagsContainerView">
                                         <rect key="frame" x="0.0" y="228" width="500" height="70"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="70" id="gVG-uD-cFW"/>

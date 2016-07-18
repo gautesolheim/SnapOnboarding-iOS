@@ -21,8 +21,6 @@ class TagsCollectionViewController: SnapTagsCollectionViewController {
         buttonConfiguration = createButtonConfiguration()
         
         super.viewDidLoad()
-        
-        scrollEnabled = false
     }
     
     func createConfiguration() -> SnapTagsViewConfiguration {
@@ -39,19 +37,15 @@ class TagsCollectionViewController: SnapTagsCollectionViewController {
     func createButtonConfiguration() -> SnapTagButtonConfiguration {
         var config = SnapTagButtonConfiguration()
         config.font = SnapFonts.gothamRoundedMediumOfSize(fontSize)
-        config.canBeTurnedOnAndOff = true
         config.margin = UIEdgeInsetsZero
         config.labelInset = insets
         
         var onState = ButtonStateConfiguration()
-//        onState.buttonImage = UIImage.SnapTagsViewAssets.YellowCloseButton.image
         onState.backgroundColor = UIColor.whiteColor()
         onState.textColor = UIColor.blackColor()
-        onState.hasButton = false
         onState.cornerRadius = 4
         
         var offState = onState
-//        offState.buttonImage = UIImage.SnapTagsViewAssets.RedCloseButton.image
         offState.buttonTransform = CGAffineTransformRotate(CGAffineTransformIdentity, CGFloat(M_PI * 45 / 180.0))
         offState.backgroundColor = UIColor.whiteColor()
         offState.textColor = UIColor.roseColor()
@@ -69,6 +63,21 @@ class TagsCollectionViewController: SnapTagsCollectionViewController {
         config.highlightedWhileOffState = highlightedOffState
         
         return config
+    }
+    
+    override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        let cell = super.collectionView(collectionView, cellForItemAtIndexPath: indexPath)
+        
+        // collectionView is internal in SnapTagsView
+        collectionView.clipsToBounds = false
+        
+        cell.layer.masksToBounds = false
+        cell.layer.shadowOpacity = 0.15
+        cell.layer.shadowColor = UIColor.blackColor().CGColor
+        cell.layer.shadowOffset = CGSize(width: 0, height:1)
+        cell.layer.shadowRadius = 1
+        
+        return cell
     }
     
 }
