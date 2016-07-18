@@ -214,6 +214,10 @@ extension SnapOnboardingViewController: LocationViewControllerDelegate {
         delegate?.enableLocationServicesTapped()
     }
     
+    func locationServicesInstructionsTapped() {
+        delegate?.locationServicesInstructionsTapped()
+    }
+    
 }
 
 // MARK: - LoginViewControllerDelegate

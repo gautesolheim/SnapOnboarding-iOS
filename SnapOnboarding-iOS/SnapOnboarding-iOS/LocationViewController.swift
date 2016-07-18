@@ -45,6 +45,12 @@ class LocationViewController: UIViewController {
     @IBAction func notNowButtonTapped(sender: UIButton) {
         configureWillAskLaterLabelForNotNow()
     }
+    
+    // MARK: Gesture recognizers
+    
+    func willAskLaterLabelWithLocationServicesInstructionsTapped() {
+        delegate?.locationServicesInstructionsTapped()
+    }
 
     // MARK: UIViewController life cycle
     
@@ -120,6 +126,10 @@ class LocationViewController: UIViewController {
         willAskLaterLabel?.updateAttributedTextWithHeader(viewModel?.wowYouDeclinedTitle, text: attributedText)
         animateWillAskLaterLabelAppearanceWithDuration(0.2)
         animateSparklingStarsAndNeighborhoodItemsDisappearanceWithDuration(0.2)
+        
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(willAskLaterLabelWithLocationServicesInstructionsTapped))
+        willAskLaterLabel?.addGestureRecognizer(tapGestureRecognizer)
+        willAskLaterLabel?.userInteractionEnabled = true
     }
     
     private func configureWillAskLaterLabelForNotNow() {
