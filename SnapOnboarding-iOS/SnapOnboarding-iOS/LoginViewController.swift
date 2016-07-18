@@ -115,6 +115,10 @@ extension LoginViewController {
         topSpacerHeight?.constant = 27
     }
     
+    func setupFor5_5InchPortrait() {
+        topSpacerHeight?.constant = 50
+    }
+    
     func setupForIpadPortrait(size: CGSize) {
         topSpacerHeight?.constant = 150
         

@@ -332,6 +332,10 @@ extension LocationViewController {
         sparklingViewToSuperViewHeightRelation?.constant = -20
     }
     
+    func setupFor5_5InchPortrait() {
+        configureNextButtonAndHeadlineLabelFor5_5Inch()
+    }
+    
     func setupForIpadPortrait(size: CGSize) {
         configureNextButtonAndHeadlineLabelForIpad()
         

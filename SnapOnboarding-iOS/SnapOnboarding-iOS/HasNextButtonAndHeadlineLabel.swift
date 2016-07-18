@@ -27,6 +27,10 @@ extension HasNextButtonAndHeadlineLabel {
         headlineLabel?.lineSpacin = 5
     }
     
+    func configureNextButtonAndHeadlineLabelFor5_5Inch() {
+        headlineLabel?.font = SnapFonts.gothamRoundedBookOfSize(23)
+    }
+    
     func configureNextButtonAndHeadlineLabelForIpad() {
         nextButton?.titleLabel?.font = SnapFonts.gothamRoundedMediumOfSize(16)
         nextButton?.contentEdgeInsets = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 23)
