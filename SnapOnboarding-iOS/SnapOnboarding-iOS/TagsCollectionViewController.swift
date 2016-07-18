@@ -24,11 +24,13 @@ class TagsCollectionViewController: SnapTagsCollectionViewController {
     }
     
     func createConfiguration() -> SnapTagsViewConfiguration {
+        let shadowWidth: CGFloat = 3
+        let shadowHeight: CGFloat = 3
+        
         var config = SnapTagsViewConfiguration()
-        config.spacing = spacing
-        config.horizontalMargin = 0
-        config.verticalMargin = 0
-        config.contentHeight = fontSize
+        config.spacing = spacing - (shadowWidth + shadowHeight)
+        config.horizontalMargin = 0 - shadowWidth
+        config.verticalMargin = 0 - shadowHeight
         config.alignment = .Center
         
         return config
@@ -38,10 +40,18 @@ class TagsCollectionViewController: SnapTagsCollectionViewController {
         var config = SnapTagButtonConfiguration()
         config.font = SnapFonts.gothamRoundedMediumOfSize(fontSize)
         config.margin = UIEdgeInsetsZero
-        config.labelInset = insets
+        
+        // Account for shadows on background image
+        var newInsets = insets
+        newInsets.bottom += 3
+        newInsets.top += 3
+        newInsets.left += 3
+        newInsets.right += 3.5
+        config.labelInset = newInsets
         
         var onState = ButtonStateConfiguration()
-        onState.backgroundColor = UIColor.whiteColor()
+        onState.backgroundColor = UIColor.clearColor()
+        onState.backgroundImage = UIImage(asset: Asset.Tags_background)
         onState.textColor = UIColor.blackColor()
         onState.cornerRadius = 4
         
@@ -63,21 +73,6 @@ class TagsCollectionViewController: SnapTagsCollectionViewController {
         config.highlightedWhileOffState = highlightedOffState
         
         return config
-    }
-    
-    override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = super.collectionView(collectionView, cellForItemAtIndexPath: indexPath)
-        
-        // collectionView is internal in SnapTagsView
-        collectionView.clipsToBounds = false
-        
-        cell.layer.masksToBounds = false
-        cell.layer.shadowOpacity = 0.15
-        cell.layer.shadowColor = UIColor.blackColor().CGColor
-        cell.layer.shadowOffset = CGSize(width: 0, height:1)
-        cell.layer.shadowRadius = 1
-        
-        return cell
     }
     
 }
