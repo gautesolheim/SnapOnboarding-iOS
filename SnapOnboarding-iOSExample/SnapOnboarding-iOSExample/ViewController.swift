@@ -116,8 +116,7 @@ class ViewController: UIViewController {
     private func createTagRepresentationsForStrings(strings: [String]) -> [SnapTagRepresentation] {
         var snapTagRepresentations = [SnapTagRepresentation]()
         strings.forEach { tag in
-            let tagRepresentation = SnapTagRepresentation()
-            tagRepresentation.tag = tag
+            let tagRepresentation = SnapTagRepresentation(tag: tag)
             snapTagRepresentations.append(tagRepresentation)
         }
         return snapTagRepresentations
@@ -153,6 +152,9 @@ extension ViewController: SnapOnboardingDelegate {
         onboardingViewController?.presentViewController(alertController, animated: true, completion: nil)
     }
     
+    func locationServicesInstructionsTapped() {
+        print("location-services-instructions-tapped")
+    }
     
     func facebookSignupTapped() {
         print("facebook-signup-tapped")

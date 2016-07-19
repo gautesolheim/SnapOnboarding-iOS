@@ -32,6 +32,7 @@ enum Asset: String {
   case Items_Pattern = "items-pattern"
   case Logo_Snapsale = "logo snapsale"
   case Star = "star"
+  case Tags_background = "tags_background"
 
   var image: Image {
     return Image(asset: self)

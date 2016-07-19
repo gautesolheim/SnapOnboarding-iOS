@@ -8,6 +8,7 @@ class SnapOnboardingDelegateTests: XCTestCase {
     private var isTermsAndConditionsTapped = false
     private var isPrivacyPolicyTapped = false
     private var isEnableLocationServicesTapped = false
+    private var isLocationServicesInstructionsTapped = false
     private var isFacebookSignupTapped = false
     private var isInstagramSignupTapped = false
     private var isWillDismissCalled = false
@@ -32,6 +33,7 @@ class SnapOnboardingDelegateTests: XCTestCase {
         isTermsAndConditionsTapped = false
         isPrivacyPolicyTapped = false
         isEnableLocationServicesTapped = false
+        isLocationServicesInstructionsTapped = false
         isFacebookSignupTapped = false
         isInstagramSignupTapped = false
         isWillDismissCalled = false
@@ -54,6 +56,13 @@ class SnapOnboardingDelegateTests: XCTestCase {
         
         locationVC.enableLocationServicesButtonTapped(locationVC.enableLocationServicesButton!)
         XCTAssertTrue(isEnableLocationServicesTapped)
+    }
+    
+    func testLocationServicesInstructionsTapped() {
+        let locationVC: LocationViewController = getChildVCOfType()!
+        
+        locationVC.willAskLaterLabelWithLocationServicesInstructionsTapped()
+        XCTAssertTrue(isLocationServicesInstructionsTapped)
     }
     
     func testFacebookSignupTapped() {
@@ -114,6 +123,10 @@ extension SnapOnboardingDelegateTests: SnapOnboardingDelegate {
     
     func enableLocationServicesTapped() {
         isEnableLocationServicesTapped = true
+    }
+    
+    func locationServicesInstructionsTapped() {
+        isLocationServicesInstructionsTapped = true
     }
     
     func facebookSignupTapped() {

@@ -171,10 +171,10 @@
 		9F3942AD1D37C96000692C9D /* Snapshot_tests */ = {
 			isa = PBXGroup;
 			children = (
+				9F58FA391D37D6AB00A43FEE /* SnapOnboardingViewController+.swift */,
 				9F58FA331D37D68C00A43FEE /* IntroViewControllerSnapshots.swift */,
 				9F58FA341D37D68C00A43FEE /* LocationViewControllerSnapshots.swift */,
 				9F58FA351D37D68C00A43FEE /* LoginViewControllerSnapshots.swift */,
-				9F58FA391D37D6AB00A43FEE /* SnapOnboardingViewController+.swift */,
 				9F3942B01D37C96000692C9D /* Info.plist */,
 			);
 			name = Snapshot_tests;

@@ -21,16 +21,16 @@ class TagsCollectionViewController: SnapTagsCollectionViewController {
         buttonConfiguration = createButtonConfiguration()
         
         super.viewDidLoad()
-        
-        scrollEnabled = false
     }
     
     func createConfiguration() -> SnapTagsViewConfiguration {
+        let shadowWidth: CGFloat = 3
+        let shadowHeight: CGFloat = 3
+        
         var config = SnapTagsViewConfiguration()
-        config.spacing = spacing
-        config.horizontalMargin = 0
-        config.verticalMargin = 0
-        config.contentHeight = fontSize
+        config.spacing = spacing - (shadowWidth + shadowHeight)
+        config.horizontalMargin = 0 - shadowWidth
+        config.verticalMargin = 0 - shadowHeight
         config.alignment = .Center
         
         return config
@@ -39,19 +39,23 @@ class TagsCollectionViewController: SnapTagsCollectionViewController {
     func createButtonConfiguration() -> SnapTagButtonConfiguration {
         var config = SnapTagButtonConfiguration()
         config.font = SnapFonts.gothamRoundedMediumOfSize(fontSize)
-        config.canBeTurnedOnAndOff = true
         config.margin = UIEdgeInsetsZero
-        config.labelInset = insets
+        
+        // Account for shadows on background image
+        var newInsets = insets
+        newInsets.bottom += 3
+        newInsets.top += 3
+        newInsets.left += 3
+        newInsets.right += 3.5
+        config.labelInset = newInsets
         
         var onState = ButtonStateConfiguration()
-//        onState.buttonImage = UIImage.SnapTagsViewAssets.YellowCloseButton.image
-        onState.backgroundColor = UIColor.whiteColor()
+        onState.backgroundColor = UIColor.clearColor()
+        onState.backgroundImage = UIImage(asset: Asset.Tags_background)
         onState.textColor = UIColor.blackColor()
-        onState.hasButton = false
         onState.cornerRadius = 4
         
         var offState = onState
-//        offState.buttonImage = UIImage.SnapTagsViewAssets.RedCloseButton.image
         offState.buttonTransform = CGAffineTransformRotate(CGAffineTransformIdentity, CGFloat(M_PI * 45 / 180.0))
         offState.backgroundColor = UIColor.whiteColor()
         offState.textColor = UIColor.roseColor()

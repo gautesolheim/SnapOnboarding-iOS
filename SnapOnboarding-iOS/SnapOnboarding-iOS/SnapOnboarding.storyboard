@@ -500,7 +500,7 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V9z-WP-6mg" userLabel="sparklingView">
                                 <rect key="frame" x="50" y="151" width="500" height="316"/>
                                 <subviews>
-                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Anb-9C-0O1" userLabel="tagsContainerView">
+                                    <containerView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Anb-9C-0O1" userLabel="tagsContainerView">
                                         <rect key="frame" x="0.0" y="228" width="500" height="70"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="70" id="gVG-uD-cFW"/>
@@ -950,7 +950,6 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                     <view key="view" contentMode="scaleToFill" id="qHp-og-6LL">
                         <rect key="frame" x="0.0" y="0.0" width="500" height="70"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="0.0" blue="0.34509804844856262" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tmM-4B-Ejc" userLabel="First Responder" sceneMemberID="firstResponder"/>
