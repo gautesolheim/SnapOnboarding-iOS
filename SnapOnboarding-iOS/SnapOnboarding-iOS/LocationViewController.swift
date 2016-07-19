@@ -26,6 +26,12 @@ class LocationViewController: UIViewController {
     @IBOutlet private var notNowButtonBottomToSuperViewBottom: NSLayoutConstraint?
     @IBOutlet private var willAskLaterLabelBottomToSuperViewBottom: NSLayoutConstraint?
     
+    var nextButtonAttributes: [String : AnyObject]? {
+        didSet {
+            setNextButtonTitle(nextButton?.titleLabel?.text)
+        }
+    }
+    
     var delegate: LocationViewControllerDelegate?
     private var viewModel: SnapOnboardingViewModel.LocationViewModel?
     
@@ -59,6 +65,7 @@ class LocationViewController: UIViewController {
         
         assert(viewModel != nil)
         
+        nextButtonAttributes = createAttributesForNextButton()
         setupForScreenSize(SnapOnboardingViewController.screenSize)
     }
     
@@ -83,15 +90,7 @@ class LocationViewController: UIViewController {
     // MARK: UIView configuration
     
     internal func configureNextButton() {
-        guard let title = viewModel?.next?.uppercaseString else {
-            return
-        }
-        
-        let paragraphStyle = NSMutableParagraphStyle()
-        paragraphStyle.lineHeightMultiple = 1.18
-        
-        let attributedText = NSAttributedString(string: title, attributes: [NSParagraphStyleAttributeName : paragraphStyle, NSForegroundColorAttributeName : UIColor.whiteColor()])
-        nextButton?.setAttributedTitle(attributedText, forState: .Normal)
+        setNextButtonTitle(viewModel?.next?.uppercaseString)
     }
     
     internal func configureHeadlineLabel() {
@@ -107,7 +106,10 @@ class LocationViewController: UIViewController {
         paragraphStyle.lineHeightMultiple = 1.18
         
         let attributedText = NSAttributedString(string: title, attributes: [NSParagraphStyleAttributeName : paragraphStyle, NSForegroundColorAttributeName : UIColor.blackColor()])
-        enableLocationServicesButton?.setAttributedTitle(attributedText, forState: .Normal)
+        UIView.performWithoutAnimation {
+            self.enableLocationServicesButton?.setAttributedTitle(attributedText, forState: .Normal)
+            self.enableLocationServicesButton?.layoutIfNeeded()
+        }
         
         let intrinsicContentWidth = enableLocationServicesButton?.intrinsicContentSize().width ?? 245
         let rightPadding: CGFloat = 26

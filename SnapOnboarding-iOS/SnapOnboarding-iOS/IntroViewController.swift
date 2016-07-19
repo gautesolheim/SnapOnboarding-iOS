@@ -19,6 +19,12 @@ class IntroViewController: UIViewController {
     @IBOutlet private var phoneViewToSparklingViewHeightRelation: NSLayoutConstraint?
     @IBOutlet private var sparklingViewToSuperViewHeightRelation: NSLayoutConstraint?
     
+    var nextButtonAttributes: [String : AnyObject]? {
+        didSet {
+            setNextButtonTitle(nextButton?.titleLabel?.text)
+        }
+    }
+    
     var delegate: IntroViewControllerDelegate?
     private var viewModel: SnapOnboardingViewModel.IntroViewModel?
     
@@ -33,6 +39,7 @@ class IntroViewController: UIViewController {
         
         assert(viewModel != nil)
         
+        nextButtonAttributes = createAttributesForNextButton()
         setupForScreenSize(SnapOnboardingViewController.screenSize)
     }
     
@@ -69,15 +76,7 @@ class IntroViewController: UIViewController {
     // MARK: UIView configuration
     
     internal func configureNextButton() {
-        guard let title = viewModel?.next?.uppercaseString else {
-            return
-        }
-        
-        let paragraphStyle = NSMutableParagraphStyle()
-        paragraphStyle.lineHeightMultiple = 1.18
-        
-        let attributedText = NSAttributedString(string: title, attributes: [NSParagraphStyleAttributeName : paragraphStyle, NSForegroundColorAttributeName : UIColor.whiteColor()])
-        nextButton?.setAttributedTitle(attributedText, forState: .Normal)
+        setNextButtonTitle(viewModel?.next?.uppercaseString)
     }
     
     internal func configureHeadlineLabel() {

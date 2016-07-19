@@ -67,7 +67,10 @@ class LoginViewController: UIViewController {
         paragraphStyle.lineHeightMultiple = 1.18
         
         let attributedText = NSAttributedString(string: title, attributes: [NSParagraphStyleAttributeName : paragraphStyle, NSForegroundColorAttributeName : UIColor.blackColor()])
-        continueWithFacebookButton?.setAttributedTitle(attributedText, forState: .Normal)
+        UIView.performWithoutAnimation {
+            self.continueWithFacebookButton?.setAttributedTitle(attributedText, forState: .Normal)
+            self.continueWithFacebookButton?.layoutIfNeeded()
+        }
         
         let intrinsicContentWidth = continueWithFacebookButton?.intrinsicContentSize().width ?? 245
         let rightPadding: CGFloat = 25
@@ -84,7 +87,10 @@ class LoginViewController: UIViewController {
         paragraphStyle.lineHeightMultiple = 1.18
         
         let attributedText = NSAttributedString(string: title, attributes: [NSParagraphStyleAttributeName : paragraphStyle, NSForegroundColorAttributeName : UIColor.blackColor()])
-        continueWithInstagramButton?.setAttributedTitle(attributedText, forState: .Normal)
+        UIView.performWithoutAnimation {
+            self.continueWithInstagramButton?.setAttributedTitle(attributedText, forState: .Normal)
+            self.continueWithInstagramButton?.layoutIfNeeded()
+        }
         
         let intrinsicContentWidth = continueWithInstagramButton?.intrinsicContentSize().width ?? 245
         let rightPadding: CGFloat = 25
