@@ -46,7 +46,7 @@ class TagsCollectionViewController: SnapTagsCollectionViewController {
         newInsets.bottom += 3
         newInsets.top += 3
         newInsets.left += 3
-        newInsets.right += 3.5
+        newInsets.right += 1.5
         config.labelInset = newInsets
         
         var onState = ButtonStateConfiguration()
