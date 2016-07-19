@@ -69,8 +69,15 @@ class IntroViewController: UIViewController {
     // MARK: UIView configuration
     
     internal func configureNextButton() {
-        let title = viewModel?.next?.uppercaseString
-        nextButton?.setTitle(title, forState: .Normal)
+        guard let title = viewModel?.next?.uppercaseString else {
+            return
+        }
+        
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.lineHeightMultiple = 1.18
+        
+        let attributedText = NSAttributedString(string: title, attributes: [NSParagraphStyleAttributeName : paragraphStyle, NSForegroundColorAttributeName : UIColor.whiteColor()])
+        nextButton?.setAttributedTitle(attributedText, forState: .Normal)
     }
     
     internal func configureHeadlineLabel() {

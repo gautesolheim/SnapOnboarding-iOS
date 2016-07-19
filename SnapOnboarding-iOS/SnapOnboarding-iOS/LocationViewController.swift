@@ -83,7 +83,15 @@ class LocationViewController: UIViewController {
     // MARK: UIView configuration
     
     internal func configureNextButton() {
-        nextButton?.setTitle(viewModel?.next?.uppercaseString, forState: .Normal)
+        guard let title = viewModel?.next?.uppercaseString else {
+            return
+        }
+        
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.lineHeightMultiple = 1.18
+        
+        let attributedText = NSAttributedString(string: title, attributes: [NSParagraphStyleAttributeName : paragraphStyle, NSForegroundColorAttributeName : UIColor.whiteColor()])
+        nextButton?.setAttributedTitle(attributedText, forState: .Normal)
     }
     
     internal func configureHeadlineLabel() {

@@ -10,6 +10,7 @@ import SnapFonts_iOS
         didSet {
             let paragraphStyle = attributes[NSParagraphStyleAttributeName] as? NSMutableParagraphStyle ?? createDefaultParagraphStyle()
             paragraphStyle.lineSpacing = lineSpacin
+            paragraphStyle.lineHeightMultiple = 1.18 // Compensate for faulty font
             attributes[NSParagraphStyleAttributeName] = paragraphStyle
             updateText(text)
         }
