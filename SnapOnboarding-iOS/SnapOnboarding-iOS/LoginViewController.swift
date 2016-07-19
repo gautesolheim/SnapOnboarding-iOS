@@ -59,7 +59,16 @@ class LoginViewController: UIViewController {
     // MARK: UIView configuration
     
     internal func configureContinueWithFacebookButton() {
-        continueWithFacebookButton?.setTitle(viewModel?.continueWithFacebook?.uppercaseString, forState: .Normal)
+        guard let title = viewModel?.continueWithFacebook?.uppercaseString else {
+            return
+        }
+        
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.lineHeightMultiple = 1.18
+        
+        let attributedText = NSAttributedString(string: title, attributes: [NSParagraphStyleAttributeName : paragraphStyle, NSForegroundColorAttributeName : UIColor.blackColor()])
+        continueWithFacebookButton?.setAttributedTitle(attributedText, forState: .Normal)
+        
         let intrinsicContentWidth = continueWithFacebookButton?.intrinsicContentSize().width ?? 245
         let rightPadding: CGFloat = 25
         let requiredWidth = intrinsicContentWidth + rightPadding
@@ -67,7 +76,16 @@ class LoginViewController: UIViewController {
     }
     
     internal func configureContinueWithInstagramButton() {
-        continueWithInstagramButton?.setTitle(viewModel?.continueWithInstagram?.uppercaseString, forState: .Normal)
+        guard let title = viewModel?.continueWithInstagram?.uppercaseString else {
+            return
+        }
+        
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.lineHeightMultiple = 1.18
+        
+        let attributedText = NSAttributedString(string: title, attributes: [NSParagraphStyleAttributeName : paragraphStyle, NSForegroundColorAttributeName : UIColor.blackColor()])
+        continueWithInstagramButton?.setAttributedTitle(attributedText, forState: .Normal)
+        
         let intrinsicContentWidth = continueWithInstagramButton?.intrinsicContentSize().width ?? 245
         let rightPadding: CGFloat = 25
         let requiredWidth = intrinsicContentWidth + rightPadding

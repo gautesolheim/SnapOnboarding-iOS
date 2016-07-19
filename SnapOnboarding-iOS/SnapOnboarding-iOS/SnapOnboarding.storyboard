@@ -174,7 +174,7 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                                     <constraint firstAttribute="width" constant="100" id="PaX-Wy-oVD"/>
                                 </constraints>
                             </view>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Vi vil spørre deg på et senere tidspunkt, når vi trenger lokasjonen din, for eksempel ved et nytt salg." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Og-sM-3rO" userLabel="willAskLaterLabel" customClass="SnapOnboardingHeadlineLabel" customModule="SnapOnboarding_iOS" customModuleProvider="target">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vi vil spørre deg på et senere tidspunkt, når vi trenger lokasjonen din, for eksempel ved et nytt salg." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Og-sM-3rO" userLabel="willAskLaterLabel" customClass="SnapOnboardingHeadlineLabel" customModule="SnapOnboarding_iOS" customModuleProvider="target">
                                 <rect key="frame" x="108" y="397" width="385" height="79"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="400" id="cBg-0u-kaL"/>
@@ -198,6 +198,7 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                                 <fontDescription key="fontDescription" name="GothamRounded-Medium" family="Gotham Rounded" pointSize="15"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <inset key="contentEdgeInsets" minX="58" minY="0.0" maxX="0.0" maxY="2"/>
+                                <inset key="titleEdgeInsets" minX="0.0" minY="-1" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="SKRU PÅ STEDSTJENESTER" backgroundImage="btn location">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -219,14 +220,14 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                                     <action selector="notNowButtonTapped:" destination="tuq-Zg-aCA" eventType="touchUpInside" id="HKa-Gl-7Mr"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r5E-HZ-yPq" userLabel="headlineSparklingSpacer">
-                                <rect key="frame" x="250" y="91" width="100" height="34"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r5E-HZ-yPq" userLabel="headlineSparklingSpacer">
+                                <rect key="frame" x="250" y="96" width="100" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="sUZ-2o-i3x"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ANS-Dj-bV5" userLabel="sparklingView">
-                                <rect key="frame" x="20" y="125" width="560" height="229"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ANS-Dj-bV5" userLabel="sparklingView">
+                                <rect key="frame" x="20" y="130" width="560" height="229"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zhm-Jz-ST7" userLabel="neighborhoodView">
                                         <rect key="frame" x="151" y="0.0" width="259" height="229"/>
@@ -357,14 +358,14 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                                     <constraint firstItem="zhm-Jz-ST7" firstAttribute="centerX" secondItem="ANS-Dj-bV5" secondAttribute="centerX" id="tGn-Dv-PrW"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J6z-PJ-dva" userLabel="bottomSpacer">
-                                <rect key="frame" x="250" y="354" width="100" height="43"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J6z-PJ-dva" userLabel="bottomSpacer">
+                                <rect key="frame" x="250" y="359" width="100" height="38"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="ndx-H9-wIn"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Følg selgere og produkter nær deg! Aldri gå glipp av et kupp igjen." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GPV-cC-643" userLabel="headlineLabel" customClass="SnapOnboardingHeadlineLabel" customModule="SnapOnboarding_iOS" customModuleProvider="target">
-                                <rect key="frame" x="25" y="40" width="550" height="51"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Følg selgere og produkter nær deg! Aldri gå glipp av et kupp igjen." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GPV-cC-643" userLabel="headlineLabel" customClass="SnapOnboardingHeadlineLabel" customModule="SnapOnboarding_iOS" customModuleProvider="target">
+                                <rect key="frame" x="25" y="40" width="550" height="56"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="550" id="N2o-xB-Fhk"/>
                                 </constraints>
@@ -468,8 +469,8 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                                     <action selector="nextButtonTapped:" destination="msg-6e-T6i" eventType="touchUpInside" id="0EP-YZ-exR"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Å legge ut salg er raskt og enkelt. Vi tagger og kategoriserer annonser med smart bildegjenkjenning." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6QU-g5-Hyl" userLabel="headlineLabel" customClass="SnapOnboardingHeadlineLabel" customModule="SnapOnboarding_iOS" customModuleProvider="target">
-                                <rect key="frame" x="25" y="40" width="550" height="79"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Å legge ut salg er raskt og enkelt. Vi tagger og kategoriserer annonser med smart bildegjenkjenning." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6QU-g5-Hyl" userLabel="headlineLabel" customClass="SnapOnboardingHeadlineLabel" customModule="SnapOnboarding_iOS" customModuleProvider="target">
+                                <rect key="frame" x="25" y="40" width="550" height="87"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="550" id="cbA-I7-Ipr"/>
                                 </constraints>
@@ -482,14 +483,14 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bZw-jc-PYY" userLabel="headlineSparklingSpacer">
-                                <rect key="frame" x="250" y="119" width="100" height="23"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bZw-jc-PYY" userLabel="headlineSparklingSpacer">
+                                <rect key="frame" x="250" y="127" width="100" height="23"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="Ai5-Uq-dY2"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yq7-1l-rO5" userLabel="bottomSpacer">
-                                <rect key="frame" x="250" y="458" width="100" height="44"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yq7-1l-rO5" userLabel="bottomSpacer">
+                                <rect key="frame" x="250" y="466" width="100" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="c6p-Z5-HTD"/>
                                 </constraints>
@@ -500,8 +501,8 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                                     <constraint firstAttribute="width" constant="100" id="aLm-4c-wkd"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V9z-WP-6mg" userLabel="sparklingView">
-                                <rect key="frame" x="50" y="142" width="500" height="316"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V9z-WP-6mg" userLabel="sparklingView">
+                                <rect key="frame" x="50" y="150" width="500" height="316"/>
                                 <subviews>
                                     <containerView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Anb-9C-0O1" userLabel="tagsContainerView">
                                         <rect key="frame" x="0.0" y="228" width="500" height="70"/>
@@ -735,6 +736,7 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                                 <fontDescription key="fontDescription" name="GothamRounded-Medium" family="Gotham Rounded" pointSize="15"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <inset key="contentEdgeInsets" minX="59" minY="0.0" maxX="0.0" maxY="2"/>
+                                <inset key="titleEdgeInsets" minX="0.0" minY="-1" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="FORTSETT MED INSTAGRAM" backgroundImage="btn login instagram">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -752,6 +754,7 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                                 <fontDescription key="fontDescription" name="GothamRounded-Medium" family="Gotham Rounded" pointSize="15"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <inset key="contentEdgeInsets" minX="59" minY="0.0" maxX="0.0" maxY="2"/>
+                                <inset key="titleEdgeInsets" minX="0.0" minY="-1" maxX="0.0" maxY="0.0"/>
                                 <size key="titleShadowOffset" width="0.0" height="2.2250738585072014e-308"/>
                                 <state key="normal" title="FORTSETT MED FACEBOOK" backgroundImage="btn login facebook">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>

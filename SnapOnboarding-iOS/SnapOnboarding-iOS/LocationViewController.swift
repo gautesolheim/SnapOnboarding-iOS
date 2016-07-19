@@ -99,7 +99,16 @@ class LocationViewController: UIViewController {
     }
     
     internal func configureEnableLocationServicesButton() {
-        enableLocationServicesButton?.setTitle(viewModel?.enableLocationServices?.uppercaseString, forState: .Normal)
+        guard let title = viewModel?.enableLocationServices?.uppercaseString else {
+            return
+        }
+        
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.lineHeightMultiple = 1.18
+        
+        let attributedText = NSAttributedString(string: title, attributes: [NSParagraphStyleAttributeName : paragraphStyle, NSForegroundColorAttributeName : UIColor.blackColor()])
+        enableLocationServicesButton?.setAttributedTitle(attributedText, forState: .Normal)
+        
         let intrinsicContentWidth = enableLocationServicesButton?.intrinsicContentSize().width ?? 245
         let rightPadding: CGFloat = 26
         let width = intrinsicContentWidth + rightPadding
@@ -252,6 +261,7 @@ class LocationViewController: UIViewController {
         enableLocationServicesButtonWidth?.active = false
         let backgroundImage = UIImage(asset: Asset.Btn_Location_Clean)
         
+        enableLocationServicesButton.setAttributedTitle(nil, forState: .Normal)
         enableLocationServicesButton.setTitle(nil, forState: .Normal)
         enableLocationServicesButton.setBackgroundImage(backgroundImage, forState: .Normal)
         enableLocationServicesButton.contentEdgeInsets = UIEdgeInsetsZero
