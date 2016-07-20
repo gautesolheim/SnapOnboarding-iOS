@@ -142,10 +142,10 @@ extension ViewController: SnapOnboardingDelegate {
             message: "Snapsale trenger din posisjon for å beregne avstand til salg",
             preferredStyle: .Alert)
         alertController.addAction(UIAlertAction(title: "Ikke tillat", style: .Default, handler: { _ in
-            self.onboardingViewController?.locationServicesStatusChanged(false)
+            self.onboardingViewController?.locationServicesStatusChanged(.Disabled)
         }))
         alertController.addAction(UIAlertAction(title: "Tillat", style: .Default, handler: { _ in
-            self.onboardingViewController?.locationServicesStatusChanged(true)
+            self.onboardingViewController?.locationServicesStatusChanged(.Enabled)
         }))
         
         onboardingViewController?.presentViewController(alertController, animated: true, completion: nil)
@@ -163,13 +163,8 @@ extension ViewController: SnapOnboardingDelegate {
         print("instagram-signup-tapped")
     }
     
-    
-    func willDismiss() {
-        print("will-dismiss")
-    }
-    
-    func didDismiss() {
-        print("did-dismiss")
+    func skipLoginTapped() {
+        print("skip-login-tapped")
     }
     
 }

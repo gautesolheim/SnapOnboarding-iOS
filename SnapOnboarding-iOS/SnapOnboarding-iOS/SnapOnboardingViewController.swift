@@ -42,14 +42,6 @@ public class SnapOnboardingViewController: UIViewController {
         configureTermsAndConditionsLabel()
     }
     
-    private func dismiss() {
-        delegate?.willDismiss()
-        
-        dismissViewControllerAnimated(true) {
-            self.delegate?.didDismiss()
-        }
-    }
-    
     // MARK: UIView configuration
     
     internal func configureTermsAndConditionsLabel() {
@@ -155,10 +147,12 @@ extension SnapOnboardingViewController: SnapOnboardingViewControllerProtocol {
         viewModel = configuration.viewModel
     }
     
-    public func locationServicesStatusChanged(status: Bool) {
+    public func locationServicesStatusChanged(status: LocationServicesStatus) {
+        assert(status == .Enabled || status == .Disabled)
+        
         locationViewController?.locationServicesStatusChanged(status)
         
-        if status {
+        if status == .Enabled {
             scrollToNextPage()
         }
     }
@@ -231,8 +225,8 @@ extension SnapOnboardingViewController: LoginViewControllerDelegate {
         delegate?.instagramSignupTapped()
     }
     
-    func skipLoginButtonTapped() {
-        dismiss()
+    func skipLoginTapped() {
+        delegate?.skipLoginTapped()
     }
     
 }
