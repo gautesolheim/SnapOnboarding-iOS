@@ -11,8 +11,7 @@ class SnapOnboardingDelegateTests: XCTestCase {
     private var isLocationServicesInstructionsTapped = false
     private var isFacebookSignupTapped = false
     private var isInstagramSignupTapped = false
-    private var isWillDismissCalled = false
-    private var isDidDismissCalled = false
+    private var isSkipLoginTapped = false
     
     private var didDismissCalledExpectation: XCTestExpectation!
     
@@ -36,9 +35,7 @@ class SnapOnboardingDelegateTests: XCTestCase {
         isLocationServicesInstructionsTapped = false
         isFacebookSignupTapped = false
         isInstagramSignupTapped = false
-        isWillDismissCalled = false
-        isDidDismissCalled = false
-        didDismissCalledExpectation = nil
+        isSkipLoginTapped = false
     }
     
     func testTermsAndConditionsTapped() {
@@ -79,21 +76,11 @@ class SnapOnboardingDelegateTests: XCTestCase {
         XCTAssertTrue(isInstagramSignupTapped)
     }
     
-    func testWillAndDidDismissCalled() {
-        didDismissCalledExpectation = expectationWithDescription("SnapOnboardingDelegate.didDismiss called")
-        
-        // For dismissal of vc to work, it must be in the view hierarchy
-        UIApplication.sharedApplication().keyWindow?.rootViewController?.presentViewController(vc, animated: false, completion: nil)
-        
+    func testSkipLoginTapped() {
         let loginVC: LoginViewController = getChildVCOfType()!
         
         loginVC.skipLoginButtonTapped(loginVC.skipLoginButton!)
-        XCTAssertTrue(isWillDismissCalled)
-        XCTAssertFalse(isDidDismissCalled) // Should not be true yet, dismissal is with delay
-        
-        waitForExpectationsWithTimeout(2, handler: { error in
-            XCTAssertNil(error)
-        })
+        XCTAssertTrue(isSkipLoginTapped)
     }
     
     // MARK: Helpers
@@ -137,13 +124,8 @@ extension SnapOnboardingDelegateTests: SnapOnboardingDelegate {
         isInstagramSignupTapped = true
     }
     
-    func willDismiss() {
-        isWillDismissCalled = true
-    }
-    
-    func didDismiss() {
-        isDidDismissCalled = true
-        didDismissCalledExpectation.fulfill()
+    func skipLoginTapped() {
+        isSkipLoginTapped = true
     }
     
 }

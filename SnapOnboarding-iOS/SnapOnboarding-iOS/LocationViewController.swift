@@ -1,13 +1,6 @@
 import UIKit
 import SnapFonts_iOS
 
-enum LocationServicesStatus {
-    case NotYetRequested
-    case WaitingForResponse
-    case Enabled
-    case Disabled
-}
-
 class LocationViewController: UIViewController {
     
     @IBOutlet private(set) var nextButton: UIButton?
@@ -292,8 +285,10 @@ extension LocationViewController: LocationViewControllerProtocol {
         self.viewModel = viewModel
     }
     
-    func locationServicesStatusChanged(status: Bool) {
-        if status {
+    func locationServicesStatusChanged(status: LocationServicesStatus) {
+        assert(status == .Enabled || status == .Disabled)
+        
+        if status == .Enabled {
             locationServicesStatus = .Enabled
             configureWillAskLaterLabelForThankYou()
         } else {
