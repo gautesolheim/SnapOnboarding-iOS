@@ -156,10 +156,12 @@ extension SnapOnboardingViewController: SnapOnboardingViewControllerProtocol {
         viewModel = configuration.viewModel
     }
     
-    public func locationServicesStatusChanged(status: Bool) {
+    public func locationServicesStatusChanged(status: SnapOnboardingLocationServicesStatus) {
+        assert(status == .Enabled || status == .Disabled)
+        
         locationViewController?.locationServicesStatusChanged(status)
         
-        if status {
+        if status == .Enabled {
             scrollToNextPage()
         }
     }

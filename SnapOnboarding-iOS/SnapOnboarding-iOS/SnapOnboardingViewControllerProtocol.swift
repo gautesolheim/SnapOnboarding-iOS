@@ -1,6 +1,13 @@
+public enum SnapOnboardingLocationServicesStatus {
+    case NotYetRequested
+    case WaitingForResponse
+    case Enabled
+    case Disabled
+}
+
 public protocol SnapOnboardingViewControllerProtocol: class {
     
     func applyConfiguration(configuration: SnapOnboardingConfiguration)
-    func locationServicesStatusChanged(status: Bool)
+    func locationServicesStatusChanged(status: SnapOnboardingLocationServicesStatus)
     
 }
