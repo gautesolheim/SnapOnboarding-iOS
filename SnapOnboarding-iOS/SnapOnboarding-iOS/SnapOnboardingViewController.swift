@@ -148,7 +148,7 @@ extension SnapOnboardingViewController: SnapOnboardingViewControllerProtocol {
         viewModel = configuration.viewModel
     }
     
-    public func locationServicesStatusChanged(status: SnapOnboardingLocationServicesStatus) {
+    public func locationServicesStatusChanged(status: LocationServicesStatus) {
         assert(status == .Enabled || status == .Disabled)
         
         locationViewController?.locationServicesStatusChanged(status)

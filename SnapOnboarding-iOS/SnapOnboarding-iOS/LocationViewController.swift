@@ -23,7 +23,7 @@ class LocationViewController: UIViewController {
     private var viewModel: SnapOnboardingViewModel.LocationViewModel?
     
     private var spinnerImageView = UIImageView()
-    private var locationServicesStatus: SnapOnboardingLocationServicesStatus = .NotYetRequested
+    private var locationServicesStatus: LocationServicesStatus = .NotYetRequested
     
     @IBAction func nextButtonTapped(sender: UIButton) {
         delegate?.locationNextButtonTapped()
@@ -285,7 +285,7 @@ extension LocationViewController: LocationViewControllerProtocol {
         self.viewModel = viewModel
     }
     
-    func locationServicesStatusChanged(status: SnapOnboardingLocationServicesStatus) {
+    func locationServicesStatusChanged(status: LocationServicesStatus) {
         assert(status == .Enabled || status == .Disabled)
         
         if status == .Enabled {
