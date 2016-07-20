@@ -164,13 +164,8 @@ extension ViewController: SnapOnboardingDelegate {
         print("instagram-signup-tapped")
     }
     
-    
-    func willDismiss() {
-        print("will-dismiss")
-    }
-    
-    func didDismiss() {
-        print("did-dismiss")
+    func skipLoginTapped() {
+        print("skip-login-tapped")
     }
     
 }

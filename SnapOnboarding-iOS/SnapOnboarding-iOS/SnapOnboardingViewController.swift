@@ -43,14 +43,6 @@ public class SnapOnboardingViewController: UIViewController {
         configureTermsAndConditionsLabel()
     }
     
-    private func dismiss() {
-        delegate?.willDismiss()
-        
-        dismissViewControllerAnimated(true) {
-            self.delegate?.didDismiss()
-        }
-    }
-    
     // MARK: UIView configuration
     
     internal func configureTermsAndConditionsLabel() {
@@ -234,8 +226,8 @@ extension SnapOnboardingViewController: LoginViewControllerDelegate {
         delegate?.instagramSignupTapped()
     }
     
-    func skipLoginButtonTapped() {
-        dismiss()
+    func skipLoginTapped() {
+        delegate?.skipLoginTapped()
     }
     
 }

@@ -22,7 +22,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func skipLoginButtonTapped(sender: UIButton) {
-        delegate?.skipLoginButtonTapped()
+        delegate?.skipLoginTapped()
     }
     
     var delegate: LoginViewControllerDelegate?

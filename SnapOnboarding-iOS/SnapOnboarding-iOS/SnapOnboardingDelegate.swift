@@ -8,8 +8,6 @@ public protocol SnapOnboardingDelegate: class {
     
     func facebookSignupTapped()
     func instagramSignupTapped()
-    
-    func willDismiss()
-    func didDismiss()
+    func skipLoginTapped()
     
 }
