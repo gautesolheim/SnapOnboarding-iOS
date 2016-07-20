@@ -86,7 +86,6 @@ strip_invalid_archs() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/KTCenterFlowLayout/KTCenterFlowLayout.framework"
   install_framework "$BUILT_PRODUCTS_DIR/NSLayoutConstraint+ExpressionFormat/NSLayoutConstraint_ExpressionFormat.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/SnapFonts-iOS/SnapFonts_iOS.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SnapOnboarding-iOS/SnapOnboarding_iOS.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SnapTagsView/SnapTagsView.framework"
   install_framework "$BUILT_PRODUCTS_DIR/TTTAttributedLabel/TTTAttributedLabel.framework"
@@ -96,7 +95,6 @@ fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/KTCenterFlowLayout/KTCenterFlowLayout.framework"
   install_framework "$BUILT_PRODUCTS_DIR/NSLayoutConstraint+ExpressionFormat/NSLayoutConstraint_ExpressionFormat.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/SnapFonts-iOS/SnapFonts_iOS.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SnapOnboarding-iOS/SnapOnboarding_iOS.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SnapTagsView/SnapTagsView.framework"
   install_framework "$BUILT_PRODUCTS_DIR/TTTAttributedLabel/TTTAttributedLabel.framework"

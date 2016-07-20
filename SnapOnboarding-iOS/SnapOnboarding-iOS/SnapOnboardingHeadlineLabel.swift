@@ -1,5 +1,4 @@
 import UIKit
-import SnapFonts_iOS
 
 @IBDesignable class SnapOnboardingHeadlineLabel: UILabel {
     
@@ -36,7 +35,7 @@ import SnapFonts_iOS
     func updateAttributedTextWithHeader(header: String?, text: NSMutableAttributedString?) {
         if let header = header, body = text {
             var headerAttributes = attributes
-            headerAttributes[NSFontAttributeName] = SnapFonts.gothamRoundedMediumOfSize(font.pointSize)
+            headerAttributes[NSFontAttributeName] = UIFont.gothamRoundedMediumOfSize(font.pointSize)
             
             let updatedText = NSMutableAttributedString(string: header, attributes: headerAttributes)
             updatedText.appendAttributedString(NSAttributedString(string: "\n"))
@@ -50,6 +49,7 @@ import SnapFonts_iOS
     private func createDefaultParagraphStyle() -> NSMutableParagraphStyle {
         let defaultParagraphStyle = NSMutableParagraphStyle()
         defaultParagraphStyle.alignment = NSTextAlignment.Center
+        defaultParagraphStyle.lineHeightMultiple = 1.18 // Compensate for faulty font
         return defaultParagraphStyle
     }
 

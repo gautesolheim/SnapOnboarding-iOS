@@ -1,5 +1,4 @@
 import SnapTagsView
-import SnapFonts_iOS
 
 struct TagsViewModel {
     var data: [SnapTagRepresentation]?
@@ -38,7 +37,7 @@ class TagsCollectionViewController: SnapTagsCollectionViewController {
     
     func createButtonConfiguration() -> SnapTagButtonConfiguration {
         var config = SnapTagButtonConfiguration()
-        config.font = SnapFonts.gothamRoundedMediumOfSize(fontSize)
+        config.font = UIFont.gothamRoundedMediumOfSize(fontSize) ?? UIFont.systemFontOfSize(fontSize)
         config.margin = UIEdgeInsetsZero
         
         // Account for shadows on background image
@@ -46,7 +45,7 @@ class TagsCollectionViewController: SnapTagsCollectionViewController {
         newInsets.bottom += 3
         newInsets.top += 3
         newInsets.left += 3
-        newInsets.right += 3.5
+        newInsets.right += 1.5
         config.labelInset = newInsets
         
         var onState = ButtonStateConfiguration()

@@ -1,5 +1,4 @@
 import UIKit
-import SnapFonts_iOS
 
 enum LocationServicesStatus {
     case NotYetRequested
@@ -25,6 +24,12 @@ class LocationViewController: UIViewController {
     @IBOutlet private var sparklingViewToSuperViewHeightRelation: NSLayoutConstraint?
     @IBOutlet private var notNowButtonBottomToSuperViewBottom: NSLayoutConstraint?
     @IBOutlet private var willAskLaterLabelBottomToSuperViewBottom: NSLayoutConstraint?
+    
+    var nextButtonAttributes: [String : AnyObject]? {
+        didSet {
+            setNextButtonTitle(nextButton?.titleLabel?.text)
+        }
+    }
     
     var delegate: LocationViewControllerDelegate?
     private var viewModel: SnapOnboardingViewModel.LocationViewModel?
@@ -59,6 +64,7 @@ class LocationViewController: UIViewController {
         
         assert(viewModel != nil)
         
+        nextButtonAttributes = createAttributesForNextButton()
         setupForScreenSize(SnapOnboardingViewController.screenSize)
     }
     
@@ -83,7 +89,7 @@ class LocationViewController: UIViewController {
     // MARK: UIView configuration
     
     internal func configureNextButton() {
-        nextButton?.setTitle(viewModel?.next?.uppercaseString, forState: .Normal)
+        setNextButtonTitle(viewModel?.next?.uppercaseString)
     }
     
     internal func configureHeadlineLabel() {
@@ -91,7 +97,19 @@ class LocationViewController: UIViewController {
     }
     
     internal func configureEnableLocationServicesButton() {
-        enableLocationServicesButton?.setTitle(viewModel?.enableLocationServices?.uppercaseString, forState: .Normal)
+        guard let title = viewModel?.enableLocationServices?.uppercaseString else {
+            return
+        }
+        
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.lineHeightMultiple = 1.18
+        
+        let attributedText = NSAttributedString(string: title, attributes: [NSParagraphStyleAttributeName : paragraphStyle, NSForegroundColorAttributeName : UIColor.blackColor()])
+        UIView.performWithoutAnimation {
+            self.enableLocationServicesButton?.setAttributedTitle(attributedText, forState: .Normal)
+            self.enableLocationServicesButton?.layoutIfNeeded()
+        }
+        
         let intrinsicContentWidth = enableLocationServicesButton?.intrinsicContentSize().width ?? 245
         let rightPadding: CGFloat = 26
         let width = intrinsicContentWidth + rightPadding
@@ -244,6 +262,7 @@ class LocationViewController: UIViewController {
         enableLocationServicesButtonWidth?.active = false
         let backgroundImage = UIImage(asset: Asset.Btn_Location_Clean)
         
+        enableLocationServicesButton.setAttributedTitle(nil, forState: .Normal)
         enableLocationServicesButton.setTitle(nil, forState: .Normal)
         enableLocationServicesButton.setBackgroundImage(backgroundImage, forState: .Normal)
         enableLocationServicesButton.contentEdgeInsets = UIEdgeInsetsZero
@@ -318,7 +337,7 @@ extension LocationViewController {
     
     func setupFor3_5InchPortrait() {
         configureNextButtonAndHeadlineLabelFor3_5Inch()
-        willAskLaterLabel?.font = SnapFonts.gothamRoundedBookOfSize(14)
+        willAskLaterLabel?.font = UIFont.gothamRoundedBookOfSize(14)
 
         sparklingViewToSuperViewHeightRelation?.constant = -30
         notNowButtonBottomToSuperViewBottom?.constant = 0
@@ -327,7 +346,7 @@ extension LocationViewController {
     
     func setupFor4_0InchPortrait() {
         configureNextButtonAndHeadlineLabelFor4_0Inch()
-        willAskLaterLabel?.font = SnapFonts.gothamRoundedBookOfSize(14)
+        willAskLaterLabel?.font = UIFont.gothamRoundedBookOfSize(14)
         
         sparklingViewToSuperViewHeightRelation?.constant = -20
     }

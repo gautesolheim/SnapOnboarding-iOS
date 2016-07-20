@@ -1,5 +1,4 @@
 import UIKit
-import SnapFonts_iOS
 
 private enum EmbedSegueIdentifier: String {
     case TagsCollectionViewController = "TagsContainerViewEmbed"
@@ -19,6 +18,12 @@ class IntroViewController: UIViewController {
     @IBOutlet private var phoneViewToSparklingViewHeightRelation: NSLayoutConstraint?
     @IBOutlet private var sparklingViewToSuperViewHeightRelation: NSLayoutConstraint?
     
+    var nextButtonAttributes: [String : AnyObject]? {
+        didSet {
+            setNextButtonTitle(nextButton?.titleLabel?.text)
+        }
+    }
+    
     var delegate: IntroViewControllerDelegate?
     private var viewModel: SnapOnboardingViewModel.IntroViewModel?
     
@@ -33,6 +38,7 @@ class IntroViewController: UIViewController {
         
         assert(viewModel != nil)
         
+        nextButtonAttributes = createAttributesForNextButton()
         setupForScreenSize(SnapOnboardingViewController.screenSize)
     }
     
@@ -69,8 +75,7 @@ class IntroViewController: UIViewController {
     // MARK: UIView configuration
     
     internal func configureNextButton() {
-        let title = viewModel?.next?.uppercaseString
-        nextButton?.setTitle(title, forState: .Normal)
+        setNextButtonTitle(viewModel?.next?.uppercaseString)
     }
     
     internal func configureHeadlineLabel() {
@@ -176,7 +181,7 @@ extension IntroViewController {
         tagsContainerViewHeight?.constant = 90
         
         if size.width <= 375 {
-            headlineLabel?.font = SnapFonts.gothamRoundedBookOfSize(30)
+            headlineLabel?.font = UIFont.gothamRoundedBookOfSize(30)
             topSpacerToSuperViewHeightRelation?.constant = 10
             sparklingViewToSuperViewHeightRelation?.constant = -160
             phoneViewToSparklingViewHeightRelation?.constant = -20

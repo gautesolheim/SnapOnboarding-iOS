@@ -8,7 +8,6 @@ PODS:
   - NSLayoutConstraint+ExpressionFormat (0.1.0)
   - SnapFBSnapshotBase (1.1.0):
     - FBSnapshotTestCase
-  - SnapFonts-iOS (1.0.0)
   - SnapTagsView (0.6.3):
     - KTCenterFlowLayout
     - NSLayoutConstraint+ExpressionFormat
@@ -20,7 +19,6 @@ PODS:
 
 DEPENDENCIES:
   - SnapFBSnapshotBase
-  - SnapFonts-iOS
   - SnapTagsView
   - TTTAttributedLabel
 
@@ -29,12 +27,11 @@ SPEC CHECKSUMS:
   KTCenterFlowLayout: 2905970d36c653d9a7736c20bfa0d37dcf797d6b
   NSLayoutConstraint+ExpressionFormat: 031af30af4d036658c02e33070622ed993318b8a
   SnapFBSnapshotBase: 41e9522e1c57f06b4b8683c36c6e03431a40abb6
-  SnapFonts-iOS: d6eb7e76f92c78bfbe0830c706c66b631157d77e
   SnapTagsView: 3a8ed5ba538ab9b9e10ed4ef7ac615d893145b51
   TTTAttributedLabel: 8cffe8e127e4e82ff3af1e5386d4cd0ad000b656
   UICollectionViewLeftAlignedLayout: 830bf6fa5bab9f9b464f62e3384f9d2e00b3c0f6
   UICollectionViewRightAlignedLayout: 823eef8c567eba4a44c21bc2ffcb0d0d5f361e2d
 
-PODFILE CHECKSUM: a500cf1d88a397c2e9d8c402db62a5cb0bf374b5
+PODFILE CHECKSUM: abec3d6bc3f2558a244f78ae1d4a6b1d2079f2f2
 
 COCOAPODS: 1.0.1

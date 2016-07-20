@@ -6,14 +6,14 @@
       "resizing" : {
         "mode" : "9-part",
         "center" : {
-          "mode" : "tile",
+          "mode" : "stretch",
           "width" : 1,
           "height" : 1
         },
         "cap-insets" : {
-          "bottom" : 7,
+          "bottom" : 8,
           "top" : 7,
-          "right" : 7,
+          "right" : 6,
           "left" : 7
         }
       }
