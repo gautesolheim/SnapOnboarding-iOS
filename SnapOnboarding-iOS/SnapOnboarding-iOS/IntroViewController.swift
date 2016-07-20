@@ -1,5 +1,4 @@
 import UIKit
-import SnapFonts_iOS
 
 private enum EmbedSegueIdentifier: String {
     case TagsCollectionViewController = "TagsContainerViewEmbed"
@@ -182,7 +181,7 @@ extension IntroViewController {
         tagsContainerViewHeight?.constant = 90
         
         if size.width <= 375 {
-            headlineLabel?.font = SnapFonts.gothamRoundedBookOfSize(30)
+            headlineLabel?.font = UIFont.gothamRoundedBookOfSize(30)
             topSpacerToSuperViewHeightRelation?.constant = 10
             sparklingViewToSuperViewHeightRelation?.constant = -160
             phoneViewToSparklingViewHeightRelation?.constant = -20

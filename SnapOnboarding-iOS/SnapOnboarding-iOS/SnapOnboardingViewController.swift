@@ -1,6 +1,5 @@
 import UIKit
 import TTTAttributedLabel
-import SnapFonts_iOS
 
 private enum TermsAndConditionsURL: String {
     case TermsAndConditions = "terms"
@@ -59,14 +58,14 @@ public class SnapOnboardingViewController: UIViewController {
         }
         
         termsAndConditionsLabel?.setText(termsAndConditionsText, afterInheritingLabelAttributesAndConfiguringWithBlock: { (text) -> NSMutableAttributedString in
-            if let gothamRoundedBook = SnapFonts.gothamRoundedBookOfSize(10) {
+            if let gothamRoundedBook = UIFont.gothamRoundedBookOfSize(10) {
                 text.addAttribute(NSFontAttributeName, value: gothamRoundedBook, range: text.mutableString.rangeOfString(text.string))
             }
             
             return text
         })
         
-        if let gothamRoundedMedium = SnapFonts.gothamRoundedMediumOfSize(10) {
+        if let gothamRoundedMedium = UIFont.gothamRoundedMediumOfSize(10) {
             termsAndConditionsLabel?.linkAttributes = [NSFontAttributeName : gothamRoundedMedium, NSForegroundColorAttributeName : UIColor.whiteColor()]
             termsAndConditionsLabel?.activeLinkAttributes = nil
         }

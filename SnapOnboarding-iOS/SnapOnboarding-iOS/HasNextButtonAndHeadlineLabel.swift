@@ -1,5 +1,4 @@
 import UIKit
-import SnapFonts_iOS
 
 protocol HasNextButtonAndHeadlineLabel: class {
     
@@ -23,31 +22,31 @@ extension HasNextButtonAndHeadlineLabel {
     func configureNextButtonAndHeadlineLabelFor3_5Inch() {
         nextButton?.contentEdgeInsets.top = 10
     
-        headlineLabel?.font = SnapFonts.gothamRoundedBookOfSize(17)
+        headlineLabel?.font = UIFont.gothamRoundedBookOfSize(17)
         headlineLabel?.lineSpacin = 4
     }
     
     func configureNextButtonAndHeadlineLabelFor4_0Inch() {
-        headlineLabel?.font = SnapFonts.gothamRoundedBookOfSize(18)
+        headlineLabel?.font = UIFont.gothamRoundedBookOfSize(18)
         headlineLabel?.lineSpacin = 5
     }
     
     func configureNextButtonAndHeadlineLabelFor5_5Inch() {
-        headlineLabel?.font = SnapFonts.gothamRoundedBookOfSize(23)
+        headlineLabel?.font = UIFont.gothamRoundedBookOfSize(23)
     }
     
     func configureNextButtonAndHeadlineLabelForIpad() {
-        nextButtonAttributes?[NSFontAttributeName] = SnapFonts.gothamRoundedMediumOfSize(16)
+        nextButtonAttributes?[NSFontAttributeName] = UIFont.gothamRoundedMediumOfSize(16)
         nextButton?.contentEdgeInsets = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 23)
         
-        headlineLabel?.font = SnapFonts.gothamRoundedBookOfSize(26)
+        headlineLabel?.font = UIFont.gothamRoundedBookOfSize(26)
     }
     
     func configureNextButtonAndHeadlineLabelForIpadPro() {
-        nextButtonAttributes?[NSFontAttributeName] = SnapFonts.gothamRoundedMediumOfSize(20)
+        nextButtonAttributes?[NSFontAttributeName] = UIFont.gothamRoundedMediumOfSize(20)
         nextButton?.contentEdgeInsets = UIEdgeInsets(top: 25, left: 25, bottom: 25, right: 30)
         
-        headlineLabel?.font = SnapFonts.gothamRoundedBookOfSize(34)
+        headlineLabel?.font = UIFont.gothamRoundedBookOfSize(34)
         headlineLabel?.lineSpacin = 10
     }
     

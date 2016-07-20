@@ -1,5 +1,4 @@
 import UIKit
-import SnapFonts_iOS
 
 enum LocationServicesStatus {
     case NotYetRequested
@@ -338,7 +337,7 @@ extension LocationViewController {
     
     func setupFor3_5InchPortrait() {
         configureNextButtonAndHeadlineLabelFor3_5Inch()
-        willAskLaterLabel?.font = SnapFonts.gothamRoundedBookOfSize(14)
+        willAskLaterLabel?.font = UIFont.gothamRoundedBookOfSize(14)
 
         sparklingViewToSuperViewHeightRelation?.constant = -30
         notNowButtonBottomToSuperViewBottom?.constant = 0
@@ -347,7 +346,7 @@ extension LocationViewController {
     
     func setupFor4_0InchPortrait() {
         configureNextButtonAndHeadlineLabelFor4_0Inch()
-        willAskLaterLabel?.font = SnapFonts.gothamRoundedBookOfSize(14)
+        willAskLaterLabel?.font = UIFont.gothamRoundedBookOfSize(14)
         
         sparklingViewToSuperViewHeightRelation?.constant = -20
     }

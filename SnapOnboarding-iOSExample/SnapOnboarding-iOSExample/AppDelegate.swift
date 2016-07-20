@@ -1,5 +1,4 @@
 import UIKit
-import SnapFonts_iOS
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -9,10 +8,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        
-        // Load fonts used in storyboard
-        SnapFonts.gothamRoundedBookOfSize(0)
-        SnapFonts.gothamRoundedMediumOfSize(0)
         
         return true
     }

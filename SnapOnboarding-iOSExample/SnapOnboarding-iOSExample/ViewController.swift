@@ -1,5 +1,4 @@
 import UIKit
-import SnapFonts_iOS
 import SnapTagsView
 import SnapOnboarding_iOS
 
