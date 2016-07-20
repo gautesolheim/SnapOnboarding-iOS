@@ -15,14 +15,17 @@ class LoginViewController: UIViewController {
     
     @IBAction func continueWithFacebookButtonTapped(sender: UIButton) {
         delegate?.facebookSignupTapped()
+        fadeAndDisableButtonsExceptTappedButton(sender)
     }
     
     @IBAction func continueWithInstagramButtonTapped(sender: UIButton) {
         delegate?.instagramSignupTapped()
+        fadeAndDisableButtonsExceptTappedButton(sender)
     }
     
     @IBAction func skipLoginButtonTapped(sender: UIButton) {
-        delegate?.skipLoginButtonTapped()
+        delegate?.skipLoginTapped()
+        fadeAndDisableButtonsExceptTappedButton(sender)
     }
     
     var delegate: LoginViewControllerDelegate?
@@ -58,7 +61,7 @@ class LoginViewController: UIViewController {
     
     // MARK: UIView configuration
     
-    internal func configureContinueWithFacebookButton() {
+    private func configureContinueWithFacebookButton() {
         guard let title = viewModel?.continueWithFacebook?.uppercaseString else {
             return
         }
@@ -78,7 +81,7 @@ class LoginViewController: UIViewController {
         continueWithFacebookButtonWidth?.constant = requiredWidth
     }
     
-    internal func configureContinueWithInstagramButton() {
+    private func configureContinueWithInstagramButton() {
         guard let title = viewModel?.continueWithInstagram?.uppercaseString else {
             return
         }
@@ -91,18 +94,18 @@ class LoginViewController: UIViewController {
             self.continueWithInstagramButton?.setAttributedTitle(attributedText, forState: .Normal)
             self.continueWithInstagramButton?.layoutIfNeeded()
         }
-        
+
         let intrinsicContentWidth = continueWithInstagramButton?.intrinsicContentSize().width ?? 245
         let rightPadding: CGFloat = 25
         let requiredWidth = intrinsicContentWidth + rightPadding
         continueWithInstagramButtonWidth?.constant = requiredWidth
     }
     
-    internal func configureSkipLoginButton() {
+    private func configureSkipLoginButton() {
         skipLoginButton?.setTitle(viewModel?.skipWithoutLogin, forState: .Normal)
     }
     
-    internal func alignFacebookAndInstagramButtons() {
+    private func alignFacebookAndInstagramButtons() {
         if let facebookWidth = continueWithFacebookButtonWidth?.constant, instagramWidth = continueWithInstagramButtonWidth?.constant {
             let difference = facebookWidth - instagramWidth
             if (-6 ... 6).contains(difference) {
@@ -110,8 +113,27 @@ class LoginViewController: UIViewController {
             }
         }
     }
+    
+    private func fadeAndDisableButtonsExceptTappedButton(tappedButton: UIButton) {
+        
+        let buttonsToDeactivate = [continueWithFacebookButton, continueWithInstagramButton, skipLoginButton]
+        let buttonsToFade = buttonsToDeactivate.filter { $0 != tappedButton }
+        
+        buttonsToDeactivate.forEach { button in
+            button?.userInteractionEnabled = false
+        }
+        
+        buttonsToFade.forEach { button in
+            UIView.animateWithDuration(0.4, delay: 0, options: [.CurveEaseIn], animations: {
+                button?.alpha = 0.3
+            }, completion: nil)
+        }
+        
+    }
 
 }
+
+// MARK: - LoginViewControllerProtocol
 
 extension LoginViewController: LoginViewControllerProtocol {
     
