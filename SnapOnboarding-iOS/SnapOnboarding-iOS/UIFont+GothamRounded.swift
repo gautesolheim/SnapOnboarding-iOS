@@ -7,11 +7,11 @@ extension UIFont {
     }
     
     static func gothamRoundedMediumOfSize(size: CGFloat) -> UIFont? {
-        return UIFont(name: "GothamRounded-Bold", size: size)
+        return UIFont(name: "GothamRounded-Medium", size: size)
     }
     
     static func gothamRoundedBookOfSize(size: CGFloat) -> UIFont? {
-        return UIFont(name: "GothamRounded-Medium", size: size)
+        return UIFont(name: "GothamRounded-Book", size: size)
     }
     
 }
