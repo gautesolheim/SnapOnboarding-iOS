@@ -69,8 +69,13 @@ class LocationViewController: UIViewController {
         configureEnableLocationServicesButton()
         configureNotNowButton()
         
-        let duration: NSTimeInterval = 2
-        animateSparklingStarsWithCycleDuration(duration)
+        animateSparklingStarsWithCycleDuration(2)
+    }
+    
+    override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        sparklingStars?.forEach { $0.layer.removeAllAnimations() }
     }
     
     override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
@@ -366,7 +371,12 @@ extension LocationViewController {
         configureNextButtonAndHeadlineLabelForIpad()
         
         sparklingViewToSuperViewHeightRelation?.constant = 20
-        sparklingViewTopToHeadlineSparklingSpacerBottom?.constant = 20
+        
+        if size.width <= 320 {
+            sparklingViewTopToHeadlineSparklingSpacerBottom?.constant = -10
+        } else {
+            sparklingViewTopToHeadlineSparklingSpacerBottom?.constant = 20
+        }
     }
     
     func setupForIpadProPortrait(size: CGSize) {

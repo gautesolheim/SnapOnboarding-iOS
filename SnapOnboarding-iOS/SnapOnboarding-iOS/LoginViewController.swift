@@ -49,8 +49,13 @@ class LoginViewController: UIViewController {
         configureSkipLoginButton()
         alignFacebookAndInstagramButtons()
         
-        let duration: NSTimeInterval = 2
-        animateSparklingStarsWithCycleDuration(duration)
+        animateSparklingStarsWithCycleDuration(2)
+    }
+    
+    override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        sparklingStars?.forEach { $0.layer.removeAllAnimations() }
     }
     
     override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
@@ -124,7 +129,7 @@ class LoginViewController: UIViewController {
         }
         
         buttonsToFade.forEach { button in
-            UIView.animateWithDuration(0.4, delay: 0, options: [.CurveEaseIn], animations: {
+            UIView.animateWithDuration(0.4, delay: 0, options: .CurveEaseIn, animations: {
                 button?.alpha = 0.3
             }, completion: nil)
         }
@@ -139,6 +144,18 @@ extension LoginViewController: LoginViewControllerProtocol {
     
     func configureForViewModel(viewModel: SnapOnboardingViewModel.LoginViewModel) {
         self.viewModel = viewModel
+    }
+    
+    func reactivateLoginButtons() {
+        [continueWithFacebookButton, continueWithInstagramButton, skipLoginButton].forEach { button in
+            button?.userInteractionEnabled = true
+            
+            if button?.alpha != 1.0 {
+                UIView.animateWithDuration(0.4, delay: 0, options: .CurveEaseIn, animations: {
+                    button?.alpha = 1.0
+                }, completion: nil)
+            }
+        }
     }
     
 }

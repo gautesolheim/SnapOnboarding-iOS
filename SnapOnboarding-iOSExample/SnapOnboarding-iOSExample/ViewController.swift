@@ -4,7 +4,7 @@ import SnapOnboarding_iOS
 
 class ViewController: UIViewController {
     
-    private var onboardingViewController: SnapOnboardingViewController?
+    var onboardingViewController: SnapOnboardingViewController?
     
     private var didPresent = false
     
@@ -127,10 +127,12 @@ extension ViewController: SnapOnboardingDelegate {
     
     func termsAndConditionsTapped() {
         print("terms-and-conditions-tapped")
+        (onboardingViewController as? SnapOnboardingViewControllerProtocol)?.reactivateLoginButtons()
     }
     
     func privacyPolicyTapped() {
         print("privacy-policy-tapped")
+        (onboardingViewController as? SnapOnboardingViewControllerProtocol)?.reactivateLoginButtons()
     }
     
     

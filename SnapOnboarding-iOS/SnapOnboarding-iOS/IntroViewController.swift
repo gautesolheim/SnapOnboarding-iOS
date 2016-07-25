@@ -48,8 +48,13 @@ class IntroViewController: UIViewController {
         configureNextButton()
         configureHeadlineLabel()
         
-        let duration: NSTimeInterval = 2
-        animateSparklingStarsWithCycleDuration(duration)
+        animateSparklingStarsWithCycleDuration(2)
+    }
+    
+    override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        sparklingStars?.forEach { $0.layer.removeAllAnimations() }
     }
     
     override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
