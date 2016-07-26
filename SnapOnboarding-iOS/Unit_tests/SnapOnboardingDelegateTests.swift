@@ -13,8 +13,6 @@ class SnapOnboardingDelegateTests: XCTestCase {
     private var isInstagramSignupTapped = false
     private var isSkipLoginTapped = false
     
-    private var didDismissCalledExpectation: XCTestExpectation!
-    
     override func setUp() {
         super.setUp()
         
@@ -36,6 +34,10 @@ class SnapOnboardingDelegateTests: XCTestCase {
         isFacebookSignupTapped = false
         isInstagramSignupTapped = false
         isSkipLoginTapped = false
+        
+        vc.childViewControllers.forEach { child in
+            (child as? HasSparklingStars)?.sparklingStars?.forEach { $0.layer.removeAllAnimations() }
+        }
     }
     
     func testTermsAndConditionsTapped() {
@@ -83,6 +85,21 @@ class SnapOnboardingDelegateTests: XCTestCase {
         XCTAssertTrue(isSkipLoginTapped)
     }
     
+    func testStarsBeginSparklingOnViewWillAppear() {
+        applyExpressionOnAllSparklingStars { XCTAssertEqual($0.layer.animationKeys()?.count, nil) }
+        
+        vc.childViewControllers.forEach { $0.viewWillAppear(false) }
+        applyExpressionOnAllSparklingStars { XCTAssertEqual($0.layer.animationKeys()?.count, 1) }
+    }
+    
+    func testStarsStopSparklingOnViewDidDisappear() {
+        vc.childViewControllers.forEach { $0.viewWillAppear(false) }
+        applyExpressionOnAllSparklingStars { XCTAssertEqual($0.layer.animationKeys()?.count, 1) }
+        
+        vc.childViewControllers.forEach { $0.viewDidDisappear(false) }
+        applyExpressionOnAllSparklingStars { XCTAssertEqual($0.layer.animationKeys()?.count, nil) }
+    }
+    
     // MARK: Helpers
     
     func getChildVCOfType<T>() -> T? {
@@ -92,6 +109,14 @@ class SnapOnboardingDelegateTests: XCTestCase {
             }
         }
         return nil
+    }
+    
+    func applyExpressionOnAllSparklingStars(expression: (star: UIImageView) -> ()) {
+        vc.childViewControllers.forEach { child in
+            (child as! HasSparklingStars).sparklingStars!.forEach { star in
+                expression(star: star)
+            }
+        }
     }
     
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -175,7 +175,7 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                                 </constraints>
                             </view>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vi vil spørre deg på et senere tidspunkt, når vi trenger lokasjonen din, for eksempel ved et nytt salg." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Og-sM-3rO" userLabel="willAskLaterLabel" customClass="SnapOnboardingHeadlineLabel" customModule="SnapOnboarding_iOS" customModuleProvider="target">
-                                <rect key="frame" x="108" y="397" width="385" height="79"/>
+                                <rect key="frame" x="108" y="408" width="385" height="77"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="400" id="cBg-0u-kaL"/>
                                 </constraints>
@@ -384,16 +384,16 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                             <constraint firstItem="pFE-Cu-2wV" firstAttribute="top" secondItem="J6z-PJ-dva" secondAttribute="bottom" id="BfW-cU-0nU"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="2Og-sM-3rO" secondAttribute="trailing" constant="27" id="DxR-IT-zUx"/>
                             <constraint firstItem="r5E-HZ-yPq" firstAttribute="centerX" secondItem="CMB-oQ-19v" secondAttribute="centerX" id="GMU-f5-tzA"/>
+                            <constraint firstItem="ScQ-wx-E74" firstAttribute="bottom" secondItem="2Og-sM-3rO" secondAttribute="bottom" id="J2n-yO-vQh"/>
                             <constraint firstItem="J6z-PJ-dva" firstAttribute="top" secondItem="ANS-Dj-bV5" secondAttribute="bottom" id="KUH-9d-xix"/>
                             <constraint firstItem="7Z2-ne-xTk" firstAttribute="centerX" secondItem="CMB-oQ-19v" secondAttribute="centerX" id="Ked-lw-bn9"/>
                             <constraint firstItem="J6z-PJ-dva" firstAttribute="height" relation="greaterThanOrEqual" secondItem="CMB-oQ-19v" secondAttribute="height" multiplier="0.05" id="Lik-v6-tAC"/>
                             <constraint firstAttribute="trailing" secondItem="Acl-8o-2Dq" secondAttribute="trailing" id="OB7-Vo-KnQ"/>
                             <constraint firstItem="ANS-Dj-bV5" firstAttribute="centerX" secondItem="CMB-oQ-19v" secondAttribute="centerX" id="UCG-d9-GyO"/>
-                            <constraint firstItem="r5E-HZ-yPq" firstAttribute="height" secondItem="CMB-oQ-19v" secondAttribute="height" multiplier="0.067" id="ULo-Ji-EtB"/>
+                            <constraint firstItem="r5E-HZ-yPq" firstAttribute="height" secondItem="CMB-oQ-19v" secondAttribute="height" multiplier="0.067" priority="749" id="ULo-Ji-EtB"/>
                             <constraint firstItem="pFE-Cu-2wV" firstAttribute="centerX" secondItem="CMB-oQ-19v" secondAttribute="centerX" id="XH0-uY-O9k"/>
                             <constraint firstItem="J6z-PJ-dva" firstAttribute="centerX" secondItem="CMB-oQ-19v" secondAttribute="centerX" id="cge-tu-2dz"/>
                             <constraint firstItem="2Og-sM-3rO" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="CMB-oQ-19v" secondAttribute="leading" constant="27" id="d7o-fs-5dK"/>
-                            <constraint firstItem="2Og-sM-3rO" firstAttribute="top" secondItem="J6z-PJ-dva" secondAttribute="bottom" id="dqd-O1-a9K"/>
                             <constraint firstAttribute="width" secondItem="GPV-cC-643" secondAttribute="width" priority="999" constant="40" id="eKM-i6-62c">
                                 <variation key="heightClass=regular-widthClass=regular" constant="200"/>
                             </constraint>
@@ -405,7 +405,6 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                             <constraint firstItem="GPV-cC-643" firstAttribute="top" secondItem="7Z2-ne-xTk" secondAttribute="bottom" id="kbR-sK-VyJ"/>
                             <constraint firstItem="ANS-Dj-bV5" firstAttribute="top" secondItem="r5E-HZ-yPq" secondAttribute="bottom" id="sJH-2h-Yzo"/>
                             <constraint firstItem="Tnx-e1-m8T" firstAttribute="top" secondItem="ScQ-wx-E74" secondAttribute="bottom" constant="17" id="tFI-3S-C0c"/>
-                            <constraint firstItem="Tnx-e1-m8T" firstAttribute="top" secondItem="2Og-sM-3rO" secondAttribute="bottom" constant="26" id="yv8-en-iPl"/>
                             <constraint firstItem="r5E-HZ-yPq" firstAttribute="top" secondItem="GPV-cC-643" secondAttribute="bottom" id="zQa-Ov-Iej"/>
                         </constraints>
                     </view>
@@ -421,7 +420,6 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                         <outlet property="sparklingViewTopToHeadlineSparklingSpacerBottom" destination="sJH-2h-Yzo" id="lxy-l8-IWW"/>
                         <outlet property="tumbleweed" destination="DaA-wS-kSZ" id="x1J-H6-YnF"/>
                         <outlet property="willAskLaterLabel" destination="2Og-sM-3rO" id="Xo3-rc-Dde"/>
-                        <outlet property="willAskLaterLabelBottomToSuperViewBottom" destination="yv8-en-iPl" id="Xiw-La-zYv"/>
                         <outletCollection property="sparklingStars" destination="ZGO-tJ-NHo" collectionClass="NSMutableArray" id="2lj-I7-wWi"/>
                         <outletCollection property="sparklingStars" destination="dsT-Zc-8Wq" collectionClass="NSMutableArray" id="iqw-R6-9p2"/>
                         <outletCollection property="sparklingStars" destination="APG-V8-8ef" collectionClass="NSMutableArray" id="jNf-kq-1ga"/>

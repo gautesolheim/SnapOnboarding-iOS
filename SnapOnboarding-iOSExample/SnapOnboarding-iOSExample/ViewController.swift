@@ -5,7 +5,7 @@ import SnapOnboarding_iOS
 
 class ViewController: UIViewController {
     
-    private var onboardingViewController: SnapOnboardingViewController?
+    var onboardingViewController: SnapOnboardingViewController?
     
     private var didPresent = false
     
@@ -42,7 +42,7 @@ class ViewController: UIViewController {
         introViewModel.next = "Neste"
         introViewModel.introHeadline = "Å legge ut salg er raskt og enkelt. Vi tagger og kategoriserer annonser med smart bildegjenkjenning."
         introViewModel.tags = createTagRepresentationsForStrings(
-            ["Veske", "MichaelKors", "JetSetTravel", "Skinn", "Beige", "Accessoirer", "MØBLER", "JAKKE", "ELEKTRONIKK", "DEKORASJON", "BØKER", "ZARA", "SOLBRILLER", "GANT"]
+            ["Veske", "MichaelKors", "JetSetTravel", "Skinn", "Beige", "Accessoirer", "Møbler", "Jakke", "Elektronikk", "Dekorasjon", "Bøker", "Zara", "Solbriller", "Gant"]
         )
         
         var locationViewModel = SnapOnboardingViewModel.LocationViewModel()
@@ -83,7 +83,7 @@ class ViewController: UIViewController {
         introViewModel.next = "Next"
         introViewModel.introHeadline = "Publishing sales is fast and easy. We tag and categorize ads with clever image recognition."
         introViewModel.tags = createTagRepresentationsForStrings(
-            ["Purse", "MichaelKors", "JetSetTravel", "Leather", "Beige", "Accessories", "FURNITURE", "JACKET", "ELECTRONICS", "DECORATIONS", "BOOKS", "ZARA", "SUNGLASSES", "GANT"]
+            ["Purse", "MichaelKors", "JetSetTravel", "Leather", "Beige", "Accessories", "Furniture", "Jacket", "Electronics", "Decorations", "Books", "Zara", "Sunglasses", "Gant"]
         )
         
         var locationViewModel = SnapOnboardingViewModel.LocationViewModel()
@@ -128,10 +128,12 @@ extension ViewController: SnapOnboardingDelegate {
     
     func termsAndConditionsTapped() {
         print("terms-and-conditions-tapped")
+        (onboardingViewController as? SnapOnboardingViewControllerProtocol)?.reactivateLoginButtons()
     }
     
     func privacyPolicyTapped() {
         print("privacy-policy-tapped")
+        (onboardingViewController as? SnapOnboardingViewControllerProtocol)?.reactivateLoginButtons()
     }
     
     

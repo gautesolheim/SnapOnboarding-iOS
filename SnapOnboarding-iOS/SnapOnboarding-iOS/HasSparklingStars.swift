@@ -24,14 +24,14 @@ extension HasSparklingStars {
     }
     
     private func animateSparklingStarWithDuration(duration: NSTimeInterval, delay: NSTimeInterval, star: UIImageView) {
-        UIView.animateWithDuration(duration, delay: delay, options: [UIViewAnimationOptions.CurveEaseInOut], animations: {
+        UIView.animateWithDuration(duration, delay: delay, options: .CurveEaseInOut, animations: {
             star.transform = CGAffineTransformMakeScale(1.5, 1.5)
-            }, completion: { _ in
-                UIView.animateWithDuration(duration, delay: 0, options: [UIViewAnimationOptions.CurveEaseInOut], animations: {
-                    star.transform = CGAffineTransformMakeScale(0.7, 0.7)
-                    }, completion: { _ in
-                        self.animateSparklingStarWithDuration(duration, delay: 0, star: star)
-                })
+        }, completion: { _ in
+            
+            UIView.animateWithDuration(duration, delay: 0, options: [.CurveEaseInOut, .Autoreverse, .Repeat], animations: {
+                star.transform = CGAffineTransformMakeScale(0.7, 0.7)
+            }, completion: nil)
+            
         })
     }
     

@@ -26,6 +26,7 @@ public class SnapOnboardingViewController: UIViewController {
     private var viewModel: SnapOnboardingViewModel?
     
     private var locationViewController: LocationViewControllerProtocol?
+    private var loginViewController: LoginViewControllerProtocol?
     
     // MARK: UIViewController life cycle
     
@@ -102,9 +103,9 @@ public class SnapOnboardingViewController: UIViewController {
         setupForScreenSize(size)
         
         let currentPage = pageControl?.currentPage ?? 0
-        coordinator.animateAlongsideTransition({ _ in
+        coordinator.animateAlongsideTransition({ [weak self] _ in
             let newOffset = CGPoint(x: CGFloat(currentPage) * size.width, y: 0)
-            self.scrollView?.setContentOffset(newOffset, animated: true)
+            self?.scrollView?.setContentOffset(newOffset, animated: true)
             }, completion: nil)
     }
     
@@ -133,6 +134,7 @@ public class SnapOnboardingViewController: UIViewController {
             let destinationViewController = segue.destinationViewController as? LoginViewController
             destinationViewController?.delegate = self as LoginViewControllerDelegate
             destinationViewController?.configureForViewModel(viewModel.loginViewModel)
+            loginViewController = destinationViewController
         default: break
         }
     }
@@ -155,6 +157,12 @@ extension SnapOnboardingViewController: SnapOnboardingViewControllerProtocol {
         
         if status == .Enabled {
             scrollToNextPage()
+        }
+    }
+    
+    public func reactivateLoginButtons() {
+        if let loginViewController = loginViewController {
+            loginViewController.reactivateLoginButtons()
         }
     }
     
