@@ -61,6 +61,7 @@ public class SnapOnboardingViewController: UIViewController {
         if let gothamRoundedMedium = UIFont.gothamRoundedMediumOfSize(10) {
             termsAndConditionsLabel?.linkAttributes = [NSFontAttributeName : gothamRoundedMedium, NSForegroundColorAttributeName : UIColor.whiteColor()]
             termsAndConditionsLabel?.activeLinkAttributes = nil
+            termsAndConditionsLabel?.inactiveLinkAttributes = nil
         }
         
         if let termsIndexRange = termsViewModel.rangeOfTermsAndConditions, privacyIndexRange = termsViewModel.rangeOfPrivacyPolicy {
