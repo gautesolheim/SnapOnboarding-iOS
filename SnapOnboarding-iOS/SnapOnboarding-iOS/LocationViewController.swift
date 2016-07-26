@@ -157,8 +157,8 @@ class LocationViewController: UIViewController {
             (sparklingStars + neighborhoodItems).forEach {
                 $0.alpha = 0.0
             }
-        }, completion: { _ in
-            self.animateTumbleweedBezierPathTraversalWithDuration(2)
+        }, completion: { [weak self] _ in
+            self?.animateTumbleweedBezierPathTraversalWithDuration(2)
         })
     }
     
@@ -211,26 +211,23 @@ class LocationViewController: UIViewController {
     }
     
     private func animateTumbleweedRotationWithTotalDuration(totalDuration: Double, rotations: Int, currentDuration: Double) {
-        guard let tumbleweed = tumbleweed else {
-            return
-        }
-        
         let duration = totalDuration / Double(rotations)
         let options: UIViewAnimationOptions = currentDuration == 0 ? .CurveEaseIn : .CurveLinear
         
-        UIView.animateWithDuration(duration, delay: 0, options: options, animations: {
-            tumbleweed.transform = CGAffineTransformRotate(tumbleweed.transform, CGFloat(M_PI_2))
-        }, completion: { _ in
+        UIView.animateWithDuration(duration, delay: 0, options: options, animations: { [weak self] in
+            guard let transform = self?.tumbleweed?.transform else { return }
+            self?.tumbleweed?.transform = CGAffineTransformRotate(transform, CGFloat(M_PI_2))
+        }, completion: { [weak self] _ in
             let currentDuration = currentDuration + duration
             
             if currentDuration > totalDuration - duration {
                 UIView.animateWithDuration(0.4, animations: {
-                    tumbleweed.alpha = 0
+                    self?.tumbleweed?.alpha = 0
                 })
                 return
             }
             
-            self.animateTumbleweedRotationWithTotalDuration(totalDuration, rotations: rotations, currentDuration: currentDuration)
+            self?.animateTumbleweedRotationWithTotalDuration(totalDuration, rotations: rotations, currentDuration: currentDuration)
         })
     }
     
@@ -256,26 +253,29 @@ class LocationViewController: UIViewController {
         
         UIView.animateWithDuration(0.3, animations: {
             enableLocationServicesButton.frame.size.width = 0
-        }, completion: { _ in
+        }, completion: { [weak self] _ in
             UIView.animateWithDuration(0.9, delay: 0, options: UIViewAnimationOptions.CurveEaseIn, animations: {
-                self.spinnerImageView.alpha = 1.0
+                self?.spinnerImageView.alpha = 1.0
                 }, completion: nil)
-            self.animateEnableLocationServicesButtonSpinner()
+            self?.animateEnableLocationServicesButtonSpinner()
         })
     }
     
     private func animateEnableLocationServicesButtonSpinner() {
-        UIView.animateWithDuration(0.3, delay: 0, options: UIViewAnimationOptions.CurveLinear, animations: {
-            self.spinnerImageView.transform = CGAffineTransformRotate(self.spinnerImageView.transform, CGFloat(M_PI_2))
-            }, completion: { _ in
-                if self.locationServicesStatus == .WaitingForResponse {
-                    self.animateEnableLocationServicesButtonSpinner()
+        UIView.animateWithDuration(0.3, delay: 0, options: .CurveLinear, animations: { [weak self] in
+            guard let transform = self?.spinnerImageView.transform else { return }
+            self?.spinnerImageView.transform = CGAffineTransformRotate(transform, CGFloat(M_PI_2))
+            }, completion: { [weak self] _ in
+                if self?.locationServicesStatus == .WaitingForResponse {
+                    self?.animateEnableLocationServicesButtonSpinner()
                 } else {
-                    UIView.animateWithDuration(1.0, delay: 0, options: [UIViewAnimationOptions.CurveEaseOut], animations: {
-                        self.spinnerImageView.transform = CGAffineTransformRotate(self.spinnerImageView.transform, CGFloat(M_PI))
-                        self.spinnerImageView.alpha = 0
-                        self.spinnerImageView.removeFromSuperview()
-                        }, completion: nil)
+                    UIView.animateWithDuration(1.0, delay: 0, options: .CurveEaseOut, animations: {
+                        guard let transform = self?.spinnerImageView.transform else { return }
+                        self?.spinnerImageView.transform = CGAffineTransformRotate(transform, CGFloat(M_PI))
+                        self?.spinnerImageView.alpha = 0
+                        }, completion: { _ in
+                            self?.spinnerImageView.removeFromSuperview()
+                        })
                 }
         })
     }

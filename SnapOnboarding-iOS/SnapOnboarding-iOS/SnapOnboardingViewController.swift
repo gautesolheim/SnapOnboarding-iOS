@@ -103,9 +103,9 @@ public class SnapOnboardingViewController: UIViewController {
         setupForScreenSize(size)
         
         let currentPage = pageControl?.currentPage ?? 0
-        coordinator.animateAlongsideTransition({ _ in
+        coordinator.animateAlongsideTransition({ [weak self] _ in
             let newOffset = CGPoint(x: CGFloat(currentPage) * size.width, y: 0)
-            self.scrollView?.setContentOffset(newOffset, animated: true)
+            self?.scrollView?.setContentOffset(newOffset, animated: true)
             }, completion: nil)
     }
     
