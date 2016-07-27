@@ -274,28 +274,28 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                                                 </constraints>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="neighborhood-photo0" translatesAutoresizingMaskIntoConstraints="NO" id="eHV-JM-rq0" userLabel="item0">
-                                                <rect key="frame" x="132" y="-27" width="46" height="100"/>
+                                                <rect key="frame" x="132" y="-30" width="46" height="106"/>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="neighborhood-photo1" translatesAutoresizingMaskIntoConstraints="NO" id="SEV-Il-HOE" userLabel="item1">
-                                                <rect key="frame" x="11" y="4" width="46" height="100"/>
+                                                <rect key="frame" x="11" y="1" width="46" height="106"/>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="neighborhood-photo2" translatesAutoresizingMaskIntoConstraints="NO" id="yIX-4g-6dR" userLabel="item2">
-                                                <rect key="frame" x="195" y="34" width="29" height="64"/>
+                                                <rect key="frame" x="195" y="32" width="29" height="68"/>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="neighborhood-photo3" translatesAutoresizingMaskIntoConstraints="NO" id="3fQ-oc-3ni" userLabel="item3">
-                                                <rect key="frame" x="76" y="58" width="29" height="64"/>
+                                                <rect key="frame" x="76" y="56" width="29" height="68"/>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="neighborhood-photo4" translatesAutoresizingMaskIntoConstraints="NO" id="Qs8-pJ-kp1" userLabel="item4">
-                                                <rect key="frame" x="147" y="93" width="34" height="75"/>
+                                                <rect key="frame" x="147" y="91" width="34" height="80"/>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="neighborhood-photo5" translatesAutoresizingMaskIntoConstraints="NO" id="vKx-PR-09Y" userLabel="item5">
-                                                <rect key="frame" x="36" y="123" width="23" height="51"/>
+                                                <rect key="frame" x="36" y="122" width="23" height="54"/>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="neighborhood-photo6" translatesAutoresizingMaskIntoConstraints="NO" id="lRX-3t-ewv" userLabel="item6">
-                                                <rect key="frame" x="207" y="157" width="45" height="100"/>
+                                                <rect key="frame" x="207" y="154" width="45" height="106"/>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="neighborhood-photo7" translatesAutoresizingMaskIntoConstraints="NO" id="3g1-0T-L7h" userLabel="item7">
-                                                <rect key="frame" x="140" y="175" width="29" height="64"/>
+                                                <rect key="frame" x="140" y="173" width="29" height="68"/>
                                             </imageView>
                                         </subviews>
                                         <constraints>
@@ -959,20 +959,20 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
         <image name="btn location" width="74" height="54"/>
         <image name="btn login facebook" width="74" height="54"/>
         <image name="btn login instagram" width="74" height="54"/>
-        <image name="icon_tumbleweed" width="17" height="15"/>
+        <image name="icon_tumbleweed" width="50" height="44"/>
         <image name="illustration_neighborhood" width="1020" height="964"/>
-        <image name="iphone" width="190" height="208"/>
-        <image name="items-pattern" width="299" height="307"/>
+        <image name="iphone" width="399" height="437"/>
+        <image name="items-pattern" width="598" height="614"/>
         <image name="link skip" width="45" height="25"/>
-        <image name="logo snapsale" width="144" height="103"/>
-        <image name="neighborhood-photo0" width="100" height="100"/>
-        <image name="neighborhood-photo1" width="100" height="100"/>
-        <image name="neighborhood-photo2" width="64" height="64"/>
-        <image name="neighborhood-photo3" width="64" height="64"/>
-        <image name="neighborhood-photo4" width="75" height="75"/>
-        <image name="neighborhood-photo5" width="51" height="51"/>
-        <image name="neighborhood-photo6" width="100" height="100"/>
-        <image name="neighborhood-photo7" width="64" height="64"/>
+        <image name="logo snapsale" width="300" height="214"/>
+        <image name="neighborhood-photo0" width="106" height="106"/>
+        <image name="neighborhood-photo1" width="106" height="106"/>
+        <image name="neighborhood-photo2" width="68" height="68"/>
+        <image name="neighborhood-photo3" width="68" height="68"/>
+        <image name="neighborhood-photo4" width="80" height="80"/>
+        <image name="neighborhood-photo5" width="54" height="54"/>
+        <image name="neighborhood-photo6" width="106" height="106"/>
+        <image name="neighborhood-photo7" width="68" height="68"/>
         <image name="star" width="30" height="34"/>
         <image name="veske" width="167" height="167"/>
     </resources>
