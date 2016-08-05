@@ -13,6 +13,7 @@ public class SnapTagsCollectionViewController: UIViewController {
     public weak var delegate : SnapTagsButtonDelegate?
 
     internal var collectionView : UICollectionView?
+    internal var handlesViewConfigurationMargins = true
 
     public lazy var sizer = SnapTextWidthSizers()
 
@@ -96,6 +97,13 @@ public class SnapTagsCollectionViewController: UIViewController {
         
         self.view.translatesAutoresizingMaskIntoConstraints = false
         collectionView.translatesAutoresizingMaskIntoConstraints = false
+
+        var configuration = self.configuration
+        if !handlesViewConfigurationMargins {
+            configuration.horizontalMargin = 0.0
+            configuration.verticalMargin = 0.0
+        }
+
         let metrics = [
             "hMargin": configuration.horizontalMargin,
             "vMargin": configuration.verticalMargin,
@@ -111,23 +119,6 @@ public class SnapTagsCollectionViewController: UIViewController {
             views: views)
         self.view.addConstraints(hConstraints)
         self.view.addConstraints(vConstraints)
-    }
-
-    internal func calculateContentSizeForTag(tag: SnapTagRepresentation) -> CGSize {
-
-        let size = sizer.calculateSizeFor(tag.tag, font: buttonConfiguration.font)
-        var width = size.width
-        width += buttonConfiguration.buttonInset.left + buttonConfiguration.buttonInset.right
-
-        if buttonConfiguration.hasOnOffButton {
-            width += buttonConfiguration.onState.spacingBetweenLabelAndOnOffButton
-            width += buttonConfiguration.onState.buttonImage?.size.width ?? 0.0
-        }
-
-        var height = size.height
-        height += buttonConfiguration.buttonInset.top + buttonConfiguration.buttonInset.bottom
-
-        return CGSizeMake(width, height)
     }
 
     public func allowBouncingHorizontally(horizontalBounce: Bool, vertically verticalBounce: Bool) {
@@ -148,7 +139,7 @@ public class SnapTagsCollectionViewController: UIViewController {
         var width = CGFloat(0.0)
         width += fmax(0.0 ,CGFloat(collectionView.numberOfItemsInSection(0) - 1) * configuration.spacing)
         var height = CGFloat(0.0)
-        let sizes = tags.map { calculateContentSizeForTag($0) }
+        let sizes = tags.map { sizer.calculateSizeForTag($0.tag, configuration: buttonConfiguration) }
         height += sizes.reduce(CGFloat(0.0), combine: { (last, size) -> CGFloat in
             return fmax(last, size.height)
         })
@@ -221,20 +212,9 @@ extension SnapTagsCollectionViewController : UICollectionViewDataSource {
 extension SnapTagsCollectionViewController : UICollectionViewDelegateFlowLayout {
     public func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
         let tag = data[indexPath.item]
+        let size = sizer.calculateSizeForTag(tag.tag ?? "", configuration: buttonConfiguration)
 
-        let height = buttonConfiguration.labelInset.top + buttonConfiguration.font.pointSize + buttonConfiguration.labelInset.bottom
-
-        let label = UILabel(frame: CGRectZero)
-        label.text = tag.tag.uppercaseString
-        label.font = buttonConfiguration.font
-
-        let labelSize = sizer.calculateSizeFor(label.text ?? "", font: label.font)
-        var width = buttonConfiguration.labelInset.left + labelSize.width + buttonConfiguration.labelInset.right
-        if buttonConfiguration.hasOnOffButton {
-            width -= buttonConfiguration.labelInset.right
-            width += buttonConfiguration.onState.spacingBetweenLabelAndOnOffButton + (buttonConfiguration.onState.buttonImage?.size.width ?? 0.0) + buttonConfiguration.buttonInset.right
-        }
-        return CGSizeMake(width, height)
+        return CGSize(width: round(size.width), height: round(size.height))
     }
 }
 

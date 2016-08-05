@@ -9,7 +9,7 @@ class TagsCollectionViewController: SnapTagsCollectionViewController {
     
     private var fontSize: CGFloat = 13
     private var spacing: CGFloat = 10
-    private var insets = UIEdgeInsets(top: 8.5, left: 9.5, bottom: 8.5, right: 9.5)
+    private var insets = UIEdgeInsets(top: 7.0, left: 9.5, bottom: 7.0, right: 9.5)
     
     func configureForViewModel(viewModel: TagsViewModel) {
         data = viewModel.data ?? [SnapTagRepresentation]()
