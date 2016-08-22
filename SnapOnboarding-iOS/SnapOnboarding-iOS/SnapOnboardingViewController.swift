@@ -40,6 +40,7 @@ public class SnapOnboardingViewController: UIViewController {
     
     public override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        delegate?.onboardingWillAppear()
         
         configureTermsAndConditionsLabel()
     }

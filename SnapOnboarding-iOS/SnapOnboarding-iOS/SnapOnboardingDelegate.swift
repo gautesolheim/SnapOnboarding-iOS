@@ -1,5 +1,7 @@
 public protocol SnapOnboardingDelegate: class {
     
+    func onboardingWillAppear()
+    
     func termsAndConditionsTapped()
     func privacyPolicyTapped()
     
