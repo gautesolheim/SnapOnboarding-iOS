@@ -48,7 +48,8 @@ public class SnapOnboardingViewController: UIViewController {
     // MARK: UIView configuration
     
     internal func configureTermsAndConditionsLabel() {
-        guard let termsViewModel = viewModel?.termsViewModel, termsAndConditionsText = termsViewModel.termsAndPrivacyFooter else {
+        guard let termsViewModel = viewModel?.termsViewModel,
+            let termsAndConditionsText = termsViewModel.termsAndPrivacyFooter else {
             return
         }
         
@@ -66,7 +67,8 @@ public class SnapOnboardingViewController: UIViewController {
             termsAndConditionsLabel?.inactiveLinkAttributes = nil
         }
         
-        if let termsIndexRange = termsViewModel.rangeOfTermsAndConditions, privacyIndexRange = termsViewModel.rangeOfPrivacyPolicy {
+        if let termsIndexRange = termsViewModel.rangeOfTermsAndConditions,
+            let privacyIndexRange = termsViewModel.rangeOfPrivacyPolicy {
             let termsRange = termsAndConditionsText.startIndex.distanceTo(termsIndexRange.startIndex) ..< termsAndConditionsText.startIndex.distanceTo(termsIndexRange.endIndex)
             let privacyRange = termsAndConditionsText.startIndex.distanceTo(privacyIndexRange.startIndex) ..< termsAndConditionsText.startIndex.distanceTo(privacyIndexRange.endIndex)
             termsAndConditionsLabel?.addLinkToURL(NSURL(string: TermsAndConditionsURL.TermsAndConditions.rawValue), withRange: NSRange(termsRange))
@@ -118,7 +120,8 @@ public class SnapOnboardingViewController: UIViewController {
     }
     
     override public func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        guard let identifier = segue.identifier, viewModel = viewModel else {
+        guard let identifier = segue.identifier,
+            let viewModel = viewModel else {
             return
         }
         
@@ -185,7 +188,9 @@ extension SnapOnboardingViewController: UIScrollViewDelegate {
 extension SnapOnboardingViewController: TTTAttributedLabelDelegate {
     
     public func attributedLabel(label: TTTAttributedLabel!, didSelectLinkWithURL url: NSURL!) {
-        switch url.absoluteString {
+        guard let absoluteString = url.absoluteString else { return }
+        
+        switch absoluteString {
             case TermsAndConditionsURL.TermsAndConditions.rawValue:
             delegate?.termsAndConditionsTapped()
             case TermsAndConditionsURL.PrivacyPolicy.rawValue:
