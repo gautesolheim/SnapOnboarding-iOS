@@ -125,6 +125,11 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: SnapOnboardingDelegate {
+
+    func onboardingWillAppear() {
+        print("onboarding-will-appear")
+    }
+
     
     func termsAndConditionsTapped() {
         print("terms-and-conditions-tapped")
