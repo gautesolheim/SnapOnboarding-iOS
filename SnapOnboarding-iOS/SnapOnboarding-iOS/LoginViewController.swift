@@ -12,6 +12,12 @@ class LoginViewController: UIViewController {
     @IBOutlet private var continueWithFacebookButtonWidth: NSLayoutConstraint?
     @IBOutlet private var continueWithInstagramButtonWidth: NSLayoutConstraint?
     @IBOutlet private var skipLoginButtonBottomToSuperViewBottom: NSLayoutConstraint?
+
+    var delegate: LoginViewControllerDelegate?
+    private var viewModel: SnapOnboardingViewModel.LoginViewModel?
+
+    private var formerAuthorizationService: AuthorizationService = .None
+    private var userViewModel: UserViewModel?
     
     @IBAction func continueWithFacebookButtonTapped(sender: UIButton) {
         delegate?.facebookSignupTapped()
@@ -27,9 +33,6 @@ class LoginViewController: UIViewController {
         delegate?.skipLoginTapped()
         fadeAndDisableButtonsExceptTappedButton(sender)
     }
-    
-    var delegate: LoginViewControllerDelegate?
-    private var viewModel: SnapOnboardingViewModel.LoginViewModel?
     
     // MARK: UIViewController life cycle
 
@@ -111,6 +114,15 @@ class LoginViewController: UIViewController {
         }
         
     }
+    
+
+    private func configureForPreviouslyAuthorizedUser() {
+        // TODO: user profile view
+
+        // TODO: continueWithInstagramButton styling
+        continueWithInstagramButton?.setTitle(viewModel?.continve?.uppercaseString, forState: .Normal)
+        skipLoginButton?.setTitle(viewModel?.logInWithAnotherAccount, forState: .Normal)
+    }
 
 }
 
@@ -120,6 +132,15 @@ extension LoginViewController: LoginViewControllerProtocol {
     
     func configureForViewModel(viewModel: SnapOnboardingViewModel.LoginViewModel) {
         self.viewModel = viewModel
+    }
+
+    func applyFormerAuthorizationService(service: AuthorizationService, userViewModel: UserViewModel) {
+        assert(service != .None)
+
+        formerAuthorizationService = service
+        self.userViewModel = userViewModel
+
+        configureForPreviouslyAuthorizedUser()
     }
     
     func reactivateLoginButtons() {
