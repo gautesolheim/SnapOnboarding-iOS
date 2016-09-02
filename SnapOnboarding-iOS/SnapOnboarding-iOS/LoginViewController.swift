@@ -4,7 +4,10 @@ class LoginViewController: UIViewController {
     
     @IBOutlet private(set) var continueWithFacebookButton: UIButton?
     @IBOutlet private(set) var continueWithInstagramButton: UIButton?
+    @IBOutlet private var continueAsLoggedInUserButton: UIButton?
     @IBOutlet private(set) var skipLoginButton: UIButton?
+    @IBOutlet private var changeAccountButton: UIButton?
+
     @IBOutlet private(set) var sparklingStars: [UIImageView]?
     
     @IBOutlet private var topSpacerHeight: NSLayoutConstraint?
@@ -28,10 +31,18 @@ class LoginViewController: UIViewController {
         delegate?.instagramSignupTapped()
         fadeAndDisableButtonsExceptTappedButton(sender)
     }
+
+    @IBAction func continueAsLoggedInUserButtonTapped(sender: UIButton) {
+
+    }
     
     @IBAction func skipLoginButtonTapped(sender: UIButton) {
         delegate?.skipLoginTapped()
         fadeAndDisableButtonsExceptTappedButton(sender)
+    }
+
+    @IBAction func changeAccountButtonTapped(sender: UIButton) {
+        
     }
     
     // MARK: UIViewController life cycle
@@ -114,14 +125,25 @@ class LoginViewController: UIViewController {
         }
         
     }
-    
+
+    // MARK: UIView configuration for previously authorized users
 
     private func configureForPreviouslyAuthorizedUser() {
         // TODO: user profile view
 
-        // TODO: continueWithInstagramButton styling
-        continueWithInstagramButton?.setTitle(viewModel?.continve?.uppercaseString, forState: .Normal)
+        configureContinueAsLoggedInUserButton()
+
         skipLoginButton?.setTitle(viewModel?.logInWithAnotherAccount, forState: .Normal)
+    }
+
+    private func configureContinueAsLoggedInUserButton() {
+        continueWithInstagramButton?.hidden = true
+        continueWithFacebookButton?.hidden = true
+
+        continueAsLoggedInUserButton?.setTitle(viewModel?.continve?.uppercaseString, forState: .Normal)
+        // TODO: set new image from storyboard
+
+        continueAsLoggedInUserButton?.hidden = false
     }
 
 }
@@ -134,10 +156,10 @@ extension LoginViewController: LoginViewControllerProtocol {
         self.viewModel = viewModel
     }
 
-    func applyFormerAuthorizationService(service: AuthorizationService, userViewModel: UserViewModel) {
-        assert(service != .None)
+    func applyFormerAuthorizationService(formerAuthorizationService: AuthorizationService, userViewModel: UserViewModel) {
+        assert(formerAuthorizationService != .None)
 
-        formerAuthorizationService = service
+        self.formerAuthorizationService = formerAuthorizationService
         self.userViewModel = userViewModel
 
         configureForPreviouslyAuthorizedUser()

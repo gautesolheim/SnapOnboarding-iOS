@@ -21,6 +21,8 @@
             <string>GothamRounded-Medium</string>
             <string>GothamRounded-Medium</string>
             <string>GothamRounded-Medium</string>
+            <string>GothamRounded-Medium</string>
+            <string>GothamRounded-Medium</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -756,6 +758,20 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                                     <action selector="enableLocationServicesButtonTapped:" destination="tuq-Zg-aCA" eventType="touchUpInside" id="K0H-1o-Dw4"/>
                                 </connections>
                             </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d99-nr-wSo" userLabel="continueAsLoggedInUserButton">
+                                <rect key="frame" x="151" y="397" width="298" height="54"/>
+                                <fontDescription key="fontDescription" name="GothamRounded-Medium" family="Gotham Rounded" pointSize="15"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="2"/>
+                                <state key="normal" title="FORTSETT" backgroundImage="btn login instagram">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="continueAsLoggedInUserButtonTapped:" destination="0qE-Ud-UlA" eventType="touchUpInside" id="fpV-2g-kct"/>
+                                    <action selector="continueWithInstagramButtonTapped:" destination="0qE-Ud-UlA" eventType="touchUpInside" id="1xA-1B-1re"/>
+                                    <action selector="enableLocationServicesButtonTapped:" destination="tuq-Zg-aCA" eventType="touchUpInside" id="VVj-rY-WDz"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LxE-Ac-dOb" userLabel="skipLoginButton">
                                 <rect key="frame" x="190" y="460" width="220" height="25"/>
                                 <constraints>
@@ -768,6 +784,18 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                                 </state>
                                 <connections>
                                     <action selector="skipLoginButtonTapped:" destination="0qE-Ud-UlA" eventType="touchUpInside" id="96b-TX-vhA"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KZw-TL-O6h" userLabel="changeAccountButton">
+                                <rect key="frame" x="190" y="460" width="220" height="25"/>
+                                <fontDescription key="fontDescription" name="GothamRounded-Medium" family="Gotham Rounded" pointSize="13"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Hopp over, prøve uten innlogging" backgroundImage="link skip">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeAccountButtonTapped:" destination="0qE-Ud-UlA" eventType="touchUpInside" id="38Z-Us-aoz"/>
+                                    <action selector="skipLoginButtonTapped:" destination="0qE-Ud-UlA" eventType="touchUpInside" id="yLw-Lv-amI"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8TP-as-s39" userLabel="sparklingContinueSpacer">
@@ -897,22 +925,31 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                         <constraints>
                             <constraint firstItem="8TP-as-s39" firstAttribute="top" secondItem="DIb-IE-TZ2" secondAttribute="bottom" id="6LC-Ti-HiF"/>
                             <constraint firstItem="LxE-Ac-dOb" firstAttribute="top" secondItem="iZI-f9-ZQP" secondAttribute="bottom" constant="9" id="I5A-7Q-3xE"/>
+                            <constraint firstItem="KZw-TL-O6h" firstAttribute="centerY" secondItem="LxE-Ac-dOb" secondAttribute="centerY" id="L67-Au-9wR"/>
                             <constraint firstItem="LxE-Ac-dOb" firstAttribute="centerX" secondItem="JFE-Tf-2Hq" secondAttribute="centerX" id="LH2-bu-0P3"/>
                             <constraint firstAttribute="width" secondItem="DIb-IE-TZ2" secondAttribute="width" constant="40" id="NTd-cK-xBM"/>
                             <constraint firstItem="8TP-as-s39" firstAttribute="centerX" secondItem="JFE-Tf-2Hq" secondAttribute="centerX" id="SBG-cd-VEF"/>
                             <constraint firstItem="y4x-Xm-ZL4" firstAttribute="centerX" secondItem="JFE-Tf-2Hq" secondAttribute="centerX" id="UUf-nU-PGL"/>
                             <constraint firstItem="8TP-as-s39" firstAttribute="height" secondItem="y4x-Xm-ZL4" secondAttribute="height" multiplier="0.86" priority="999" id="Ujr-iu-mLH"/>
+                            <constraint firstItem="iZI-f9-ZQP" firstAttribute="width" secondItem="d99-nr-wSo" secondAttribute="width" id="VlV-7g-nFA"/>
+                            <constraint firstItem="KZw-TL-O6h" firstAttribute="centerX" secondItem="LxE-Ac-dOb" secondAttribute="centerX" id="YZR-Jf-zUv"/>
                             <constraint firstItem="DIb-IE-TZ2" firstAttribute="centerX" secondItem="JFE-Tf-2Hq" secondAttribute="centerX" id="bO2-Nr-jqM"/>
+                            <constraint firstItem="iZI-f9-ZQP" firstAttribute="centerX" secondItem="d99-nr-wSo" secondAttribute="centerX" id="gBE-Wj-3hx"/>
+                            <constraint firstItem="iZI-f9-ZQP" firstAttribute="height" secondItem="d99-nr-wSo" secondAttribute="height" id="gkx-Qu-ihA"/>
                             <constraint firstItem="iZI-f9-ZQP" firstAttribute="top" secondItem="hVU-s5-rUl" secondAttribute="bottom" constant="16" id="gwF-82-QbO"/>
                             <constraint firstItem="y4x-Xm-ZL4" firstAttribute="top" secondItem="6VU-A7-cWa" secondAttribute="bottom" id="hAd-WB-P3o"/>
+                            <constraint firstItem="KZw-TL-O6h" firstAttribute="height" secondItem="LxE-Ac-dOb" secondAttribute="height" id="rX4-bQ-fXx"/>
                             <constraint firstItem="DIb-IE-TZ2" firstAttribute="top" secondItem="y4x-Xm-ZL4" secondAttribute="bottom" id="s5L-mL-dib"/>
                             <constraint firstItem="hVU-s5-rUl" firstAttribute="centerX" secondItem="JFE-Tf-2Hq" secondAttribute="centerX" id="u46-yW-LFl"/>
                             <constraint firstItem="lpC-Qa-pWA" firstAttribute="top" secondItem="LxE-Ac-dOb" secondAttribute="bottom" constant="17" id="uJ2-pc-QXe"/>
                             <constraint firstItem="hVU-s5-rUl" firstAttribute="top" secondItem="8TP-as-s39" secondAttribute="bottom" id="vJ1-Y9-9gM"/>
                             <constraint firstItem="iZI-f9-ZQP" firstAttribute="centerX" secondItem="JFE-Tf-2Hq" secondAttribute="centerX" id="vdE-gO-8fk"/>
+                            <constraint firstItem="iZI-f9-ZQP" firstAttribute="centerY" secondItem="d99-nr-wSo" secondAttribute="centerY" id="xQC-Fs-RDQ"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="changeAccountButton" destination="KZw-TL-O6h" id="BDP-jq-Eds"/>
+                        <outlet property="continueAsLoggedInUserButton" destination="d99-nr-wSo" id="L9r-Nm-StD"/>
                         <outlet property="continueWithFacebookButton" destination="hVU-s5-rUl" id="FzT-Jk-MBK"/>
                         <outlet property="continueWithFacebookButtonWidth" destination="hdJ-tp-v4g" id="aAA-lw-DjA"/>
                         <outlet property="continueWithInstagramButton" destination="iZI-f9-ZQP" id="M98-5b-NzK"/>
@@ -974,6 +1011,6 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
         <image name="neighborhood-photo6" width="106" height="106"/>
         <image name="neighborhood-photo7" width="68" height="68"/>
         <image name="star" width="30" height="34"/>
-        <image name="veske" width="167" height="167"/>
+        <image name="veske" width="350" height="350"/>
     </resources>
 </document>

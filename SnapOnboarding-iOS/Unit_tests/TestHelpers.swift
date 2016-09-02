@@ -3,6 +3,8 @@ import SnapTagsView
 @testable import SnapOnboarding_iOS
 
 private class SnapOnboardingDelegateExample: SnapOnboardingDelegate {
+
+    func onboardingWillAppear() {}
     
     func termsAndConditionsTapped() {}
     func privacyPolicyTapped() {}
