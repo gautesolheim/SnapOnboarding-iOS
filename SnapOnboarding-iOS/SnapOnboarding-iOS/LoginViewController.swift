@@ -1,11 +1,16 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-    
+
+    @IBOutlet private var snapsaleLogo: UIImageView?
     @IBOutlet private(set) var continueWithFacebookButton: UIButton?
     @IBOutlet private(set) var continueWithInstagramButton: UIButton?
-    @IBOutlet private var continueAsLoggedInUserButton: UIButton?
     @IBOutlet private(set) var skipLoginButton: UIButton?
+
+    @IBOutlet private var profilePhoto: UIImageView?
+    @IBOutlet private var socialLogoMask: UIImageView?
+    @IBOutlet private var welcomeBackLabel: UILabel?
+    @IBOutlet private var continueAsLoggedInUserButton: UIButton?
     @IBOutlet private var changeAccountButton: UIButton?
 
     @IBOutlet private(set) var sparklingStars: [UIImageView]?
@@ -33,7 +38,8 @@ class LoginViewController: UIViewController {
     }
 
     @IBAction func continueAsLoggedInUserButtonTapped(sender: UIButton) {
-
+        delegate?.continueAsLoggedInUserTapped()
+        fadeAndDisableButtonsExceptTappedButton(sender)
     }
     
     @IBAction func skipLoginButtonTapped(sender: UIButton) {
@@ -42,7 +48,11 @@ class LoginViewController: UIViewController {
     }
 
     @IBAction func changeAccountButtonTapped(sender: UIButton) {
-        
+        continueAsLoggedInUserButton?.hidden = true
+        changeAccountButton?.hidden = true
+        continueWithFacebookButton?.hidden = false
+        continueWithInstagramButton?.hidden = false
+        skipLoginButton?.hidden = false
     }
     
     // MARK: UIViewController life cycle
@@ -111,7 +121,7 @@ class LoginViewController: UIViewController {
     
     private func fadeAndDisableButtonsExceptTappedButton(tappedButton: UIButton) {
         
-        let buttonsToDeactivate = [continueWithFacebookButton, continueWithInstagramButton, skipLoginButton]
+        let buttonsToDeactivate = [continueWithFacebookButton, continueWithInstagramButton, changeAccountButton, skipLoginButton]
         let buttonsToFade = buttonsToDeactivate.filter { $0 != tappedButton }
         
         buttonsToDeactivate.forEach { button in
@@ -129,21 +139,35 @@ class LoginViewController: UIViewController {
     // MARK: UIView configuration for previously authorized users
 
     private func configureForPreviouslyAuthorizedUser() {
-        // TODO: user profile view
+        configureProfileView()
+        snapsaleLogo?.hidden = true
+        profilePhoto?.hidden = false
+        socialLogoMask?.hidden = false
+        welcomeBackLabel?.hidden = false
 
         configureContinueAsLoggedInUserButton()
+        continueWithFacebookButton?.hidden = true
+        continueWithInstagramButton?.hidden = true
+        continueAsLoggedInUserButton?.hidden = false
 
-        skipLoginButton?.setTitle(viewModel?.logInWithAnotherAccount, forState: .Normal)
+        configureChangeAccountButton()
+        skipLoginButton?.hidden = true
+        changeAccountButton?.hidden = false
+    }
+
+    private func configureProfileView() {
+        welcomeBackLabel?.text = viewModel?.welcomeBack
+        profilePhoto?.layer.masksToBounds = true
+        profilePhoto?.layer.cornerRadius = (profilePhoto?.frame.size.height ?? 69) / 2.0
+        profilePhoto?.image = userViewModel?.profileImage
     }
 
     private func configureContinueAsLoggedInUserButton() {
-        continueWithInstagramButton?.hidden = true
-        continueWithFacebookButton?.hidden = true
-
         continueAsLoggedInUserButton?.setTitle(viewModel?.continve?.uppercaseString, forState: .Normal)
-        // TODO: set new image from storyboard
+    }
 
-        continueAsLoggedInUserButton?.hidden = false
+    private func configureChangeAccountButton() {
+        changeAccountButton?.setTitle(viewModel?.logInWithAnotherAccount, forState: .Normal)
     }
 
 }
@@ -166,7 +190,9 @@ extension LoginViewController: LoginViewControllerProtocol {
     }
     
     func reactivateLoginButtons() {
-        [continueWithFacebookButton, continueWithInstagramButton, skipLoginButton].forEach { button in
+        let buttonsToReactivate = [continueWithFacebookButton, continueWithInstagramButton, changeAccountButton, skipLoginButton]
+        
+        buttonsToReactivate.forEach { button in
             button?.userInteractionEnabled = true
             
             if button?.alpha != 1.0 {

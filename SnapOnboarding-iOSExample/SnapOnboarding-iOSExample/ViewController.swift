@@ -147,7 +147,7 @@ extension ViewController: SnapOnboardingDelegate {
 
         var userViewModel = UserViewModel()
         userViewModel.firstName = "Mona"
-        userViewModel.profileImage = UIImage() // TODO: actual image
+        userViewModel.profileImage = UIImage(named: "sample_profile_image")
         (onboardingViewController as? SnapOnboardingViewControllerProtocol)?.applyFormerAuthorizationService(.Facebook, userViewModel: userViewModel)
     }
     
@@ -179,6 +179,10 @@ extension ViewController: SnapOnboardingDelegate {
     
     func instagramSignupTapped() {
         print("instagram-signup-tapped")
+    }
+
+    func continueAsLoggedInUserTapped() {
+        print("continue-as-logged-in-user-tapped")
     }
     
     func skipLoginTapped() {

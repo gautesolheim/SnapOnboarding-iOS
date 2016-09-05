@@ -241,6 +241,10 @@ extension SnapOnboardingViewController: LoginViewControllerDelegate {
     func instagramSignupTapped() {
         delegate?.instagramSignupTapped()
     }
+
+    func continueAsLoggedInUserTapped() {
+        delegate?.continueAsLoggedInUserTapped()
+    }
     
     func skipLoginTapped() {
         delegate?.skipLoginTapped()
