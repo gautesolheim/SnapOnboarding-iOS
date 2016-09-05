@@ -48,11 +48,7 @@ class LoginViewController: UIViewController {
     }
 
     @IBAction func changeAccountButtonTapped(sender: UIButton) {
-        continueAsLoggedInUserButton?.hidden = true
-        changeAccountButton?.hidden = true
-        continueWithFacebookButton?.hidden = false
-        continueWithInstagramButton?.hidden = false
-        skipLoginButton?.hidden = false
+        switchWelcomeBackHiddenStates(false)
     }
     
     // MARK: UIViewController life cycle
@@ -140,19 +136,10 @@ class LoginViewController: UIViewController {
 
     private func configureForPreviouslyAuthorizedUser() {
         configureProfileView()
-        snapsaleLogo?.hidden = true
-        profilePhoto?.hidden = false
-        socialLogoMask?.hidden = false
-        welcomeBackLabel?.hidden = false
-
         configureContinueAsLoggedInUserButton()
-        continueWithFacebookButton?.hidden = true
-        continueWithInstagramButton?.hidden = true
-        continueAsLoggedInUserButton?.hidden = false
-
         configureChangeAccountButton()
-        skipLoginButton?.hidden = true
-        changeAccountButton?.hidden = false
+
+        switchWelcomeBackHiddenStates(true)
     }
 
     private func configureProfileView() {
@@ -160,6 +147,12 @@ class LoginViewController: UIViewController {
         profilePhoto?.layer.masksToBounds = true
         profilePhoto?.layer.cornerRadius = (profilePhoto?.frame.size.height ?? 69) / 2.0
         profilePhoto?.image = userViewModel?.profileImage
+
+        if case .Facebook = formerAuthorizationService {
+            socialLogoMask?.image = Asset.Avatar_Facebook.image
+        } else if case .Instagram = formerAuthorizationService {
+            socialLogoMask?.image = Asset.Avatar_Instagram.image
+        }
     }
 
     private func configureContinueAsLoggedInUserButton() {
@@ -167,7 +160,24 @@ class LoginViewController: UIViewController {
     }
 
     private func configureChangeAccountButton() {
-        changeAccountButton?.setTitle(viewModel?.logInWithAnotherAccount, forState: .Normal)
+        let title = self.viewModel?.logInWithAnotherAccount
+        UIView.performWithoutAnimation {
+            self.changeAccountButton?.setTitle(title, forState: .Normal)
+            self.changeAccountButton?.layoutIfNeeded()
+        }
+    }
+
+    private func switchWelcomeBackHiddenStates(newState: Bool) {
+        snapsaleLogo?.hidden = newState
+        continueWithFacebookButton?.hidden = newState
+        continueWithInstagramButton?.hidden = newState
+        skipLoginButton?.hidden = newState
+
+        profilePhoto?.hidden = !newState
+        socialLogoMask?.hidden = !newState
+        welcomeBackLabel?.hidden = !newState
+        continueAsLoggedInUserButton?.hidden = !newState
+        changeAccountButton?.hidden = !newState
     }
 
 }

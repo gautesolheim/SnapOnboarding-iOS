@@ -148,7 +148,7 @@ extension ViewController: SnapOnboardingDelegate {
         var userViewModel = UserViewModel()
         userViewModel.firstName = "Mona"
         userViewModel.profileImage = UIImage(named: "sample_profile_image")
-        (onboardingViewController as? SnapOnboardingViewControllerProtocol)?.applyFormerAuthorizationService(.Facebook, userViewModel: userViewModel)
+        (onboardingViewController as? SnapOnboardingViewControllerProtocol)?.applyFormerAuthorizationService(.Instagram, userViewModel: userViewModel)
     }
     
     

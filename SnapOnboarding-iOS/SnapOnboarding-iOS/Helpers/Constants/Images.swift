@@ -29,6 +29,8 @@ enum Asset: String {
   case Neighborhood_Photo7 = "neighborhood-photo7"
   case Btn_Login_Facebook = "btn login facebook"
   case Btn_Login_Instagram = "btn login instagram"
+  case Avatar_Facebook = "avatar_facebook"
+  case Avatar_Instagram = "avatar_instagram"
   case Items_Pattern = "items-pattern"
   case Logo_Snapsale = "logo snapsale"
   case Star = "star"

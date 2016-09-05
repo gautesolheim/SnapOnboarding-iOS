@@ -784,10 +784,10 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KZw-TL-O6h" userLabel="changeAccountButton">
-                                <rect key="frame" x="190" y="460" width="220" height="25"/>
+                                <rect key="frame" x="202" y="460" width="196" height="25"/>
                                 <fontDescription key="fontDescription" name="GothamRounded-Medium" family="Gotham Rounded" pointSize="13"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="Hopp over, prøve uten innlogging" backgroundImage="link skip">
+                                <state key="normal" title="Logg inn med en annen konto" backgroundImage="link skip">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
