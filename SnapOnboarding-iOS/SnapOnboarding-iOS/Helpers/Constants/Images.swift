@@ -14,7 +14,7 @@ enum Asset: String {
   case Iphone = "iphone"
   case Veske = "veske"
   case Link_Skip = "link skip"
-  case Btn_Location_Clean = "btn location clean"
+  case Btn_White_Clean = "btn white clean"
   case Btn_Location = "btn location"
   case Icon_m_spinner_black = "icon_m_spinner_black"
   case Icon_tumbleweed = "icon_tumbleweed"

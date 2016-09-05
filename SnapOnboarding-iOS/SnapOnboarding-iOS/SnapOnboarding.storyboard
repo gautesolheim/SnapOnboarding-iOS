@@ -762,7 +762,7 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                                 <fontDescription key="fontDescription" name="GothamRounded-Medium" family="Gotham Rounded" pointSize="15"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="2"/>
-                                <state key="normal" title="FORTSETT" backgroundImage="btn location clean">
+                                <state key="normal" title="FORTSETT" backgroundImage="btn white clean">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -1029,9 +1029,9 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
     <resources>
         <image name="avatar_facebook" width="143" height="143"/>
         <image name="btn location" width="74" height="54"/>
-        <image name="btn location clean" width="54" height="54"/>
         <image name="btn login facebook" width="74" height="54"/>
         <image name="btn login instagram" width="74" height="54"/>
+        <image name="btn white clean" width="54" height="54"/>
         <image name="icon_tumbleweed" width="50" height="44"/>
         <image name="illustration_neighborhood" width="1020" height="964"/>
         <image name="iphone" width="399" height="437"/>

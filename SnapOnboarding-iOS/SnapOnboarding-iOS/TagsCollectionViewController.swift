@@ -51,7 +51,7 @@ class TagsCollectionViewController: SnapTagsCollectionViewController {
         
         var onState = ButtonStateConfiguration()
         onState.backgroundColor = UIColor.clearColor()
-        onState.backgroundImage = UIImage(asset: Asset.Tags_background)
+        onState.backgroundImage = Asset.Tags_background.image
         onState.textColor = UIColor.blackColor()
         onState.cornerRadius = 4
         

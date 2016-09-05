@@ -237,13 +237,13 @@ class LocationViewController: UIViewController {
         }
         
         enableLocationServicesButtonWidth?.active = false
-        let backgroundImage = UIImage(asset: Asset.Btn_Location_Clean)
+        let backgroundImage = Asset.Btn_White_Clean.image
         
         enableLocationServicesButton.setTitle(nil, forState: .Normal)
         enableLocationServicesButton.setBackgroundImage(backgroundImage, forState: .Normal)
         enableLocationServicesButton.contentEdgeInsets = UIEdgeInsetsZero
         
-        let spinner = UIImage(asset: Asset.Icon_m_spinner_black)
+        let spinner = Asset.Icon_m_spinner_black.image
         spinnerImageView.translatesAutoresizingMaskIntoConstraints = false
         spinnerImageView.image = spinner
         spinnerImageView.alpha = 0.0
