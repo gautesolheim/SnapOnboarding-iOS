@@ -102,13 +102,13 @@ extension TagsCollectionViewController {
     private func setupForIpad() {
         fontSize = 15
         spacing = 12
-        insets = UIEdgeInsets(top: 9.5, left: 10.5, bottom: 9.5, right: 10.5)
+        insets = UIEdgeInsets(top: 8.0, left: 10.5, bottom: 8.0, right: 10.5)
     }
     
     private func setupForIpadPro() {
         fontSize = 17
         spacing = 14
-        insets = UIEdgeInsets(top: 10.5, left: 11.5, bottom: 10.5, right: 11.5)
+        insets = UIEdgeInsets(top: 9.0, left: 11.5, bottom: 9.0, right: 11.5)
     }
     
 }
