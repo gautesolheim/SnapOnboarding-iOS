@@ -14,7 +14,6 @@ public enum AuthorizationService {
 }
 
 public struct UserViewModel {
-    public var firstName: String?
     public var profileImage: UIImage?
 
     public init() {}

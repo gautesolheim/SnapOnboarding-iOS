@@ -813,13 +813,13 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                                                 </constraints>
                                             </imageView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tla-Ec-SsZ" userLabel="profileView">
-                                                <rect key="frame" x="90.5" y="85" width="54" height="53.5"/>
+                                                <rect key="frame" x="91" y="85" width="54" height="53.5"/>
                                                 <subviews>
                                                     <imageView hidden="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qTq-xc-UCf" userLabel="profilePhoto">
                                                         <rect key="frame" x="0.0" y="0.0" width="54" height="53.5"/>
                                                     </imageView>
                                                     <imageView hidden="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar_facebook" translatesAutoresizingMaskIntoConstraints="NO" id="nya-vd-g1g" userLabel="socialLogoMask">
-                                                        <rect key="frame" x="0.0" y="0.5" width="54" height="53.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="54" height="53.5"/>
                                                     </imageView>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -835,8 +835,8 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                                                     <constraint firstAttribute="bottom" secondItem="qTq-xc-UCf" secondAttribute="bottom" id="zyo-ca-wDY"/>
                                                 </constraints>
                                             </view>
-                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Velkommen tilbake!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zEu-bz-Cpm" userLabel="welcomeBackLabel">
-                                                <rect key="frame" x="13" y="150.5" width="208.5" height="25.5"/>
+                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Velkommen tilbake!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="zEu-bz-Cpm" userLabel="welcomeBackLabel">
+                                                <rect key="frame" x="30" y="152.5" width="177" height="25.5"/>
                                                 <fontDescription key="fontDescription" name="GothamRounded-Medium" family="Gotham Rounded" pointSize="21"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
@@ -869,19 +869,19 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                                                 </constraints>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="xFM-9c-KHt" userLabel="star4">
-                                                <rect key="frame" x="20" y="132" width="9" height="34"/>
+                                                <rect key="frame" x="12" y="132" width="9" height="34"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="9" id="nV1-T3-IQP"/>
                                                 </constraints>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="2lV-dU-6ex" userLabel="star5">
-                                                <rect key="frame" x="206" y="147" width="9" height="34"/>
+                                                <rect key="frame" x="215" y="147" width="9" height="34"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="9" id="GHB-Oa-jnR"/>
                                                 </constraints>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="h0a-sr-xre" userLabel="star6">
-                                                <rect key="frame" x="162" y="174" width="12" height="34"/>
+                                                <rect key="frame" x="144" y="192" width="12" height="34"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="12" id="zGJ-M2-a4Z"/>
                                                 </constraints>
@@ -908,11 +908,13 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                                         <constraints>
                                             <constraint firstItem="Rkx-wm-l9O" firstAttribute="centerX" secondItem="al6-WW-aFx" secondAttribute="centerX" id="2FF-2X-zo3"/>
                                             <constraint firstItem="Tla-Ec-SsZ" firstAttribute="centerX" secondItem="al6-WW-aFx" secondAttribute="centerX" id="2eh-Uu-1Fa"/>
-                                            <constraint firstItem="xFM-9c-KHt" firstAttribute="centerX" secondItem="al6-WW-aFx" secondAttribute="centerX" multiplier="0.21" id="3gw-8U-Om4"/>
+                                            <constraint firstItem="xFM-9c-KHt" firstAttribute="centerX" secondItem="al6-WW-aFx" secondAttribute="centerX" multiplier="0.14" id="3gw-8U-Om4"/>
                                             <constraint firstItem="vj6-hP-y2W" firstAttribute="centerY" secondItem="al6-WW-aFx" secondAttribute="centerY" multiplier="0.2" id="5u7-oK-HWd"/>
+                                            <constraint firstItem="zEu-bz-Cpm" firstAttribute="centerY" secondItem="al6-WW-aFx" secondAttribute="centerY" multiplier="1.3" id="CzB-6E-HuG"/>
                                             <constraint firstItem="X7f-ab-Q3t" firstAttribute="centerX" secondItem="al6-WW-aFx" secondAttribute="centerX" multiplier="0.72" id="FBw-aR-Yxs"/>
-                                            <constraint firstItem="2lV-dU-6ex" firstAttribute="centerX" secondItem="al6-WW-aFx" secondAttribute="centerX" multiplier="1.78" id="I1d-R9-cQ0"/>
+                                            <constraint firstItem="2lV-dU-6ex" firstAttribute="centerX" secondItem="al6-WW-aFx" secondAttribute="centerX" multiplier="1.86" id="I1d-R9-cQ0"/>
                                             <constraint firstAttribute="width" secondItem="al6-WW-aFx" secondAttribute="height" multiplier="579:623" id="JUw-4l-JpK"/>
+                                            <constraint firstItem="zEu-bz-Cpm" firstAttribute="width" secondItem="al6-WW-aFx" secondAttribute="width" multiplier="0.75" id="Jae-z3-dw8"/>
                                             <constraint firstItem="fMq-Xf-V1c" firstAttribute="centerX" secondItem="al6-WW-aFx" secondAttribute="centerX" multiplier="0.55" id="Kyo-LX-3Ie"/>
                                             <constraint firstAttribute="bottom" secondItem="BBq-cU-apg" secondAttribute="bottom" id="Lqc-ol-Fn8"/>
                                             <constraint firstItem="Ea6-o5-kuO" firstAttribute="centerX" secondItem="al6-WW-aFx" secondAttribute="centerX" multiplier="1.64" id="OOL-ub-hF6"/>
@@ -931,12 +933,11 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                                             <constraint firstItem="Tla-Ec-SsZ" firstAttribute="width" secondItem="al6-WW-aFx" secondAttribute="width" multiplier="0.23" id="jR1-am-nd3"/>
                                             <constraint firstItem="koN-v6-nc7" firstAttribute="centerX" secondItem="al6-WW-aFx" secondAttribute="centerX" multiplier="1.35" id="k0Q-cE-qa4"/>
                                             <constraint firstAttribute="trailing" secondItem="BBq-cU-apg" secondAttribute="trailing" id="mNK-rE-Le9"/>
-                                            <constraint firstItem="h0a-sr-xre" firstAttribute="centerY" secondItem="al6-WW-aFx" secondAttribute="centerY" multiplier="1.5" id="moJ-8k-nJA"/>
+                                            <constraint firstItem="h0a-sr-xre" firstAttribute="centerY" secondItem="al6-WW-aFx" secondAttribute="centerY" multiplier="1.65" id="moJ-8k-nJA"/>
                                             <constraint firstItem="Rkx-wm-l9O" firstAttribute="height" secondItem="BBq-cU-apg" secondAttribute="height" multiplier="0.32" id="nL0-BF-MXg"/>
-                                            <constraint firstItem="zEu-bz-Cpm" firstAttribute="top" secondItem="Tla-Ec-SsZ" secondAttribute="bottom" constant="12" id="oiB-Y7-mQg"/>
                                             <constraint firstItem="Tla-Ec-SsZ" firstAttribute="centerY" secondItem="al6-WW-aFx" secondAttribute="centerY" multiplier="0.88" id="pBX-zR-mgY"/>
                                             <constraint firstItem="Ea6-o5-kuO" firstAttribute="centerY" secondItem="al6-WW-aFx" secondAttribute="centerY" multiplier="1.78" id="rQq-fj-6ek"/>
-                                            <constraint firstItem="h0a-sr-xre" firstAttribute="centerX" secondItem="al6-WW-aFx" secondAttribute="centerX" multiplier="1.42" id="riq-cu-g7z"/>
+                                            <constraint firstItem="h0a-sr-xre" firstAttribute="centerX" secondItem="al6-WW-aFx" secondAttribute="centerX" multiplier="1.27" id="riq-cu-g7z"/>
                                             <constraint firstItem="zEu-bz-Cpm" firstAttribute="centerX" secondItem="Tla-Ec-SsZ" secondAttribute="centerX" id="tM1-2K-CuQ"/>
                                             <constraint firstItem="2lV-dU-6ex" firstAttribute="centerY" secondItem="al6-WW-aFx" secondAttribute="centerY" multiplier="1.29" id="zfi-qx-8vi"/>
                                         </constraints>

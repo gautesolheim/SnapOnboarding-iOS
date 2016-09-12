@@ -61,7 +61,7 @@ class ViewController: UIViewController {
         loginViewModel.continueWithFacebook = "Fortsett med Facebook"
         loginViewModel.continueWithInstagram = "Fortsett med Instagram"
         loginViewModel.skipWithoutLogin = "Hopp over, prøve uten innlogging"
-        loginViewModel.welcomeBack = "Velkommen tilbake!"
+        loginViewModel.welcomeBack = "Velkommen velkommen tilbake tilbake!"
         loginViewModel.continve = "Fortsett"
         loginViewModel.logInWithAnotherAccount = "Logg inn med en annen konto"
 
@@ -146,7 +146,6 @@ extension ViewController: SnapOnboardingDelegate {
         print("privacy-policy-tapped")
 
         var userViewModel = UserViewModel()
-        userViewModel.firstName = "Mona"
         userViewModel.profileImage = UIImage(named: "sample_profile_image")
         (onboardingViewController as? SnapOnboardingViewControllerProtocol)?.applyFormerAuthorizationService(.Instagram, userViewModel: userViewModel)
     }
