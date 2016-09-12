@@ -1,4 +1,5 @@
 import UIKit
+import SnapFonts_iOS
 
 class LoginViewController: UIViewController {
 
@@ -12,6 +13,10 @@ class LoginViewController: UIViewController {
     @IBOutlet private var welcomeBackLabel: UILabel?
     @IBOutlet private var continueAsLoggedInUserButton: UIButton?
     @IBOutlet private var changeAccountButton: UIButton?
+
+    @IBOutlet private var star7: UIImageView?
+    @IBOutlet private var star6CenterY: NSLayoutConstraint?
+    @IBOutlet private var welcomeBackLabelCenterY: NSLayoutConstraint?
 
     @IBOutlet private(set) var sparklingStars: [UIImageView]?
     
@@ -240,7 +245,13 @@ extension LoginViewController {
     
     func setupFor3_5InchPortrait() {
         topSpacerHeight?.constant = 17
-        
+        welcomeBackLabel?.numberOfLines = 3
+        welcomeBackLabel?.font = SnapFonts.gothamRoundedMediumOfSize(14)
+
+        star7?.hidden = true
+        star6CenterY?.constant = 8
+        welcomeBackLabelCenterY?.constant = 5
+
         skipLoginButtonBottomToSuperViewBottom?.constant = 0
     }
     

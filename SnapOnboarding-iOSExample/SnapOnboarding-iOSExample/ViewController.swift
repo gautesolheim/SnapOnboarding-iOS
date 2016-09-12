@@ -61,7 +61,7 @@ class ViewController: UIViewController {
         loginViewModel.continueWithFacebook = "Fortsett med Facebook"
         loginViewModel.continueWithInstagram = "Fortsett med Instagram"
         loginViewModel.skipWithoutLogin = "Hopp over, prøve uten innlogging"
-        loginViewModel.welcomeBack = "Velkommen velkommen tilbake tilbake!"
+        loginViewModel.welcomeBack = "Velkommen tilbake!"
         loginViewModel.continve = "Fortsett"
         loginViewModel.logInWithAnotherAccount = "Logg inn med en annen konto"
 

@@ -835,7 +835,7 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                                                     <constraint firstAttribute="bottom" secondItem="qTq-xc-UCf" secondAttribute="bottom" id="zyo-ca-wDY"/>
                                                 </constraints>
                                             </view>
-                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Velkommen tilbake!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="zEu-bz-Cpm" userLabel="welcomeBackLabel">
+                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Velkommen tilbake!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="zEu-bz-Cpm" userLabel="welcomeBackLabel">
                                                 <rect key="frame" x="30" y="152.5" width="177" height="25.5"/>
                                                 <fontDescription key="fontDescription" name="GothamRounded-Medium" family="Gotham Rounded" pointSize="21"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -881,7 +881,7 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                                                 </constraints>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="h0a-sr-xre" userLabel="star6">
-                                                <rect key="frame" x="144" y="192" width="12" height="34"/>
+                                                <rect key="frame" x="138" y="192" width="12" height="34"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="12" id="zGJ-M2-a4Z"/>
                                                 </constraints>
@@ -937,7 +937,7 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                                             <constraint firstItem="Rkx-wm-l9O" firstAttribute="height" secondItem="BBq-cU-apg" secondAttribute="height" multiplier="0.32" id="nL0-BF-MXg"/>
                                             <constraint firstItem="Tla-Ec-SsZ" firstAttribute="centerY" secondItem="al6-WW-aFx" secondAttribute="centerY" multiplier="0.88" id="pBX-zR-mgY"/>
                                             <constraint firstItem="Ea6-o5-kuO" firstAttribute="centerY" secondItem="al6-WW-aFx" secondAttribute="centerY" multiplier="1.78" id="rQq-fj-6ek"/>
-                                            <constraint firstItem="h0a-sr-xre" firstAttribute="centerX" secondItem="al6-WW-aFx" secondAttribute="centerX" multiplier="1.27" id="riq-cu-g7z"/>
+                                            <constraint firstItem="h0a-sr-xre" firstAttribute="centerX" secondItem="al6-WW-aFx" secondAttribute="centerX" multiplier="1.22" id="riq-cu-g7z"/>
                                             <constraint firstItem="zEu-bz-Cpm" firstAttribute="centerX" secondItem="Tla-Ec-SsZ" secondAttribute="centerX" id="tM1-2K-CuQ"/>
                                             <constraint firstItem="2lV-dU-6ex" firstAttribute="centerY" secondItem="al6-WW-aFx" secondAttribute="centerY" multiplier="1.29" id="zfi-qx-8vi"/>
                                         </constraints>
@@ -991,8 +991,11 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                         <outlet property="snapsaleLogo" destination="Rkx-wm-l9O" id="Slz-oT-mUb"/>
                         <outlet property="socialLogoMask" destination="nya-vd-g1g" id="Oj6-kS-TS2"/>
                         <outlet property="sparklingContinueSpacerToTopSpacerHeightRelation" destination="Ujr-iu-mLH" id="RLW-w0-rob"/>
+                        <outlet property="star6CenterY" destination="moJ-8k-nJA" id="kY4-Wa-z7G"/>
+                        <outlet property="star7" destination="X7f-ab-Q3t" id="JRh-Fk-rUd"/>
                         <outlet property="topSpacerHeight" destination="jL5-vl-r0V" id="UD3-AH-kVQ"/>
                         <outlet property="welcomeBackLabel" destination="zEu-bz-Cpm" id="2Cy-0K-ynX"/>
+                        <outlet property="welcomeBackLabelCenterY" destination="CzB-6E-HuG" id="gHj-sE-YNu"/>
                         <outletCollection property="sparklingStars" destination="vj6-hP-y2W" collectionClass="NSMutableArray" id="LOm-zl-5JI"/>
                         <outletCollection property="sparklingStars" destination="eZ7-Pl-CKs" collectionClass="NSMutableArray" id="kRH-nh-SiX"/>
                         <outletCollection property="sparklingStars" destination="koN-v6-nc7" collectionClass="NSMutableArray" id="EYk-49-gih"/>
