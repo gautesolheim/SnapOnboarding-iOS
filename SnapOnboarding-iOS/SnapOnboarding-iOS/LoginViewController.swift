@@ -48,7 +48,7 @@ class LoginViewController: UIViewController {
     }
 
     @IBAction func changeAccountButtonTapped(sender: UIButton) {
-        switchWelcomeBackHiddenStates(false)
+        switchWelcomeBackHidden(hidden: true)
     }
     
     // MARK: UIViewController life cycle
@@ -139,7 +139,7 @@ class LoginViewController: UIViewController {
         configureContinueAsLoggedInUserButton()
         configureChangeAccountButton()
 
-        switchWelcomeBackHiddenStates(true)
+        switchWelcomeBackHidden(hidden: false)
     }
 
     private func configureProfileView() {
@@ -167,17 +167,24 @@ class LoginViewController: UIViewController {
         }
     }
 
-    private func switchWelcomeBackHiddenStates(newState: Bool) {
-        snapsaleLogo?.hidden = newState
-        continueWithFacebookButton?.hidden = newState
-        continueWithInstagramButton?.hidden = newState
-        skipLoginButton?.hidden = newState
+    private func switchWelcomeBackHidden(hidden welcomeBackHidden: Bool) {
+        let welcomeBackViews: [UIView?] = [profilePhoto, socialLogoMask, welcomeBackLabel, continueAsLoggedInUserButton, changeAccountButton]
+        let newUserViews: [UIView?] = [snapsaleLogo, continueWithFacebookButton, continueWithInstagramButton, skipLoginButton]
+        
+        welcomeBackViews.forEach { $0?.hidden = false }
+        newUserViews.forEach { $0?.hidden = false }
+        
+        UIView.animateWithDuration(0.2, animations: {
+            welcomeBackViews.forEach { $0?.alpha = welcomeBackHidden ? 0 : 1 }
+            newUserViews.forEach { $0?.alpha = welcomeBackHidden ? 1 : 0 }
+        }, completion: { _ in
+            if welcomeBackHidden {
+                welcomeBackViews.forEach { $0?.hidden = true }
+            } else {
+                newUserViews.forEach { $0?.hidden = true }
+            }
+        })
 
-        profilePhoto?.hidden = !newState
-        socialLogoMask?.hidden = !newState
-        welcomeBackLabel?.hidden = !newState
-        continueAsLoggedInUserButton?.hidden = !newState
-        changeAccountButton?.hidden = !newState
     }
 
 }

@@ -757,7 +757,7 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                                     <action selector="continueWithFacebookButtonTapped:" destination="0qE-Ud-UlA" eventType="touchUpInside" id="WI4-mg-gym"/>
                                 </connections>
                             </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d99-nr-wSo" userLabel="continueAsLoggedInUserButton">
+                            <button hidden="YES" opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d99-nr-wSo" userLabel="continueAsLoggedInUserButton">
                                 <rect key="frame" x="151" y="397" width="298" height="54"/>
                                 <fontDescription key="fontDescription" name="GothamRounded-Medium" family="Gotham Rounded" pointSize="15"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -783,7 +783,7 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                                     <action selector="skipLoginButtonTapped:" destination="0qE-Ud-UlA" eventType="touchUpInside" id="96b-TX-vhA"/>
                                 </connections>
                             </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KZw-TL-O6h" userLabel="changeAccountButton">
+                            <button hidden="YES" opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KZw-TL-O6h" userLabel="changeAccountButton">
                                 <rect key="frame" x="202" y="460" width="196" height="25"/>
                                 <fontDescription key="fontDescription" name="GothamRounded-Medium" family="Gotham Rounded" pointSize="13"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -815,10 +815,10 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tla-Ec-SsZ" userLabel="profileView">
                                                 <rect key="frame" x="90.5" y="85" width="54" height="53.5"/>
                                                 <subviews>
-                                                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qTq-xc-UCf" userLabel="profilePhoto">
+                                                    <imageView hidden="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qTq-xc-UCf" userLabel="profilePhoto">
                                                         <rect key="frame" x="0.0" y="0.0" width="54" height="53.5"/>
                                                     </imageView>
-                                                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar_facebook" translatesAutoresizingMaskIntoConstraints="NO" id="nya-vd-g1g" userLabel="socialLogoMask">
+                                                    <imageView hidden="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar_facebook" translatesAutoresizingMaskIntoConstraints="NO" id="nya-vd-g1g" userLabel="socialLogoMask">
                                                         <rect key="frame" x="0.0" y="0.5" width="54" height="53.5"/>
                                                     </imageView>
                                                 </subviews>
@@ -835,7 +835,7 @@ Vilkårene for bruk og Retningslinjer for personvern</string>
                                                     <constraint firstAttribute="bottom" secondItem="qTq-xc-UCf" secondAttribute="bottom" id="zyo-ca-wDY"/>
                                                 </constraints>
                                             </view>
-                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Velkommen tilbake!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zEu-bz-Cpm" userLabel="welcomeBackLabel">
+                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Velkommen tilbake!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zEu-bz-Cpm" userLabel="welcomeBackLabel">
                                                 <rect key="frame" x="13" y="150.5" width="208.5" height="25.5"/>
                                                 <fontDescription key="fontDescription" name="GothamRounded-Medium" family="Gotham Rounded" pointSize="21"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
