@@ -183,21 +183,23 @@ class LoginViewController: UIViewController {
     private func switchWelcomeBackHidden(hidden welcomeBackHidden: Bool) {
         let welcomeBackViews: [UIView?] = [profilePhoto, socialLogoMask, welcomeBackLabel, continueAsLoggedInUserButton, changeAccountButton]
         let newUserViews: [UIView?] = [snapsaleLogo, continueWithFacebookButton, continueWithInstagramButton, skipLoginButton]
-        
+
         welcomeBackViews.forEach { $0?.hidden = false }
         newUserViews.forEach { $0?.hidden = false }
         
         UIView.animateWithDuration(0.2, animations: {
             welcomeBackViews.forEach { $0?.alpha = welcomeBackHidden ? 0 : 1 }
             newUserViews.forEach { $0?.alpha = welcomeBackHidden ? 1 : 0 }
-        }, completion: { _ in
+        }, completion: { finished in
+            // The animations may be interrupted if the protocol method calling this method is called several times
+            guard finished else { return }
+
             if welcomeBackHidden {
                 welcomeBackViews.forEach { $0?.hidden = true }
             } else {
                 newUserViews.forEach { $0?.hidden = true }
             }
         })
-
     }
 
 }
