@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9DE91424D69CF692642B9B31 /* Pods_Snapshot_tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEFB46B956860BA8C9C555F5 /* Pods_Snapshot_tests.framework */; };
+		9F0B920C1D86E2D0002CA098 /* LoginViewControllerWelcomeBackSnapshots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0B920B1D86E2D0002CA098 /* LoginViewControllerWelcomeBackSnapshots.swift */; };
 		9F3942BA1D37CA8900692C9D /* SnapOnboardingDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3942B91D37CA8900692C9D /* SnapOnboardingDelegateTests.swift */; };
 		9F3942BD1D37CC5E00692C9D /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3942BC1D37CC5E00692C9D /* TestHelpers.swift */; };
 		9F3942BE1D37CC5E00692C9D /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3942BC1D37CC5E00692C9D /* TestHelpers.swift */; };
@@ -67,6 +68,7 @@
 		220DB400F1A9FA75F7FFE047 /* Pods-Unit_tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Unit_tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Unit_tests/Pods-Unit_tests.release.xcconfig"; sourceTree = "<group>"; };
 		2551F05CB2EDC6823563C4CD /* Pods-Snapshot_tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Snapshot_tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Snapshot_tests/Pods-Snapshot_tests.release.xcconfig"; sourceTree = "<group>"; };
 		2D1B1F37387C0D4B913EC8F2 /* Pods-Unit_tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Unit_tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Unit_tests/Pods-Unit_tests.debug.xcconfig"; sourceTree = "<group>"; };
+		9F0B920B1D86E2D0002CA098 /* LoginViewControllerWelcomeBackSnapshots.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewControllerWelcomeBackSnapshots.swift; sourceTree = "<group>"; };
 		9F39429E1D37C95400692C9D /* Unit_tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Unit_tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F3942A21D37C95400692C9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F3942AC1D37C96000692C9D /* Snapshot_tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Snapshot_tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -175,6 +177,7 @@
 				9F58FA331D37D68C00A43FEE /* IntroViewControllerSnapshots.swift */,
 				9F58FA341D37D68C00A43FEE /* LocationViewControllerSnapshots.swift */,
 				9F58FA351D37D68C00A43FEE /* LoginViewControllerSnapshots.swift */,
+				9F0B920B1D86E2D0002CA098 /* LoginViewControllerWelcomeBackSnapshots.swift */,
 				9F3942B01D37C96000692C9D /* Info.plist */,
 			);
 			name = Snapshot_tests;
@@ -605,6 +608,7 @@
 				9F58FA361D37D68C00A43FEE /* IntroViewControllerSnapshots.swift in Sources */,
 				9F58FA381D37D68C00A43FEE /* LoginViewControllerSnapshots.swift in Sources */,
 				9F3942BD1D37CC5E00692C9D /* TestHelpers.swift in Sources */,
+				9F0B920C1D86E2D0002CA098 /* LoginViewControllerWelcomeBackSnapshots.swift in Sources */,
 				9F58FA371D37D68C00A43FEE /* LocationViewControllerSnapshots.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

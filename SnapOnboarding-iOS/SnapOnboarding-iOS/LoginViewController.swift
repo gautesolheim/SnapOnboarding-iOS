@@ -80,6 +80,10 @@ class LoginViewController: UIViewController {
     
     override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransitionToSize(size, withTransitionCoordinator: coordinator)
+
+        coordinator.animateAlongsideTransition({ _ in
+            self.updateProfileViewCornerRadius()
+        }, completion: nil)
         
         setupForScreenSize(size)
     }
@@ -145,7 +149,7 @@ class LoginViewController: UIViewController {
     private func configureProfileView() {
         welcomeBackLabel?.text = viewModel?.welcomeBack
         profilePhoto?.layer.masksToBounds = true
-        profilePhoto?.layer.cornerRadius = (profilePhoto?.frame.size.height ?? 69) / 2.0
+        updateProfileViewCornerRadius()
         profilePhoto?.image = userViewModel?.profileImage
 
         if case .Facebook = formerAuthorizationService {
@@ -153,6 +157,10 @@ class LoginViewController: UIViewController {
         } else if case .Instagram = formerAuthorizationService {
             socialLogoMask?.image = Asset.Avatar_Instagram.image
         }
+    }
+
+    func updateProfileViewCornerRadius() {
+        profilePhoto?.layer.cornerRadius = (profilePhoto?.frame.size.height ?? 69) / 2.0
     }
 
     private func configureContinueAsLoggedInUserButton() {
