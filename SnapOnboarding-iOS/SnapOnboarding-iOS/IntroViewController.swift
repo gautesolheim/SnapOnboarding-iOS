@@ -75,7 +75,10 @@ class IntroViewController: UIViewController {
     
     internal func configureNextButton() {
         let title = viewModel?.next?.uppercaseString
-        nextButton?.setTitle(title, forState: .Normal)
+        UIView.performWithoutAnimation {
+            self.nextButton?.setTitle(title, forState: .Normal)
+            self.nextButton?.layoutIfNeeded()
+        }
     }
     
     internal func configureHeadlineLabel() {

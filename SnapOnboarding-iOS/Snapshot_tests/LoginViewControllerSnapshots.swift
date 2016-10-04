@@ -38,6 +38,7 @@ extension LoginViewController {
     
     override func viewWillLayoutSubviews() {
         setupForScreenSize(parentViewController!.view.frame.size)
+        updateProfileViewCornerRadius()
     }
     
 }

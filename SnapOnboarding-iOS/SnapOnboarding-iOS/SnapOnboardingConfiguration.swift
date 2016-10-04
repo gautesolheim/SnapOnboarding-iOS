@@ -38,6 +38,9 @@ public struct SnapOnboardingViewModel {
         public var continueWithFacebook: String?
         public var continueWithInstagram: String?
         public var skipWithoutLogin: String?
+        public var welcomeBack: String?
+        public var continve: String?
+        public var logInWithAnotherAccount: String?
         
         public init() {}
     }

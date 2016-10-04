@@ -151,6 +151,12 @@ extension SnapOnboardingViewController: SnapOnboardingViewControllerProtocol {
         delegate = configuration.delegate
         viewModel = configuration.viewModel
     }
+
+    public func applyFormerAuthorizationService(service: AuthorizationService, userViewModel: UserViewModel) {
+        assert(service != .None)
+
+        loginViewController?.applyFormerAuthorizationService(service, userViewModel: userViewModel)
+    }
     
     public func locationServicesStatusChanged(status: LocationServicesStatus) {
         assert(status == .Enabled || status == .Disabled)
@@ -234,6 +240,10 @@ extension SnapOnboardingViewController: LoginViewControllerDelegate {
     
     func instagramSignupTapped() {
         delegate?.instagramSignupTapped()
+    }
+
+    func continueAsLoggedInUserTapped() {
+        delegate?.continueAsLoggedInUserTapped()
     }
     
     func skipLoginTapped() {

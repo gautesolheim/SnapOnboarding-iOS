@@ -61,7 +61,10 @@ class ViewController: UIViewController {
         loginViewModel.continueWithFacebook = "Fortsett med Facebook"
         loginViewModel.continueWithInstagram = "Fortsett med Instagram"
         loginViewModel.skipWithoutLogin = "Hopp over, prøve uten innlogging"
-        
+        loginViewModel.welcomeBack = "Velkommen tilbake!"
+        loginViewModel.continve = "Fortsett"
+        loginViewModel.logInWithAnotherAccount = "Logg inn med en annen konto"
+
         let model = SnapOnboardingViewModel(
             termsViewModel: termsViewModel,
             introViewModel: introViewModel,
@@ -102,6 +105,9 @@ class ViewController: UIViewController {
         loginViewModel.continueWithFacebook = "Continue with Facebook"
         loginViewModel.continueWithInstagram = "Continue with Instagram"
         loginViewModel.skipWithoutLogin = "Skip, try without logging in"
+        loginViewModel.welcomeBack = "Welcome back!"
+        loginViewModel.continve = "Continue"
+        loginViewModel.logInWithAnotherAccount = "Log in with another account"
         
         let model = SnapOnboardingViewModel(
             termsViewModel: termsViewModel,
@@ -138,7 +144,10 @@ extension ViewController: SnapOnboardingDelegate {
     
     func privacyPolicyTapped() {
         print("privacy-policy-tapped")
-        (onboardingViewController as? SnapOnboardingViewControllerProtocol)?.reactivateLoginButtons()
+
+        var userViewModel = UserViewModel()
+        userViewModel.profileImage = UIImage(named: "sample_profile_image")
+        (onboardingViewController as? SnapOnboardingViewControllerProtocol)?.applyFormerAuthorizationService(.Instagram, userViewModel: userViewModel)
     }
     
     
@@ -169,6 +178,10 @@ extension ViewController: SnapOnboardingDelegate {
     
     func instagramSignupTapped() {
         print("instagram-signup-tapped")
+    }
+
+    func continueAsLoggedInUserTapped() {
+        print("continue-as-logged-in-user-tapped")
     }
     
     func skipLoginTapped() {

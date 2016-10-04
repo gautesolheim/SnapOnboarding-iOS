@@ -1,10 +1,23 @@
 import UIKit
+import SnapFonts_iOS
 
 class LoginViewController: UIViewController {
-    
+
+    @IBOutlet private var snapsaleLogo: UIImageView?
     @IBOutlet private(set) var continueWithFacebookButton: UIButton?
     @IBOutlet private(set) var continueWithInstagramButton: UIButton?
     @IBOutlet private(set) var skipLoginButton: UIButton?
+
+    @IBOutlet private var profilePhoto: UIImageView?
+    @IBOutlet private var socialLogoMask: UIImageView?
+    @IBOutlet private var welcomeBackLabel: UILabel?
+    @IBOutlet private var continueAsLoggedInUserButton: UIButton?
+    @IBOutlet private var changeAccountButton: UIButton?
+
+    @IBOutlet private var star7: UIImageView?
+    @IBOutlet private var star6CenterY: NSLayoutConstraint?
+    @IBOutlet private var welcomeBackLabelCenterY: NSLayoutConstraint?
+
     @IBOutlet private(set) var sparklingStars: [UIImageView]?
     
     @IBOutlet private var topSpacerHeight: NSLayoutConstraint?
@@ -12,6 +25,12 @@ class LoginViewController: UIViewController {
     @IBOutlet private var continueWithFacebookButtonWidth: NSLayoutConstraint?
     @IBOutlet private var continueWithInstagramButtonWidth: NSLayoutConstraint?
     @IBOutlet private var skipLoginButtonBottomToSuperViewBottom: NSLayoutConstraint?
+
+    var delegate: LoginViewControllerDelegate?
+    private var viewModel: SnapOnboardingViewModel.LoginViewModel?
+
+    private var formerAuthorizationService: AuthorizationService = .None
+    private var userViewModel: UserViewModel?
     
     @IBAction func continueWithFacebookButtonTapped(sender: UIButton) {
         delegate?.facebookSignupTapped()
@@ -22,14 +41,20 @@ class LoginViewController: UIViewController {
         delegate?.instagramSignupTapped()
         fadeAndDisableButtonsExceptTappedButton(sender)
     }
+
+    @IBAction func continueAsLoggedInUserButtonTapped(sender: UIButton) {
+        delegate?.continueAsLoggedInUserTapped()
+        fadeAndDisableButtonsExceptTappedButton(sender)
+    }
     
     @IBAction func skipLoginButtonTapped(sender: UIButton) {
         delegate?.skipLoginTapped()
         fadeAndDisableButtonsExceptTappedButton(sender)
     }
-    
-    var delegate: LoginViewControllerDelegate?
-    private var viewModel: SnapOnboardingViewModel.LoginViewModel?
+
+    @IBAction func changeAccountButtonTapped(sender: UIButton) {
+        switchWelcomeBackHidden(hidden: true)
+    }
     
     // MARK: UIViewController life cycle
 
@@ -60,6 +85,10 @@ class LoginViewController: UIViewController {
     
     override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransitionToSize(size, withTransitionCoordinator: coordinator)
+
+        coordinator.animateAlongsideTransition({ _ in
+            self.updateProfileViewCornerRadius()
+        }, completion: nil)
         
         setupForScreenSize(size)
     }
@@ -97,7 +126,7 @@ class LoginViewController: UIViewController {
     
     private func fadeAndDisableButtonsExceptTappedButton(tappedButton: UIButton) {
         
-        let buttonsToDeactivate = [continueWithFacebookButton, continueWithInstagramButton, skipLoginButton]
+        let buttonsToDeactivate = [continueWithFacebookButton, continueWithInstagramButton, changeAccountButton, skipLoginButton]
         let buttonsToFade = buttonsToDeactivate.filter { $0 != tappedButton }
         
         buttonsToDeactivate.forEach { button in
@@ -112,6 +141,67 @@ class LoginViewController: UIViewController {
         
     }
 
+    // MARK: UIView configuration for previously authorized users
+
+    private func configureForPreviouslyAuthorizedUser() {
+        configureProfileView()
+        configureContinueAsLoggedInUserButton()
+        configureChangeAccountButton()
+
+        switchWelcomeBackHidden(hidden: false)
+    }
+
+    private func configureProfileView() {
+        welcomeBackLabel?.text = viewModel?.welcomeBack
+        profilePhoto?.layer.masksToBounds = true
+        updateProfileViewCornerRadius()
+        profilePhoto?.image = userViewModel?.profileImage
+
+        if case .Facebook = formerAuthorizationService {
+            socialLogoMask?.image = Asset.Avatar_Facebook.image
+        } else if case .Instagram = formerAuthorizationService {
+            socialLogoMask?.image = Asset.Avatar_Instagram.image
+        }
+    }
+
+    func updateProfileViewCornerRadius() {
+        profilePhoto?.layer.cornerRadius = (profilePhoto?.frame.size.height ?? 69) / 2.0
+    }
+
+    private func configureContinueAsLoggedInUserButton() {
+        continueAsLoggedInUserButton?.setTitle(viewModel?.continve?.uppercaseString, forState: .Normal)
+    }
+
+    private func configureChangeAccountButton() {
+        let title = self.viewModel?.logInWithAnotherAccount
+        UIView.performWithoutAnimation {
+            self.changeAccountButton?.setTitle(title, forState: .Normal)
+            self.changeAccountButton?.layoutIfNeeded()
+        }
+    }
+
+    private func switchWelcomeBackHidden(hidden welcomeBackHidden: Bool) {
+        let welcomeBackViews: [UIView?] = [profilePhoto, socialLogoMask, welcomeBackLabel, continueAsLoggedInUserButton, changeAccountButton]
+        let newUserViews: [UIView?] = [snapsaleLogo, continueWithFacebookButton, continueWithInstagramButton, skipLoginButton]
+
+        welcomeBackViews.forEach { $0?.hidden = false }
+        newUserViews.forEach { $0?.hidden = false }
+        
+        UIView.animateWithDuration(0.2, animations: {
+            welcomeBackViews.forEach { $0?.alpha = welcomeBackHidden ? 0 : 1 }
+            newUserViews.forEach { $0?.alpha = welcomeBackHidden ? 1 : 0 }
+        }, completion: { finished in
+            // The animations may be interrupted if the protocol method calling this method is called several times
+            guard finished else { return }
+
+            if welcomeBackHidden {
+                welcomeBackViews.forEach { $0?.hidden = true }
+            } else {
+                newUserViews.forEach { $0?.hidden = true }
+            }
+        })
+    }
+
 }
 
 // MARK: - LoginViewControllerProtocol
@@ -121,9 +211,20 @@ extension LoginViewController: LoginViewControllerProtocol {
     func configureForViewModel(viewModel: SnapOnboardingViewModel.LoginViewModel) {
         self.viewModel = viewModel
     }
+
+    func applyFormerAuthorizationService(formerAuthorizationService: AuthorizationService, userViewModel: UserViewModel) {
+        assert(formerAuthorizationService != .None)
+
+        self.formerAuthorizationService = formerAuthorizationService
+        self.userViewModel = userViewModel
+
+        configureForPreviouslyAuthorizedUser()
+    }
     
     func reactivateLoginButtons() {
-        [continueWithFacebookButton, continueWithInstagramButton, skipLoginButton].forEach { button in
+        let buttonsToReactivate = [continueWithFacebookButton, continueWithInstagramButton, changeAccountButton, skipLoginButton]
+        
+        buttonsToReactivate.forEach { button in
             button?.userInteractionEnabled = true
             
             if button?.alpha != 1.0 {
@@ -146,7 +247,13 @@ extension LoginViewController {
     
     func setupFor3_5InchPortrait() {
         topSpacerHeight?.constant = 17
-        
+        welcomeBackLabel?.numberOfLines = 3
+        welcomeBackLabel?.font = SnapFonts.gothamRoundedMediumOfSize(14)
+
+        star7?.hidden = true
+        star6CenterY?.constant = 8
+        welcomeBackLabelCenterY?.constant = 5
+
         skipLoginButtonBottomToSuperViewBottom?.constant = 0
     }
     
