@@ -106,14 +106,13 @@ public class SnapTagsCollectionViewController: UIViewController {
 
         let metrics = [
             "hMargin": configuration.horizontalMargin,
-            "vMargin": configuration.verticalMargin,
-            "height": configuration.contentHeight]
+            "vMargin": configuration.verticalMargin]
         let views = [ "cv": collectionView ]
         let hConstraints = NSLayoutConstraint.constraintsWithVisualFormat("H:|-(hMargin)-[cv]-(hMargin)-|",
             options: [],
             metrics: metrics,
             views: views)
-        let vConstraints = NSLayoutConstraint.constraintsWithVisualFormat("V:|-(vMargin)-[cv(>=height)]-(vMargin)-|",
+        let vConstraints = NSLayoutConstraint.constraintsWithVisualFormat("V:|-(vMargin)-[cv]-(vMargin)-|",
             options: [],
             metrics: metrics,
             views: views)
@@ -249,7 +248,6 @@ extension SnapTagsCollectionViewController : UICollectionViewDelegate {
         UIView.animateWithDuration(0.3) {
             cell.setHighlightState(false)
         }
-        didSelect(collectionView, indexPath: indexPath)
     }
 
     public func collectionView(collectionView: UICollectionView, shouldSelectItemAtIndexPath indexPath: NSIndexPath) -> Bool {
@@ -260,10 +258,9 @@ extension SnapTagsCollectionViewController : UICollectionViewDelegate {
 
 
 
-//    public func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-    private func didSelect(collectionView: UICollectionView, indexPath: NSIndexPath) {
+    public func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
 //        printIsMainThread()
-//        print("YES!!! didSelectItemAtIndexPath")
+//        print("didSelectItemAtIndexPath")
         let tag = data[indexPath.row]
         if buttonConfiguration.canBeTurnedOnAndOff {
             tag.isOn = !tag.isOn
@@ -292,7 +289,6 @@ extension SnapTagsCollectionViewController : UICollectionViewDelegate {
 
 
     public func collectionView(collectionView: UICollectionView, shouldShowMenuForItemAtIndexPath indexPath: NSIndexPath) -> Bool {
-
 //        printIsMainThread()
         return buttonConfiguration.canBeTurnedOnAndOff
     }

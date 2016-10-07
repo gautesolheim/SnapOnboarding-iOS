@@ -72,16 +72,19 @@ public class SnapFonts: NSObject {
             return
         }
         
-        let fontData = NSData(contentsOfURL: fontURL)
-        let fontDataProvider = CGDataProviderCreateWithCFData(fontData)
+        let _ = UIFont.familyNames() // http://stackoverflow.com/questions/24900979/cgfontcreatewithdataprovider-hangs-in-airplane-mode
+
+        guard let fontData = NSData(contentsOfURL: fontURL),
+              let fontDataProvider = CGDataProviderCreateWithCFData(fontData) else {
+                return
+        }
         
-        if let font = CGFontCreateWithDataProvider(fontDataProvider) {
-            var error: Unmanaged<CFError>?
-            CTFontManagerRegisterGraphicsFont(font, &error)
-            
-            if error != nil {
-                print(error.debugDescription)
-            }
+        let font = CGFontCreateWithDataProvider(fontDataProvider)
+        var error: Unmanaged<CFError>?
+        CTFontManagerRegisterGraphicsFont(font, &error)
+        
+        if error != nil {
+            print(error.debugDescription)
         }
     }
     

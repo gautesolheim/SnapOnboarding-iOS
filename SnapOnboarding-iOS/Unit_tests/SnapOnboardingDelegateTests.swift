@@ -88,15 +88,15 @@ class SnapOnboardingDelegateTests: XCTestCase {
     func testStarsBeginSparklingOnViewWillAppear() {
         applyExpressionOnAllSparklingStars { XCTAssertEqual($0.layer.animationKeys()?.count, nil) }
         
-        vc.childViewControllers.forEach { $0.viewWillAppear(false) }
+        vc.viewWillAppear(false)
         applyExpressionOnAllSparklingStars { XCTAssertEqual($0.layer.animationKeys()?.count, 1) }
     }
     
     func testStarsStopSparklingOnViewDidDisappear() {
-        vc.childViewControllers.forEach { $0.viewWillAppear(false) }
+        vc.viewWillAppear(false)
         applyExpressionOnAllSparklingStars { XCTAssertEqual($0.layer.animationKeys()?.count, 1) }
         
-        vc.childViewControllers.forEach { $0.viewDidDisappear(false) }
+        vc.viewDidDisappear(false)
         applyExpressionOnAllSparklingStars { XCTAssertEqual($0.layer.animationKeys()?.count, nil) }
     }
     
@@ -111,10 +111,10 @@ class SnapOnboardingDelegateTests: XCTestCase {
         return nil
     }
     
-    func applyExpressionOnAllSparklingStars(expression: (star: UIImageView) -> ()) {
+    func applyExpressionOnAllSparklingStars(expression: UIImageView -> Void) {
         vc.childViewControllers.forEach { child in
             (child as! HasSparklingStars).sparklingStars!.forEach { star in
-                expression(star: star)
+                expression(star)
             }
         }
     }
@@ -124,6 +124,8 @@ class SnapOnboardingDelegateTests: XCTestCase {
 // MARK: - SnapOnboardingDelegate
 
 extension SnapOnboardingDelegateTests: SnapOnboardingDelegate {
+
+    func onboardingWillAppear() {}
     
     func termsAndConditionsTapped() {
         isTermsAndConditionsTapped = true
@@ -152,5 +154,7 @@ extension SnapOnboardingDelegateTests: SnapOnboardingDelegate {
     func skipLoginTapped() {
         isSkipLoginTapped = true
     }
+
+    func continueAsLoggedInUserTapped() {}
     
 }

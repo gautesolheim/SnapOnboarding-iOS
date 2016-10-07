@@ -34,6 +34,8 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 </string>
+			<key>License</key>
+			<string>MIT</string>
 			<key>Title</key>
 			<string>KTCenterFlowLayout</string>
 			<key>Type</key>
@@ -42,6 +44,8 @@ THE SOFTWARE.
 		<dict>
 			<key>FooterText</key>
 			<string>Do as you will.</string>
+			<key>License</key>
+			<string>Public Domain</string>
 			<key>Title</key>
 			<string>NSLayoutConstraint+ExpressionFormat</string>
 			<key>Type</key>
@@ -57,13 +61,15 @@ A Swift port of https://github.com/CocoaPods-Fonts/OpenSans, encapsulating the f
 ###Usage
 
 ```swift
-import SnapFonts
+import SnapFonts_iOS
 
 let font = SnapFonts.gothamRoundedBoldOfSize(20)
 ```
 
 To get the fonts working from a Storyboard, first load them (like above) from didFinishLaunchingWithOptions e.g.
 </string>
+			<key>License</key>
+			<string>PRIVATE</string>
 			<key>Title</key>
 			<string>SnapFonts-iOS</string>
 			<key>Type</key>
@@ -99,6 +105,8 @@ CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
 OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 </string>
+			<key>License</key>
+			<string>BSD</string>
 			<key>Title</key>
 			<string>SnapTagsView</string>
 			<key>Type</key>
@@ -126,6 +134,8 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 </string>
+			<key>License</key>
+			<string>MIT</string>
 			<key>Title</key>
 			<string>TTTAttributedLabel</string>
 			<key>Type</key>
@@ -154,6 +164,8 @@ COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
 IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 </string>
+			<key>License</key>
+			<string>MIT</string>
 			<key>Title</key>
 			<string>UICollectionViewLeftAlignedLayout</string>
 			<key>Type</key>
@@ -182,6 +194,8 @@ COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
 IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 </string>
+			<key>License</key>
+			<string>MIT</string>
 			<key>Title</key>
 			<string>UICollectionViewRightAlignedLayout</string>
 			<key>Type</key>
