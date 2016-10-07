@@ -43,6 +43,14 @@ public class SnapOnboardingViewController: UIViewController {
         delegate?.onboardingWillAppear()
         
         configureTermsAndConditionsLabel()
+
+        startAnimations()
+    }
+
+    public override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(animated)
+
+        stopAnimations()
     }
     
     // MARK: UIView configuration
@@ -172,6 +180,15 @@ extension SnapOnboardingViewController: SnapOnboardingViewControllerProtocol {
         if let loginViewController = loginViewController {
             loginViewController.reactivateLoginButtons()
         }
+    }
+
+
+    public func startAnimations() {
+        childViewControllers.forEach { ($0 as? HasSparklingStars)?.animateSparklingStarsWithCycleDuration(2.0) }
+    }
+
+    public func stopAnimations() {
+        childViewControllers.forEach { ($0 as? HasSparklingStars)?.stopAnimatingSparklingStars() }
     }
     
 }

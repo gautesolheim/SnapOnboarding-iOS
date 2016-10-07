@@ -140,6 +140,7 @@ extension ViewController: SnapOnboardingDelegate {
     func termsAndConditionsTapped() {
         print("terms-and-conditions-tapped")
         (onboardingViewController as? SnapOnboardingViewControllerProtocol)?.reactivateLoginButtons()
+        (onboardingViewController as? SnapOnboardingViewControllerProtocol)?.startAnimations()
     }
     
     func privacyPolicyTapped() {

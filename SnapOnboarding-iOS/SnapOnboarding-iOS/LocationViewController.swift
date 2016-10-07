@@ -62,14 +62,6 @@ class LocationViewController: UIViewController {
         configureHeadlineLabel()
         configureEnableLocationServicesButton()
         configureNotNowButton()
-        
-        animateSparklingStarsWithCycleDuration(2)
-    }
-    
-    override func viewDidDisappear(animated: Bool) {
-        super.viewDidDisappear(animated)
-        
-        sparklingStars?.forEach { $0.layer.removeAllAnimations() }
     }
     
     override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {

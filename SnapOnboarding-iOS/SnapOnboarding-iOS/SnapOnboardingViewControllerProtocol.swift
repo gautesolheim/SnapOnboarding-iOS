@@ -25,5 +25,8 @@ public protocol SnapOnboardingViewControllerProtocol: class {
     func applyFormerAuthorizationService(service: AuthorizationService, userViewModel: UserViewModel)
     func locationServicesStatusChanged(status: LocationServicesStatus)
     func reactivateLoginButtons()
+
+    func startAnimations()
+    func stopAnimations()
     
 }
