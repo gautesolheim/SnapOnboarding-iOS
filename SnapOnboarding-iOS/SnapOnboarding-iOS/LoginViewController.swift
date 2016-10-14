@@ -1,5 +1,6 @@
 import UIKit
 import SnapFonts_iOS
+import Haneke
 
 class LoginViewController: UIViewController {
 
@@ -11,8 +12,8 @@ class LoginViewController: UIViewController {
     @IBOutlet private var profilePhoto: UIImageView?
     @IBOutlet private var socialLogoMask: UIImageView?
     @IBOutlet private var welcomeBackLabel: UILabel?
-    @IBOutlet private var continueAsLoggedInUserButton: UIButton?
-    @IBOutlet private var changeAccountButton: UIButton?
+    @IBOutlet private(set) var continueAsLoggedInUserButton: UIButton?
+    @IBOutlet private(set) var changeAccountButton: UIButton?
 
     @IBOutlet private var star7: UIImageView?
     @IBOutlet private var star6CenterY: NSLayoutConstraint?
@@ -53,6 +54,7 @@ class LoginViewController: UIViewController {
     }
 
     @IBAction func changeAccountButtonTapped(sender: UIButton) {
+        delegate?.logoutFromCurrentAccountTapped()
         switchWelcomeBackHidden(hidden: true)
     }
     
@@ -108,7 +110,8 @@ class LoginViewController: UIViewController {
     }
     
     private func alignFacebookAndInstagramButtons() {
-        if let facebookWidth = continueWithFacebookButtonWidth?.constant, instagramWidth = continueWithInstagramButtonWidth?.constant {
+        if let facebookWidth = continueWithFacebookButtonWidth?.constant,
+           let instagramWidth = continueWithInstagramButtonWidth?.constant {
             let difference = facebookWidth - instagramWidth
             if (-6 ... 6).contains(difference) {
                 continueWithInstagramButtonWidth?.constant = facebookWidth
@@ -147,8 +150,13 @@ class LoginViewController: UIViewController {
         welcomeBackLabel?.text = viewModel?.welcomeBack
         profilePhoto?.layer.masksToBounds = true
         updateProfileViewCornerRadius()
-        profilePhoto?.image = userViewModel?.profileImage
 
+        if let profilePhoto = profilePhoto,
+            let url = userViewModel?.profileImageURL?.withSize(profilePhoto.bounds.size) {
+
+            profilePhoto.hnk_setImageFromURL(url)
+        }
+        
         if case .Facebook = formerAuthorizationService {
             socialLogoMask?.image = Asset.Avatar_Facebook.image
         } else if case .Instagram = formerAuthorizationService {
@@ -290,4 +298,3 @@ extension LoginViewController {
     }
     
 }
-

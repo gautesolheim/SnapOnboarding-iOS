@@ -12,6 +12,7 @@
 		9F4CE0B81D0EB2A000A6A1FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F4CE0B61D0EB2A000A6A1FB /* Main.storyboard */; };
 		9F4CE0BD1D0EB2A000A6A1FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F4CE0BB1D0EB2A000A6A1FB /* LaunchScreen.storyboard */; };
 		9F6D65791D3797F600252541 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F6D65781D3797F600252541 /* Assets.xcassets */; };
+		9F7A0F261DB10373005EB0E5 /* sample_profile_image.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F7A0F251DB10373005EB0E5 /* sample_profile_image.png */; };
 		B4BC6C057E8582DE68E9D3FA /* Pods_SnapOnboarding_iOSExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 374D26386501E7A81738B268 /* Pods_SnapOnboarding_iOSExample.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +27,7 @@
 		9F4CE0BE1D0EB2A000A6A1FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "SnapOnboarding-iOSExample/Info.plist"; sourceTree = "<group>"; };
 		9F6CE5DE1D37EEF00090ADE8 /* KTCenterFlowLayout.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KTCenterFlowLayout.framework; path = "../../../Library/Developer/Xcode/DerivedData/SnapOnboarding-iOSExample-gfwpvthfqdfhirclnslipszwppar/Build/Products/Debug-iphoneos/KTCenterFlowLayout/KTCenterFlowLayout.framework"; sourceTree = "<group>"; };
 		9F6D65781D3797F600252541 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "SnapOnboarding-iOSExample/Assets.xcassets"; sourceTree = "<group>"; };
+		9F7A0F251DB10373005EB0E5 /* sample_profile_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sample_profile_image.png; sourceTree = "<group>"; };
 		BEA688DEDF85E1DE50BD2445 /* Pods-SnapOnboarding-iOSExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapOnboarding-iOSExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SnapOnboarding-iOSExample/Pods-SnapOnboarding-iOSExample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -57,6 +59,7 @@
 				9F4CE0B41D0EB2A000A6A1FB /* ViewController.swift */,
 				9F4CE0B61D0EB2A000A6A1FB /* Main.storyboard */,
 				9F4CE0BB1D0EB2A000A6A1FB /* LaunchScreen.storyboard */,
+				9F7A0F251DB10373005EB0E5 /* sample_profile_image.png */,
 				9F6D65781D3797F600252541 /* Assets.xcassets */,
 				9F4CE0BE1D0EB2A000A6A1FB /* Info.plist */,
 			);
@@ -154,6 +157,7 @@
 			files = (
 				9F4CE0BD1D0EB2A000A6A1FB /* LaunchScreen.storyboard in Resources */,
 				9F6D65791D3797F600252541 /* Assets.xcassets in Resources */,
+				9F7A0F261DB10373005EB0E5 /* sample_profile_image.png in Resources */,
 				9F4CE0B81D0EB2A000A6A1FB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

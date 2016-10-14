@@ -12,5 +12,6 @@ public protocol SnapOnboardingDelegate: class {
     func instagramSignupTapped()
     func continueAsLoggedInUserTapped()
     func skipLoginTapped()
-    
+    func logoutFromCurrentAccountTapped()
+
 }

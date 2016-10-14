@@ -16,6 +16,7 @@ private class SnapOnboardingDelegateExample: SnapOnboardingDelegate {
     func instagramSignupTapped() {}
     func continueAsLoggedInUserTapped() {}
     func skipLoginTapped() {}
+    func logoutFromCurrentAccountTapped() {}
     
 }
 
@@ -126,7 +127,6 @@ func getSnapOnboardingViewController() -> SnapOnboardingViewController {
 }
 
 func mockUserViewModel() -> UserViewModel {
-    var userViewModel = UserViewModel()
-    userViewModel.profileImage = Asset.Veske.image
+    let userViewModel = UserViewModel(profileImageURL: nil)
     return userViewModel
 }

@@ -4,5 +4,6 @@ protocol LoginViewControllerDelegate: class {
     func instagramSignupTapped()
     func continueAsLoggedInUserTapped()
     func skipLoginTapped()
+    func logoutFromCurrentAccountTapped()
     
 }

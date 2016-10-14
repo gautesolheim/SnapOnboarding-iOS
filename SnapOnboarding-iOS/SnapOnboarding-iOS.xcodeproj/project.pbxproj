@@ -39,6 +39,7 @@
 		9F58FA381D37D68C00A43FEE /* LoginViewControllerSnapshots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F58FA351D37D68C00A43FEE /* LoginViewControllerSnapshots.swift */; };
 		9F58FA3A1D37D6AB00A43FEE /* SnapOnboardingViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F58FA391D37D6AB00A43FEE /* SnapOnboardingViewController+.swift */; };
 		9F58FA3E1D37D9AD00A43FEE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F58FA3D1D37D9AD00A43FEE /* LaunchScreen.storyboard */; };
+		9F7A0F281DB10663005EB0E5 /* NSURL+withSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7A0F271DB10663005EB0E5 /* NSURL+withSize.swift */; };
 		A338E6F784F12350DA1F680D /* Pods_SnapOnboarding_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1227C41D15FA50CE1C6BA5EC /* Pods_SnapOnboarding_iOS.framework */; };
 		CA2BC469FC8668FEB04662B2 /* Pods_Unit_tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 040AD278BAD6A266CA78F1FB /* Pods_Unit_tests.framework */; };
 /* End PBXBuildFile section */
@@ -104,6 +105,7 @@
 		9F58FA351D37D68C00A43FEE /* LoginViewControllerSnapshots.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewControllerSnapshots.swift; sourceTree = "<group>"; };
 		9F58FA391D37D6AB00A43FEE /* SnapOnboardingViewController+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SnapOnboardingViewController+.swift"; sourceTree = "<group>"; };
 		9F58FA3D1D37D9AD00A43FEE /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9F7A0F271DB10663005EB0E5 /* NSURL+withSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSURL+withSize.swift"; sourceTree = "<group>"; };
 		BEA35860B7452D71E4E82DA6 /* Pods-SnapOnboarding-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapOnboarding-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SnapOnboarding-iOS/Pods-SnapOnboarding-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		BEFB46B956860BA8C9C555F5 /* Pods_Snapshot_tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Snapshot_tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -223,6 +225,7 @@
 				9F55432F1D37B72A00FAD486 /* Location View Controller */,
 				9F5543301D37B73A00FAD486 /* Login View Controller */,
 				9F55431B1D37B71300FAD486 /* UIViewController+ScreenSizes.swift */,
+				9F7A0F271DB10663005EB0E5 /* NSURL+withSize.swift */,
 				9F5542E21D37B67300FAD486 /* AppDelegate.swift */,
 				9F5543021D37B6C900FAD486 /* SnapOnboarding.storyboard */,
 				9F58FA3D1D37D9AD00A43FEE /* LaunchScreen.storyboard */,
@@ -625,6 +628,7 @@
 				9F55432A1D37B71300FAD486 /* SnapOnboardingViewController.swift in Sources */,
 				9F5543091D37B6FE00FAD486 /* Images.swift in Sources */,
 				9F5543201D37B71300FAD486 /* IntroViewControllerProtocol.swift in Sources */,
+				9F7A0F281DB10663005EB0E5 /* NSURL+withSize.swift in Sources */,
 				9F55431E1D37B71300FAD486 /* IntroViewController.swift in Sources */,
 				9F55432D1D37B71300FAD486 /* UIViewController+ScreenSizes.swift in Sources */,
 				9F55432C1D37B71300FAD486 /* TagsCollectionViewController.swift in Sources */,

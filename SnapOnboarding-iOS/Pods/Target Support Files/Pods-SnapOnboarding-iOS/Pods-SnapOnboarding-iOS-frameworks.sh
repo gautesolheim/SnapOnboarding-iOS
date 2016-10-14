@@ -84,6 +84,7 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "$BUILT_PRODUCTS_DIR/HanekeSwift/Haneke.framework"
   install_framework "$BUILT_PRODUCTS_DIR/KTCenterFlowLayout/KTCenterFlowLayout.framework"
   install_framework "$BUILT_PRODUCTS_DIR/NSLayoutConstraint+ExpressionFormat/NSLayoutConstraint_ExpressionFormat.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SnapFonts-iOS/SnapFonts_iOS.framework"
@@ -93,6 +94,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/UICollectionViewRightAlignedLayout/UICollectionViewRightAlignedLayout.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "$BUILT_PRODUCTS_DIR/HanekeSwift/Haneke.framework"
   install_framework "$BUILT_PRODUCTS_DIR/KTCenterFlowLayout/KTCenterFlowLayout.framework"
   install_framework "$BUILT_PRODUCTS_DIR/NSLayoutConstraint+ExpressionFormat/NSLayoutConstraint_ExpressionFormat.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SnapFonts-iOS/SnapFonts_iOS.framework"

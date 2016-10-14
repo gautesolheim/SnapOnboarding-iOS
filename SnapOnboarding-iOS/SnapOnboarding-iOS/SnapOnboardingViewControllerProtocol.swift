@@ -14,9 +14,11 @@ public enum AuthorizationService {
 }
 
 public struct UserViewModel {
-    public var profileImage: UIImage?
+    public let profileImageURL: NSURL?
 
-    public init() {}
+    public init(profileImageURL: NSURL?) {
+        self.profileImageURL = profileImageURL
+    }
 }
 
 public protocol SnapOnboardingViewControllerProtocol: class {

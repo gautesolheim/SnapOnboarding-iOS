@@ -4,7 +4,8 @@ import XCTest
 class SnapOnboardingDelegateTests: XCTestCase {
     
     var vc: SnapOnboardingViewController!
-    
+
+    private var isOnboardingWillAppearCalled = false
     private var isTermsAndConditionsTapped = false
     private var isPrivacyPolicyTapped = false
     private var isEnableLocationServicesTapped = false
@@ -12,6 +13,8 @@ class SnapOnboardingDelegateTests: XCTestCase {
     private var isFacebookSignupTapped = false
     private var isInstagramSignupTapped = false
     private var isSkipLoginTapped = false
+    private var isContinueAsLoggedInUserTapped = false
+    private var isLogoutFromCurrentAccountTapped = false
     
     override func setUp() {
         super.setUp()
@@ -26,7 +29,8 @@ class SnapOnboardingDelegateTests: XCTestCase {
     
     override func tearDown() {
         super.tearDown()
-        
+
+        isOnboardingWillAppearCalled = false
         isTermsAndConditionsTapped = false
         isPrivacyPolicyTapped = false
         isEnableLocationServicesTapped = false
@@ -34,10 +38,19 @@ class SnapOnboardingDelegateTests: XCTestCase {
         isFacebookSignupTapped = false
         isInstagramSignupTapped = false
         isSkipLoginTapped = false
+        isContinueAsLoggedInUserTapped = false
+        isLogoutFromCurrentAccountTapped = false
         
         vc.childViewControllers.forEach { child in
             (child as? HasSparklingStars)?.sparklingStars?.forEach { $0.layer.removeAllAnimations() }
         }
+    }
+
+    func testIsOnboardingWillAppearCalled() {
+        XCTAssertFalse(isOnboardingWillAppearCalled)
+
+        vc.viewWillAppear(false)
+        XCTAssertTrue(isOnboardingWillAppearCalled)
     }
     
     func testTermsAndConditionsTapped() {
@@ -84,6 +97,20 @@ class SnapOnboardingDelegateTests: XCTestCase {
         loginVC.skipLoginButtonTapped(loginVC.skipLoginButton!)
         XCTAssertTrue(isSkipLoginTapped)
     }
+
+    func testContinueAsLoggedInUserTapped() {
+        let loginVC: LoginViewController = getChildVCOfType()!
+
+        loginVC.continueAsLoggedInUserButtonTapped(loginVC.continueAsLoggedInUserButton!)
+        XCTAssertTrue(isContinueAsLoggedInUserTapped)
+    }
+
+    func testLogoutFromCurrentAccountTapped() {
+        let loginVC: LoginViewController = getChildVCOfType()!
+
+        loginVC.changeAccountButtonTapped(loginVC.changeAccountButton!)
+        XCTAssertTrue(isLogoutFromCurrentAccountTapped)
+    }
     
     func testStarsBeginSparklingOnViewWillAppear() {
         applyExpressionOnAllSparklingStars { XCTAssertEqual($0.layer.animationKeys()?.count, nil) }
@@ -125,7 +152,9 @@ class SnapOnboardingDelegateTests: XCTestCase {
 
 extension SnapOnboardingDelegateTests: SnapOnboardingDelegate {
 
-    func onboardingWillAppear() {}
+    func onboardingWillAppear() {
+        isOnboardingWillAppearCalled = true
+    }
     
     func termsAndConditionsTapped() {
         isTermsAndConditionsTapped = true
@@ -155,6 +184,12 @@ extension SnapOnboardingDelegateTests: SnapOnboardingDelegate {
         isSkipLoginTapped = true
     }
 
-    func continueAsLoggedInUserTapped() {}
+    func continueAsLoggedInUserTapped() {
+        isContinueAsLoggedInUserTapped = true
+    }
+
+    func logoutFromCurrentAccountTapped() {
+        isLogoutFromCurrentAccountTapped = true
+    }
     
 }

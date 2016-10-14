@@ -272,6 +272,10 @@ extension SnapOnboardingViewController: LoginViewControllerDelegate {
         delegate?.skipLoginTapped()
     }
     
+    func logoutFromCurrentAccountTapped() {
+        delegate?.logoutFromCurrentAccountTapped()
+    }
+    
 }
 
 // MARK: - ScreenSizesProtocol

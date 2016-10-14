@@ -146,8 +146,8 @@ extension ViewController: SnapOnboardingDelegate {
     func privacyPolicyTapped() {
         print("privacy-policy-tapped")
 
-        var userViewModel = UserViewModel()
-        userViewModel.profileImage = UIImage(named: "sample_profile_image")
+        let profileImageURL = NSBundle.mainBundle().URLForResource("sample_profile_image", withExtension: "png")
+        let userViewModel = UserViewModel(profileImageURL: profileImageURL)
         (onboardingViewController as? SnapOnboardingViewControllerProtocol)?.applyFormerAuthorizationService(.Instagram, userViewModel: userViewModel)
     }
     
@@ -187,6 +187,10 @@ extension ViewController: SnapOnboardingDelegate {
     
     func skipLoginTapped() {
         print("skip-login-tapped")
+    }
+
+    func logoutFromCurrentAccountTapped() {
+        print("logout-from-current-account-tapped")
     }
     
 }
