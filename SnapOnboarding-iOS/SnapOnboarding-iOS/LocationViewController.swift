@@ -228,23 +228,20 @@ class LocationViewController: UIViewController {
             return
         }
         
-        enableLocationServicesButtonWidth?.active = false
-        let backgroundImage = Asset.Btn_White_Clean.image
-        
         enableLocationServicesButton.setTitle(nil, forState: .Normal)
-        enableLocationServicesButton.setBackgroundImage(backgroundImage, forState: .Normal)
+        enableLocationServicesButton.setBackgroundImage(Asset.Btn_White_Clean.image, forState: .Normal)
         enableLocationServicesButton.contentEdgeInsets = UIEdgeInsetsZero
-        
-        let spinner = Asset.Icon_m_spinner_black.image
+
         spinnerImageView.translatesAutoresizingMaskIntoConstraints = false
-        spinnerImageView.image = spinner
+        spinnerImageView.image = Asset.Icon_m_spinner_black.image
         spinnerImageView.alpha = 0.0
         enableLocationServicesButton.addSubview(spinnerImageView)
         enableLocationServicesButton.addConstraint(NSLayoutConstraint(item: spinnerImageView, attribute: .CenterX, relatedBy: .Equal, toItem: enableLocationServicesButton, attribute: .CenterX, multiplier: 1, constant: 0))
         enableLocationServicesButton.addConstraint(NSLayoutConstraint(item: spinnerImageView, attribute: .CenterY, relatedBy: .Equal, toItem: enableLocationServicesButton, attribute: .CenterY, multiplier: 1, constant: -1))
         
+        enableLocationServicesButtonWidth?.constant = enableLocationServicesButton.frame.height
         UIView.animateWithDuration(0.3, animations: {
-            enableLocationServicesButton.frame.size.width = 0
+            enableLocationServicesButton.layoutIfNeeded()
         }, completion: { [weak self] _ in
             UIView.animateWithDuration(0.9, delay: 0, options: UIViewAnimationOptions.CurveEaseIn, animations: {
                 self?.spinnerImageView.alpha = 1.0
