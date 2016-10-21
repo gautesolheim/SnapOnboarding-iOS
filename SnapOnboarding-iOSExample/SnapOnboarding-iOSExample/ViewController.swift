@@ -35,8 +35,8 @@ class ViewController: UIViewController {
         var termsViewModel = SnapOnboardingViewModel.TermsViewModel()
         let footer = "Ved bruk av tjenesten Snapsale godtar du Vilkårene for bruk og Retningslinjer for personvern"
         termsViewModel.termsAndPrivacyFooter = footer
-        termsViewModel.rangeOfTermsAndConditions = footer.rangeOfString("Vilkårene for bruk")
-        termsViewModel.rangeOfPrivacyPolicy = footer.rangeOfString("Retningslinjer for personvern")
+        termsViewModel.rangeOfTermsAndConditions = footer.range(of: "Vilkårene for bruk")
+        termsViewModel.rangeOfPrivacyPolicy = footer.range(of: "Retningslinjer for personvern")
         
         var introViewModel = SnapOnboardingViewModel.IntroViewModel()
         introViewModel.next = "Neste"
@@ -79,8 +79,8 @@ class ViewController: UIViewController {
         var termsViewModel = SnapOnboardingViewModel.TermsViewModel()
         let footer = "You accept our Privacy Policy and Terms And Conditions by using the service Snapsale."
         termsViewModel.termsAndPrivacyFooter = footer
-        termsViewModel.rangeOfTermsAndConditions = footer.rangeOfString("Terms And Conditions")
-        termsViewModel.rangeOfPrivacyPolicy = footer.rangeOfString("Privacy Policy")
+        termsViewModel.rangeOfTermsAndConditions = footer.range(of: "Terms And Conditions")
+        termsViewModel.rangeOfPrivacyPolicy = footer.range(of: "Privacy Policy")
         
         var introViewModel = SnapOnboardingViewModel.IntroViewModel()
         introViewModel.next = "Next"
@@ -148,7 +148,7 @@ extension ViewController: SnapOnboardingDelegate {
 
         let profileImageURL = Bundle.main.url(forResource: "sample_profile_image", withExtension: "png")
         let userViewModel = UserViewModel(profileImageURL: profileImageURL)
-        (onboardingViewController as? SnapOnboardingViewControllerProtocol)?.applyFormerAuthorizationService(.Instagram, userViewModel: userViewModel)
+        (onboardingViewController as? SnapOnboardingViewControllerProtocol)?.applyFormerAuthorizationService(.instagram, userViewModel: userViewModel)
     }
     
     
@@ -159,11 +159,11 @@ extension ViewController: SnapOnboardingDelegate {
             title: "Vil du gi «Snapsale» tilgang til plasseringen din når du bruker appen?",
             message: "Snapsale trenger din posisjon for å beregne avstand til salg",
             preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: "Ikke tillat", style: .Default, handler: { _ in
-            self.onboardingViewController?.locationServicesStatusChanged(.Disabled)
+        alertController.addAction(UIAlertAction(title: "Ikke tillat", style: .default, handler: { _ in
+            self.onboardingViewController?.locationServicesStatusChanged(.disabled)
         }))
-        alertController.addAction(UIAlertAction(title: "Tillat", style: .Default, handler: { _ in
-            self.onboardingViewController?.locationServicesStatusChanged(.Enabled)
+        alertController.addAction(UIAlertAction(title: "Tillat", style: .default, handler: { _ in
+            self.onboardingViewController?.locationServicesStatusChanged(.enabled)
         }))
         
         onboardingViewController?.present(alertController, animated: true, completion: nil)
