@@ -7,9 +7,9 @@ class ViewController: UIViewController {
     
     var onboardingViewController: SnapOnboardingViewController?
     
-    private var didPresent = false
+    fileprivate var didPresent = false
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         if !didPresent {
@@ -18,17 +18,17 @@ class ViewController: UIViewController {
         }
     }
     
-    private func presentOnboardingViewController() {
-        let podBundle = NSBundle(forClass: SnapOnboardingViewController.self)
+    fileprivate func presentOnboardingViewController() {
+        let podBundle = Bundle(for: SnapOnboardingViewController.self)
         let storyboard = UIStoryboard(name: "SnapOnboarding", bundle: podBundle)
-        onboardingViewController = storyboard.instantiateViewControllerWithIdentifier("SnapOnboardingViewController") as? SnapOnboardingViewController
+        onboardingViewController = storyboard.instantiateViewController(withIdentifier: "SnapOnboardingViewController") as? SnapOnboardingViewController
         
         let viewModel = createSampleViewModelNorwegian()
 //        let viewModel = createSampleViewModelEnglish()
         let configuration = SnapOnboardingConfiguration(delegate: self, viewModel: viewModel)
         
         onboardingViewController?.applyConfiguration(configuration)
-        presentViewController(onboardingViewController!, animated: false, completion: nil)
+        present(onboardingViewController!, animated: false, completion: nil)
     }
     
     func createSampleViewModelNorwegian() -> SnapOnboardingViewModel {
@@ -119,7 +119,7 @@ class ViewController: UIViewController {
         return model
     }
     
-    private func createTagRepresentationsForStrings(strings: [String]) -> [SnapTagRepresentation] {
+    fileprivate func createTagRepresentationsForStrings(_ strings: [String]) -> [SnapTagRepresentation] {
         var snapTagRepresentations = [SnapTagRepresentation]()
         strings.forEach { tag in
             let tagRepresentation = SnapTagRepresentation(tag: tag)
@@ -146,7 +146,7 @@ extension ViewController: SnapOnboardingDelegate {
     func privacyPolicyTapped() {
         print("privacy-policy-tapped")
 
-        let profileImageURL = NSBundle.mainBundle().URLForResource("sample_profile_image", withExtension: "png")
+        let profileImageURL = Bundle.main.url(forResource: "sample_profile_image", withExtension: "png")
         let userViewModel = UserViewModel(profileImageURL: profileImageURL)
         (onboardingViewController as? SnapOnboardingViewControllerProtocol)?.applyFormerAuthorizationService(.Instagram, userViewModel: userViewModel)
     }
@@ -158,7 +158,7 @@ extension ViewController: SnapOnboardingDelegate {
         let alertController = UIAlertController(
             title: "Vil du gi «Snapsale» tilgang til plasseringen din når du bruker appen?",
             message: "Snapsale trenger din posisjon for å beregne avstand til salg",
-            preferredStyle: .Alert)
+            preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "Ikke tillat", style: .Default, handler: { _ in
             self.onboardingViewController?.locationServicesStatusChanged(.Disabled)
         }))
@@ -166,7 +166,7 @@ extension ViewController: SnapOnboardingDelegate {
             self.onboardingViewController?.locationServicesStatusChanged(.Enabled)
         }))
         
-        onboardingViewController?.presentViewController(alertController, animated: true, completion: nil)
+        onboardingViewController?.present(alertController, animated: true, completion: nil)
     }
     
     func locationServicesInstructionsTapped() {

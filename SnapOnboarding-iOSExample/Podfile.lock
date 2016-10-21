@@ -1,14 +1,14 @@
 PODS:
   - HanekeSwift (0.10.1)
-  - KTCenterFlowLayout (1.3)
+  - KTCenterFlowLayout (1.3.1)
   - NSLayoutConstraint+ExpressionFormat (0.1.0)
-  - SnapFonts-iOS (1.1.0)
+  - SnapFonts-iOS (1.2.0)
   - SnapOnboarding-iOS (1.5.0):
     - HanekeSwift
     - SnapFonts-iOS
     - SnapTagsView
     - TTTAttributedLabel
-  - SnapTagsView (0.6.6):
+  - SnapTagsView (0.7.0):
     - KTCenterFlowLayout
     - NSLayoutConstraint+ExpressionFormat
     - UICollectionViewLeftAlignedLayout
@@ -35,11 +35,11 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   HanekeSwift: 4113367892828e7700d24a384027de6ebc79aad1
-  KTCenterFlowLayout: 2905970d36c653d9a7736c20bfa0d37dcf797d6b
+  KTCenterFlowLayout: 6e02b50ab2bd865025ae82fe266ed13b6d9eaf97
   NSLayoutConstraint+ExpressionFormat: 031af30af4d036658c02e33070622ed993318b8a
-  SnapFonts-iOS: 8d2a7538eeef218f0cdf13ae27672bdb8cc2b3ec
+  SnapFonts-iOS: b5f97aa89410c6be795fab07a1337b21e7f02d16
   SnapOnboarding-iOS: 09909b172b44cec551753591e138bd6332c624f0
-  SnapTagsView: ee4ca71740eb5e0bbcd23f35337afaef9cfb0c50
+  SnapTagsView: 2553489ddcff645098bbde34f2ff2fb4b5759e58
   TTTAttributedLabel: 8cffe8e127e4e82ff3af1e5386d4cd0ad000b656
   UICollectionViewLeftAlignedLayout: 830bf6fa5bab9f9b464f62e3384f9d2e00b3c0f6
   UICollectionViewRightAlignedLayout: 823eef8c567eba4a44c21bc2ffcb0d0d5f361e2d
