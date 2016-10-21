@@ -7,22 +7,22 @@ private enum EmbedSegueIdentifier: String {
 
 class IntroViewController: UIViewController {
 
-    @IBOutlet private(set) var nextButton: UIButton?
-    @IBOutlet private(set) var headlineLabel: SnapOnboardingHeadlineLabel?
-    @IBOutlet private(set) var sparklingStars: [UIImageView]?
+    @IBOutlet fileprivate(set) var nextButton: UIButton?
+    @IBOutlet fileprivate(set) var headlineLabel: SnapOnboardingHeadlineLabel?
+    @IBOutlet fileprivate(set) var sparklingStars: [UIImageView]?
     
-    @IBOutlet private var topSpacerToSuperViewHeightRelation: NSLayoutConstraint?
-    @IBOutlet private var sparklingViewTopToHeadlineSparklingSpacerBottom: NSLayoutConstraint?
-    @IBOutlet private var tagsContainerViewHeight: NSLayoutConstraint?
-    @IBOutlet private var tagsContainerViewTopToPhoneViewBottom: NSLayoutConstraint?
-    @IBOutlet private var phoneViewTopToSparklingViewTop: NSLayoutConstraint?
-    @IBOutlet private var phoneViewToSparklingViewHeightRelation: NSLayoutConstraint?
-    @IBOutlet private var sparklingViewToSuperViewHeightRelation: NSLayoutConstraint?
+    @IBOutlet fileprivate var topSpacerToSuperViewHeightRelation: NSLayoutConstraint?
+    @IBOutlet fileprivate var sparklingViewTopToHeadlineSparklingSpacerBottom: NSLayoutConstraint?
+    @IBOutlet fileprivate var tagsContainerViewHeight: NSLayoutConstraint?
+    @IBOutlet fileprivate var tagsContainerViewTopToPhoneViewBottom: NSLayoutConstraint?
+    @IBOutlet fileprivate var phoneViewTopToSparklingViewTop: NSLayoutConstraint?
+    @IBOutlet fileprivate var phoneViewToSparklingViewHeightRelation: NSLayoutConstraint?
+    @IBOutlet fileprivate var sparklingViewToSuperViewHeightRelation: NSLayoutConstraint?
     
     var delegate: IntroViewControllerDelegate?
-    private var viewModel: SnapOnboardingViewModel.IntroViewModel?
+    fileprivate var viewModel: SnapOnboardingViewModel.IntroViewModel?
     
-    @IBAction func nextButtonTapped(sender: UIButton) {
+    @IBAction func nextButtonTapped(_ sender: UIButton) {
         delegate?.introNextButtonTapped()
     }
     
@@ -36,27 +36,27 @@ class IntroViewController: UIViewController {
         setupForScreenSize(SnapOnboardingViewController.screenSize)
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         configureNextButton()
         configureHeadlineLabel()
     }
     
-    override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
-        super.viewWillTransitionToSize(size, withTransitionCoordinator: coordinator)
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
         
         setupForScreenSize(size)
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        guard let identifier = segue.identifier, viewModel = viewModel else {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let identifier = segue.identifier, let viewModel = viewModel else {
             return
         }
         
         switch identifier {
         case EmbedSegueIdentifier.TagsCollectionViewController.rawValue:
-            let destinationViewController = segue.destinationViewController as? TagsCollectionViewController
+            let destinationViewController = segue.destination as? TagsCollectionViewController
             let viewModel = TagsViewModel(data: viewModel.tags)
             destinationViewController?.configureForViewModel(viewModel)
         default: break
@@ -66,9 +66,9 @@ class IntroViewController: UIViewController {
     // MARK: UIView configuration
     
     internal func configureNextButton() {
-        let title = viewModel?.next?.uppercaseString
+        let title = viewModel?.next?.uppercased()
         UIView.performWithoutAnimation {
-            self.nextButton?.setTitle(title, forState: .Normal)
+            self.nextButton?.setTitle(title, for: UIControlState())
             self.nextButton?.layoutIfNeeded()
         }
     }
@@ -83,7 +83,7 @@ class IntroViewController: UIViewController {
 
 extension IntroViewController: IntroViewControllerProtocol {
     
-    func configureForViewModel(viewModel: SnapOnboardingViewModel.IntroViewModel) {
+    func configureForViewModel(_ viewModel: SnapOnboardingViewModel.IntroViewModel) {
         self.viewModel = viewModel
     }
     
@@ -120,7 +120,7 @@ extension IntroViewController {
         configureNextButtonAndHeadlineLabelFor5_5Inch()
     }
     
-    func setupForIpadPortrait(size: CGSize) {
+    func setupForIpadPortrait(_ size: CGSize) {
         configureNextButtonAndHeadlineLabelForIpad()
         
         phoneViewTopToSparklingViewTop?.constant = 40
@@ -136,7 +136,7 @@ extension IntroViewController {
         }
     }
     
-    func setupForIpadLandscape(size: CGSize) {
+    func setupForIpadLandscape(_ size: CGSize) {
         configureNextButtonAndHeadlineLabelForIpad()
         
         phoneViewTopToSparklingViewTop?.constant = 20
@@ -152,7 +152,7 @@ extension IntroViewController {
         }
     }
     
-    func setupForIpadProPortrait(size: CGSize) {
+    func setupForIpadProPortrait(_ size: CGSize) {
         configureNextButtonAndHeadlineLabelForIpadPro()
         
         phoneViewTopToSparklingViewTop?.constant = 50
@@ -169,7 +169,7 @@ extension IntroViewController {
         }
     }
     
-    func setupForIpadProLandscape(size: CGSize) {
+    func setupForIpadProLandscape(_ size: CGSize) {
         configureNextButtonAndHeadlineLabelForIpadPro()
         
         phoneViewTopToSparklingViewTop?.constant = 30

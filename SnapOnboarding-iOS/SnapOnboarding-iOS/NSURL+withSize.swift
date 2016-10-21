@@ -1,30 +1,29 @@
+import Foundation
 import UIKit
 
-extension NSURL {
-
-    func withSize(size: CGSize) -> NSURL {
-
-        let scale = UIScreen.mainScreen().scale
-        let scaledSize = CGSizeMake(size.width * scale, size.height * scale)
-
-        if ((scaledSize.width ?? 512) != 512 && (scaledSize.height ?? 512) != 512) &&
+public extension URL {
+    
+    public func withSize(_ size: CGSize) -> URL {
+        
+        let scale = UIScreen.main.scale
+        let scaledSize = CGSize(width: size.width * scale, height: size.height * scale)
+        
+        if (scaledSize.width != 512 && scaledSize.height != 512) &&
             (scaledSize.height != 512 && scaledSize.width != 512) {
-            guard var absoluteString = self.absoluteString else {
-                return NSURL()
+            var absoluteString = self.absoluteString
+            
+            if let squareRange = absoluteString.range(of: "=-c") {
+                absoluteString = absoluteString.substring(to: squareRange.lowerBound)
             }
-
-            if let squareRange = absoluteString.rangeOfString("=-c") {
-                absoluteString = absoluteString.substringToIndex(squareRange.startIndex)
+            
+            guard let fetchingUrl = URL(string: "\(absoluteString)=s\(Int(max(scaledSize.width, scaledSize.height)))-c") else {
+                return URL(string: "https://snapsale.com")!
             }
-
-            guard let fetchingUrl = NSURL(string: "\(absoluteString)=s\(Int(max(scaledSize.width, scaledSize.height)))-c") else {
-                return NSURL()
-            }
-
+            
             return fetchingUrl
         }
-
+        
         return self
     }
-
+    
 }

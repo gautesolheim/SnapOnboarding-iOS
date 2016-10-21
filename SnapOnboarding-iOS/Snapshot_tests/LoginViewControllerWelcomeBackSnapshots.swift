@@ -16,14 +16,14 @@ class LoginViewControllerWelcomeBackSnapshots: SnapFBSnapshotBase {
         sut = vc.view
 //        vc.viewWillAppear(false)
 
-        UIApplication.sharedApplication().keyWindow?.rootViewController = vc
-        UIApplication.sharedApplication().keyWindow?.rootViewController = nil
+        UIApplication.shared.keyWindow?.rootViewController = vc
+        UIApplication.shared.keyWindow?.rootViewController = nil
 
         // Setup the loaded view
         currentPage = 3
         
         let userViewModel = mockUserViewModel()
-        vc.applyFormerAuthorizationService(.Facebook, userViewModel: userViewModel)
+        vc.applyFormerAuthorizationService(.facebook, userViewModel: userViewModel)
 
         super.setUp()
         recordMode = recordAll || false

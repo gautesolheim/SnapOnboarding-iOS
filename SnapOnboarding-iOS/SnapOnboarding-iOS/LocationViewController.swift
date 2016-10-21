@@ -3,39 +3,39 @@ import SnapFonts_iOS
 
 class LocationViewController: UIViewController {
     
-    @IBOutlet private(set) var nextButton: UIButton?
-    @IBOutlet private(set) var headlineLabel: SnapOnboardingHeadlineLabel?
-    @IBOutlet private(set) var enableLocationServicesButton: UIButton?
-    @IBOutlet private var notNowButton: UIButton?
-    @IBOutlet private var willAskLaterLabel: SnapOnboardingHeadlineLabel?
-    @IBOutlet private var tumbleweed: UIImageView?
-    @IBOutlet private(set) var sparklingStars: [UIImageView]?
-    @IBOutlet private var neighborhoodItems: [UIImageView]?
-    @IBOutlet private var neighborhoodView: UIView?
+    @IBOutlet fileprivate(set) var nextButton: UIButton?
+    @IBOutlet fileprivate(set) var headlineLabel: SnapOnboardingHeadlineLabel?
+    @IBOutlet fileprivate(set) var enableLocationServicesButton: UIButton?
+    @IBOutlet fileprivate var notNowButton: UIButton?
+    @IBOutlet fileprivate var willAskLaterLabel: SnapOnboardingHeadlineLabel?
+    @IBOutlet fileprivate var tumbleweed: UIImageView?
+    @IBOutlet fileprivate(set) var sparklingStars: [UIImageView]?
+    @IBOutlet fileprivate var neighborhoodItems: [UIImageView]?
+    @IBOutlet fileprivate var neighborhoodView: UIView?
     
-    @IBOutlet private var enableLocationServicesButtonWidth: NSLayoutConstraint?
-    @IBOutlet private var sparklingViewTopToHeadlineSparklingSpacerBottom: NSLayoutConstraint?
-    @IBOutlet private var sparklingViewToSuperViewHeightRelation: NSLayoutConstraint?
-    @IBOutlet private var notNowButtonBottomToSuperViewBottom: NSLayoutConstraint?
-    @IBOutlet private var willAskLaterLabelBottomToSuperViewBottom: NSLayoutConstraint?
+    @IBOutlet fileprivate var enableLocationServicesButtonWidth: NSLayoutConstraint?
+    @IBOutlet fileprivate var sparklingViewTopToHeadlineSparklingSpacerBottom: NSLayoutConstraint?
+    @IBOutlet fileprivate var sparklingViewToSuperViewHeightRelation: NSLayoutConstraint?
+    @IBOutlet fileprivate var notNowButtonBottomToSuperViewBottom: NSLayoutConstraint?
+    @IBOutlet fileprivate var willAskLaterLabelBottomToSuperViewBottom: NSLayoutConstraint?
     
     var delegate: LocationViewControllerDelegate?
-    private var viewModel: SnapOnboardingViewModel.LocationViewModel?
+    fileprivate var viewModel: SnapOnboardingViewModel.LocationViewModel?
     
-    private var spinnerImageView = UIImageView()
-    private var locationServicesStatus: LocationServicesStatus = .NotYetRequested
+    fileprivate var spinnerImageView = UIImageView()
+    fileprivate var locationServicesStatus: LocationServicesStatus = .notYetRequested
     
-    @IBAction func nextButtonTapped(sender: UIButton) {
+    @IBAction func nextButtonTapped(_ sender: UIButton) {
         delegate?.locationNextButtonTapped()
     }
     
-    @IBAction func enableLocationServicesButtonTapped(sender: UIButton) {
+    @IBAction func enableLocationServicesButtonTapped(_ sender: UIButton) {
         delegate?.enableLocationServicesTapped()
-        locationServicesStatus = .WaitingForResponse
+        locationServicesStatus = .waitingForResponse
         animateEnableLocationServicesButtonToSpinner()
     }
     
-    @IBAction func notNowButtonTapped(sender: UIButton) {
+    @IBAction func notNowButtonTapped(_ sender: UIButton) {
         configureWillAskLaterLabelForNotNow()
     }
     
@@ -55,7 +55,7 @@ class LocationViewController: UIViewController {
         setupForScreenSize(SnapOnboardingViewController.screenSize)
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         configureNextButton()
@@ -64,8 +64,8 @@ class LocationViewController: UIViewController {
         configureNotNowButton()
     }
     
-    override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
-        super.viewWillTransitionToSize(size, withTransitionCoordinator: coordinator)
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
         
         setupForScreenSize(size)
     }
@@ -73,7 +73,7 @@ class LocationViewController: UIViewController {
     // MARK: UIView configuration
     
     internal func configureNextButton() {
-        nextButton?.setTitle(viewModel?.next?.uppercaseString, forState: .Normal)
+        nextButton?.setTitle(viewModel?.next?.uppercased(), for: UIControlState())
     }
     
     internal func configureHeadlineLabel() {
@@ -81,23 +81,23 @@ class LocationViewController: UIViewController {
     }
     
     internal func configureEnableLocationServicesButton() {
-        enableLocationServicesButton?.setTitle(viewModel?.enableLocationServices?.uppercaseString, forState: .Normal)
-        let intrinsicContentWidth = enableLocationServicesButton?.intrinsicContentSize().width ?? 245
+        enableLocationServicesButton?.setTitle(viewModel?.enableLocationServices?.uppercased(), for: UIControlState())
+        let intrinsicContentWidth = enableLocationServicesButton?.intrinsicContentSize.width ?? 245
         let rightPadding: CGFloat = 26
         let width = intrinsicContentWidth + rightPadding
         enableLocationServicesButtonWidth?.constant = width
     }
     
     internal func configureNotNowButton() {
-        notNowButton?.setTitle(viewModel?.notNow, forState: .Normal)
+        notNowButton?.setTitle(viewModel?.notNow, for: UIControlState())
     }
     
-    private func configureWillAskLaterLabelForThankYou() {
+    fileprivate func configureWillAskLaterLabelForThankYou() {
         willAskLaterLabel?.updateTextWithHeader(viewModel?.didEnableLocationServicesTitle, text: viewModel?.didEnableLocationServicesBody)
         animateWillAskLaterLabelAppearanceWithDuration(0.1)
     }
     
-    private func configureWillAskLaterLabelForLocationDisabled() {
+    fileprivate func configureWillAskLaterLabelForLocationDisabled() {
         guard let wowYouDeclinedBody = viewModel?.wowYouDeclinedBody else {
             return
         }
@@ -108,8 +108,8 @@ class LocationViewController: UIViewController {
         
         for index in wowYouDeclinedBody.characters.indices {
             if wowYouDeclinedBody[index] == ">" || wowYouDeclinedBody[index] == "›" {
-                let int = wowYouDeclinedBody.startIndex.distanceTo(index)
-                attributedText.replaceCharactersInRange(NSRange(int ... int), withAttributedString: NSAttributedString(string: String(wowYouDeclinedBody[index]), attributes: [NSForegroundColorAttributeName : angleSignColor]))
+                let int = wowYouDeclinedBody.characters.distance(from: wowYouDeclinedBody.startIndex, to: index)
+                attributedText.replaceCharacters(in: NSRange(int ..< (int+1)), with: NSAttributedString(string: String(wowYouDeclinedBody[index]), attributes: [NSForegroundColorAttributeName : angleSignColor]))
             }
         }
         
@@ -119,33 +119,33 @@ class LocationViewController: UIViewController {
         
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(willAskLaterLabelWithLocationServicesInstructionsTapped))
         willAskLaterLabel?.addGestureRecognizer(tapGestureRecognizer)
-        willAskLaterLabel?.userInteractionEnabled = true
+        willAskLaterLabel?.isUserInteractionEnabled = true
     }
     
-    private func configureWillAskLaterLabelForNotNow() {
+    fileprivate func configureWillAskLaterLabelForNotNow() {
         willAskLaterLabel?.updateTextWithHeader(viewModel?.willAskLaterTitle, text: viewModel?.willAskLaterBody)
         animateWillAskLaterLabelAppearanceWithDuration(0.1)
     }
     
     // MARK: UIView animation
     
-    private func animateWillAskLaterLabelAppearanceWithDuration(duration: Double) {
+    fileprivate func animateWillAskLaterLabelAppearanceWithDuration(_ duration: Double) {
         willAskLaterLabel?.alpha = 0
-        willAskLaterLabel?.hidden = false
+        willAskLaterLabel?.isHidden = false
         
-        UIView.animateWithDuration(duration, animations: {
+        UIView.animate(withDuration: duration, animations: {
             self.enableLocationServicesButton?.alpha = 0
             self.notNowButton?.alpha = 0
             self.willAskLaterLabel?.alpha = 1
         })
     }
     
-    private func animateSparklingStarsAndNeighborhoodItemsDisappearanceWithDuration(duration: Double) {
-        guard let sparklingStars = sparklingStars, neighborhoodItems = neighborhoodItems else {
+    fileprivate func animateSparklingStarsAndNeighborhoodItemsDisappearanceWithDuration(_ duration: Double) {
+        guard let sparklingStars = sparklingStars, let neighborhoodItems = neighborhoodItems else {
             return
         }
         
-        UIView.animateWithDuration(duration, animations: {
+        UIView.animate(withDuration: duration, animations: {
             (sparklingStars + neighborhoodItems).forEach {
                 $0.alpha = 0.0
             }
@@ -154,8 +154,8 @@ class LocationViewController: UIViewController {
         })
     }
     
-    private func animateTumbleweedBezierPathTraversalWithDuration(duration: Double) {
-        guard let neighborhoodView = neighborhoodView, tumbleweed = tumbleweed else {
+    fileprivate func animateTumbleweedBezierPathTraversalWithDuration(_ duration: Double) {
+        guard let neighborhoodView = neighborhoodView, let tumbleweed = tumbleweed else {
             return
         }
         
@@ -178,15 +178,15 @@ class LocationViewController: UIViewController {
         let endPoint = point4
         
         let path = UIBezierPath()
-        path.moveToPoint(startPoint)
+        path.move(to: startPoint)
         
-        path.addQuadCurveToPoint(point1, controlPoint: control1)
-        path.addQuadCurveToPoint(point2, controlPoint: control2)
-        path.addQuadCurveToPoint(point3, controlPoint: control3)
-        path.addQuadCurveToPoint(point4, controlPoint: control4)
+        path.addQuadCurve(to: point1, controlPoint: control1)
+        path.addQuadCurve(to: point2, controlPoint: control2)
+        path.addQuadCurve(to: point3, controlPoint: control3)
+        path.addQuadCurve(to: point4, controlPoint: control4)
         
         let pathShapeLayer = CAShapeLayer()
-        pathShapeLayer.path = path.CGPath
+        pathShapeLayer.path = path.cgPath
         pathShapeLayer.fillColor = nil
         neighborhoodView.layer.addSublayer(pathShapeLayer)
         
@@ -196,24 +196,24 @@ class LocationViewController: UIViewController {
         tumbleweedAnimation.calculationMode = kCAAnimationPaced
         
         tumbleweed.alpha = 1
-        tumbleweed.layer.addAnimation(tumbleweedAnimation, forKey: "position")
+        tumbleweed.layer.add(tumbleweedAnimation, forKey: "position")
         tumbleweed.frame.origin = CGPoint(x: endPoint.x - tumbleweed.frame.width / 2, y: endPoint.y - tumbleweed.frame.height / 2)
         
         animateTumbleweedRotationWithTotalDuration(tumbleweedAnimation.duration, rotations: 10, currentDuration: 0)
     }
     
-    private func animateTumbleweedRotationWithTotalDuration(totalDuration: Double, rotations: Int, currentDuration: Double) {
+    fileprivate func animateTumbleweedRotationWithTotalDuration(_ totalDuration: Double, rotations: Int, currentDuration: Double) {
         let duration = totalDuration / Double(rotations)
-        let options: UIViewAnimationOptions = currentDuration == 0 ? .CurveEaseIn : .CurveLinear
+        let options: UIViewAnimationOptions = currentDuration == 0 ? .curveEaseIn : .curveLinear
         
-        UIView.animateWithDuration(duration, delay: 0, options: options, animations: { [weak self] in
+        UIView.animate(withDuration: duration, delay: 0, options: options, animations: { [weak self] in
             guard let transform = self?.tumbleweed?.transform else { return }
-            self?.tumbleweed?.transform = CGAffineTransformRotate(transform, CGFloat(M_PI_2))
+            self?.tumbleweed?.transform = transform.rotated(by: CGFloat(M_PI_2))
         }, completion: { [weak self] _ in
             let currentDuration = currentDuration + duration
             
             if currentDuration > totalDuration - duration {
-                UIView.animateWithDuration(0.4, animations: {
+                UIView.animate(withDuration: 0.4, animations: {
                     self?.tumbleweed?.alpha = 0
                 })
                 return
@@ -223,44 +223,44 @@ class LocationViewController: UIViewController {
         })
     }
     
-    private func animateEnableLocationServicesButtonToSpinner() {
+    fileprivate func animateEnableLocationServicesButtonToSpinner() {
         guard let enableLocationServicesButton = enableLocationServicesButton else {
             return
         }
         
-        enableLocationServicesButton.setTitle(nil, forState: .Normal)
-        enableLocationServicesButton.setBackgroundImage(Asset.Btn_White_Clean.image, forState: .Normal)
-        enableLocationServicesButton.contentEdgeInsets = UIEdgeInsetsZero
+        enableLocationServicesButton.setTitle(nil, for: UIControlState())
+        enableLocationServicesButton.setBackgroundImage(Asset.Btn_White_Clean.image, for: UIControlState())
+        enableLocationServicesButton.contentEdgeInsets = UIEdgeInsets.zero
 
         spinnerImageView.translatesAutoresizingMaskIntoConstraints = false
         spinnerImageView.image = Asset.Icon_m_spinner_black.image
         spinnerImageView.alpha = 0.0
         enableLocationServicesButton.addSubview(spinnerImageView)
-        enableLocationServicesButton.addConstraint(NSLayoutConstraint(item: spinnerImageView, attribute: .CenterX, relatedBy: .Equal, toItem: enableLocationServicesButton, attribute: .CenterX, multiplier: 1, constant: 0))
-        enableLocationServicesButton.addConstraint(NSLayoutConstraint(item: spinnerImageView, attribute: .CenterY, relatedBy: .Equal, toItem: enableLocationServicesButton, attribute: .CenterY, multiplier: 1, constant: -1))
+        enableLocationServicesButton.addConstraint(NSLayoutConstraint(item: spinnerImageView, attribute: .centerX, relatedBy: .equal, toItem: enableLocationServicesButton, attribute: .centerX, multiplier: 1, constant: 0))
+        enableLocationServicesButton.addConstraint(NSLayoutConstraint(item: spinnerImageView, attribute: .centerY, relatedBy: .equal, toItem: enableLocationServicesButton, attribute: .centerY, multiplier: 1, constant: -1))
         
         enableLocationServicesButtonWidth?.constant = enableLocationServicesButton.frame.height
-        UIView.animateWithDuration(0.3, animations: {
+        UIView.animate(withDuration: 0.3, animations: {
             enableLocationServicesButton.layoutIfNeeded()
         }, completion: { [weak self] _ in
-            UIView.animateWithDuration(0.9, delay: 0, options: UIViewAnimationOptions.CurveEaseIn, animations: {
+            UIView.animate(withDuration: 0.9, delay: 0, options: UIViewAnimationOptions.curveEaseIn, animations: {
                 self?.spinnerImageView.alpha = 1.0
                 }, completion: nil)
             self?.animateEnableLocationServicesButtonSpinner()
         })
     }
     
-    private func animateEnableLocationServicesButtonSpinner() {
-        UIView.animateWithDuration(0.3, delay: 0, options: .CurveLinear, animations: { [weak self] in
+    fileprivate func animateEnableLocationServicesButtonSpinner() {
+        UIView.animate(withDuration: 0.3, delay: 0, options: .curveLinear, animations: { [weak self] in
             guard let transform = self?.spinnerImageView.transform else { return }
-            self?.spinnerImageView.transform = CGAffineTransformRotate(transform, CGFloat(M_PI_2))
+            self?.spinnerImageView.transform = transform.rotated(by: CGFloat(M_PI_2))
             }, completion: { [weak self] _ in
-                if self?.locationServicesStatus == .WaitingForResponse {
+                if self?.locationServicesStatus == .waitingForResponse {
                     self?.animateEnableLocationServicesButtonSpinner()
                 } else {
-                    UIView.animateWithDuration(1.0, delay: 0, options: .CurveEaseOut, animations: {
+                    UIView.animate(withDuration: 1.0, delay: 0, options: .curveEaseOut, animations: {
                         guard let transform = self?.spinnerImageView.transform else { return }
-                        self?.spinnerImageView.transform = CGAffineTransformRotate(transform, CGFloat(M_PI))
+                        self?.spinnerImageView.transform = transform.rotated(by: CGFloat(M_PI))
                         self?.spinnerImageView.alpha = 0
                         }, completion: { _ in
                             self?.spinnerImageView.removeFromSuperview()
@@ -275,18 +275,18 @@ class LocationViewController: UIViewController {
 
 extension LocationViewController: LocationViewControllerProtocol {
     
-    func configureForViewModel(viewModel: SnapOnboardingViewModel.LocationViewModel) {
+    func configureForViewModel(_ viewModel: SnapOnboardingViewModel.LocationViewModel) {
         self.viewModel = viewModel
     }
     
-    func locationServicesStatusChanged(status: LocationServicesStatus) {
-        assert(status == .Enabled || status == .Disabled)
+    func locationServicesStatusChanged(_ status: LocationServicesStatus) {
+        assert(status == .enabled || status == .disabled)
         
-        if status == .Enabled {
-            locationServicesStatus = .Enabled
+        if status == .enabled {
+            locationServicesStatus = .enabled
             configureWillAskLaterLabelForThankYou()
         } else {
-            locationServicesStatus = .Disabled
+            locationServicesStatus = .disabled
             configureWillAskLaterLabelForLocationDisabled()
         }
     }
@@ -325,7 +325,7 @@ extension LocationViewController {
         configureNextButtonAndHeadlineLabelFor5_5Inch()
     }
     
-    func setupForIpadPortrait(size: CGSize) {
+    func setupForIpadPortrait(_ size: CGSize) {
         configureNextButtonAndHeadlineLabelForIpad()
         
         sparklingViewToSuperViewHeightRelation?.constant = -20
@@ -337,7 +337,7 @@ extension LocationViewController {
         }
     }
     
-    func setupForIpadLandscape(size: CGSize) {
+    func setupForIpadLandscape(_ size: CGSize) {
         configureNextButtonAndHeadlineLabelForIpad()
         
         sparklingViewToSuperViewHeightRelation?.constant = 20
@@ -349,7 +349,7 @@ extension LocationViewController {
         }
     }
     
-    func setupForIpadProPortrait(size: CGSize) {
+    func setupForIpadProPortrait(_ size: CGSize) {
         configureNextButtonAndHeadlineLabelForIpadPro()
         
         sparklingViewToSuperViewHeightRelation?.constant = -30
@@ -361,7 +361,7 @@ extension LocationViewController {
         }
     }
     
-    func setupForIpadProLandscape(size: CGSize) {
+    func setupForIpadProLandscape(_ size: CGSize) {
         configureNextButtonAndHeadlineLabelForIpadPro()
         
         sparklingViewToSuperViewHeightRelation?.constant = 20

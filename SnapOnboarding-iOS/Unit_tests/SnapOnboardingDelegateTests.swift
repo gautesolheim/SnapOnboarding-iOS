@@ -5,16 +5,16 @@ class SnapOnboardingDelegateTests: XCTestCase {
     
     var vc: SnapOnboardingViewController!
 
-    private var isOnboardingWillAppearCalled = false
-    private var isTermsAndConditionsTapped = false
-    private var isPrivacyPolicyTapped = false
-    private var isEnableLocationServicesTapped = false
-    private var isLocationServicesInstructionsTapped = false
-    private var isFacebookSignupTapped = false
-    private var isInstagramSignupTapped = false
-    private var isSkipLoginTapped = false
-    private var isContinueAsLoggedInUserTapped = false
-    private var isLogoutFromCurrentAccountTapped = false
+    fileprivate var isOnboardingWillAppearCalled = false
+    fileprivate var isTermsAndConditionsTapped = false
+    fileprivate var isPrivacyPolicyTapped = false
+    fileprivate var isEnableLocationServicesTapped = false
+    fileprivate var isLocationServicesInstructionsTapped = false
+    fileprivate var isFacebookSignupTapped = false
+    fileprivate var isInstagramSignupTapped = false
+    fileprivate var isSkipLoginTapped = false
+    fileprivate var isContinueAsLoggedInUserTapped = false
+    fileprivate var isLogoutFromCurrentAccountTapped = false
     
     override func setUp() {
         super.setUp()
@@ -54,12 +54,12 @@ class SnapOnboardingDelegateTests: XCTestCase {
     }
     
     func testTermsAndConditionsTapped() {
-        vc.attributedLabel(vc.termsAndConditionsLabel, didSelectLinkWithURL: NSURL(string: "terms"))
+        vc.attributedLabel(vc.termsAndConditionsLabel, didSelectLinkWith: URL(string: "terms"))
         XCTAssertTrue(isTermsAndConditionsTapped)
     }
     
     func testPrivacyPolicyTapped() {
-        vc.attributedLabel(vc.termsAndConditionsLabel, didSelectLinkWithURL: NSURL(string: "privacy"))
+        vc.attributedLabel(vc.termsAndConditionsLabel, didSelectLinkWith: URL(string: "privacy"))
         XCTAssertTrue(isPrivacyPolicyTapped)
     }
     
@@ -138,7 +138,7 @@ class SnapOnboardingDelegateTests: XCTestCase {
         return nil
     }
     
-    func applyExpressionOnAllSparklingStars(expression: UIImageView -> Void) {
+    func applyExpressionOnAllSparklingStars(_ expression: @escaping (UIImageView) -> Void) {
         vc.childViewControllers.forEach { child in
             (child as! HasSparklingStars).sparklingStars!.forEach { star in
                 expression(star)

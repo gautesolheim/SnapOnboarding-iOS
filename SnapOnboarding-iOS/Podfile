@@ -6,9 +6,9 @@ platform :ios, '9.0'
 target 'SnapOnboarding-iOS' do
   use_frameworks!
 
-  pod 'HanekeSwift', :git => "https://github.com/chadmoone/HanekeSwift.git", :branch => "feature/swift-3"
+  pod 'HanekeSwift', :git => 'https://github.com/Haneke/HanekeSwift', :branch => 'feature/swift-3'
   pod 'SnapFonts-iOS'
-  pod 'SnapTagsView', :git => "https://github.com/skylib/SnapTagsView/.git", :branch => "swift-3"
+  pod 'SnapTagsView', :git => "https://github.com/skylib/SnapTagsView.git", :branch => "swift-3"
   pod 'TTTAttributedLabel'
 
   target 'Snapshot_tests' do
