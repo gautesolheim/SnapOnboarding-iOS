@@ -2,7 +2,7 @@ PODS:
   - HanekeSwift (0.10.1)
   - KTCenterFlowLayout (1.3.1)
   - NSLayoutConstraint+ExpressionFormat (0.1.0)
-  - SnapFonts-iOS (1.2.0)
+  - SnapFonts-iOS (1.2.1)
   - SnapOnboarding-iOS (1.5.0):
     - HanekeSwift
     - SnapFonts-iOS
@@ -37,7 +37,7 @@ SPEC CHECKSUMS:
   HanekeSwift: 4113367892828e7700d24a384027de6ebc79aad1
   KTCenterFlowLayout: 6e02b50ab2bd865025ae82fe266ed13b6d9eaf97
   NSLayoutConstraint+ExpressionFormat: 031af30af4d036658c02e33070622ed993318b8a
-  SnapFonts-iOS: b5f97aa89410c6be795fab07a1337b21e7f02d16
+  SnapFonts-iOS: e29545199cf4b96ebc3bc9c25e0c229698f28d16
   SnapOnboarding-iOS: '09909b172b44cec551753591e138bd6332c624f0'
   SnapTagsView: a712d85ebc028274410806f1ba3987cfe49c3e71
   TTTAttributedLabel: 8cffe8e127e4e82ff3af1e5386d4cd0ad000b656

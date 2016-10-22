@@ -1746,6 +1746,71 @@
 			};
 			name = Release;
 		};
+		10F65B2967262F2D2F4806893EEBEC07 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 08AB8A86E19DCA6848D15A53442E5FA0 /* SnapFonts-iOS.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SnapFonts-iOS/SnapFonts-iOS-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SnapFonts-iOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SnapFonts-iOS/SnapFonts-iOS.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SnapFonts_iOS;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		1762547B466147D8A6C7E79A47C86D20 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 08AB8A86E19DCA6848D15A53442E5FA0 /* SnapFonts-iOS.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SnapFonts-iOS/SnapFonts-iOS-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SnapFonts-iOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SnapFonts-iOS/SnapFonts-iOS.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SnapFonts_iOS;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		19A7BB84D78488AAEDA67FB42622677F /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 573A1E1584C69986C02D3B46081D8125 /* Pods-SnapOnboarding-iOSExample.release.xcconfig */;
@@ -1874,23 +1939,6 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		3144EA05FBC53ABAD0B2EC5AB7FB87F2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 08AB8A86E19DCA6848D15A53442E5FA0 /* SnapFonts-iOS.xcconfig */;
-			buildSettings = {
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/SnapFonts-iOS";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/SnapFonts-iOS/ResourceBundle-Fonts-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				PRODUCT_NAME = Fonts;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
 			};
 			name = Release;
 		};
@@ -2070,23 +2118,6 @@
 			};
 			name = Debug;
 		};
-		74A7007485FC2153E6E5634FCD04696B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 08AB8A86E19DCA6848D15A53442E5FA0 /* SnapFonts-iOS.xcconfig */;
-			buildSettings = {
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/SnapFonts-iOS";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/SnapFonts-iOS/ResourceBundle-Fonts-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				PRODUCT_NAME = Fonts;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Debug;
-		};
 		750A698DD940D6C9FEF5C61EE96F5CE3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4335E3E845836B6CC49CC4B2A87DF57F /* SnapTagsView.xcconfig */;
@@ -2210,39 +2241,6 @@
 				PRODUCT_NAME = UICollectionViewRightAlignedLayout;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		AAA4CE26049873B587548E0CD073039C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 08AB8A86E19DCA6848D15A53442E5FA0 /* SnapFonts-iOS.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SnapFonts-iOS/SnapFonts-iOS-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SnapFonts-iOS/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SnapFonts-iOS/SnapFonts-iOS.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = SnapFonts_iOS;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -2386,35 +2384,20 @@
 			};
 			name = Release;
 		};
-		C68E1DF2F16F33C2888BEFBED62DC70A /* Release */ = {
+		D94649F6F8ADDE8F427020EA8F43CF7B /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 08AB8A86E19DCA6848D15A53442E5FA0 /* SnapFonts-iOS.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/SnapFonts-iOS";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SnapFonts-iOS/SnapFonts-iOS-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SnapFonts-iOS/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SnapFonts-iOS/SnapFonts-iOS.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = SnapFonts_iOS;
+				INFOPLIST_FILE = "Target Support Files/SnapFonts-iOS/ResourceBundle-Fonts-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = Fonts;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
+				WRAPPER_EXTENSION = bundle;
 			};
 			name = Release;
 		};
@@ -2483,6 +2466,23 @@
 			};
 			name = Debug;
 		};
+		F4431AA2618EA805EB188606AD5D0087 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 08AB8A86E19DCA6848D15A53442E5FA0 /* SnapFonts-iOS.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/SnapFonts-iOS";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/SnapFonts-iOS/ResourceBundle-Fonts-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = Fonts;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -2507,8 +2507,8 @@
 		377FE717CFEF26D2D240605ABF10D392 /* Build configuration list for PBXNativeTarget "SnapFonts-iOS-Fonts" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				74A7007485FC2153E6E5634FCD04696B /* Debug */,
-				3144EA05FBC53ABAD0B2EC5AB7FB87F2 /* Release */,
+				F4431AA2618EA805EB188606AD5D0087 /* Debug */,
+				D94649F6F8ADDE8F427020EA8F43CF7B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2525,8 +2525,8 @@
 		4C1EB5B5A45A77D05DF9D0DB96A86D2D /* Build configuration list for PBXNativeTarget "SnapFonts-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AAA4CE26049873B587548E0CD073039C /* Debug */,
-				C68E1DF2F16F33C2888BEFBED62DC70A /* Release */,
+				1762547B466147D8A6C7E79A47C86D20 /* Debug */,
+				10F65B2967262F2D2F4806893EEBEC07 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -11,8 +11,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         // Load fonts used in storyboard
-        let _ = SnapFonts.gothamRoundedBook(size: 0)
-        let _ = SnapFonts.gothamRoundedMedium(size: 0)
+        let _ = SnapFonts.gothamRoundedBook(ofSize: 0)
+        let _ = SnapFonts.gothamRoundedMedium(ofSize: 0)
 
         return true
     }
