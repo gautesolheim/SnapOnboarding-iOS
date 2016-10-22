@@ -58,7 +58,7 @@ class TagsCollectionViewController: SnapTagsCollectionViewController {
         var offState = onState
         offState.buttonTransform = CGAffineTransform.identity.rotated(by: CGFloat(M_PI * 45 / 180.0))
         offState.backgroundColor = UIColor.white
-        offState.textColor = UIColor.roseColor()
+        offState.textColor = UIColor.roseColor
         offState.borderColor = UIColor(red: 229/255.0, green: 229/255.0, blue: 229/255.0, alpha: 1)
         offState.borderWidth = 0
         
