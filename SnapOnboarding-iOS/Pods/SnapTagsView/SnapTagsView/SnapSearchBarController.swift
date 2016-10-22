@@ -67,6 +67,7 @@ open class SnapSearchBarController : UIViewController {
         tagsVc.buttonConfiguration = buttonConfiguration
         tagsVc.handlesViewConfigurationMargins = false
 
+        searchBar.gestureRecognizers?.forEach { $0.cancelsTouchesInView = false }
         searchBar.delegate = self
         searchBar.setNeedsLayout()
         searchBar.layoutIfNeeded()
@@ -92,7 +93,7 @@ open class SnapSearchBarController : UIViewController {
         searchTextField.rightViewMode = .never
         searchTextField.textAlignment = .natural
         searchTextField.textColor = UIColor.black
-        searchTextField.tintColor = UIColor.roseColor()
+        searchTextField.tintColor = UIColor.roseColor
         self.searchTextField = searchTextField
 
         let hMargin = configuration.horizontalMargin

@@ -7,12 +7,12 @@ var viewModel = mockSnapOnboardingViewModelNorwegian()
 
 extension SnapOnboardingViewController {
     
-    override public func viewWillLayoutSubviews() {
+    override open func viewWillLayoutSubviews() {
         configureTermsAndConditionsLabel()
         setupForScreenSize(view.frame.size)
     }
     
-    override public func viewDidLayoutSubviews() {
+    override open func viewDidLayoutSubviews() {
         // Will reset on layoutSubviews, and must therefore be set afterwards
         scrollView?.contentOffset.x = view.frame.width * CGFloat(currentPage)
     }

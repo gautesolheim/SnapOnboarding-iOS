@@ -64,14 +64,14 @@ open class SnapOnboardingViewController: UIViewController {
         termsAndConditionsLabel?.setText(termsAndConditionsText, afterInheritingLabelAttributesAndConfiguringWith: { (text) -> NSMutableAttributedString in
             guard let text = text else { return NSMutableAttributedString(string: "") }
             
-            if let gothamRoundedBook = SnapFonts.gothamRoundedBookOfSize(10) {
+            if let gothamRoundedBook = SnapFonts.gothamRoundedBook(ofSize: 10) {
                 text.addAttribute(NSFontAttributeName, value: gothamRoundedBook, range: text.mutableString.range(of: text.string))
             }
             
             return text
         })
         
-        if let gothamRoundedMedium = SnapFonts.gothamRoundedMediumOfSize(10) {
+        if let gothamRoundedMedium = SnapFonts.gothamRoundedMedium(ofSize: 10) {
             termsAndConditionsLabel?.linkAttributes = [NSFontAttributeName : gothamRoundedMedium, NSForegroundColorAttributeName : UIColor.white]
             termsAndConditionsLabel?.activeLinkAttributes = [NSForegroundColorAttributeName : UIColor(red: 254/255.0, green: 232/255.0, blue: 5/255.0, alpha:1)]
             termsAndConditionsLabel?.inactiveLinkAttributes = nil

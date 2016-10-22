@@ -248,7 +248,7 @@ extension LoginViewController {
     func setupFor3_5InchPortrait() {
         topSpacerHeight?.constant = 17
         welcomeBackLabel?.numberOfLines = 3
-        welcomeBackLabel?.font = SnapFonts.gothamRoundedMediumOfSize(14)
+        welcomeBackLabel?.font = SnapFonts.gothamRoundedMedium(ofSize: 14)
 
         star7?.isHidden = true
         star6CenterY?.constant = 8

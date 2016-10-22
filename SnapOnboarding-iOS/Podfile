@@ -8,7 +8,7 @@ target 'SnapOnboarding-iOS' do
 
   pod 'HanekeSwift', :git => 'https://github.com/Haneke/HanekeSwift', :branch => 'feature/swift-3'
   pod 'SnapFonts-iOS'
-  pod 'SnapTagsView', :git => "https://github.com/skylib/SnapTagsView.git", :branch => "swift-3"
+  pod 'SnapTagsView'
   pod 'TTTAttributedLabel'
 
   target 'Snapshot_tests' do

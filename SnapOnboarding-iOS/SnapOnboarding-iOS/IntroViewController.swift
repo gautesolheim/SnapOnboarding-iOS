@@ -176,7 +176,7 @@ extension IntroViewController {
         tagsContainerViewHeight?.constant = 90
         
         if size.width <= 375 {
-            headlineLabel?.font = SnapFonts.gothamRoundedBookOfSize(30)
+            headlineLabel?.font = SnapFonts.gothamRoundedBook(ofSize: 30)
             topSpacerToSuperViewHeightRelation?.constant = 10
             sparklingViewToSuperViewHeightRelation?.constant = -160
             phoneViewToSparklingViewHeightRelation?.constant = -20

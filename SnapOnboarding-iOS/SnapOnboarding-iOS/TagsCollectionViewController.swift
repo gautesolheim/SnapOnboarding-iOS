@@ -38,7 +38,7 @@ class TagsCollectionViewController: SnapTagsCollectionViewController {
     
     func createButtonConfiguration() -> SnapTagButtonConfiguration {
         var config = SnapTagButtonConfiguration()
-        config.font = SnapFonts.gothamRoundedMediumOfSize(fontSize)
+        config.font = SnapFonts.gothamRoundedMedium(ofSize: fontSize)
         config.margin = UIEdgeInsets.zero
         
         // Account for shadows on background image

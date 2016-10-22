@@ -36,7 +36,7 @@ import SnapFonts_iOS
     func updateAttributedTextWithHeader(_ header: String?, text: NSMutableAttributedString?) {
         if let header = header, let body = text {
             var headerAttributes = attributes
-            headerAttributes[NSFontAttributeName] = SnapFonts.gothamRoundedMediumOfSize(font.pointSize)
+            headerAttributes[NSFontAttributeName] = SnapFonts.gothamRoundedMedium(ofSize: font.pointSize)
             
             let updatedText = NSMutableAttributedString(string: header, attributes: headerAttributes)
             updatedText.append(NSAttributedString(string: "\n"))
