@@ -19,7 +19,7 @@ class IntroViewController: UIViewController {
     @IBOutlet fileprivate var phoneViewToSparklingViewHeightRelation: NSLayoutConstraint?
     @IBOutlet fileprivate var sparklingViewToSuperViewHeightRelation: NSLayoutConstraint?
     
-    var delegate: IntroViewControllerDelegate?
+    weak var delegate: IntroViewControllerDelegate?
     fileprivate var viewModel: SnapOnboardingViewModel.IntroViewModel?
     
     @IBAction func nextButtonTapped(_ sender: UIButton) {

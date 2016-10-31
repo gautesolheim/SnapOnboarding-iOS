@@ -22,7 +22,7 @@ open class SnapOnboardingViewController: UIViewController {
     @IBOutlet fileprivate var termsAndConditionsLabelBottomToSuperViewBottom: NSLayoutConstraint?
     @IBOutlet fileprivate var pageControlBottomToTermsAndConditionsTop: NSLayoutConstraint?
     
-    fileprivate var delegate: SnapOnboardingDelegate?
+    fileprivate weak var delegate: SnapOnboardingDelegate?
     fileprivate var viewModel: SnapOnboardingViewModel?
     
     fileprivate var locationViewController: LocationViewControllerProtocol?

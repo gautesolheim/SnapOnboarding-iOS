@@ -4,12 +4,12 @@ import Haneke
 
 class LoginViewController: UIViewController {
 
-    @IBOutlet fileprivate var snapsaleLogo: UIImageView?
+    @IBOutlet fileprivate var snapsaleLogoImageView: UIImageView?
     @IBOutlet fileprivate(set) var continueWithFacebookButton: UIButton?
     @IBOutlet fileprivate(set) var continueWithInstagramButton: UIButton?
     @IBOutlet fileprivate(set) var skipLoginButton: UIButton?
 
-    @IBOutlet fileprivate var profilePhoto: UIImageView?
+    @IBOutlet fileprivate var profileImageView: UIImageView?
     @IBOutlet fileprivate var socialLogoMask: UIImageView?
     @IBOutlet fileprivate var welcomeBackLabel: UILabel?
     @IBOutlet fileprivate(set) var continueAsLoggedInUserButton: UIButton?
@@ -27,7 +27,7 @@ class LoginViewController: UIViewController {
     @IBOutlet fileprivate var continueWithInstagramButtonWidth: NSLayoutConstraint?
     @IBOutlet fileprivate var skipLoginButtonBottomToSuperViewBottom: NSLayoutConstraint?
 
-    var delegate: LoginViewControllerDelegate?
+    weak var delegate: LoginViewControllerDelegate?
     fileprivate var viewModel: SnapOnboardingViewModel.LoginViewModel?
 
     fileprivate var formerAuthorizationService: AuthorizationService = .none
@@ -148,15 +148,15 @@ class LoginViewController: UIViewController {
 
     fileprivate func configureProfileView() {
         welcomeBackLabel?.text = viewModel?.welcomeBack
-        profilePhoto?.layer.masksToBounds = true
+        profileImageView?.layer.masksToBounds = true
         updateProfileViewCornerRadius()
 
-        if let profilePhoto = profilePhoto,
-            let url = userViewModel?.profileImageURL?.withSize(profilePhoto.bounds.size) {
+        if let profileImageView = profileImageView,
+            let url = userViewModel?.profileImageURL?.withSize(profileImageView.bounds.size) {
 
-            profilePhoto.hnk_setImageFromURL(url)
+            profileImageView.hnk_setImageFromURL(url)
         }
-        
+
         if case .facebook = formerAuthorizationService {
             socialLogoMask?.image = Asset.Avatar_Facebook.image
         } else if case .instagram = formerAuthorizationService {
@@ -165,7 +165,7 @@ class LoginViewController: UIViewController {
     }
 
     func updateProfileViewCornerRadius() {
-        profilePhoto?.layer.cornerRadius = (profilePhoto?.frame.size.height ?? 69) / 2.0
+        profileImageView?.layer.cornerRadius = (profileImageView?.frame.size.height ?? 69) / 2.0
     }
 
     fileprivate func configureContinueAsLoggedInUserButton() {
@@ -181,8 +181,8 @@ class LoginViewController: UIViewController {
     }
 
     fileprivate func switchWelcomeBackHidden(hidden welcomeBackHidden: Bool) {
-        let welcomeBackViews: [UIView?] = [profilePhoto, socialLogoMask, welcomeBackLabel, continueAsLoggedInUserButton, changeAccountButton]
-        let newUserViews: [UIView?] = [snapsaleLogo, continueWithFacebookButton, continueWithInstagramButton, skipLoginButton]
+        let welcomeBackViews: [UIView?] = [profileImageView, socialLogoMask, welcomeBackLabel, continueAsLoggedInUserButton, changeAccountButton]
+        let newUserViews: [UIView?] = [snapsaleLogoImageView, continueWithFacebookButton, continueWithInstagramButton, skipLoginButton]
 
         welcomeBackViews.forEach { $0?.isHidden = false }
         newUserViews.forEach { $0?.isHidden = false }

@@ -5,7 +5,7 @@ import SnapOnboarding_iOS
 
 class ViewController: UIViewController {
     
-    var onboardingViewController: SnapOnboardingViewController?
+    weak var onboardingViewController: SnapOnboardingViewController?
     
     fileprivate var didPresent = false
     
@@ -28,7 +28,9 @@ class ViewController: UIViewController {
         let configuration = SnapOnboardingConfiguration(delegate: self, viewModel: viewModel)
         
         onboardingViewController?.applyConfiguration(configuration)
-        present(onboardingViewController!, animated: false, completion: nil)
+        present(onboardingViewController!, animated: false) {
+            //self.dismiss(animated: true, completion: nil)
+        }
     }
     
     func createSampleViewModelNorwegian() -> SnapOnboardingViewModel {

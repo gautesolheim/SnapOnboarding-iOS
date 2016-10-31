@@ -19,7 +19,7 @@ class LocationViewController: UIViewController {
     @IBOutlet fileprivate var notNowButtonBottomToSuperViewBottom: NSLayoutConstraint?
     @IBOutlet fileprivate var willAskLaterLabelBottomToSuperViewBottom: NSLayoutConstraint?
     
-    var delegate: LocationViewControllerDelegate?
+    weak var delegate: LocationViewControllerDelegate?
     fileprivate var viewModel: SnapOnboardingViewModel.LocationViewModel?
     
     fileprivate var spinnerImageView = UIImageView()
