@@ -31,7 +31,6 @@ class LoginViewController: UIViewController {
     fileprivate var viewModel: SnapOnboardingViewModel.LoginViewModel?
 
     fileprivate var formerAuthorizationService: AuthorizationService = .none
-    fileprivate var userViewModel: UserViewModel?
     
     @IBAction func continueWithFacebookButtonTapped(_ sender: UIButton) {
         delegate?.facebookSignupTapped()
@@ -138,21 +137,21 @@ class LoginViewController: UIViewController {
 
     // MARK: UIView configuration for previously authorized users
 
-    fileprivate func configureForPreviouslyAuthorizedUser() {
-        configureProfileView()
+    fileprivate func configureForPreviouslyAuthorizedUser(viewModel userViewModel: UserViewModel) {
+        configureProfileView(imageURL: userViewModel.profileImageURL)
         configureContinueAsLoggedInUserButton()
         configureChangeAccountButton()
 
         switchWelcomeBackHidden(hidden: false)
     }
 
-    fileprivate func configureProfileView() {
+    fileprivate func configureProfileView(imageURL: URL?) {
         welcomeBackLabel?.text = viewModel?.welcomeBack
         profileImageView?.layer.masksToBounds = true
         updateProfileViewCornerRadius()
 
         if let profileImageView = profileImageView,
-            let url = userViewModel?.profileImageURL?.withSize(profileImageView.bounds.size) {
+            let url = imageURL?.withSize(profileImageView.bounds.size) {
 
             profileImageView.hnk_setImageFromURL(url)
         }
@@ -216,9 +215,7 @@ extension LoginViewController: LoginViewControllerProtocol {
         assert(formerAuthorizationService != .none)
 
         self.formerAuthorizationService = formerAuthorizationService
-        self.userViewModel = userViewModel
-
-        configureForPreviouslyAuthorizedUser()
+        configureForPreviouslyAuthorizedUser(viewModel: userViewModel)
     }
     
     func reactivateLoginButtons() {

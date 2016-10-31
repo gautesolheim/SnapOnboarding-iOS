@@ -21,8 +21,7 @@ class LocationViewController: UIViewController {
     
     weak var delegate: LocationViewControllerDelegate?
     fileprivate var viewModel: SnapOnboardingViewModel.LocationViewModel?
-    
-    fileprivate var spinnerImageView = UIImageView()
+
     fileprivate var locationServicesStatus: LocationServicesStatus = .notYetRequested
     
     @IBAction func nextButtonTapped(_ sender: UIButton) {
@@ -232,8 +231,8 @@ class LocationViewController: UIViewController {
         enableLocationServicesButton.setBackgroundImage(Asset.Btn_White_Clean.image, for: UIControlState())
         enableLocationServicesButton.contentEdgeInsets = UIEdgeInsets.zero
 
+        let spinnerImageView = UIImageView(image: Asset.Icon_m_spinner_black.image)
         spinnerImageView.translatesAutoresizingMaskIntoConstraints = false
-        spinnerImageView.image = Asset.Icon_m_spinner_black.image
         spinnerImageView.alpha = 0.0
         enableLocationServicesButton.addSubview(spinnerImageView)
         enableLocationServicesButton.addConstraint(NSLayoutConstraint(item: spinnerImageView, attribute: .centerX, relatedBy: .equal, toItem: enableLocationServicesButton, attribute: .centerX, multiplier: 1, constant: 0))
@@ -243,27 +242,25 @@ class LocationViewController: UIViewController {
         UIView.animate(withDuration: 0.3, animations: {
             enableLocationServicesButton.layoutIfNeeded()
         }, completion: { [weak self] _ in
-            UIView.animate(withDuration: 0.9, delay: 0, options: UIViewAnimationOptions.curveEaseIn, animations: {
-                self?.spinnerImageView.alpha = 1.0
+            UIView.animate(withDuration: 0.9, delay: 0, options: .curveEaseIn, animations: {
+                spinnerImageView.alpha = 1.0
                 }, completion: nil)
-            self?.animateEnableLocationServicesButtonSpinner()
+            self?.animateEnableLocationServicesButtonSpinner(spinnerImageView)
         })
     }
     
-    fileprivate func animateEnableLocationServicesButtonSpinner() {
-        UIView.animate(withDuration: 0.3, delay: 0, options: .curveLinear, animations: { [weak self] in
-            guard let transform = self?.spinnerImageView.transform else { return }
-            self?.spinnerImageView.transform = transform.rotated(by: CGFloat(M_PI_2))
+    fileprivate func animateEnableLocationServicesButtonSpinner(_ spinnerImageView: UIImageView) {
+        UIView.animate(withDuration: 0.3, delay: 0, options: .curveLinear, animations: {
+            spinnerImageView.transform = spinnerImageView.transform.rotated(by: CGFloat(M_PI_2))
             }, completion: { [weak self] _ in
                 if self?.locationServicesStatus == .waitingForResponse {
-                    self?.animateEnableLocationServicesButtonSpinner()
+                    self?.animateEnableLocationServicesButtonSpinner(spinnerImageView)
                 } else {
                     UIView.animate(withDuration: 1.0, delay: 0, options: .curveEaseOut, animations: {
-                        guard let transform = self?.spinnerImageView.transform else { return }
-                        self?.spinnerImageView.transform = transform.rotated(by: CGFloat(M_PI))
-                        self?.spinnerImageView.alpha = 0
+                        spinnerImageView.transform = spinnerImageView.transform.rotated(by: CGFloat(M_PI))
+                        spinnerImageView.alpha = 0
                         }, completion: { _ in
-                            self?.spinnerImageView.removeFromSuperview()
+                            spinnerImageView.removeFromSuperview()
                         })
                 }
         })

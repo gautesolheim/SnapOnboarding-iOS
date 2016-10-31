@@ -348,7 +348,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/SnapOnboarding-iOSExample/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.gautesolheim.SnapOnboarding-iOSExample";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.snapsale.SnapOnboarding-iOSExample";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_VERSION = 3.0;
@@ -367,7 +367,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/SnapOnboarding-iOSExample/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks $(SOURCE_ROOT) $(CONFIGURATION_BUILD_DIR)";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.gautesolheim.SnapOnboarding-iOSExample";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.snapsale.SnapOnboarding-iOSExample";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_VERSION = 3.0;
