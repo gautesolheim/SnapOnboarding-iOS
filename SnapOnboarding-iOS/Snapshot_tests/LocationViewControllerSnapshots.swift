@@ -16,8 +16,8 @@ class LocationViewControllerSnapshots: SnapFBSnapshotBase {
         sut = vc.view
 //        vc.viewWillAppear(false)
         
-        UIApplication.sharedApplication().keyWindow?.rootViewController = vc
-        UIApplication.sharedApplication().keyWindow?.rootViewController = nil
+        UIApplication.shared.keyWindow?.rootViewController = vc
+        UIApplication.shared.keyWindow?.rootViewController = nil
         
         // Setup the loaded view
         currentPage = 1
@@ -37,7 +37,7 @@ class LocationViewControllerSnapshots: SnapFBSnapshotBase {
 extension LocationViewController {
     
     override func viewWillLayoutSubviews() {
-        setupForScreenSize(parentViewController!.view.frame.size)
+        setupForScreenSize(parent!.view.frame.size)
     }
     
 }

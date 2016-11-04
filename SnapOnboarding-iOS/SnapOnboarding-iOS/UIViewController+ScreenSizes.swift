@@ -1,26 +1,26 @@
 import UIKit
 
 @objc public protocol ScreenSizesProtocol: class {
-    optional func setupFor3_5InchPortrait()
-    optional func setupFor4_0InchPortrait()
-    optional func setupFor4_7InchPortrait()
-    optional func setupFor5_5InchPortrait()
-    optional func setupForIpadPortrait(size: CGSize)
-    optional func setupForIpadProPortrait(size: CGSize)
+    @objc optional func setupFor3_5InchPortrait()
+    @objc optional func setupFor4_0InchPortrait()
+    @objc optional func setupFor4_7InchPortrait()
+    @objc optional func setupFor5_5InchPortrait()
+    @objc optional func setupForIpadPortrait(_ size: CGSize)
+    @objc optional func setupForIpadProPortrait(_ size: CGSize)
     
-    optional func setupForIpadLandscape(size: CGSize)
-    optional func setupForIpadProLandscape(size: CGSize)
+    @objc optional func setupForIpadLandscape(_ size: CGSize)
+    @objc optional func setupForIpadProLandscape(_ size: CGSize)
 }
 
 extension UIViewController: ScreenSizesProtocol {
     
     class var screenSize: CGSize {
         // Swift 3: UIScreen.main().bounds.size
-        return UIScreen.mainScreen().bounds.size
+        return UIScreen.main.bounds.size
     }
     
     // @param: screenSize
-    public func setupForScreenSize(size: CGSize) {
+    public func setupForScreenSize(_ size: CGSize) {
         let mySelf = self as ScreenSizesProtocol
         let width = size.width
         

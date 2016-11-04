@@ -3,7 +3,7 @@ import SnapFonts_iOS
 
 @IBDesignable class SnapOnboardingHeadlineLabel: UILabel {
     
-    private var attributes = [String: AnyObject]()
+    fileprivate var attributes = [String: AnyObject]()
     
     // NOTE: Cannot be named lineSpacing, as this will set an offset regardless of its value (possibly Xcode bug)
     @IBInspectable var lineSpacin: CGFloat = 1 {
@@ -21,35 +21,35 @@ import SnapFonts_iOS
         }
     }
     
-    func updateText(text: String?) {
+    func updateText(_ text: String?) {
         if let text = text {
             attributedText = NSAttributedString(string: text, attributes: attributes)
         }
     }
     
-    func updateTextWithHeader(header: String?, text: String?) {
+    func updateTextWithHeader(_ header: String?, text: String?) {
         if let text = text {
             updateAttributedTextWithHeader(header, text: NSMutableAttributedString(string: text))
         }
     }
     
-    func updateAttributedTextWithHeader(header: String?, text: NSMutableAttributedString?) {
-        if let header = header, body = text {
+    func updateAttributedTextWithHeader(_ header: String?, text: NSMutableAttributedString?) {
+        if let header = header, let body = text {
             var headerAttributes = attributes
-            headerAttributes[NSFontAttributeName] = SnapFonts.gothamRoundedMediumOfSize(font.pointSize)
+            headerAttributes[NSFontAttributeName] = SnapFonts.gothamRoundedMedium(ofSize: font.pointSize)
             
             let updatedText = NSMutableAttributedString(string: header, attributes: headerAttributes)
-            updatedText.appendAttributedString(NSAttributedString(string: "\n"))
+            updatedText.append(NSAttributedString(string: "\n"))
             
             body.addAttributes(attributes, range: NSRange(location: 0, length: body.length))
-            updatedText.appendAttributedString(body)
+            updatedText.append(body)
             attributedText = updatedText
         }
     }
     
-    private func createDefaultParagraphStyle() -> NSMutableParagraphStyle {
+    fileprivate func createDefaultParagraphStyle() -> NSMutableParagraphStyle {
         let defaultParagraphStyle = NSMutableParagraphStyle()
-        defaultParagraphStyle.alignment = NSTextAlignment.Center
+        defaultParagraphStyle.alignment = NSTextAlignment.center
         return defaultParagraphStyle
     }
 

@@ -7,11 +7,11 @@ struct TagsViewModel {
 
 class TagsCollectionViewController: SnapTagsCollectionViewController {
     
-    private var fontSize: CGFloat = 13
-    private var spacing: CGFloat = 10
-    private var insets = UIEdgeInsets(top: 7.0, left: 9.5, bottom: 7.0, right: 9.5)
+    fileprivate var fontSize: CGFloat = 13
+    fileprivate var spacing: CGFloat = 10
+    fileprivate var insets = UIEdgeInsets(top: 7.0, left: 9.5, bottom: 7.0, right: 9.5)
     
-    func configureForViewModel(viewModel: TagsViewModel) {
+    func configureForViewModel(_ viewModel: TagsViewModel) {
         data = viewModel.data ?? [SnapTagRepresentation]()
     }
     
@@ -31,15 +31,15 @@ class TagsCollectionViewController: SnapTagsCollectionViewController {
         config.spacing = spacing - (shadowWidth + shadowHeight)
         config.horizontalMargin = 0 - shadowWidth
         config.verticalMargin = 0 - shadowHeight
-        config.alignment = .Center
+        config.alignment = .center
         
         return config
     }
     
     func createButtonConfiguration() -> SnapTagButtonConfiguration {
         var config = SnapTagButtonConfiguration()
-        config.font = SnapFonts.gothamRoundedMediumOfSize(fontSize)
-        config.margin = UIEdgeInsetsZero
+        config.font = SnapFonts.gothamRoundedMedium(ofSize: fontSize)
+        config.margin = UIEdgeInsets.zero
         
         // Account for shadows on background image
         var newInsets = insets
@@ -50,15 +50,15 @@ class TagsCollectionViewController: SnapTagsCollectionViewController {
         config.labelInset = newInsets
         
         var onState = ButtonStateConfiguration()
-        onState.backgroundColor = UIColor.clearColor()
+        onState.backgroundColor = UIColor.clear
         onState.backgroundImage = Asset.Tags_background.image
-        onState.textColor = UIColor.blackColor()
+        onState.textColor = UIColor.black
         onState.cornerRadius = 4
         
         var offState = onState
-        offState.buttonTransform = CGAffineTransformRotate(CGAffineTransformIdentity, CGFloat(M_PI * 45 / 180.0))
-        offState.backgroundColor = UIColor.whiteColor()
-        offState.textColor = UIColor.roseColor()
+        offState.buttonTransform = CGAffineTransform.identity.rotated(by: CGFloat(M_PI * 45 / 180.0))
+        offState.backgroundColor = UIColor.white
+        offState.textColor = UIColor.roseColor
         offState.borderColor = UIColor(red: 229/255.0, green: 229/255.0, blue: 229/255.0, alpha: 1)
         offState.borderWidth = 0
         
@@ -81,31 +81,31 @@ class TagsCollectionViewController: SnapTagsCollectionViewController {
 
 extension TagsCollectionViewController {
     
-    func setupForIpadPortrait(size: CGSize) {
+    func setupForIpadPortrait(_ size: CGSize) {
         setupForIpad()
     }
     
-    func setupForIpadLandscape(size: CGSize) {
+    func setupForIpadLandscape(_ size: CGSize) {
         setupForIpad()
     }
     
-    func setupForIpadProPortrait(size: CGSize) {
+    func setupForIpadProPortrait(_ size: CGSize) {
         setupForIpadPro()
     }
     
-    func setupForIpadProLandscape(size: CGSize) {
+    func setupForIpadProLandscape(_ size: CGSize) {
         setupForIpadPro()
     }
     
     // MARK: Helpers
     
-    private func setupForIpad() {
+    fileprivate func setupForIpad() {
         fontSize = 15
         spacing = 12
         insets = UIEdgeInsets(top: 8.0, left: 10.5, bottom: 8.0, right: 10.5)
     }
     
-    private func setupForIpadPro() {
+    fileprivate func setupForIpadPro() {
         fontSize = 17
         spacing = 14
         insets = UIEdgeInsets(top: 9.0, left: 11.5, bottom: 9.0, right: 11.5)

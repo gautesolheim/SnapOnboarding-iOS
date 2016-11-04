@@ -1,0 +1,44 @@
+{
+  "name": "SnapTagsView",
+  "version": "0.6.5",
+  "summary": "Tag buttons, a tag bar and UISearchBar with tags",
+  "homepage": "https://github.com/skylib/SnapTagsView",
+  "license": {
+    "type": "BSD",
+    "file": "LICENSE"
+  },
+  "authors": [
+    "Niklas Saers"
+  ],
+  "social_media_url": "http://twitter.com/snapsale_com",
+  "source": {
+    "git": "https://github.com/skylib/SnapTagsView.git",
+    "tag": "0.6.5"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": [
+    "SnapTagsView/*.swift"
+  ],
+  "resources": [
+    "SnapTagsView/*.xib",
+    "SnapTagsView/DefaultImages.xcassets"
+  ],
+  "frameworks": "Foundation",
+  "exclude_files": "Example*",
+  "dependencies": {
+    "NSLayoutConstraint+ExpressionFormat": [
+
+    ],
+    "KTCenterFlowLayout": [
+
+    ],
+    "UICollectionViewLeftAlignedLayout": [
+
+    ],
+    "UICollectionViewRightAlignedLayout": [
+
+    ]
+  }
+}

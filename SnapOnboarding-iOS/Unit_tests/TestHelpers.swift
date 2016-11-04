@@ -28,8 +28,8 @@ func mockSnapOnboardingViewModelNorwegian() -> SnapOnboardingViewModel {
     var termsViewModel = SnapOnboardingViewModel.TermsViewModel()
     let footer = "Ved bruk av tjenesten Snapsale godtar du Vilkårene for bruk og Retningslinjer for personvern"
     termsViewModel.termsAndPrivacyFooter = footer
-    termsViewModel.rangeOfTermsAndConditions = footer.rangeOfString("Vilkårene for bruk")
-    termsViewModel.rangeOfPrivacyPolicy = footer.rangeOfString("Retningslinjer for personvern")
+    termsViewModel.rangeOfTermsAndConditions = footer.range(of: "Vilkårene for bruk")
+    termsViewModel.rangeOfPrivacyPolicy = footer.range(of: "Retningslinjer for personvern")
 
     var introViewModel = SnapOnboardingViewModel.IntroViewModel()
     introViewModel.next = "Neste"
@@ -72,8 +72,8 @@ func mockSnapOnboardingViewModelEnglish() -> SnapOnboardingViewModel {
     var termsViewModel = SnapOnboardingViewModel.TermsViewModel()
     let footer = "You accept our Privacy Policy and Terms And Conditions by using the service Snapsale."
     termsViewModel.termsAndPrivacyFooter = footer
-    termsViewModel.rangeOfTermsAndConditions = footer.rangeOfString("Terms And Conditions")
-    termsViewModel.rangeOfPrivacyPolicy = footer.rangeOfString("Privacy Policy")
+    termsViewModel.rangeOfTermsAndConditions = footer.range(of: "Terms And Conditions")
+    termsViewModel.rangeOfPrivacyPolicy = footer.range(of: "Privacy Policy")
 
     var introViewModel = SnapOnboardingViewModel.IntroViewModel()
     introViewModel.next = "Next"
@@ -112,7 +112,7 @@ func mockSnapOnboardingViewModelEnglish() -> SnapOnboardingViewModel {
     return model
 }
 
-private func createTagRepresentationsForStrings(strings: [String]) -> [SnapTagRepresentation] {
+private func createTagRepresentationsForStrings(_ strings: [String]) -> [SnapTagRepresentation] {
     var snapTagRepresentations = [SnapTagRepresentation]()
     strings.forEach { tag in
         let tagRepresentation = SnapTagRepresentation(tag: tag)
@@ -122,8 +122,8 @@ private func createTagRepresentationsForStrings(strings: [String]) -> [SnapTagRe
 }
 
 func getSnapOnboardingViewController() -> SnapOnboardingViewController {
-    let storyboard = UIStoryboard(name: "SnapOnboarding", bundle: NSBundle.mainBundle())
-    return storyboard.instantiateViewControllerWithIdentifier("SnapOnboardingViewController") as! SnapOnboardingViewController
+    let storyboard = UIStoryboard(name: "SnapOnboarding", bundle: Bundle.main)
+    return storyboard.instantiateViewController(withIdentifier: "SnapOnboardingViewController") as! SnapOnboardingViewController
 }
 
 func mockUserViewModel() -> UserViewModel {

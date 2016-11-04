@@ -14,8 +14,8 @@ class IntroViewControllerSnapshots: SnapFBSnapshotBase {
         sut = vc.view
 //        vc.viewWillAppear(false)
         
-        UIApplication.sharedApplication().keyWindow?.rootViewController = vc
-        UIApplication.sharedApplication().keyWindow?.rootViewController = nil
+        UIApplication.shared.keyWindow?.rootViewController = vc
+        UIApplication.shared.keyWindow?.rootViewController = nil
         
         // Setup the loaded view
         currentPage = 0
@@ -33,7 +33,7 @@ class IntroViewControllerSnapshots: SnapFBSnapshotBase {
 extension IntroViewController {
     
     override func viewWillLayoutSubviews() {
-        setupForScreenSize(parentViewController!.view.frame.size)
+        setupForScreenSize(parent!.view.frame.size)
     }
     
 }
@@ -41,7 +41,7 @@ extension IntroViewController {
 extension TagsCollectionViewController {
     
     override func viewWillLayoutSubviews() {
-        setupForScreenSize(parentViewController!.parentViewController!.view.frame.size)
+        setupForScreenSize(parent!.parent!.view.frame.size)
         configuration = createConfiguration()
         buttonConfiguration = createButtonConfiguration()
     }

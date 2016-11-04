@@ -16,8 +16,8 @@ class LoginViewControllerSnapshots: SnapFBSnapshotBase {
         sut = vc.view
 //        vc.viewWillAppear(false)
         
-        UIApplication.sharedApplication().keyWindow?.rootViewController = vc
-        UIApplication.sharedApplication().keyWindow?.rootViewController = nil
+        UIApplication.shared.keyWindow?.rootViewController = vc
+        UIApplication.shared.keyWindow?.rootViewController = nil
         
         // Setup the loaded view
         currentPage = 2
@@ -37,7 +37,7 @@ class LoginViewControllerSnapshots: SnapFBSnapshotBase {
 extension LoginViewController {
     
     override func viewWillLayoutSubviews() {
-        setupForScreenSize(parentViewController!.view.frame.size)
+        setupForScreenSize(parent!.view.frame.size)
         updateProfileViewCornerRadius()
     }
     

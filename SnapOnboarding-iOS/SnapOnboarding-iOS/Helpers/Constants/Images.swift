@@ -43,8 +43,8 @@ enum Asset: String {
 
 extension Image {
   convenience init!(asset: Asset) {
-    let bundle = NSBundle(forClass: ClassInSameBundleAsAssets.self)
-    self.init(named: asset.rawValue, inBundle: bundle, compatibleWithTraitCollection: nil)
+    let bundle = Bundle(for: ClassInSameBundleAsAssets.self)
+    self.init(named: asset.rawValue, in: bundle, compatibleWith: nil)
   }
 }
 

@@ -128,7 +128,7 @@
 				TargetAttributes = {
 					9F4CE0AE1D0EB29F00A6A1FB = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = T83284H5PN;
+						DevelopmentTeam = J6N9P27DVY;
 						LastSwiftMigration = 0800;
 					};
 				};
@@ -344,13 +344,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = J6N9P27DVY;
 				INFOPLIST_FILE = "$(SRCROOT)/SnapOnboarding-iOSExample/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.gautesolheim.SnapOnboarding-iOSExample";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.snapsale.SnapOnboarding-iOSExample";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -362,13 +363,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = J6N9P27DVY;
 				INFOPLIST_FILE = "$(SRCROOT)/SnapOnboarding-iOSExample/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks $(SOURCE_ROOT) $(CONFIGURATION_BUILD_DIR)";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.gautesolheim.SnapOnboarding-iOSExample";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.snapsale.SnapOnboarding-iOSExample";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

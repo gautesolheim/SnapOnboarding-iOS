@@ -5,11 +5,11 @@ import SnapOnboarding_iOS
 
 class ViewController: UIViewController {
     
-    var onboardingViewController: SnapOnboardingViewController?
+    weak var onboardingViewController: SnapOnboardingViewController?
     
-    private var didPresent = false
+    fileprivate var didPresent = false
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         if !didPresent {
@@ -18,25 +18,27 @@ class ViewController: UIViewController {
         }
     }
     
-    private func presentOnboardingViewController() {
-        let podBundle = NSBundle(forClass: SnapOnboardingViewController.self)
+    fileprivate func presentOnboardingViewController() {
+        let podBundle = Bundle(for: SnapOnboardingViewController.self)
         let storyboard = UIStoryboard(name: "SnapOnboarding", bundle: podBundle)
-        onboardingViewController = storyboard.instantiateViewControllerWithIdentifier("SnapOnboardingViewController") as? SnapOnboardingViewController
+        onboardingViewController = storyboard.instantiateViewController(withIdentifier: "SnapOnboardingViewController") as? SnapOnboardingViewController
         
         let viewModel = createSampleViewModelNorwegian()
 //        let viewModel = createSampleViewModelEnglish()
         let configuration = SnapOnboardingConfiguration(delegate: self, viewModel: viewModel)
         
         onboardingViewController?.applyConfiguration(configuration)
-        presentViewController(onboardingViewController!, animated: false, completion: nil)
+        present(onboardingViewController!, animated: false) {
+            //self.dismiss(animated: true, completion: nil)
+        }
     }
     
     func createSampleViewModelNorwegian() -> SnapOnboardingViewModel {
         var termsViewModel = SnapOnboardingViewModel.TermsViewModel()
         let footer = "Ved bruk av tjenesten Snapsale godtar du Vilkårene for bruk og Retningslinjer for personvern"
         termsViewModel.termsAndPrivacyFooter = footer
-        termsViewModel.rangeOfTermsAndConditions = footer.rangeOfString("Vilkårene for bruk")
-        termsViewModel.rangeOfPrivacyPolicy = footer.rangeOfString("Retningslinjer for personvern")
+        termsViewModel.rangeOfTermsAndConditions = footer.range(of: "Vilkårene for bruk")
+        termsViewModel.rangeOfPrivacyPolicy = footer.range(of: "Retningslinjer for personvern")
         
         var introViewModel = SnapOnboardingViewModel.IntroViewModel()
         introViewModel.next = "Neste"
@@ -79,8 +81,8 @@ class ViewController: UIViewController {
         var termsViewModel = SnapOnboardingViewModel.TermsViewModel()
         let footer = "You accept our Privacy Policy and Terms And Conditions by using the service Snapsale."
         termsViewModel.termsAndPrivacyFooter = footer
-        termsViewModel.rangeOfTermsAndConditions = footer.rangeOfString("Terms And Conditions")
-        termsViewModel.rangeOfPrivacyPolicy = footer.rangeOfString("Privacy Policy")
+        termsViewModel.rangeOfTermsAndConditions = footer.range(of: "Terms And Conditions")
+        termsViewModel.rangeOfPrivacyPolicy = footer.range(of: "Privacy Policy")
         
         var introViewModel = SnapOnboardingViewModel.IntroViewModel()
         introViewModel.next = "Next"
@@ -119,7 +121,7 @@ class ViewController: UIViewController {
         return model
     }
     
-    private func createTagRepresentationsForStrings(strings: [String]) -> [SnapTagRepresentation] {
+    fileprivate func createTagRepresentationsForStrings(_ strings: [String]) -> [SnapTagRepresentation] {
         var snapTagRepresentations = [SnapTagRepresentation]()
         strings.forEach { tag in
             let tagRepresentation = SnapTagRepresentation(tag: tag)
@@ -146,9 +148,9 @@ extension ViewController: SnapOnboardingDelegate {
     func privacyPolicyTapped() {
         print("privacy-policy-tapped")
 
-        let profileImageURL = NSBundle.mainBundle().URLForResource("sample_profile_image", withExtension: "png")
+        let profileImageURL = Bundle.main.url(forResource: "sample_profile_image", withExtension: "png")
         let userViewModel = UserViewModel(profileImageURL: profileImageURL)
-        (onboardingViewController as? SnapOnboardingViewControllerProtocol)?.applyFormerAuthorizationService(.Instagram, userViewModel: userViewModel)
+        (onboardingViewController as? SnapOnboardingViewControllerProtocol)?.applyFormerAuthorizationService(.instagram, userViewModel: userViewModel)
     }
     
     
@@ -158,15 +160,15 @@ extension ViewController: SnapOnboardingDelegate {
         let alertController = UIAlertController(
             title: "Vil du gi «Snapsale» tilgang til plasseringen din når du bruker appen?",
             message: "Snapsale trenger din posisjon for å beregne avstand til salg",
-            preferredStyle: .Alert)
-        alertController.addAction(UIAlertAction(title: "Ikke tillat", style: .Default, handler: { _ in
-            self.onboardingViewController?.locationServicesStatusChanged(.Disabled)
+            preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "Ikke tillat", style: .default, handler: { _ in
+            self.onboardingViewController?.locationServicesStatusChanged(.disabled)
         }))
-        alertController.addAction(UIAlertAction(title: "Tillat", style: .Default, handler: { _ in
-            self.onboardingViewController?.locationServicesStatusChanged(.Enabled)
+        alertController.addAction(UIAlertAction(title: "Tillat", style: .default, handler: { _ in
+            self.onboardingViewController?.locationServicesStatusChanged(.enabled)
         }))
         
-        onboardingViewController?.presentViewController(alertController, animated: true, completion: nil)
+        onboardingViewController?.present(alertController, animated: true, completion: nil)
     }
     
     func locationServicesInstructionsTapped() {

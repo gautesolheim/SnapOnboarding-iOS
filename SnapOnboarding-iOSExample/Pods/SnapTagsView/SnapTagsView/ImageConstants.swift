@@ -8,9 +8,6 @@ private class ClassInSameBundleAsAssets: NSObject {}
 public extension UIImage {
   public enum SnapTagsViewAssets : String {
     case RedCloseButton = "RedCloseButton"
-    case RoundedButton = "RoundedButton"
-    case RoundedButton_WhiteWithGreyBorder = "RoundedButton_WhiteWithGreyBorder"
-    case RoundedButtonFilled = "RoundedButtonFilled"
     case YellowCloseButton = "YellowCloseButton"
 
     public var image: UIImage {
@@ -19,7 +16,7 @@ public extension UIImage {
   }
 
   convenience init!(asset: SnapTagsViewAssets) {
-    let bundle = NSBundle(forClass: ClassInSameBundleAsAssets.self)
-    self.init(named: asset.rawValue, inBundle: bundle, compatibleWithTraitCollection: nil)
+    let bundle = Bundle(for: ClassInSameBundleAsAssets.self)
+    self.init(named: asset.rawValue, in: bundle, compatibleWith: nil)
   }
 }
