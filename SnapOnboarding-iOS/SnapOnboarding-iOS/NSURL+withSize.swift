@@ -1,9 +1,9 @@
 import Foundation
 import UIKit
 
-public extension URL {
+internal extension URL {
     
-    public func withSize(_ size: CGSize) -> URL {
+    internal func withSize(_ size: CGSize) -> URL {
         
         let scale = UIScreen.main.scale
         let scaledSize = CGSize(width: size.width * scale, height: size.height * scale)
